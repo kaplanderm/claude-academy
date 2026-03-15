@@ -54,49 +54,6 @@ export default function BonusSection() {
             </div>
           ))}
         </div>
-
-        {/* Image prompt cards */}
-        <div className="mt-16">
-          <h3 className="text-2xl font-bold text-text-primary text-center mb-8">
-            {lang === 'he' ? '🎨 פרומפטים ליצירת תמונות' : '🎨 Image Generation Prompts'}
-          </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[
-              {
-                title: { he: 'Claude בסביבת עבודה', en: 'Claude in Workspace' },
-                prompt: 'A warm, minimalist illustration in the style of Anthropic\'s Claude branding. An AI assistant represented as a glowing orange orb sitting on a clean desk next to a laptop and coffee cup. Soft beige/cream background with subtle geometric patterns. Professional, friendly, and approachable aesthetic. No text.',
-                color: '#E07A2F',
-              },
-              {
-                title: { he: 'MCP - חיבור לעולם', en: 'MCP - Connected World' },
-                prompt: 'A beautiful infographic-style illustration showing a central orange glowing node (representing Claude) connected to multiple service icons (GitHub, Slack, databases, filesystems) via elegant orange-gradient lines. Light cream background with subtle grid. Clean, modern, Anthropic brand style. No text.',
-                color: '#4A90D9',
-              },
-              {
-                title: { he: 'קורס הכשרה', en: 'Training Course' },
-                prompt: 'An illustration of a learning journey path going from beginner (green) to intermediate (orange) to advanced (purple), with milestone markers and small icons representing AI concepts. The path curves elegantly through a warm cream-toned landscape. Anthropic/Claude brand colors. Modern, clean design. No text.',
-                color: '#27AE60',
-              },
-            ].map(item => (
-              <div key={item.prompt} className="glass-card p-5">
-                <div className="aspect-video bg-gradient-to-br from-claude-cream to-claude-warm rounded-xl mb-4 flex items-center justify-center">
-                  <span className="text-4xl opacity-50">🖼️</span>
-                </div>
-                <h4 className="font-bold text-text-primary mb-2" style={{ color: item.color }}>
-                  {item.title[lang]}
-                </h4>
-                <details className="text-sm text-text-secondary">
-                  <summary className="cursor-pointer font-medium text-claude-orange">
-                    {lang === 'he' ? 'הצג פרומפט' : 'Show Prompt'}
-                  </summary>
-                  <code className="block mt-2 p-3 rounded-lg bg-gray-50 text-xs font-mono leading-relaxed">
-                    {item.prompt}
-                  </code>
-                </details>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );

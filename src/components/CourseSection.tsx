@@ -27,9 +27,8 @@ export default function CourseSection({ selectedLevel = 'all' }: CourseSectionPr
     advanced: 'badge-advanced',
   };
 
-  const filteredCourses = selectedLevel === 'all'
-    ? courses
-    : courses.filter(c => c.level === selectedLevel);
+  // All courses always visible - level only affects explanation depth
+  const filteredCourses = courses;
 
   if (activeLessonId && activeCourseId) {
     const course = courses.find(c => c.id === activeCourseId);
@@ -39,6 +38,7 @@ export default function CourseSection({ selectedLevel = 'all' }: CourseSectionPr
         <LessonViewer
           course={course}
           lesson={lesson}
+          selectedLevel={(selectedLevel === 'all' ? 'beginner' : selectedLevel) as 'beginner' | 'intermediate' | 'advanced'}
           onBack={() => { setActiveLessonId(null); setActiveCourseId(null); }}
           onNavigate={(lessonId: string) => {
             setActiveLessonId(lessonId);

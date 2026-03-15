@@ -9,7 +9,7 @@ interface LevelSelectorProps {
 
 export default function LevelSelector({ onLevelChange }: LevelSelectorProps) {
   const { t, dir } = useLang();
-  const [selected, setSelected] = useState('all');
+  const [selected, setSelected] = useState('beginner');
 
   const levels = [
     {

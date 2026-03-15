@@ -14,7 +14,7 @@ import Footer from '@/components/Footer';
 
 function AppContent() {
   const { dir } = useLang();
-  const [selectedLevel, setSelectedLevel] = useState<string>('all');
+  const [selectedLevel, setSelectedLevel] = useState<string>('beginner');
 
   return (
     <div dir={dir}>

@@ -32,7 +32,7 @@ export const translations = {
   // Level selector
   levels: {
     title: { he: 'בחרו את הרמה שלכם', en: 'Choose Your Level' },
-    subtitle: { he: 'התוכן מותאם לרמת הידע הטכני שלכם', en: 'Content is tailored to your technical knowledge level' },
+    subtitle: { he: 'כל הקורסים זמינים - הבחירה משנה את רמת ההסבר והניסוח', en: 'All courses available - your choice changes the explanation depth and style' },
     beginner: { he: 'מתחילים', en: 'Beginner' },
     beginnerDesc: { he: 'אין צורך בידע טכני מוקדם. נתחיל מהבסיס.', en: 'No prior technical knowledge needed. We start from the basics.' },
     intermediate: { he: 'בינוניים', en: 'Intermediate' },

@@ -7,13 +7,37 @@ import { ArrowLeft, ArrowRight, Clock, BookOpen } from 'lucide-react';
 interface LessonViewerProps {
   course: Course;
   lesson: Lesson;
+  selectedLevel?: 'beginner' | 'intermediate' | 'advanced';
   onBack: () => void;
   onNavigate: (lessonId: string) => void;
 }
 
-export default function LessonViewer({ course, lesson, onBack, onNavigate }: LessonViewerProps) {
+export default function LessonViewer({ course, lesson, selectedLevel = 'beginner', onBack, onNavigate }: LessonViewerProps) {
   const { lang, dir, t } = useLang();
   const currentIdx = course.lessons.findIndex(l => l.id === lesson.id);
+
+  // Filter content based on selected level
+  // :::beginner ... ::: blocks shown only for beginners
+  // :::advanced ... ::: blocks shown only for advanced
+  // Everything else shown for all levels
+  const filterContentByLevel = (content: string, level: string): string => {
+    let result = content;
+    const beginnerLabel = lang === 'he' ? '💡 הסבר למתחילים' : '💡 Beginner Tip';
+    const advancedLabel = lang === 'he' ? '🔧 למתקדמים' : '🔧 Advanced';
+    // Remove beginner blocks if not beginner
+    if (level !== 'beginner') {
+      result = result.replace(/:::beginner\n([\s\S]*?):::/g, '');
+    } else {
+      result = result.replace(/:::beginner\n([\s\S]*?):::/g, `\n> **${beginnerLabel}:** $1\n`);
+    }
+    // Remove advanced blocks if not advanced
+    if (level !== 'advanced') {
+      result = result.replace(/:::advanced\n([\s\S]*?):::/g, '');
+    } else {
+      result = result.replace(/:::advanced\n([\s\S]*?):::/g, `\n> **${advancedLabel}:** $1\n`);
+    }
+    return result;
+  };
 
   // Simple markdown-like rendering
   const renderContent = (content: string) => {
@@ -84,8 +108,17 @@ export default function LessonViewer({ course, lesson, onBack, onNavigate }: Les
         tableRows = [];
       }
 
+      // Blockquote
+      if (line.trim().startsWith('> ')) {
+        const text = line.trim().slice(2);
+        elements.push(
+          <blockquote key={i} className="border-l-4 border-claude-orange/40 bg-claude-cream/50 px-4 py-2 my-3 rounded-r-lg text-text-secondary">
+            <span dangerouslySetInnerHTML={{ __html: formatInline(text) }} />
+          </blockquote>
+        );
+      }
       // Headings
-      if (line.startsWith('# ')) {
+      else if (line.startsWith('# ')) {
         elements.push(<h1 key={i} className="text-3xl font-bold text-text-primary mt-8 mb-4">{line.slice(2)}</h1>);
       } else if (line.startsWith('## ')) {
         elements.push(<h2 key={i} className="text-2xl font-bold text-text-primary mt-6 mb-3">{line.slice(3)}</h2>);
@@ -187,12 +220,22 @@ export default function LessonViewer({ course, lesson, onBack, onNavigate }: Les
 
         {/* Lesson header */}
         <div className="glass-card p-6 mb-8">
-          <div className="flex items-center gap-3 mb-3">
+          <div className="flex items-center gap-3 mb-3 flex-wrap">
             <span className="text-2xl">{course.icon}</span>
             <span className="text-sm text-text-muted">{course.title[lang]}</span>
             <span className="text-text-muted">•</span>
             <span className="text-sm text-text-muted flex items-center gap-1">
               <Clock size={14} /> {lesson.duration} {t('common.minutes')}
+            </span>
+            <span className="text-text-muted">•</span>
+            <span className={`text-xs px-2 py-0.5 rounded-full ${
+              selectedLevel === 'beginner' ? 'bg-green-100 text-green-700' :
+              selectedLevel === 'intermediate' ? 'bg-orange-100 text-orange-700' :
+              'bg-purple-100 text-purple-700'
+            }`}>
+              {selectedLevel === 'beginner' ? (lang === 'he' ? 'הסבר למתחילים' : 'Beginner') :
+               selectedLevel === 'intermediate' ? (lang === 'he' ? 'הסבר בינוני' : 'Intermediate') :
+               (lang === 'he' ? 'הסבר מתקדם' : 'Advanced')}
             </span>
           </div>
           <h1 className="text-2xl md:text-3xl font-bold text-text-primary">{lesson.title[lang]}</h1>
@@ -226,7 +269,7 @@ export default function LessonViewer({ course, lesson, onBack, onNavigate }: Les
         {/* Content */}
         <div className="glass-card p-6 md:p-8">
           <article className="prose prose-lg max-w-none">
-            {renderContent(lesson.content[lang])}
+            {renderContent(filterContentByLevel(lesson.content[lang], selectedLevel))}
           </article>
         </div>
 
