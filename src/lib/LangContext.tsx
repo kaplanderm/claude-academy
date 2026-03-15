@@ -1,5 +1,5 @@
 'use client';
-import { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { Lang, t as translate } from './i18n';
 
 interface LangContextType {
@@ -17,7 +17,22 @@ const LangContext = createContext<LangContextType>({
 });
 
 export function LangProvider({ children }: { children: ReactNode }) {
-  const [lang, setLang] = useState<Lang>('he');
+  const [lang, setLangState] = useState<Lang>('he');
+
+  // Restore language from localStorage on mount
+  useEffect(() => {
+    const saved = typeof window !== 'undefined' ? localStorage.getItem('claude-academy-lang') : null;
+    if (saved === 'en' || saved === 'he') {
+      setLangState(saved);
+    }
+  }, []);
+
+  const setLang = (newLang: Lang) => {
+    setLangState(newLang);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('claude-academy-lang', newLang);
+    }
+  };
 
   const value: LangContextType = {
     lang,

@@ -53,22 +53,30 @@ const renderContent = (content: string): React.ReactElement[] => {
     } else if (line.startsWith('# ')) {
       elements.push(<h1 key={i} className="text-3xl font-bold text-text-primary mt-8 mb-4">{line.slice(2)}</h1>);
     } else if (line.startsWith('## ')) {
-      elements.push(<h2 key={i} className="text-2xl font-bold text-text-primary mt-6 mb-3">{line.slice(3)}</h2>);
+      elements.push(<h2 key={i} className="text-2xl font-bold text-text-primary mt-8 mb-3 pb-2 border-b border-orange-100">{line.slice(3)}</h2>);
     } else if (line.startsWith('### ')) {
       elements.push(<h3 key={i} className="text-xl font-semibold text-text-primary mt-5 mb-2">{line.slice(4)}</h3>);
     } else if (line.trim().startsWith('- ')) {
       const text = line.trim().slice(2);
       elements.push(
-        <li key={i} className="text-text-secondary ml-4 my-1 list-disc">
+        <li key={i} className="text-text-secondary ml-4 my-1.5 list-disc leading-relaxed">
           <span dangerouslySetInnerHTML={{ __html: formatInline(text) }} />
         </li>
       );
     } else if (line.trim().match(/^\d+\.\s/)) {
       const text = line.trim().replace(/^\d+\.\s/, '');
       elements.push(
-        <li key={i} className="text-text-secondary ml-4 my-1 list-decimal">
+        <li key={i} className="text-text-secondary ml-4 my-1.5 list-decimal leading-relaxed">
           <span dangerouslySetInnerHTML={{ __html: formatInline(text) }} />
         </li>
+      );
+    } else if (line.trim().startsWith('□ ') || line.trim().startsWith('☐ ')) {
+      const text = line.trim().slice(2);
+      elements.push(
+        <div key={i} className="flex items-start gap-2 my-1.5 text-text-secondary">
+          <span className="text-claude-orange mt-0.5">☐</span>
+          <span dangerouslySetInnerHTML={{ __html: formatInline(text) }} />
+        </div>
       );
     } else if (line.trim()) {
       elements.push(
@@ -131,6 +139,28 @@ export default function MedicalUseCasePage() {
               </h1>
               <p className="text-text-secondary mt-1">{useCase.description[lang]}</p>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Horizontal use-case nav bar */}
+      <div className="bg-white border-b border-orange-50 sticky top-16 z-30">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <div className="flex items-center gap-1 py-2 overflow-x-auto scrollbar-thin">
+            {medicalUseCases.map(uc => (
+              <Link
+                key={uc.id}
+                href={`/medical/${uc.id}`}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
+                  uc.id === slug
+                    ? 'bg-claude-orange text-white shadow-sm'
+                    : 'bg-claude-cream/50 text-text-secondary hover:bg-claude-cream hover:text-claude-orange'
+                }`}
+              >
+                <span>{uc.icon}</span>
+                <span className="hidden sm:inline">{uc.title[lang]}</span>
+              </Link>
+            ))}
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@
 import React from 'react';
 import { useLang } from '@/lib/LangContext';
 import { medicalUseCases } from '@/data/medicalUseCases';
-import { ArrowRight, ArrowLeft, BookOpen } from 'lucide-react';
+import { ArrowRight, ArrowLeft, BookOpen, ExternalLink, Shield, Brain, Users } from 'lucide-react';
 import Link from 'next/link';
 import MedicalHero from '@/components/MedicalHero';
 
@@ -18,7 +18,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
-              {lang === 'he' ? 'תחומי שימוש רפואיים' : 'Medical Use Cases'}
+              {lang === 'he' ? 'Claude AI בפרקטיקה הרפואית' : 'Claude AI in Medical Practice'}
             </h2>
             <p className="text-text-secondary text-lg max-w-2xl mx-auto">
               {lang === 'he'
@@ -48,6 +48,78 @@ export default function Home() {
                 </p>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About DermUnbound Research */}
+      <section className="py-16 bg-gradient-to-b from-white to-claude-cream/20" dir={dir}>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-text-primary mb-3">
+              {lang === 'he' ? 'שיטת DermUnbound' : 'The DermUnbound Method'}
+            </h2>
+            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+              {lang === 'he'
+                ? 'מחקר וזיקוק של שיטות עבודה בטוחות ויעילות עם AI בפרקטיקה הרפואית'
+                : 'Researching and refining safe, effective AI workflows for medical practice'}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-10">
+            <div className="glass-card p-6 text-center">
+              <div className="w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center mx-auto mb-4">
+                <Shield className="text-green-600" size={24} />
+              </div>
+              <h3 className="text-lg font-bold text-text-primary mb-2">
+                {lang === 'he' ? 'פרטיות קודמת לכל' : 'Privacy First'}
+              </h3>
+              <p className="text-sm text-text-secondary leading-relaxed">
+                {lang === 'he'
+                  ? 'פרוטוקולים מוגדרים לאנונימיזציה ולשימוש בטוח ב-AI עם מידע רפואי, בהתאם לחוק הגנת הפרטיות הישראלי'
+                  : 'Defined protocols for anonymization and safe AI use with medical data, compliant with Israeli privacy law'}
+              </p>
+            </div>
+
+            <div className="glass-card p-6 text-center">
+              <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mx-auto mb-4">
+                <Brain className="text-blue-600" size={24} />
+              </div>
+              <h3 className="text-lg font-bold text-text-primary mb-2">
+                {lang === 'he' ? 'מבוסס מחקר' : 'Research-Based'}
+              </h3>
+              <p className="text-sm text-text-secondary leading-relaxed">
+                {lang === 'he'
+                  ? 'כל השיטות מבוססות על ניסיון קליני מעשי ומחקר שוטף בתחום ה-AI הרפואי'
+                  : 'All methods are based on practical clinical experience and ongoing medical AI research'}
+              </p>
+            </div>
+
+            <div className="glass-card p-6 text-center">
+              <div className="w-12 h-12 rounded-xl bg-purple-50 flex items-center justify-center mx-auto mb-4">
+                <Users className="text-purple-600" size={24} />
+              </div>
+              <h3 className="text-lg font-bold text-text-primary mb-2">
+                {lang === 'he' ? 'מותאם לרופאים' : 'Built for Physicians'}
+              </h3>
+              <p className="text-sm text-text-secondary leading-relaxed">
+                {lang === 'he'
+                  ? 'תוכן מותאם לרופאים — ללא צורך בידע טכני מוקדם. כל מושגי הטכנולוגיה מוסברים בשפה פשוטה'
+                  : 'Content tailored for physicians — no prior tech knowledge needed. All tech concepts explained in plain language'}
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <a
+              href={`https://kaplanclinic.co.il/${lang === 'he' ? 'he' : 'en'}/derm-ai`}
+              target="_blank"
+              rel="dofollow"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-claude-orange text-claude-orange hover:bg-claude-orange hover:text-white transition-all font-semibold"
+            >
+              {lang === 'he' ? 'קראו עוד על מחקר DermUnbound' : 'Read More About DermUnbound Research'}
+              <ExternalLink size={16} />
+            </a>
           </div>
         </div>
       </section>
