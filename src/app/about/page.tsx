@@ -5,7 +5,6 @@ import {
   ArrowLeft,
   UserCircle,
   ExternalLink,
-  MapPin,
   FlaskConical,
   Cloud,
   Server,
@@ -143,14 +142,10 @@ export default function AboutPage() {
               <h2 className="text-2xl md:text-3xl font-bold text-text-primary mb-2">
                 {lang === 'he' ? 'ד"ר יהונתן קפלן' : 'Dr. Yehonatan Kaplan'}
               </h2>
-              <div className="flex items-center justify-center md:justify-start gap-2 text-text-muted text-sm mb-4">
-                <MapPin size={14} />
-                <span>{lang === 'he' ? 'פתח תקווה, ישראל' : 'Petach Tikva, Israel'}</span>
-              </div>
               <p className="text-text-secondary leading-relaxed mb-6">
                 {lang === 'he'
-                  ? 'ד"ר יהונתן קפלן הוא מומחה ברפואת עור, כירורגיית עור וניתוחי מוז מיקרוגרפיים. ד"ר קפלן מאמין שרופא שמבין את הכלים הדיגיטליים שלו יכול לספק למטופליו טיפול טוב, מהיר ואישי יותר. הוא חוקר את השילוב בין בינה מלאכותית לרפואת עור, ומפתח כלים קליניים מבוססי AI לשיפור הטיפול הרפואי.'
-                  : 'Dr. Yehonatan Kaplan is a specialist in dermatology, dermatologic surgery, and Mohs micrographic surgery. Dr. Kaplan believes that a clinician who understands his digital tools can provide patients better, faster, and more personalized care. He researches the integration of artificial intelligence in dermatology and develops AI-based clinical tools to improve medical care.'}
+                  ? 'ד"ר יהונתן קפלן הוא מומחה ברפואת עור, כירורגיית עור וניתוחי מוז מיקרוגרפיים. כשרופאים בונים את הכלים שלהם, הם לא מתאימים טכנולוגיה לרפואה אלא מעצבים רפואה טובה יותר מלכתחילה. מתוך אמונה זו נולד פרויקט המחקר DermUnbound, שבו ד"ר קפלן חוקר ומפתח כלים קליניים מבוססי AI שנבנים מתוך ההבנה העמוקה של מי שעומד מול המטופל.'
+                  : 'Dr. Yehonatan Kaplan is a specialist in dermatology, dermatologic surgery, and Mohs micrographic surgery. When physicians build their own tools, they don\'t adapt technology to medicine, they shape better medicine from the ground up. This conviction led to the DermUnbound research project, where Dr. Kaplan develops AI-powered clinical tools born from the deep understanding of someone who stands in front of the patient every day.'}
               </p>
               <a
                 href="https://kaplanclinic.co.il"
@@ -173,11 +168,11 @@ export default function AboutPage() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-claude-warm border border-claude-peach/50 mb-6">
               <FlaskConical size={16} className="text-claude-orange" />
               <span className="text-sm font-medium text-claude-brown">
-                {lang === 'he' ? 'פרויקט מחקר' : 'Research Project'}
+                {lang === 'he' ? 'פרויקט המחקר' : 'Research Project'}
               </span>
             </div>
             <h2 className="text-2xl md:text-3xl font-bold text-text-primary mb-4">
-              {lang === 'he' ? 'פרויקט מחקר DermUnbound' : 'DermUnbound Research Project'}
+              {lang === 'he' ? 'פרויקט המחקר DermUnbound' : 'DermUnbound Research Project'}
             </h2>
             <p className="text-text-secondary text-lg max-w-3xl mx-auto leading-relaxed">
               {lang === 'he'
@@ -206,7 +201,7 @@ export default function AboutPage() {
               rel="dofollow"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-claude-orange text-claude-orange hover:bg-claude-orange hover:text-white transition-all font-semibold"
             >
-              {lang === 'he' ? 'קראו עוד על המחקר' : 'Read More About the Research'}
+              {lang === 'he' ? 'קראו עוד על המחקר שלנו' : 'Read More About Our Research'}
               <ExternalLink size={16} />
             </a>
           </div>
