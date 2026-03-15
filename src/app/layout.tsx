@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Heebo } from "next/font/google";
 import "./globals.css";
+import Providers from "@/components/Providers";
+import LayoutShell from "@/components/LayoutShell";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,15 +21,15 @@ const heebo = Heebo({
 });
 
 export const metadata: Metadata = {
-  title: "Claude Academy for Physicians | AI Training for Doctors | DermUnbound",
-  description: "Claude Academy for Physicians — comprehensive medical AI training program. Learn to use Claude AI in patient care, documentation, research, and practice management. תוכנית הכשרה מקיפה לרופאים לשימוש ב-Claude AI. By kaplanclinic.co.il",
-  keywords: ["Claude", "Claude Code", "AI", "Anthropic", "MCP", "training", "course", "Hebrew", "קורס", "הכשרה", "medical AI", "Claude for doctors", "AI in dermatology", "DermUnbound", "AI in medicine", "physician AI training"],
+  title: "Claude AI for Physicians | Medical AI Training | DermUnbound",
+  description: "Claude AI in Medical Practice — practical guide for physicians. Diagnosis, documentation, research, patient communication, practice management, and privacy. תוכנית הכשרה מקיפה לרופאים לשימוש ב-Claude AI. By kaplanclinic.co.il",
+  keywords: ["Claude", "Claude AI", "AI for doctors", "medical AI", "Claude for physicians", "AI in dermatology", "DermUnbound", "AI in medicine", "physician AI training", "HIPAA", "medical documentation", "קורס", "הכשרה", "רופאים"],
   alternates: {
     canonical: "https://kaplanclinic.co.il/he/derm-ai",
   },
   openGraph: {
-    title: "Claude Academy for Physicians | DermUnbound Research Project",
-    description: "Comprehensive medical AI training program for physicians. Learn to use Claude AI in clinical practice, documentation, research, and patient communication.",
+    title: "Claude AI for Physicians | DermUnbound Research Project",
+    description: "Practical guide for using Claude AI in medical practice. Diagnosis, documentation, research, patient communication, and privacy guidelines.",
     type: "website",
     url: "https://kaplanclinic.co.il/he/derm-ai",
   },
@@ -43,7 +45,9 @@ export default function RootLayout({
       <body
         className={`${heebo.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <Providers>
+          <LayoutShell>{children}</LayoutShell>
+        </Providers>
       </body>
     </html>
   );

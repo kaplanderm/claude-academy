@@ -1,6 +1,7 @@
 'use client';
 import { useLang } from '@/lib/LangContext';
 import { Heart, ExternalLink } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Footer() {
   const { t, dir, lang } = useLang();
@@ -38,13 +39,31 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-4 text-claude-orange">{t('footer.quickLinks')}</h4>
             <ul className="space-y-2">
-              {['courses', 'tools', 'plugins', 'useCases', 'blog', 'bonus'].map(key => (
-                <li key={key}>
-                  <a href={`#${key === 'useCases' ? 'use-cases' : key}`} className="text-sm text-gray-400 hover:text-white transition-colors">
-                    {t(`nav.${key}`)}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <Link href="/#medical-uses" className="text-sm text-gray-400 hover:text-white transition-colors">
+                  {lang === 'he' ? 'שימושים רפואיים' : 'Medical Use Cases'}
+                </Link>
+              </li>
+              <li>
+                <Link href="/academy#courses" className="text-sm text-gray-400 hover:text-white transition-colors">
+                  {t('nav.courses')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/academy#tools" className="text-sm text-gray-400 hover:text-white transition-colors">
+                  {t('nav.tools')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/academy#blog" className="text-sm text-gray-400 hover:text-white transition-colors">
+                  {t('nav.blog')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/academy#bonus" className="text-sm text-gray-400 hover:text-white transition-colors">
+                  {t('nav.bonus')}
+                </Link>
+              </li>
             </ul>
           </div>
 
