@@ -53,8 +53,8 @@ export default function AcademyPage() {
           </h1>
           <p className="text-text-secondary text-lg max-w-2xl mx-auto">
             {lang === 'he'
-              ? 'קורסים מלאים, שיעורי בונוס, השוואת כלים ומדריכים מפורטים — מסלול למידה שלם מההתחלה ועד רמת מומחה'
-              : 'Full courses, bonus lessons, tool comparisons and detailed guides — a complete learning path from beginner to expert'}
+              ? 'קורסים מלאים, שיעורי בונוס, השוואת כלים ומדריכים מפורטים - מסלול למידה שלם מההתחלה ועד רמת מומחה'
+              : 'Full courses, bonus lessons, tool comparisons and detailed guides - a complete learning path from beginner to expert'}
           </p>
         </div>
       </section>

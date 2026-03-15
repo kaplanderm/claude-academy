@@ -22,7 +22,7 @@ const heebo = Heebo({
 
 export const metadata: Metadata = {
   title: "Claude AI for Physicians | Medical AI Training | DermUnbound",
-  description: "Claude AI in Medical Practice — practical guide for physicians. Diagnosis, documentation, research, patient communication, practice management, and privacy. תוכנית הכשרה מקיפה לרופאים לשימוש ב-Claude AI. By kaplanclinic.co.il",
+  description: "Claude AI in Medical Practice - practical guide for physicians. Diagnosis, documentation, research, patient communication, practice management, and privacy. תוכנית הכשרה מקיפה לרופאים לשימוש ב-Claude AI. By kaplanclinic.co.il",
   keywords: ["Claude", "Claude AI", "AI for doctors", "medical AI", "Claude for physicians", "AI in dermatology", "DermUnbound", "AI in medicine", "physician AI training", "HIPAA", "medical documentation", "קורס", "הכשרה", "רופאים"],
   alternates: {
     canonical: "https://kaplanclinic.co.il/he/derm-ai",

@@ -120,6 +120,16 @@ export default function Header() {
                 {item.label[lang]}
               </Link>
             ))}
+
+            {/* About link */}
+            <Link
+              href="/about"
+              className={`px-3 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-claude-cream ${
+                pathname === '/about' ? 'text-claude-orange' : 'text-text-secondary hover:text-claude-orange'
+              }`}
+            >
+              {t('nav.about')}
+            </Link>
           </nav>
 
           {/* Actions */}
@@ -208,6 +218,16 @@ export default function Header() {
                 {item.label[lang]}
               </Link>
             ))}
+
+            <div className="border-t border-orange-50 my-2" />
+
+            <Link
+              href="/about"
+              className="block px-4 py-2.5 rounded-xl text-text-secondary hover:text-claude-orange hover:bg-claude-cream transition-colors text-sm font-medium"
+              onClick={() => setMenuOpen(false)}
+            >
+              {t('nav.about')}
+            </Link>
 
             <Link
               href="/academy"

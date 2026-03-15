@@ -21,8 +21,8 @@ export const translations = {
     titleHighlight: { he: 'Claude AI', en: 'Claude AI' },
     title2: { he: ' מההתחלה ועד לרמת מומחה', en: ' From Beginner to Expert' },
     subtitle: {
-      he: 'תוכנית הכשרה מקיפה לשימוש ב-Claude AI בעבודה הרפואית — טיפול, תיעוד, מחקר, תקשורת עם מטופלים, ניהול מרפאה ושיווק',
-      en: 'Comprehensive training program for using Claude AI in medical practice — patient care, documentation, research, patient communication, practice management, and marketing'
+      he: 'תוכנית הכשרה מקיפה לשימוש ב-Claude AI בעבודה הרפואית - טיפול, תיעוד, מחקר, תקשורת עם מטופלים, ניהול מרפאה ושיווק',
+      en: 'Comprehensive training program for using Claude AI in medical practice - patient care, documentation, research, patient communication, practice management, and marketing'
     },
     startLearning: { he: 'התחילו ללמוד', en: 'Start Learning' },
     exploreCourses: { he: 'גלו את הקורסים', en: 'Explore Courses' },

@@ -47,8 +47,8 @@ export default function MedicalHero() {
           {/* Subtitle */}
           <p className="text-lg sm:text-xl text-text-secondary max-w-3xl mx-auto mb-10 leading-relaxed">
             {lang === 'he'
-              ? 'גלו כיצד Claude AI יכול לשפר את העבודה הרפואית שלכם — מאבחון וטיפול, דרך תיעוד ומחקר, ועד תקשורת עם מטופלים וניהול מרפאה. כולל דוגמאות מעשיות, פרומפטים מוכנים, והנחיות פרטיות.'
-              : 'Discover how Claude AI can enhance your medical practice — from diagnosis and treatment, through documentation and research, to patient communication and practice management. Includes practical examples, ready-to-use prompts, and privacy guidelines.'}
+              ? 'גלו כיצד Claude AI יכול לשפר את העבודה הרפואית שלכם - מאבחון וטיפול, דרך תיעוד ומחקר, ועד תקשורת עם מטופלים וניהול מרפאה. כולל דוגמאות מעשיות, פרומפטים מוכנים, והנחיות פרטיות.'
+              : 'Discover how Claude AI can enhance your medical practice - from diagnosis and treatment, through documentation and research, to patient communication and practice management. Includes practical examples, ready-to-use prompts, and privacy guidelines.'}
           </p>
 
           {/* CTAs */}
@@ -65,7 +65,7 @@ export default function MedicalHero() {
               className="flex items-center gap-2 px-8 py-4 rounded-2xl border-2 border-claude-orange/30 text-claude-orange font-semibold text-lg hover:bg-claude-cream transition-all hover:border-claude-orange"
             >
               <BookOpen size={20} />
-              {lang === 'he' ? 'Claude Academy — קורסים' : 'Claude Academy — Courses'}
+              {lang === 'he' ? 'Claude Academy - קורסים' : 'Claude Academy - Courses'}
             </Link>
           </div>
 

@@ -104,8 +104,8 @@ export default function Home() {
               </h3>
               <p className="text-sm text-text-secondary leading-relaxed">
                 {lang === 'he'
-                  ? 'תוכן מותאם לרופאים — ללא צורך בידע טכני מוקדם. כל מושגי הטכנולוגיה מוסברים בשפה פשוטה'
-                  : 'Content tailored for physicians — no prior tech knowledge needed. All tech concepts explained in plain language'}
+                  ? 'תוכן מותאם לרופאים - ללא צורך בידע טכני מוקדם. כל מושגי הטכנולוגיה מוסברים בשפה פשוטה'
+                  : 'Content tailored for physicians - no prior tech knowledge needed. All tech concepts explained in plain language'}
               </p>
             </div>
           </div>
@@ -134,8 +134,8 @@ export default function Home() {
             </h2>
             <p className="text-text-secondary text-lg mb-8 max-w-2xl mx-auto">
               {lang === 'he'
-                ? 'ב-Claude Academy תמצאו קורסים מלאים, שיעורי בונוס, השוואת כלים, ומדריכים מפורטים — מותאמים לרמה שלכם'
-                : 'In Claude Academy you\'ll find full courses, bonus lessons, tool comparisons, and detailed guides — adapted to your level'}
+                ? 'ב-Claude Academy תמצאו קורסים מלאים, שיעורי בונוס, השוואת כלים, ומדריכים מפורטים - מותאמים לרמה שלכם'
+                : 'In Claude Academy you\'ll find full courses, bonus lessons, tool comparisons, and detailed guides - adapted to your level'}
             </p>
             <Link
               href="/academy"
