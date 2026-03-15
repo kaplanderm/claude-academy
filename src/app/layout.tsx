@@ -25,13 +25,14 @@ export const metadata: Metadata = {
   description: "Claude AI in Medical Practice - practical guide for physicians. Diagnosis, documentation, research, patient communication, practice management, and privacy. תוכנית הכשרה מקיפה לרופאים לשימוש ב-Claude AI. By kaplanclinic.co.il",
   keywords: ["Claude", "Claude AI", "AI for doctors", "medical AI", "Claude for physicians", "AI in dermatology", "DermUnbound", "AI in medicine", "physician AI training", "HIPAA", "medical documentation", "קורס", "הכשרה", "רופאים"],
   alternates: {
-    canonical: "https://kaplanclinic.co.il/he/derm-ai",
+    canonical: "https://academy.dermunbound.com",
   },
   openGraph: {
     title: "Claude AI for Physicians | DermUnbound Research Project",
     description: "Practical guide for using Claude AI in medical practice. Diagnosis, documentation, research, patient communication, and privacy guidelines.",
     type: "website",
-    url: "https://kaplanclinic.co.il/he/derm-ai",
+    url: "https://academy.dermunbound.com",
+    siteName: "Claude Academy for Physicians",
   },
 };
 
