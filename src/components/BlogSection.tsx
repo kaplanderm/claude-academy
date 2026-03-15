@@ -122,22 +122,22 @@ export default function BlogSection() {
 
   const videos = [
     {
-      title: { he: 'מבוא ל-Claude Code', en: 'Introduction to Claude Code' },
-      channel: 'Anthropic',
-      videoId: 'd2HW8mXQyx4',
-      url: 'https://www.youtube.com/watch?v=d2HW8mXQyx4',
+      title: { he: 'קורס Claude Code למתחילים', en: 'Claude Code Full Course for Beginners' },
+      channel: 'Sabrina Ramonov',
+      videoId: 'fYX6hHC9FhQ',
+      url: 'https://www.youtube.com/watch?v=fYX6hHC9FhQ',
     },
     {
-      title: { he: 'MCP - המדריך המלא', en: 'MCP - The Complete Guide' },
+      title: { he: 'MCP - הסבר מלא (Fireship)', en: 'MCP Explained - Fireship' },
       channel: 'Fireship',
-      videoId: 'kQJBCuMmSGg',
-      url: 'https://www.youtube.com/watch?v=kQJBCuMmSGg',
+      videoId: 'HyzlYwjoXOQ',
+      url: 'https://www.youtube.com/watch?v=HyzlYwjoXOQ',
     },
     {
-      title: { he: 'Prompt Engineering מתקדם', en: 'Advanced Prompt Engineering' },
-      channel: 'Anthropic',
-      videoId: 'T9aRN5JkmL8',
-      url: 'https://www.youtube.com/watch?v=T9aRN5JkmL8',
+      title: { he: 'סדנת Prompt Engineering עם Anthropic', en: 'Prompt Workshop with Zack Witten (Anthropic)' },
+      channel: 'AI Engineer',
+      videoId: 'hkhDdcM5V94',
+      url: 'https://www.youtube.com/watch?v=hkhDdcM5V94',
     },
   ];
 
