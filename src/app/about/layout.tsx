@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'About | Claude Academy for Physicians | DermUnbound',
     description: 'Dr. Yehonatan Kaplan - dermatologist, Mohs surgeon, and AI researcher. The DermUnbound research project and ecosystem.',
-    url: 'https://claude-academy-il.vercel.app/about',
+    url: 'https://academy.dermunbound.com/about',
   },
 };
 
