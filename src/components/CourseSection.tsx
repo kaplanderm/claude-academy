@@ -32,6 +32,10 @@ export default function CourseSection() {
           course={course}
           lesson={lesson}
           onBack={() => { setActiveLessonId(null); setActiveCourseId(null); }}
+          onNavigate={(lessonId: string) => {
+            setActiveLessonId(lessonId);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
         />
       );
     }

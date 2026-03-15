@@ -69,6 +69,40 @@ export default function PluginsSection() {
           <p className="text-text-secondary text-lg max-w-2xl mx-auto">{t('plugins.subtitle')}</p>
         </div>
 
+        {/* Explanations */}
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
+          <div className="glass-card p-6 border-t-4 border-t-claude-orange">
+            <h3 className="text-lg font-bold text-text-primary mb-3">
+              {lang === 'he' ? '🔌 MCP - מה זה?' : '🔌 MCP - What is it?'}
+            </h3>
+            <p className="text-sm text-text-secondary leading-relaxed">
+              {lang === 'he'
+                ? 'MCP (Model Context Protocol) הוא כמו "שקע USB" עבור Claude. הוא מאפשר לחבר את Claude לכלים חיצוניים כמו GitHub, Google Drive, בסיסי נתונים ועוד. במקום שתצטרכו לעשות copy-paste, Claude ניגש ישירות למידע שהוא צריך.'
+                : 'MCP (Model Context Protocol) is like a "USB port" for Claude. It allows connecting Claude to external tools like GitHub, Google Drive, databases, and more. Instead of copy-pasting, Claude accesses the information it needs directly.'}
+            </p>
+          </div>
+          <div className="glass-card p-6 border-t-4 border-t-accent-blue">
+            <h3 className="text-lg font-bold text-text-primary mb-3">
+              {lang === 'he' ? '🔗 Connectors - מחברים' : '🔗 Connectors'}
+            </h3>
+            <p className="text-sm text-text-secondary leading-relaxed">
+              {lang === 'he'
+                ? 'מחברים (Connectors) הם חיבורים מוכנים מראש לשירותים פופולריים. למשל: מחבר ל-Slack שמאפשר ל-Claude לקרוא ולשלוח הודעות, או מחבר ל-Gmail שמאפשר ניהול מיילים. הם בנויים על פרוטוקול MCP.'
+                : 'Connectors are pre-built connections to popular services. For example: a Slack connector that lets Claude read and send messages, or a Gmail connector for email management. They are built on the MCP protocol.'}
+            </p>
+          </div>
+          <div className="glass-card p-6 border-t-4 border-t-accent-green">
+            <h3 className="text-lg font-bold text-text-primary mb-3">
+              {lang === 'he' ? '⚡ Skills - כישורים' : '⚡ Skills'}
+            </h3>
+            <p className="text-sm text-text-secondary leading-relaxed">
+              {lang === 'he'
+                ? 'Skills הם "מתכונים" מוכנים מראש ב-Claude Code. כשאתם כותבים /commit, למשל, Claude Code יודע בדיוק איך ליצור commit מסודר. אפשר גם ליצור Skills מותאמים אישית למשימות שחוזרות על עצמן.'
+                : 'Skills are pre-built "recipes" in Claude Code. When you type /commit, for example, Claude Code knows exactly how to create a proper commit. You can also create custom Skills for recurring tasks.'}
+            </p>
+          </div>
+        </div>
+
         {/* Category filter */}
         <div className="flex items-center gap-2 mb-8 flex-wrap justify-center">
           <Filter size={16} className="text-text-muted" />

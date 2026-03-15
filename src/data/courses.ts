@@ -2626,6 +2626,1080 @@ Prioritize by severity."
         }
       }
     ]
+  },
+  {
+    id: 'account-and-api',
+    title: { he: 'חשבון, תוכניות ושימוש ב-API', en: 'Account, Plans & API Usage' },
+    description: {
+      he: 'מדריך מקיף להבנת כל אפשרויות השימוש: חשבון אישי, Pro, Max, Team, Enterprise ו-API. מתי להשתמש במה ואיך.',
+      en: 'Comprehensive guide to all usage options: personal account, Pro, Max, Team, Enterprise, and API. When to use what and how.'
+    },
+    icon: '🔑',
+    level: 'beginner' as const,
+    duration: 120,
+    lessonsCount: 5,
+    color: '#2ECC71',
+    lessons: [
+      {
+        id: 'account-types',
+        title: { he: 'סוגי חשבונות - מה ההבדל?', en: 'Account Types - What\'s the Difference?' },
+        description: { he: 'הבנה מלאה של כל סוגי החשבונות והתוכניות', en: 'Full understanding of all account types and plans' },
+        duration: 25,
+        content: {
+          he: `# סוגי חשבונות ב-Claude - מדריך מלא
+
+## בואו נתחיל מההתחלה - מה זה בכלל "חשבון Claude"?
+
+כשאתם רוצים להשתמש ב-Claude, יש לכם שתי דרכים עיקריות:
+
+1. **חשבון אישי** (דרך claude.ai) - כמו להשתמש באפליקציה רגילה
+2. **API** (דרך console.anthropic.com) - כמו לבנות עם לגו - אתם בונים מה שאתם רוצים
+
+בואו נפרק את זה לפרטים:
+
+---
+
+## 🆓 חשבון חינמי (Free)
+
+### מה מקבלים?
+- גישה ל-**Claude Sonnet** (הדגם הבינוני)
+- שיחות טקסט רגילות
+- העלאת קבצים (PDF, תמונות)
+- חלון הקשר של 200,000 tokens (בערך 150,000 מילים!)
+
+### מגבלות
+- **מספר הודעות מוגבל** - בערך 20-30 הודעות ביום (משתנה)
+- **אין גישה ל-Opus** - הדגם החזק ביותר
+- **אין Extended Thinking** - חשיבה מעמיקה
+- **אין Claude Code** - הכלי למפתחים
+- **אין Projects** - ארגון שיחות מתקדם
+
+### למי מתאים?
+✅ מי שרוצה לנסות את Claude בפעם הראשונה
+✅ שימוש מזדמן - שאלה פה ושם
+✅ סטודנטים שרוצים עזרה בשיעורי בית
+
+### איך נרשמים?
+1. היכנסו ל-**claude.ai**
+2. לחצו **Sign up**
+3. הירשמו עם Google, Apple, או מייל
+4. מוכנים! אפשר להתחיל לשוחח
+
+---
+
+## ⭐ Pro ($20 לחודש)
+
+### מה מקבלים מעבר לחינמי?
+- **פי 5 יותר שימוש** - הרבה יותר הודעות ביום
+- **גישה ל-Claude Opus** - הדגם הכי חכם
+- **Extended Thinking** - Claude "חושב" לפני שעונה (תוצאות מדויקות יותר)
+- **Claude Code** - שימוש מוגבל בכלי המפתחים
+- **Projects** - ארגון שיחות עם הנחיות מותאמות
+- **Artifacts** - יצירת קוד, HTML, ודיאגרמות בחלון נפרד
+- **גישה מוקדמת** לתכונות חדשות
+
+### מגבלות
+- עדיין יש **מגבלת שימוש יומית** (אם כי גבוהה בהרבה)
+- Claude Code מוגבל בכמות
+- אין ניהול צוות
+
+### למי מתאים?
+✅ אנשים שמשתמשים ב-Claude כל יום
+✅ מי שצריך תשובות מדויקות ומעמיקות
+✅ מפתחים שרוצים לנסות Claude Code
+✅ כותבים, חוקרים, ואנשי מקצוע
+
+### איך משדרגים?
+1. היכנסו ל-claude.ai
+2. לחצו על שם המשתמש שלכם (למעלה)
+3. בחרו **Upgrade to Pro**
+4. הזינו פרטי תשלום
+5. מיד מקבלים גישה לכל התכונות
+
+---
+
+## 🚀 Max ($100 לחודש)
+
+### מה מקבלים מעבר ל-Pro?
+- **פי 20 יותר שימוש** מחשבון חינמי!
+- **Claude Code ללא הגבלה** (כמעט) - שימוש מורחב משמעותית
+- **עדיפות בתור** - לא ממתינים כשיש עומס
+- אידיאלי למי ש**חי ב-Claude** כל היום
+
+### למי מתאים?
+✅ מפתחים שעובדים עם Claude Code באופן יומיומי
+✅ מי שמגיע למגבלת ה-Pro בקביעות
+✅ פרילנסרים שClaude הוא הכלי המרכזי שלהם
+
+---
+
+## 👥 Team ($25 למשתמש לחודש)
+
+### מה מקבלים?
+- **כל מה שב-Pro** + ניהול צוות
+- **Admin Console** - ניהול מרכזי של חברי הצוות
+- **שיתוף Projects** - כל הצוות עובד על אותם פרויקטים
+- **חיוב מרכזי** - חשבונית אחת לכל הצוות
+- מינימום **2 משתמשים**
+
+### למי מתאים?
+✅ צוותים קטנים (2-50 אנשים)
+✅ סטארטאפים שרוצים לעבוד ביחד עם Claude
+✅ מחלקות בארגון
+
+---
+
+## 🏢 Enterprise (מחיר מותאם)
+
+### מה מקבלים?
+- **כל מה שב-Team** + אבטחה מוגברת
+- **SSO** (Single Sign-On) - התחברות דרך מערכת הארגון
+- **SCIM** - ניהול משתמשים אוטומטי
+- **Audit Logs** - מעקב אחרי כל הפעילות
+- **SLA מותאם** - התחייבות לזמני תגובה
+- **שמירת נתונים מותאמת** - שליטה מלאה על המידע
+- **מנהל חשבון ייעודי**
+
+### למי מתאים?
+✅ ארגונים גדולים (50+ עובדים)
+✅ חברות עם דרישות אבטחה מחמירות
+✅ ארגונים שצריכים תאימות לרגולציה
+
+---
+
+## 📊 טבלת השוואה מהירה
+
+| תכונה | חינמי | Pro $20 | Max $100 | Team $25/user | Enterprise |
+|--------|--------|---------|----------|---------------|------------|
+| Claude Sonnet | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Claude Opus | ❌ | ✅ | ✅ | ✅ | ✅ |
+| Extended Thinking | ❌ | ✅ | ✅ | ✅ | ✅ |
+| Claude Code | ❌ | מוגבל | מורחב | מוגבל | מותאם |
+| Projects | ❌ | ✅ | ✅ | ✅ (משותף) | ✅ (משותף) |
+| ניהול צוות | ❌ | ❌ | ❌ | ✅ | ✅ |
+| SSO | ❌ | ❌ | ❌ | ❌ | ✅ |
+| Audit Logs | ❌ | ❌ | ❌ | ❌ | ✅ |`,
+          en: `# Claude Account Types - Complete Guide
+
+## Let's Start from the Beginning - What is a "Claude Account"?
+
+When you want to use Claude, there are two main paths:
+
+1. **Personal Account** (via claude.ai) - like using a regular app
+2. **API** (via console.anthropic.com) - like building with Lego - you build what you want
+
+Let's break it down:
+
+---
+
+## 🆓 Free Account
+
+### What do you get?
+- Access to **Claude Sonnet** (the mid-tier model)
+- Regular text conversations
+- File uploads (PDF, images)
+- Context window of 200,000 tokens (about 150,000 words!)
+
+### Limitations
+- **Limited messages** - about 20-30 messages per day (varies)
+- **No access to Opus** - the most powerful model
+- **No Extended Thinking** - deep reasoning
+- **No Claude Code** - the developer tool
+- **No Projects** - advanced conversation organization
+
+### Who is it for?
+✅ First-time Claude users
+✅ Casual use - a question here and there
+✅ Students wanting homework help
+
+---
+
+## ⭐ Pro ($20/month)
+
+### What do you get beyond Free?
+- **5x more usage** - many more daily messages
+- **Access to Claude Opus** - the smartest model
+- **Extended Thinking** - Claude "thinks" before answering (more accurate results)
+- **Claude Code** - limited developer tool access
+- **Projects** - organize conversations with custom instructions
+- **Artifacts** - create code, HTML, and diagrams in a separate window
+- **Early access** to new features
+
+### Who is it for?
+✅ Daily Claude users
+✅ Those who need accurate and deep answers
+✅ Developers wanting to try Claude Code
+✅ Writers, researchers, and professionals
+
+---
+
+## 🚀 Max ($100/month)
+
+### What do you get beyond Pro?
+- **20x more usage** than free!
+- **Claude Code unlimited** (nearly) - significantly extended usage
+- **Priority queue** - no waiting during peak times
+- Ideal for those who **live in Claude** all day
+
+---
+
+## 👥 Team ($25/user/month)
+
+### What do you get?
+- **Everything in Pro** + team management
+- **Admin Console** - central team management
+- **Shared Projects** - whole team works on same projects
+- **Central billing** - one invoice for the whole team
+- Minimum **2 users**
+
+---
+
+## 🏢 Enterprise (Custom pricing)
+
+### What do you get?
+- **Everything in Team** + enhanced security
+- **SSO** (Single Sign-On)
+- **SCIM** - automatic user management
+- **Audit Logs** - track all activity
+- **Custom SLA** - response time commitments
+- **Custom data retention**
+- **Dedicated account manager**
+
+---
+
+## 📊 Quick Comparison Table
+
+| Feature | Free | Pro $20 | Max $100 | Team $25/user | Enterprise |
+|---------|------|---------|----------|---------------|------------|
+| Claude Sonnet | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Claude Opus | ❌ | ✅ | ✅ | ✅ | ✅ |
+| Extended Thinking | ❌ | ✅ | ✅ | ✅ | ✅ |
+| Claude Code | ❌ | Limited | Extended | Limited | Custom |
+| Projects | ❌ | ✅ | ✅ | ✅ (shared) | ✅ (shared) |
+| Team Mgmt | ❌ | ❌ | ❌ | ✅ | ✅ |
+| SSO | ❌ | ❌ | ❌ | ❌ | ✅ |
+| Audit Logs | ❌ | ❌ | ❌ | ❌ | ✅ |`
+        }
+      },
+      {
+        id: 'account-vs-api',
+        title: { he: 'חשבון רגיל מול API - מה ההבדל?', en: 'Account vs API - What\'s the Difference?' },
+        description: { he: 'מתי להשתמש בחשבון ומתי ב-API? הסבר פשוט ומעשי', en: 'When to use an account and when an API? Simple practical explanation' },
+        duration: 25,
+        content: {
+          he: `# חשבון רגיל מול API - מה ההבדל?
+
+## בואו נסביר את זה בפשטות
+
+דמיינו שClaude הוא מסעדה:
+
+- **חשבון רגיל** (claude.ai) = לאכול במסעדה. מגיעים, יושבים, מזמינים מהתפריט. פשוט ונוח.
+- **API** = להזמין את השף הביתה. אתם מחליטים מה לבשל, איך להגיש, לכמה אנשים. יותר עבודה, אבל יותר שליטה.
+
+---
+
+## 🖥️ חשבון רגיל (claude.ai / אפליקציה)
+
+### מה זה?
+אתם נכנסים לאתר claude.ai, כותבים הודעה, ומקבלים תשובה. זהו. פשוט.
+
+### מתי להשתמש?
+- ✅ **שיחות יומיומיות** - שאלות, עזרה בכתיבה, ניתוח
+- ✅ **עבודה אישית** - כתיבת מסמכים, קוד, מחקר
+- ✅ **ניסויים** - לנסות רעיונות חדשים עם Claude
+- ✅ **Projects** - ארגון עבודה מתמשכת
+
+### איך זה עובד?
+1. נכנסים ל-claude.ai
+2. כותבים הודעה
+3. Claude עונה
+4. ממשיכים שיחה
+5. ההיסטוריה נשמרת
+
+### תשלום
+- **מנוי חודשי קבוע** ($0 / $20 / $100)
+- לא משנה כמה משתמשים (עד המגבלה)
+- פשוט ונוח
+
+---
+
+## 🔌 API (Application Programming Interface)
+
+### מה זה?
+API זה ממשק שמאפשר **לתוכנה שלכם** לדבר עם Claude. במקום שאתם כותבים בצ'אט, הקוד שלכם שולח בקשות ומקבל תשובות.
+
+### מתי להשתמש?
+- ✅ **בניית מוצר** - אפליקציה שמשתמשת ב-Claude
+- ✅ **אוטומציה** - תהליכים אוטומטיים
+- ✅ **עיבוד בכמויות** - ניתוח מאות מסמכים
+- ✅ **אינטגרציה** - חיבור Claude למערכת קיימת
+- ✅ **שליטה מלאה** - בחירת מודל, טמפרטורה, הגבלות
+
+### איך זה עובד?
+1. נרשמים ב-**console.anthropic.com**
+2. יוצרים **API Key** (מפתח גישה)
+3. מוסיפים **credits** (כסף לשימוש)
+4. שולחים בקשות מהקוד שלכם:
+
+\`\`\`python
+import anthropic
+
+client = anthropic.Anthropic(api_key="sk-ant-...")
+
+response = client.messages.create(
+    model="claude-sonnet-4-6",
+    max_tokens=1024,
+    messages=[
+        {"role": "user", "content": "שלום! מה אתה יכול לעשות?"}
+    ]
+)
+
+print(response.content[0].text)
+\`\`\`
+
+### תשלום
+- **לפי שימוש בלבד** - כמו חשמל
+- משלמים על כל **token** (יחידת טקסט)
+- **Input tokens** - מה ששלחתם (זול יותר)
+- **Output tokens** - מה שClaude ענה (יקר יותר)
+
+### מחירון API
+
+| מודל | Input (1M tokens) | Output (1M tokens) | עלות משוערת לשיחה |
+|------|-------------------|---------------------|--------------------|
+| Haiku 4.5 | $0.80 | $4 | ~$0.01 |
+| Sonnet 4.6 | $3 | $15 | ~$0.05 |
+| Opus 4.6 | $15 | $75 | ~$0.25 |
+
+> 💡 **טיפ:** 1 מיליון tokens זה בערך 750,000 מילים - ספר שלם!
+
+---
+
+## 🆚 השוואה ישירה
+
+| קריטריון | חשבון רגיל | API |
+|-----------|------------|-----|
+| **קושי** | קל מאוד | דורש ידע טכני |
+| **תשלום** | מנוי קבוע | לפי שימוש |
+| **גמישות** | ממשק קבוע | שליטה מלאה |
+| **אוטומציה** | ידני | אוטומטי |
+| **Artifacts** | ✅ | ❌ |
+| **Projects** | ✅ | ❌ |
+| **Tool Use** | ❌ | ✅ |
+| **Streaming** | ✅ | ✅ |
+| **Extended Thinking** | ✅ (Pro) | ✅ |
+| **בניית מוצר** | ❌ | ✅ |
+
+---
+
+## 🎯 מה מתאים לי?
+
+### אני רוצה פשוט לשוחח עם Claude
+→ **חשבון רגיל** (חינמי או Pro)
+
+### אני מפתח ורוצה Claude Code
+→ **חשבון Pro** ($20) או **Max** ($100)
+
+### אני רוצה לבנות אפליקציה שמשתמשת ב-Claude
+→ **API**
+
+### אני רוצה אוטומציה של תהליכים
+→ **API** או **Claude Code** (עם חשבון Pro/Max)
+
+### אני מנהל צוות שצריך Claude
+→ **Team** ($25/משתמש)
+
+### הארגון שלי צריך Claude
+→ **Enterprise** (פנו ל-Anthropic)`,
+          en: `# Account vs API - What's the Difference?
+
+## Let's Explain This Simply
+
+Imagine Claude is a restaurant:
+
+- **Regular Account** (claude.ai) = Eating at the restaurant. Arrive, sit down, order from the menu. Simple and convenient.
+- **API** = Hiring the chef to cook at your home. You decide what to cook, how to serve, for how many people. More work, but more control.
+
+---
+
+## 🖥️ Regular Account (claude.ai / App)
+
+### What is it?
+You go to claude.ai, write a message, get an answer. That's it. Simple.
+
+### When to use?
+- ✅ **Daily conversations** - questions, writing help, analysis
+- ✅ **Personal work** - writing documents, code, research
+- ✅ **Experiments** - trying new ideas with Claude
+- ✅ **Projects** - organizing ongoing work
+
+### Payment
+- **Fixed monthly subscription** ($0 / $20 / $100)
+- No matter how much you use (up to the limit)
+
+---
+
+## 🔌 API (Application Programming Interface)
+
+### What is it?
+API is an interface that lets **your software** talk to Claude. Instead of you typing in a chat, your code sends requests and receives answers.
+
+### When to use?
+- ✅ **Building a product** - an app that uses Claude
+- ✅ **Automation** - automated processes
+- ✅ **Batch processing** - analyzing hundreds of documents
+- ✅ **Integration** - connecting Claude to an existing system
+- ✅ **Full control** - choosing model, temperature, limits
+
+### Payment
+- **Pay per use only** - like electricity
+- Pay per **token** (text unit)
+- **Input tokens** - what you sent (cheaper)
+- **Output tokens** - what Claude answered (more expensive)
+
+### API Pricing
+
+| Model | Input (1M tokens) | Output (1M tokens) | Est. cost per chat |
+|-------|-------------------|---------------------|--------------------|
+| Haiku 4.5 | $0.80 | $4 | ~$0.01 |
+| Sonnet 4.6 | $3 | $15 | ~$0.05 |
+| Opus 4.6 | $15 | $75 | ~$0.25 |
+
+> 💡 **Tip:** 1 million tokens is about 750,000 words - an entire book!
+
+---
+
+## 🎯 What's Right for Me?
+
+### I just want to chat with Claude
+→ **Regular Account** (Free or Pro)
+
+### I'm a developer and want Claude Code
+→ **Pro Account** ($20) or **Max** ($100)
+
+### I want to build an app that uses Claude
+→ **API**
+
+### I want process automation
+→ **API** or **Claude Code** (with Pro/Max account)
+
+### I manage a team that needs Claude
+→ **Team** ($25/user)
+
+### My organization needs Claude
+→ **Enterprise** (contact Anthropic)`
+        }
+      },
+      {
+        id: 'api-getting-started',
+        title: { he: 'התחלת עבודה עם ה-API', en: 'Getting Started with the API' },
+        description: { he: 'מדריך צעד-אחר-צעד לשימוש ראשון ב-API', en: 'Step-by-step guide for first API usage' },
+        duration: 30,
+        content: {
+          he: `# התחלת עבודה עם ה-API - מדריך צעד אחר צעד
+
+## שלב 1: יצירת חשבון API
+
+### 1.1 הרשמה
+1. היכנסו ל-**console.anthropic.com**
+2. לחצו **Sign Up**
+3. מלאו פרטים ואימות מייל
+4. זה חשבון **נפרד** מחשבון claude.ai!
+
+### 1.2 יצירת API Key
+1. בתפריט, לחצו **API Keys**
+2. לחצו **Create Key**
+3. תנו שם (למשל "my-first-key")
+4. **שמרו את המפתח!** הוא מוצג רק פעם אחת
+
+> ⚠️ **חשוב מאוד:** לעולם אל תשתפו את ה-API Key שלכם! אל תכניסו אותו לקוד שעולה ל-GitHub. השתמשו במשתני סביבה.
+
+### 1.3 הוספת Credits
+1. לחצו **Billing**
+2. הוסיפו כרטיס אשראי
+3. הוסיפו credits (מינימום $5)
+4. הגדירו **Spending Limit** - מגבלת הוצאה חודשית
+
+---
+
+## שלב 2: התקנת SDK
+
+### Python (הכי פופולרי)
+\`\`\`bash
+pip install anthropic
+\`\`\`
+
+### JavaScript / TypeScript
+\`\`\`bash
+npm install @anthropic-ai/sdk
+\`\`\`
+
+---
+
+## שלב 3: הקוד הראשון
+
+### Python
+\`\`\`python
+import anthropic
+import os
+
+# הגדירו את המפתח כמשתנה סביבה
+# export ANTHROPIC_API_KEY="sk-ant-..."
+
+client = anthropic.Anthropic()  # קורא אוטומטית מ-ANTHROPIC_API_KEY
+
+# שליחת הודעה פשוטה
+message = client.messages.create(
+    model="claude-sonnet-4-6",
+    max_tokens=1024,
+    messages=[
+        {
+            "role": "user",
+            "content": "הסבר לי מה זה Python בשלוש משפטים פשוטים"
+        }
+    ]
+)
+
+# הדפסת התשובה
+print(message.content[0].text)
+
+# הדפסת מידע על השימוש
+print(f"Tokens used: {message.usage.input_tokens} in, {message.usage.output_tokens} out")
+\`\`\`
+
+### JavaScript
+\`\`\`javascript
+import Anthropic from '@anthropic-ai/sdk';
+
+const client = new Anthropic();
+
+const message = await client.messages.create({
+  model: 'claude-sonnet-4-6',
+  max_tokens: 1024,
+  messages: [
+    { role: 'user', content: 'Explain what JavaScript is in three simple sentences' }
+  ]
+});
+
+console.log(message.content[0].text);
+\`\`\`
+
+---
+
+## שלב 4: תכונות מתקדמות
+
+### System Prompt - הגדרת אופי
+\`\`\`python
+message = client.messages.create(
+    model="claude-sonnet-4-6",
+    max_tokens=1024,
+    system="אתה מורה לתכנות מתחילים. הסבר הכל בפשטות עם דוגמאות.",
+    messages=[
+        {"role": "user", "content": "מה זה loop?"}
+    ]
+)
+\`\`\`
+
+### שיחה רב-תורנית
+\`\`\`python
+messages = [
+    {"role": "user", "content": "שלום! אני רוצה ללמוד Python"},
+    {"role": "assistant", "content": "שלום! נהדר! Python היא שפת תכנות מעולה להתחלה. ממה תרצה להתחיל?"},
+    {"role": "user", "content": "מה ההבדל בין list ל-tuple?"}
+]
+
+message = client.messages.create(
+    model="claude-sonnet-4-6",
+    max_tokens=1024,
+    messages=messages
+)
+\`\`\`
+
+### Streaming - תשובה בזמן אמת
+\`\`\`python
+with client.messages.stream(
+    model="claude-sonnet-4-6",
+    max_tokens=1024,
+    messages=[{"role": "user", "content": "כתוב סיפור קצר"}]
+) as stream:
+    for text in stream.text_stream:
+        print(text, end="", flush=True)
+\`\`\`
+
+---
+
+## 💡 טיפים חשובים
+
+1. **התחילו עם Haiku** - זול ומהיר, מושלם ללמידה
+2. **הגבילו max_tokens** - מונע תשובות ארוכות מדי ועלויות מיותרות
+3. **שמרו API Key בסביבה** - לעולם לא בקוד
+4. **עקבו אחרי עלויות** - בדקו ב-console.anthropic.com
+5. **השתמשו ב-system prompt** - לתוצאות טובות יותר`,
+          en: `# Getting Started with the API - Step by Step Guide
+
+## Step 1: Create an API Account
+
+### 1.1 Sign Up
+1. Go to **console.anthropic.com**
+2. Click **Sign Up**
+3. Fill in details and verify email
+4. This is a **separate** account from claude.ai!
+
+### 1.2 Create an API Key
+1. In the menu, click **API Keys**
+2. Click **Create Key**
+3. Give it a name (e.g., "my-first-key")
+4. **Save the key!** It's shown only once
+
+> ⚠️ **Very Important:** Never share your API Key! Don't put it in code that goes to GitHub. Use environment variables.
+
+### 1.3 Add Credits
+1. Click **Billing**
+2. Add a credit card
+3. Add credits (minimum $5)
+4. Set a **Spending Limit** - monthly spending cap
+
+---
+
+## Step 2: Install SDK
+
+### Python (most popular)
+\`\`\`bash
+pip install anthropic
+\`\`\`
+
+### JavaScript / TypeScript
+\`\`\`bash
+npm install @anthropic-ai/sdk
+\`\`\`
+
+---
+
+## Step 3: First Code
+
+### Python
+\`\`\`python
+import anthropic
+
+client = anthropic.Anthropic()  # reads from ANTHROPIC_API_KEY automatically
+
+message = client.messages.create(
+    model="claude-sonnet-4-6",
+    max_tokens=1024,
+    messages=[
+        {"role": "user", "content": "Explain Python in three simple sentences"}
+    ]
+)
+
+print(message.content[0].text)
+print(f"Tokens used: {message.usage.input_tokens} in, {message.usage.output_tokens} out")
+\`\`\`
+
+---
+
+## Step 4: Advanced Features
+
+### System Prompt
+\`\`\`python
+message = client.messages.create(
+    model="claude-sonnet-4-6",
+    max_tokens=1024,
+    system="You are a beginner programming teacher. Explain everything simply with examples.",
+    messages=[{"role": "user", "content": "What is a loop?"}]
+)
+\`\`\`
+
+### Multi-turn Conversation
+\`\`\`python
+messages = [
+    {"role": "user", "content": "Hi! I want to learn Python"},
+    {"role": "assistant", "content": "Hi! Great! Python is an excellent language to start with. What would you like to begin with?"},
+    {"role": "user", "content": "What's the difference between list and tuple?"}
+]
+
+message = client.messages.create(
+    model="claude-sonnet-4-6",
+    max_tokens=1024,
+    messages=messages
+)
+\`\`\`
+
+### Streaming - Real-time Response
+\`\`\`python
+with client.messages.stream(
+    model="claude-sonnet-4-6",
+    max_tokens=1024,
+    messages=[{"role": "user", "content": "Write a short story"}]
+) as stream:
+    for text in stream.text_stream:
+        print(text, end="", flush=True)
+\`\`\`
+
+---
+
+## 💡 Important Tips
+
+1. **Start with Haiku** - cheap and fast, perfect for learning
+2. **Limit max_tokens** - prevents overly long responses and unnecessary costs
+3. **Store API Key in environment** - never in code
+4. **Track costs** - check at console.anthropic.com
+5. **Use system prompts** - for better results`
+        }
+      },
+      {
+        id: 'claude-code-auth',
+        title: { he: 'Claude Code - חשבון או API?', en: 'Claude Code - Account or API?' },
+        description: { he: 'איך Claude Code עובד עם חשבון Pro/Max מול API credits', en: 'How Claude Code works with Pro/Max account vs API credits' },
+        duration: 20,
+        content: {
+          he: `# Claude Code - חשבון או API?
+
+## שתי דרכים להפעיל את Claude Code
+
+Claude Code יכול לעבוד בשתי דרכים:
+
+### 1. דרך חשבון Pro/Max (מומלץ למתחילים)
+
+**איך זה עובד:**
+- מתחברים עם חשבון claude.ai שלכם
+- Claude Code שואל "Login with Claude account?"
+- לוחצים Yes ומתחברים דרך הדפדפן
+- השימוש כלול במנוי שלכם
+
+**יתרונות:**
+- ✅ פשוט - לא צריך API key
+- ✅ מנוי קבוע - אין הפתעות בחיוב
+- ✅ Pro ($20) כולל שימוש בסיסי ב-Claude Code
+- ✅ Max ($100) כולל שימוש מורחב
+
+**חסרונות:**
+- ❌ יש מגבלת שימוש (במיוחד ב-Pro)
+- ❌ עלול להיתקע באמצע משימה ארוכה
+
+### 2. דרך API Credits
+
+**איך זה עובד:**
+- מגדירים API Key כמשתנה סביבה
+- Claude Code משתמש ב-credits שלכם
+- משלמים לפי שימוש בפועל
+
+\`\`\`bash
+# הגדרת API Key
+export ANTHROPIC_API_KEY="sk-ant-api03-..."
+
+# הפעלת Claude Code
+claude
+\`\`\`
+
+**יתרונות:**
+- ✅ אין מגבלת שימוש (כל עוד יש credits)
+- ✅ משלמים רק על מה שצריכים
+- ✅ מתאים לעבודה אינטנסיבית
+
+**חסרונות:**
+- ❌ יכול להיות יקר (Opus עולה $15/$75 per 1M tokens)
+- ❌ צריך לעקוב אחרי עלויות
+- ❌ דורש הגדרת API key
+
+---
+
+## 💰 כמה עולה Claude Code בפועל?
+
+### שימוש טיפוסי ביום עבודה
+
+| פעולה | Tokens בערך | עלות (Sonnet) | עלות (Opus) |
+|--------|-------------|---------------|-------------|
+| שאלה קצרה | ~1,000 | $0.003 | $0.015 |
+| עריכת קובץ | ~5,000 | $0.02 | $0.08 |
+| סקירת קוד | ~10,000 | $0.05 | $0.15 |
+| בניית פיצ'ר שלם | ~50,000 | $0.20 | $0.75 |
+| **יום עבודה שלם** | ~200,000 | **$0.80** | **$3.00** |
+
+### המלצות
+
+- **מתחילים:** Pro plan ($20/חודש) - מספיק לרוב השימושים
+- **משתמשים כבדים:** Max plan ($100/חודש) - שימוש כמעט ללא הגבלה
+- **צוותים גדולים:** API credits - שליטה מלאה בעלויות
+- **פרויקטים גדולים:** API credits עם Sonnet (חסכוני) + Opus (למשימות קריטיות)
+
+---
+
+## 🔧 בחירת מודל ב-Claude Code
+
+Claude Code מאפשר לבחור מודל:
+\`\`\`bash
+# שימוש ב-Sonnet (ברירת מחדל - מהיר וחסכוני)
+claude --model claude-sonnet-4-6
+
+# שימוש ב-Opus (חזק יותר, יקר יותר)
+claude --model claude-opus-4-6
+
+# החלפת מודל באמצע שיחה
+/model
+\`\`\`
+
+### מתי להשתמש באיזה מודל?
+
+**Sonnet 4.6 (ברירת מחדל):**
+- עריכת קבצים בודדים
+- שאלות ותשובות
+- commits ו-PRs
+- רוב העבודה היומיומית
+
+**Opus 4.6 (למשימות מורכבות):**
+- ארכיטקטורה ותכנון
+- refactoring מורכב של כל הפרויקט
+- debugging קשה
+- כתיבת אלגוריתמים מורכבים`,
+          en: `# Claude Code - Account or API?
+
+## Two Ways to Power Claude Code
+
+Claude Code can work in two ways:
+
+### 1. Via Pro/Max Account (Recommended for beginners)
+
+**How it works:**
+- Connect with your claude.ai account
+- Claude Code asks "Login with Claude account?"
+- Click Yes and authenticate through browser
+- Usage is included in your subscription
+
+**Pros:**
+- ✅ Simple - no API key needed
+- ✅ Fixed subscription - no billing surprises
+- ✅ Pro ($20) includes basic Claude Code usage
+- ✅ Max ($100) includes extended usage
+
+**Cons:**
+- ❌ Usage limits (especially on Pro)
+- ❌ May hit limits during long tasks
+
+### 2. Via API Credits
+
+**How it works:**
+- Set API Key as environment variable
+- Claude Code uses your credits
+- Pay only for actual usage
+
+\`\`\`bash
+export ANTHROPIC_API_KEY="sk-ant-api03-..."
+claude
+\`\`\`
+
+**Pros:**
+- ✅ No usage limits (as long as you have credits)
+- ✅ Pay only for what you need
+- ✅ Suitable for intensive work
+
+**Cons:**
+- ❌ Can be expensive (Opus costs $15/$75 per 1M tokens)
+- ❌ Need to track costs
+- ❌ Requires API key setup
+
+---
+
+## 💰 How Much Does Claude Code Actually Cost?
+
+### Typical Workday Usage
+
+| Action | ~Tokens | Cost (Sonnet) | Cost (Opus) |
+|--------|---------|---------------|-------------|
+| Short question | ~1,000 | $0.003 | $0.015 |
+| File edit | ~5,000 | $0.02 | $0.08 |
+| Code review | ~10,000 | $0.05 | $0.15 |
+| Full feature | ~50,000 | $0.20 | $0.75 |
+| **Full workday** | ~200,000 | **$0.80** | **$3.00** |
+
+---
+
+## 🔧 Choosing a Model in Claude Code
+
+\`\`\`bash
+# Sonnet (default - fast and economical)
+claude --model claude-sonnet-4-6
+
+# Opus (more powerful, more expensive)
+claude --model claude-opus-4-6
+
+# Switch model mid-conversation
+/model
+\`\`\`
+
+### When to use which model?
+
+**Sonnet 4.6 (default):**
+- Single file edits
+- Q&A
+- Commits and PRs
+- Most daily work
+
+**Opus 4.6 (for complex tasks):**
+- Architecture and planning
+- Complex full-project refactoring
+- Difficult debugging
+- Complex algorithm writing`
+        }
+      },
+      {
+        id: 'cost-optimization',
+        title: { he: 'אופטימיזציה של עלויות', en: 'Cost Optimization' },
+        description: { he: 'טיפים לחיסכון בעלויות שימוש ב-Claude', en: 'Tips for saving on Claude usage costs' },
+        duration: 20,
+        content: {
+          he: `# אופטימיזציה של עלויות
+
+## 7 טיפים לחיסכון
+
+### 1. בחרו את המודל הנכון
+לא כל משימה דורשת את המודל הכי חזק!
+
+| משימה | מודל מומלץ | עלות יחסית |
+|--------|------------|-------------|
+| שאלות פשוטות | Haiku | 💲 |
+| עבודה יומיומית | Sonnet | 💲💲 |
+| משימות מורכבות | Opus | 💲💲💲💲 |
+
+### 2. כתבו פרומפטים יעילים
+- **היו ספציפיים** - פחות אי-הבנות = פחות ניסיונות
+- **תנו הקשר** - Claude לא צריך "לנחש"
+- **הגבילו אורך** - "ענה בקצרה" או "עד 100 מילים"
+
+### 3. השתמשו ב-System Prompts
+System prompt נשלח פעם אחת ונשאר לכל השיחה:
+\`\`\`
+system: "ענה תמיד בקצרה ובנקודה. אל תחזור על השאלה."
+\`\`\`
+זה חוסך tokens בכל תשובה!
+
+### 4. נהלו את חלון ההקשר
+- **התחילו שיחה חדשה** כשהנושא משתנה
+- **השתמשו ב-/compact** ב-Claude Code לדחיסת ההקשר
+- **אל תשלחו קבצים מיותרים**
+
+### 5. Cache בAPI
+Anthropic תומך ב-**Prompt Caching**:
+\`\`\`python
+# שימוש ב-cache_control לחיסכון
+messages=[{
+    "role": "user",
+    "content": [
+        {
+            "type": "text",
+            "text": long_document,
+            "cache_control": {"type": "ephemeral"}
+        },
+        {
+            "type": "text",
+            "text": "סכם את המסמך"
+        }
+    ]
+}]
+\`\`\`
+Cache מוזיל את עלות ה-input ב-90%!
+
+### 6. Batch API לעיבוד כמויות
+במקום לשלוח בקשה אחת אחרי השנייה:
+\`\`\`python
+# Batch API - 50% הנחה!
+batch = client.messages.batches.create(
+    requests=[
+        {"custom_id": "1", "params": {...}},
+        {"custom_id": "2", "params": {...}},
+        # עד 10,000 בקשות!
+    ]
+)
+\`\`\`
+Batch API נותן **50% הנחה** על כל הבקשות!
+
+### 7. הגדירו Spending Limits
+ב-console.anthropic.com:
+1. **Billing → Spending Limit**
+2. הגדירו מגבלה חודשית
+3. קבלו התראות כשמתקרבים
+
+---
+
+## 📊 תרחיש עלויות לדוגמה
+
+### מפתח בודד (שימוש יומי)
+- **Pro Plan:** $20/חודש - מספיק לרוב
+- **API (Sonnet):** $15-25/חודש
+- **API (Opus):** $50-100/חודש
+
+### צוות של 5 מפתחים
+- **Team Plan:** $125/חודש (5 × $25)
+- **API (Sonnet):** $75-125/חודש
+- **API מעורב:** $100-200/חודש
+
+### סטארטאפ (שימוש אינטנסיבי)
+- **API + Batch:** $200-500/חודש
+- **API + Cache:** חיסכון של 40-60%`,
+          en: `# Cost Optimization
+
+## 7 Tips for Saving
+
+### 1. Choose the Right Model
+Not every task needs the most powerful model!
+
+| Task | Recommended Model | Relative Cost |
+|------|-------------------|---------------|
+| Simple questions | Haiku | 💲 |
+| Daily work | Sonnet | 💲💲 |
+| Complex tasks | Opus | 💲💲💲💲 |
+
+### 2. Write Efficient Prompts
+- **Be specific** - fewer misunderstandings = fewer retries
+- **Give context** - Claude doesn't need to "guess"
+- **Limit length** - "answer briefly" or "up to 100 words"
+
+### 3. Use System Prompts
+System prompt is sent once and persists for the whole conversation:
+\`\`\`
+system: "Always answer briefly and to the point. Don't repeat the question."
+\`\`\`
+
+### 4. Manage the Context Window
+- **Start a new conversation** when the topic changes
+- **Use /compact** in Claude Code to compress context
+- **Don't send unnecessary files**
+
+### 5. API Caching
+Anthropic supports **Prompt Caching**:
+\`\`\`python
+messages=[{
+    "role": "user",
+    "content": [
+        {
+            "type": "text",
+            "text": long_document,
+            "cache_control": {"type": "ephemeral"}
+        },
+        {"type": "text", "text": "Summarize the document"}
+    ]
+}]
+\`\`\`
+Cache reduces input cost by 90%!
+
+### 6. Batch API for Volume Processing
+\`\`\`python
+batch = client.messages.batches.create(
+    requests=[
+        {"custom_id": "1", "params": {...}},
+        {"custom_id": "2", "params": {...}},
+    ]
+)
+\`\`\`
+Batch API gives **50% discount** on all requests!
+
+### 7. Set Spending Limits
+At console.anthropic.com:
+1. **Billing → Spending Limit**
+2. Set a monthly limit
+3. Get alerts when approaching`
+        }
+      }
+    ]
   }
 ];
 

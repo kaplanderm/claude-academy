@@ -8,9 +8,10 @@ interface LessonViewerProps {
   course: Course;
   lesson: Lesson;
   onBack: () => void;
+  onNavigate: (lessonId: string) => void;
 }
 
-export default function LessonViewer({ course, lesson, onBack }: LessonViewerProps) {
+export default function LessonViewer({ course, lesson, onBack, onNavigate }: LessonViewerProps) {
   const { lang, dir, t } = useLang();
   const currentIdx = course.lessons.findIndex(l => l.id === lesson.id);
 
@@ -233,28 +234,35 @@ export default function LessonViewer({ course, lesson, onBack }: LessonViewerPro
         <div className="flex justify-between mt-8">
           {currentIdx > 0 ? (
             <button
-              onClick={() => {
-                const prev = course.lessons[currentIdx - 1];
-                // Force re-render by using window.scrollTo
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-              className="flex items-center gap-2 px-4 py-2 rounded-xl border border-border-color hover:border-claude-orange text-text-secondary hover:text-claude-orange transition-all"
+              onClick={() => onNavigate(course.lessons[currentIdx - 1].id)}
+              className="flex items-center gap-2 px-5 py-2.5 rounded-xl border border-border-color hover:border-claude-orange text-text-secondary hover:text-claude-orange transition-all"
             >
               {dir === 'rtl' ? <ArrowRight size={16} /> : <ArrowLeft size={16} />}
-              {t('common.previous')}
+              <span className="flex flex-col items-start">
+                <span className="text-xs text-text-muted">{t('common.previous')}</span>
+                <span className="text-sm font-medium">{course.lessons[currentIdx - 1].title[lang]}</span>
+              </span>
             </button>
           ) : <div />}
           {currentIdx < course.lessons.length - 1 ? (
             <button
-              onClick={() => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-              className="flex items-center gap-2 px-4 py-2 rounded-xl bg-claude-orange text-white hover:bg-claude-orange-dark transition-colors"
+              onClick={() => onNavigate(course.lessons[currentIdx + 1].id)}
+              className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-claude-orange text-white hover:bg-claude-orange-dark transition-colors"
             >
-              {t('common.next')}
+              <span className="flex flex-col items-end">
+                <span className="text-xs text-white/70">{t('common.next')}</span>
+                <span className="text-sm font-medium">{course.lessons[currentIdx + 1].title[lang]}</span>
+              </span>
               {dir === 'rtl' ? <ArrowLeft size={16} /> : <ArrowRight size={16} />}
             </button>
-          ) : <div />}
+          ) : (
+            <button
+              onClick={onBack}
+              className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-green-500 text-white hover:bg-green-600 transition-colors"
+            >
+              {lang === 'he' ? 'סיימתי! חזרה לקורסים' : 'Done! Back to courses'}
+            </button>
+          )}
         </div>
       </div>
     </section>
