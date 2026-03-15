@@ -1,9 +1,13 @@
 'use client';
 import { useLang } from '@/lib/LangContext';
-import { ArrowRight, Play, BookOpen, Clock, Layers, Calendar } from 'lucide-react';
+import { ArrowRight, Play, BookOpen, Clock, Layers, Calendar, ExternalLink } from 'lucide-react';
 
 export default function Hero() {
   const { t, dir, lang } = useLang();
+
+  const researchUrl = lang === 'he'
+    ? 'https://kaplanclinic.co.il/he/derm-ai'
+    : 'https://kaplanclinic.co.il/en/derm-ai';
 
   return (
     <section className="relative min-h-screen gradient-bg pt-20 overflow-hidden" dir={dir}>
@@ -20,6 +24,11 @@ export default function Hero() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-24">
         <div className="text-center max-w-4xl mx-auto">
+          {/* DermUnbound subtitle */}
+          <div className="mb-4">
+            <span className="text-sm font-medium text-claude-brown/70">{t('hero.byDermUnbound')}</span>
+          </div>
+
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-claude-warm border border-claude-peach/50 mb-8">
             <span className="text-sm font-medium text-claude-brown">{t('hero.badge')}</span>
@@ -39,7 +48,7 @@ export default function Hero() {
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <a
               href="#courses"
               className="group flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-r from-claude-orange to-claude-orange-light text-white font-semibold text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-[1.02] pulse-glow"
@@ -53,6 +62,19 @@ export default function Hero() {
             >
               <Play size={20} />
               {t('hero.exploreCourses')}
+            </a>
+          </div>
+
+          {/* Research link */}
+          <div className="mb-16">
+            <a
+              href={researchUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm text-text-muted hover:text-claude-orange transition-colors"
+            >
+              {t('hero.researchLink')}
+              <ExternalLink size={14} />
             </a>
           </div>
 

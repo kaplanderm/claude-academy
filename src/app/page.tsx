@@ -10,6 +10,7 @@ import PluginsSection from '@/components/PluginsSection';
 import UseCasesSection from '@/components/UseCasesSection';
 import BlogSection from '@/components/BlogSection';
 import BonusSection from '@/components/BonusSection';
+import MedicalUseCasesSection from '@/components/MedicalUseCasesSection';
 import Footer from '@/components/Footer';
 
 function AppContent() {
@@ -26,6 +27,7 @@ function AppContent() {
         <ToolsComparison />
         <PluginsSection />
         <UseCasesSection />
+        <MedicalUseCasesSection />
         <BlogSection />
         <BonusSection />
       </main>

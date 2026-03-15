@@ -12,6 +12,7 @@ export default function Header() {
     { key: 'courses', href: '#courses' },
     { key: 'tools', href: '#tools' },
     { key: 'plugins', href: '#plugins' },
+    { key: 'medicalUses', href: '#medical-uses' },
     { key: 'useCases', href: '#use-cases' },
     { key: 'blog', href: '#blog' },
     { key: 'bonus', href: '#bonus' },
@@ -26,9 +27,14 @@ export default function Header() {
             <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-claude-orange to-claude-orange-light flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
               <span className="text-white font-bold text-lg">C</span>
             </div>
-            <span className="font-bold text-xl text-text-primary hidden sm:block">
-              Claude <span className="gradient-text">Academy</span>
-            </span>
+            <div className="hidden sm:block">
+              <span className="font-bold text-xl text-text-primary">
+                Claude <span className="gradient-text">Academy</span>
+              </span>
+              <span className="block text-xs text-text-muted -mt-0.5">
+                {lang === 'he' ? 'לרופאים' : 'for Physicians'}
+              </span>
+            </div>
           </a>
 
           {/* Desktop Nav */}

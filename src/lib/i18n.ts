@@ -8,6 +8,7 @@ export const translations = {
     tools: { he: 'כלים וממשקים', en: 'Tools & Interfaces' },
     plugins: { he: 'תוספים ומחברים', en: 'Plugins & Connectors' },
     useCases: { he: 'שימושים לפי תחום', en: 'Use Cases' },
+    medicalUses: { he: 'שימושים רפואיים', en: 'Medical Use Cases' },
     blog: { he: 'בלוג וחדשות', en: 'Blog & News' },
     bonus: { he: 'שיעורי בונוס', en: 'Bonus Lessons' },
     about: { he: 'אודות', en: 'About' },
@@ -15,15 +16,18 @@ export const translations = {
   // Hero
   hero: {
     badge: { he: '🚀 הפלטפורמה המקיפה ללימוד Claude', en: '🚀 The Comprehensive Claude Learning Platform' },
+    title: { he: 'Claude Academy לרופאים', en: 'Claude Academy for Physicians' },
     title1: { he: 'שלטו ב-', en: 'Master ' },
     titleHighlight: { he: 'Claude AI', en: 'Claude AI' },
     title2: { he: ' מההתחלה ועד לרמת מומחה', en: ' From Beginner to Expert' },
     subtitle: {
-      he: 'למדו להשתמש ב-Claude ו-Claude Code בכל הממשקים: Desktop, Terminal, IDE ועוד. קורס מקיף בעברית ובאנגלית למתחילים ומתקדמים כאחד.',
-      en: 'Learn to use Claude and Claude Code across all interfaces: Desktop, Terminal, IDE, and more. A comprehensive course in Hebrew and English for beginners and advanced users alike.'
+      he: 'תוכנית הכשרה מקיפה לשימוש ב-Claude AI בעבודה הרפואית — טיפול, תיעוד, מחקר, תקשורת עם מטופלים, ניהול מרפאה ושיווק',
+      en: 'Comprehensive training program for using Claude AI in medical practice — patient care, documentation, research, patient communication, practice management, and marketing'
     },
     startLearning: { he: 'התחילו ללמוד', en: 'Start Learning' },
     exploreCourses: { he: 'גלו את הקורסים', en: 'Explore Courses' },
+    researchLink: { he: 'מחקר: AI בדרמטולוגיה', en: 'Research: AI in Dermatology' },
+    byDermUnbound: { he: 'פרויקט מחקר DermUnbound', en: 'DermUnbound Research Project' },
     stat1Label: { he: 'שיעורים', en: 'Lessons' },
     stat2Label: { he: 'שעות תוכן', en: 'Hours of Content' },
     stat3Label: { he: 'תחומי שימוש', en: 'Use Case Areas' },
@@ -102,6 +106,9 @@ export const translations = {
     apiReference: { he: 'API Reference', en: 'API Reference' },
     discord: { he: 'Discord קהילת', en: 'Discord Community' },
     github: { he: 'GitHub', en: 'GitHub' },
+    license: { he: 'שימוש חופשי למטרות לא מסחריות', en: 'Free for non-commercial use' },
+    research: { he: 'מחקר AI ברפואה', en: 'AI Research in Medicine' },
+    dermUnbound: { he: 'פרויקט מחקר DermUnbound', en: 'DermUnbound Research Project' },
   },
   // Common
   common: {

@@ -1,9 +1,13 @@
 'use client';
 import { useLang } from '@/lib/LangContext';
-import { Heart } from 'lucide-react';
+import { Heart, ExternalLink } from 'lucide-react';
 
 export default function Footer() {
   const { t, dir, lang } = useLang();
+
+  const researchUrl = lang === 'he'
+    ? 'https://kaplanclinic.co.il/he/derm-ai'
+    : 'https://kaplanclinic.co.il/en/derm-ai';
 
   return (
     <footer className="bg-claude-dark text-white py-16" dir={dir}>
@@ -11,12 +15,20 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div className="md:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
+            <div className="flex items-center gap-2 mb-2">
               <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-claude-orange to-claude-orange-light flex items-center justify-center">
                 <span className="text-white font-bold text-lg">C</span>
               </div>
-              <span className="font-bold text-xl">Claude Academy</span>
+              <div>
+                <span className="font-bold text-xl">Claude Academy</span>
+                <span className="block text-xs text-gray-400 -mt-0.5">
+                  {lang === 'he' ? 'לרופאים' : 'for Physicians'}
+                </span>
+              </div>
             </div>
+            <p className="text-sm text-claude-orange font-medium mb-2">
+              {t('footer.dermUnbound')}
+            </p>
             <p className="text-sm text-gray-400 leading-relaxed">
               {t('footer.description')}
             </p>
@@ -47,23 +59,57 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Community */}
+          {/* SEO Links & Research */}
           <div>
-            <h4 className="font-bold mb-4 text-claude-orange">{t('footer.community')}</h4>
+            <h4 className="font-bold mb-4 text-claude-orange">{t('footer.research')}</h4>
+            <ul className="space-y-2">
+              <li>
+                <a href="https://kaplanclinic.co.il" target="_blank" rel="dofollow" className="text-sm text-gray-400 hover:text-white transition-colors inline-flex items-center gap-1">
+                  Kaplan Clinic
+                  <ExternalLink size={12} />
+                </a>
+              </li>
+              <li>
+                <a href={researchUrl} target="_blank" rel="dofollow" className="text-sm text-gray-400 hover:text-white transition-colors inline-flex items-center gap-1">
+                  {t('hero.researchLink')}
+                  <ExternalLink size={12} />
+                </a>
+              </li>
+              <li>
+                <a href="https://mohspedia.com" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-white transition-colors inline-flex items-center gap-1">
+                  MohsPedia
+                  <ExternalLink size={12} />
+                </a>
+              </li>
+              <li>
+                <a href="https://dermai.co.il" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-white transition-colors inline-flex items-center gap-1">
+                  DermAI
+                  <ExternalLink size={12} />
+                </a>
+              </li>
+            </ul>
+
+            <h4 className="font-bold mt-6 mb-4 text-claude-orange">{t('footer.community')}</h4>
             <ul className="space-y-2">
               <li><a href="https://discord.gg/anthropic" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-white transition-colors">{t('footer.discord')}</a></li>
               <li><a href="https://github.com/anthropics" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-white transition-colors">{t('footer.github')}</a></li>
-              <li><a href="https://www.anthropic.com/research" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-white transition-colors">{lang === 'he' ? 'מחקר' : 'Research'}</a></li>
-              <li><a href="https://www.anthropic.com/news" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-white transition-colors">{lang === 'he' ? 'חדשות' : 'News'}</a></li>
             </ul>
           </div>
         </div>
 
         {/* Bottom bar */}
         <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-gray-500">
-            © 2026 Claude Academy. {t('footer.rights')}.
-          </p>
+          <div className="text-sm text-gray-500 text-center md:text-start">
+            <p>
+              {t('footer.license')}.{' '}
+              {lang === 'he'
+                ? 'כל הזכויות שמורות ל-Kaplan Clinic'
+                : 'All rights reserved to Kaplan Clinic'}
+            </p>
+            <p className="mt-1">
+              © 2026 Claude Academy. {t('footer.rights')}.
+            </p>
+          </div>
           <p className="text-sm text-gray-500 flex items-center gap-1">
             {t('footer.madeWith')} <Heart size={14} className="text-red-500" /> {lang === 'he' ? 'ו-Claude AI' : 'and Claude AI'}
           </p>

@@ -19,13 +19,17 @@ const heebo = Heebo({
 });
 
 export const metadata: Metadata = {
-  title: "Claude Academy - הפלטפורמה המקיפה ללימוד Claude AI",
-  description: "למדו להשתמש ב-Claude ו-Claude Code מההתחלה ועד לרמת מומחה. קורס מקיף בעברית ובאנגלית. Master Claude AI from beginner to expert.",
-  keywords: ["Claude", "Claude Code", "AI", "Anthropic", "MCP", "training", "course", "Hebrew", "קורס", "הכשרה"],
+  title: "Claude Academy for Physicians | AI Training for Doctors | DermUnbound",
+  description: "Claude Academy for Physicians — comprehensive medical AI training program. Learn to use Claude AI in patient care, documentation, research, and practice management. תוכנית הכשרה מקיפה לרופאים לשימוש ב-Claude AI. By kaplanclinic.co.il",
+  keywords: ["Claude", "Claude Code", "AI", "Anthropic", "MCP", "training", "course", "Hebrew", "קורס", "הכשרה", "medical AI", "Claude for doctors", "AI in dermatology", "DermUnbound", "AI in medicine", "physician AI training"],
+  alternates: {
+    canonical: "https://kaplanclinic.co.il/he/derm-ai",
+  },
   openGraph: {
-    title: "Claude Academy",
-    description: "The comprehensive Claude AI training platform",
+    title: "Claude Academy for Physicians | DermUnbound Research Project",
+    description: "Comprehensive medical AI training program for physicians. Learn to use Claude AI in clinical practice, documentation, research, and patient communication.",
     type: "website",
+    url: "https://kaplanclinic.co.il/he/derm-ai",
   },
 };
 
