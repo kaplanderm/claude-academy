@@ -62,10 +62,16 @@ export default function Footer() {
             {lang === 'he' ? 'אודות' : 'About'}
           </Link>
           <Link
-            href="/medical/privacy"
+            href="/privacy"
             className="text-gray-400 hover:text-white transition-colors"
           >
             {lang === 'he' ? 'פרטיות' : 'Privacy'}
+          </Link>
+          <Link
+            href="/accessibility"
+            className="text-gray-400 hover:text-white transition-colors"
+          >
+            {lang === 'he' ? 'נגישות' : 'Accessibility'}
           </Link>
         </div>
 
