@@ -6154,6 +6154,204 @@ export const bonusLessons = [
     duration: 20,
     level: 'intermediate' as const,
     icon: '🔤',
+    content: {
+      he: `# Regex עם Claude
+
+ביטויים רגולריים (Regular Expressions) הם אחד הכלים החזקים ביותר בארגז הכלים של מפתח — וגם אחד המפחידים ביותר. עם Claude, אפשר ליצור, להבין ולדבג ביטויים רגולריים מורכבים בקלות.
+
+:::beginner
+ביטוי רגולרי (Regex) הוא דפוס טקסט שמאפשר לחפש, לאמת ולעבד מחרוזות. לדוגמה, הביטוי \\d+ מתאים לכל רצף של ספרות. אל תדאגו אם זה נשמע מורכב — Claude יעזור לכם להבין כל חלק.
+:::
+
+## למה Regex עם Claude?
+
+רוב המפתחים נתקלים בביטויים רגולריים ומרגישים אבודים. הסינטקס מוזר, הסימנים לא אינטואיטיביים, והדיבוג קשה. Claude משנה את המשחק כי:
+
+- **הוא מסביר כל חלק** — תנו לו ביטוי רגולרי והוא יפרק אותו לחלקים ויסביר כל אחד
+- **הוא בונה ביטויים מתיאור** — תארו מה אתם מחפשים בשפה טבעית והוא יבנה את הביטוי
+- **הוא מספק דוגמאות** — לכל ביטוי הוא יראה מה מתאים ומה לא
+- **הוא מתקן שגיאות** — הדביקו ביטוי שלא עובד והוא ימצא את הבאג
+
+## דוגמאות מעשיות
+
+### אימות אימייל
+
+\`\`\`
+בקשה ל-Claude:
+"צור ביטוי רגולרי לאימות כתובת אימייל.
+הביטוי צריך לתמוך ב:
+- אותיות, ספרות, נקודות וקווים תחתונים לפני ה-@
+- דומיין עם לפחות נקודה אחת
+- סיומת של 2-4 אותיות"
+\`\`\`
+
+Claude יחזיר משהו כמו:
+
+\`\`\`
+^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$
+\`\`\`
+
+ויסביר כל חלק:
+- **^** — תחילת המחרוזת
+- **[a-zA-Z0-9._-]+** — אות אחת או יותר, ספרה, נקודה, קו תחתון או מקף
+- **@** — הסימן @
+- **[a-zA-Z0-9.-]+** — הדומיין
+- **\\.[a-zA-Z]{2,4}$** — נקודה ואז 2-4 אותיות בסוף
+
+### חילוץ מידע מטקסט
+
+\`\`\`
+בקשה ל-Claude:
+"יש לי טקסט עם מספרי טלפון ישראליים בפורמטים שונים:
+050-1234567, 052-123-4567, 0521234567, +972-52-1234567
+צור regex שיתפוס את כולם"
+\`\`\`
+
+### ניקוי נתונים
+
+\`\`\`
+בקשה ל-Claude:
+"יש לי CSV עם תאריכים בפורמטים שונים:
+01/03/2025, 2025-03-01, March 1 2025, 1.3.25
+צור regex לכל פורמט וקוד Python שממיר הכל ל-YYYY-MM-DD"
+\`\`\`
+
+## טיפים לעבודה עם Claude ו-Regex
+
+1. **תארו את המטרה, לא את הפתרון** — במקום "תכתוב regex עם lookahead", אמרו "אני צריך למצוא מילים שאחריהן באה נקודה"
+
+2. **תנו דוגמאות** — ספקו דוגמאות של מה צריך להתאים ומה לא:
+
+\`\`\`
+"צור regex שמתאים ל:
+✅ hello-world
+✅ my-component-name
+❌ -starts-with-dash
+❌ ends-with-dash-
+❌ double--dash"
+\`\`\`
+
+3. **בקשו הסבר** — תמיד בקשו מ-Claude להסביר את הביטוי שלב אחרי שלב
+
+4. **בקשו טסטים** — בקשו מ-Claude לכתוב מקרי בדיקה לביטוי הרגולרי
+
+:::advanced
+Claude מצטיין גם ביכולות Regex מתקדמות כמו:
+- **Lookahead ו-Lookbehind** — (?=...), (?<=...), (?!...), (?<!...)
+- **Named Groups** — (?<name>...) לחילוץ מובנה של מידע
+- **Backreferences** — \\1, \\2 להתייחסות לקבוצות קודמות
+- **Atomic Groups ו-Possessive Quantifiers** — לאופטימיזציה של ביצועים
+- **Unicode Categories** — \\p{Hebrew} לעבודה עם עברית ושפות אחרות
+
+בקשו מ-Claude להשתמש ביכולות אלו כשאתם צריכים ביטויים מורכבים במיוחד.
+:::
+
+## תרגיל מסכם
+
+נסו לבקש מ-Claude:
+- לבנות regex שמאמת סיסמה חזקה (8+ תווים, אות גדולה, אות קטנה, ספרה, תו מיוחד)
+- להסביר כל חלק בביטוי
+- לכתוב פונקציית JavaScript שמשתמשת בביטוי
+- לספק 10 דוגמאות — 5 שעוברות ו-5 שנכשלות`,
+      en: `# Regex with Claude
+
+Regular Expressions are one of the most powerful tools in a developer's toolkit — and also one of the most intimidating. With Claude, you can create, understand, and debug complex regex patterns with ease.
+
+:::beginner
+A Regular Expression (Regex) is a text pattern that lets you search, validate, and process strings. For example, \\d+ matches any sequence of digits. Don't worry if this sounds complex — Claude will help you understand every part.
+:::
+
+## Why Regex with Claude?
+
+Most developers encounter regular expressions and feel lost. The syntax is weird, the symbols aren't intuitive, and debugging is hard. Claude changes the game because:
+
+- **It explains every part** — give it a regex and it'll break it down piece by piece
+- **It builds patterns from descriptions** — describe what you're looking for in plain language and it'll build the regex
+- **It provides examples** — for every pattern it shows what matches and what doesn't
+- **It fixes bugs** — paste a broken regex and it'll find the issue
+
+## Practical Examples
+
+### Email Validation
+
+\`\`\`
+Prompt for Claude:
+"Create a regex to validate email addresses.
+The pattern should support:
+- Letters, digits, dots, and underscores before the @
+- A domain with at least one dot
+- A suffix of 2-4 letters"
+\`\`\`
+
+Claude will return something like:
+
+\`\`\`
+^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$
+\`\`\`
+
+And explain each part:
+- **^** — start of string
+- **[a-zA-Z0-9._-]+** — one or more letters, digits, dots, underscores, or hyphens
+- **@** — the @ symbol
+- **[a-zA-Z0-9.-]+** — the domain
+- **\\.[a-zA-Z]{2,4}$** — a dot followed by 2-4 letters at the end
+
+### Extracting Data from Text
+
+\`\`\`
+Prompt for Claude:
+"I have text with phone numbers in various formats:
+555-123-4567, (555) 123-4567, 5551234567, +1-555-123-4567
+Create a regex that captures all of them"
+\`\`\`
+
+### Data Cleaning
+
+\`\`\`
+Prompt for Claude:
+"I have a CSV with dates in different formats:
+01/03/2025, 2025-03-01, March 1 2025, 1.3.25
+Create a regex for each format and Python code to convert everything to YYYY-MM-DD"
+\`\`\`
+
+## Tips for Working with Claude and Regex
+
+1. **Describe the goal, not the solution** — instead of "write a regex with lookahead", say "I need to find words followed by a period"
+
+2. **Provide examples** — supply examples of what should match and what shouldn't:
+
+\`\`\`
+"Create a regex that matches:
+✅ hello-world
+✅ my-component-name
+❌ -starts-with-dash
+❌ ends-with-dash-
+❌ double--dash"
+\`\`\`
+
+3. **Ask for explanations** — always ask Claude to explain the pattern step by step
+
+4. **Request tests** — ask Claude to write test cases for the regex
+
+:::advanced
+Claude excels at advanced Regex capabilities like:
+- **Lookahead and Lookbehind** — (?=...), (?<=...), (?!...), (?<!...)
+- **Named Groups** — (?<name>...) for structured data extraction
+- **Backreferences** — \\1, \\2 to reference previous groups
+- **Atomic Groups and Possessive Quantifiers** — for performance optimization
+- **Unicode Categories** — \\p{L} for working with international characters
+
+Ask Claude to use these features when you need particularly complex patterns.
+:::
+
+## Summary Exercise
+
+Try asking Claude to:
+- Build a regex that validates a strong password (8+ chars, uppercase, lowercase, digit, special char)
+- Explain each part of the pattern
+- Write a JavaScript function using the pattern
+- Provide 10 examples — 5 that pass and 5 that fail`
+    },
   },
   {
     id: 'bonus-sql',
@@ -6162,6 +6360,178 @@ export const bonusLessons = [
     duration: 30,
     level: 'intermediate' as const,
     icon: '🗃️',
+    content: {
+      he: `# SQL מתקדם עם Claude
+
+SQL הוא שפת השאילתות הסטנדרטית לעבודה עם מסדי נתונים, ו-Claude הוא השותף המושלם לכתיבת שאילתות מורכבות, אופטימיזציה ודיבוג.
+
+:::beginner
+SQL (Structured Query Language) היא שפה שמאפשרת לשלוף, להוסיף, לעדכן ולמחוק מידע ממסדי נתונים. הפקודה הבסיסית ביותר היא SELECT שמשמשת לשליפת נתונים. Claude יכול לעזור לכם לכתוב שאילתות גם אם אתם רק מתחילים.
+:::
+
+## למה SQL עם Claude?
+
+כתיבת שאילתות SQL מורכבות דורשת הבנה עמוקה של מבנה הנתונים, אופטימיזציה ולוגיקה. Claude עוזר כי:
+
+- **הוא מבין את המבנה** — תארו את הטבלאות שלכם והוא יבנה שאילתות מדויקות
+- **הוא מייעל ביצועים** — הדביקו שאילתה איטית והוא יציע אופטימיזציות
+- **הוא מסביר** — כל שאילתה מורכבת תקבל הסבר שורה אחר שורה
+- **הוא מתרגם** — תארו מה אתם צריכים בעברית והוא יכתוב את ה-SQL
+
+## דוגמאות מעשיות
+
+### שאילתות JOINs מורכבות
+
+\`\`\`
+בקשה ל-Claude:
+"יש לי 3 טבלאות:
+- users (id, name, email, created_at)
+- orders (id, user_id, total, status, created_at)
+- order_items (id, order_id, product_name, quantity, price)
+
+תכתוב שאילתה שמחזירה:
+- שם הלקוח
+- מספר ההזמנות שלו
+- סך כל הקניות
+- המוצר שהוא קנה הכי הרבה
+- רק לקוחות עם יותר מ-3 הזמנות
+- ממוין לפי סך הקניות יורד"
+\`\`\`
+
+### ניתוח נתונים עם Window Functions
+
+\`\`\`
+בקשה ל-Claude:
+"כתוב שאילתה שמראה לכל הזמנה:
+- את דירוג ההזמנה מבחינת סכום (מהגבוהה לנמוכה)
+- את הממוצע הנע של 3 ההזמנות האחרונות
+- את ההפרש באחוזים מההזמנה הקודמת
+- השתמש ב-Window Functions"
+\`\`\`
+
+### אופטימיזציה
+
+\`\`\`
+בקשה ל-Claude:
+"השאילתה הזו רצה 30 שניות. עזור לי לייעל אותה:
+[הדביקו את השאילתה האיטית]
+
+הטבלה orders מכילה 10 מיליון שורות.
+יש אינדקסים על user_id ו-created_at."
+\`\`\`
+
+## טיפים לעבודה עם Claude ו-SQL
+
+1. **תארו את המבנה** — ספרו ל-Claude על הטבלאות, העמודות, וסוגי הנתונים
+2. **ציינו את מנוע הדיטהבייס** — PostgreSQL, MySQL, SQLite — כל אחד מעט שונה
+3. **ספרו על הגודל** — כמות השורות משפיעה על הגישה לאופטימיזציה
+4. **בקשו הסבר** — תמיד בקשו ש-Claude יסביר את הלוגיקה
+
+:::advanced
+Claude מצטיין גם בנושאי SQL מתקדמים:
+- **CTEs רקורסיביים** — לעבודה עם מבני עץ ונתונים היררכיים
+- **Materialized Views** — למטמון של שאילתות מורכבות
+- **Query Plans** — ניתוח EXPLAIN ANALYZE ואופטימיזציה של ביצועים
+- **Partitioning** — חלוקת טבלאות גדולות לשיפור ביצועים
+- **JSON Functions** — עבודה עם עמודות JSON ב-PostgreSQL
+- **Lateral Joins** — שאילתות מתקדמות עם LATERAL
+
+בקשו מ-Claude לעזור לכם לעצב סכמת נתונים מאופטמת, לכתוב מיגרציות, או לנתח בעיות ביצועים מורכבות.
+:::
+
+## תרגיל מסכם
+
+נסו לבקש מ-Claude:
+- לעצב סכמת נתונים למערכת ניהול משימות (tasks, users, projects, comments)
+- לכתוב 5 שאילתות מורכבות שמנתחות את הנתונים
+- להסביר את תוכנית הביצוע של כל שאילתה
+- להציע אינדקסים מתאימים`,
+      en: `# Advanced SQL with Claude
+
+SQL is the standard query language for working with databases, and Claude is the perfect partner for writing complex queries, optimization, and debugging.
+
+:::beginner
+SQL (Structured Query Language) is a language that lets you retrieve, insert, update, and delete data from databases. The most basic command is SELECT, used to retrieve data. Claude can help you write queries even if you're just starting out.
+:::
+
+## Why SQL with Claude?
+
+Writing complex SQL queries requires deep understanding of data structure, optimization, and logic. Claude helps because:
+
+- **It understands structure** — describe your tables and it'll build precise queries
+- **It optimizes performance** — paste a slow query and it'll suggest optimizations
+- **It explains** — every complex query gets a line-by-line explanation
+- **It translates** — describe what you need in plain language and it'll write the SQL
+
+## Practical Examples
+
+### Complex JOINs
+
+\`\`\`
+Prompt for Claude:
+"I have 3 tables:
+- users (id, name, email, created_at)
+- orders (id, user_id, total, status, created_at)
+- order_items (id, order_id, product_name, quantity, price)
+
+Write a query that returns:
+- Customer name
+- Number of orders
+- Total purchases
+- Most purchased product
+- Only customers with more than 3 orders
+- Sorted by total purchases descending"
+\`\`\`
+
+### Data Analysis with Window Functions
+
+\`\`\`
+Prompt for Claude:
+"Write a query that shows for each order:
+- The rank by amount (highest to lowest)
+- The moving average of the last 3 orders
+- The percentage difference from the previous order
+- Use Window Functions"
+\`\`\`
+
+### Optimization
+
+\`\`\`
+Prompt for Claude:
+"This query takes 30 seconds. Help me optimize it:
+[paste your slow query here]
+
+The orders table has 10 million rows.
+There are indexes on user_id and created_at."
+\`\`\`
+
+## Tips for Working with Claude and SQL
+
+1. **Describe the structure** — tell Claude about tables, columns, and data types
+2. **Specify the database engine** — PostgreSQL, MySQL, SQLite — each is slightly different
+3. **Mention the scale** — row counts affect the optimization approach
+4. **Ask for explanations** — always ask Claude to explain the logic
+
+:::advanced
+Claude excels at advanced SQL topics:
+- **Recursive CTEs** — for working with tree structures and hierarchical data
+- **Materialized Views** — for caching complex queries
+- **Query Plans** — analyzing EXPLAIN ANALYZE and optimizing performance
+- **Partitioning** — splitting large tables for better performance
+- **JSON Functions** — working with JSON columns in PostgreSQL
+- **Lateral Joins** — advanced queries with LATERAL
+
+Ask Claude to help you design optimized data schemas, write migrations, or analyze complex performance issues.
+:::
+
+## Summary Exercise
+
+Try asking Claude to:
+- Design a data schema for a task management system (tasks, users, projects, comments)
+- Write 5 complex queries that analyze the data
+- Explain the execution plan for each query
+- Suggest appropriate indexes`
+    },
   },
   {
     id: 'bonus-git',
@@ -6170,6 +6540,210 @@ export const bonusLessons = [
     duration: 25,
     level: 'intermediate' as const,
     icon: '📦',
+    content: {
+      he: `# Git Mastery עם Claude Code
+
+Git הוא מערכת ניהול הגרסאות הנפוצה ביותר בעולם, ו-Claude Code הופך את העבודה איתו לפשוטה ואינטואיטיבית. בשיעור הזה נלמד איך לשלוט ב-Git ברמת מומחה באמצעות Claude Code.
+
+:::beginner
+Git הוא כלי שעוקב אחרי שינויים בקבצים שלכם. דמיינו שאתם כותבים מסמך ושומרים גרסה חדשה אחרי כל שינוי גדול — Git עושה את זה אוטומטית ומאפשר לכם לחזור לכל גרסה קודמת. Claude Code עוזר לכם להשתמש ב-Git בלי לזכור את כל הפקודות.
+:::
+
+## למה Git עם Claude Code?
+
+Git הוא כלי חזק אבל מורכב. יש מאות פקודות, אפשרויות ותרחישי שימוש. Claude Code מפשט את הכל כי:
+
+- **שפה טבעית** — במקום לזכור פקודות, פשוט תגידו מה אתם רוצים
+- **הבנת הקשר** — Claude Code רואה את המצב הנוכחי של הריפו ופועל בהתאם
+- **מניעת טעויות** — Claude Code יזהיר אתכם לפני פעולות מסוכנות
+- **הסברים** — כל פעולה מלווה בהסבר של מה קורה
+
+## פקודות Git בסיסיות עם Claude Code
+
+### ניהול שינויים
+
+\`\`\`
+"תראה לי מה השתנה מאז ה-commit האחרון"
+"תוסיף את כל הקבצים ששיניתי ותעשה commit עם הודעה מתאימה"
+"תעשה commit רק לקבצי ה-TypeScript, בלי קבצי ה-CSS"
+\`\`\`
+
+### עבודה עם ענפים
+
+\`\`\`
+"צור ענף חדש בשם feature/user-auth"
+"עבור לענף main ותמזג את הענף הנוכחי"
+"תראה לי את כל הענפים ואיזה מהם כבר מוזגו"
+\`\`\`
+
+### פתרון קונפליקטים
+
+\`\`\`
+"יש לי קונפליקטים אחרי merge, תעזור לי לפתור אותם"
+"תראה לי את הקונפליקטים ותציע פתרון"
+\`\`\`
+
+## תרחישים מתקדמים
+
+### Rebase אינטראקטיבי
+
+\`\`\`
+"יש לי 5 commits אחרונים שרוצה לאחד ל-2.
+commit 1-3 עוסקים בפיצ'ר הלוגין ו-4-5 בפיצ'ר הרישום"
+\`\`\`
+
+### Cherry Pick
+
+\`\`\`
+"קח את ה-commit שמתקן את באג הלוגין מענף develop
+והחל אותו על ענף hotfix/login-fix"
+\`\`\`
+
+### Git Bisect
+
+\`\`\`
+"משהו נשבר בין גרסה 1.2.0 לגרסה 1.3.0.
+תעזור לי למצוא את ה-commit שגרם לבאג"
+\`\`\`
+
+## עבודה עם GitHub דרך Claude Code
+
+Claude Code יכול גם לעבוד עם GitHub:
+
+\`\`\`
+"צור Pull Request עם תיאור מפורט של השינויים"
+"תראה לי את ההערות על ה-PR הפתוח שלי"
+"תעשה review ל-PR מספר 42"
+\`\`\`
+
+## טיפים לעבודה נכונה
+
+1. **הודעות commit ברורות** — בקשו מ-Claude Code לכתוב הודעות commit שמתארות את ה"למה" ולא את ה"מה"
+2. **בדקו לפני push** — בקשו מ-Claude Code להראות סיכום של מה ישלח
+3. **ענפים קטנים** — עדיף ענפים קטנים וממוקדים מענפים גדולים
+4. **אל תשנו היסטוריה משותפת** — Claude Code יזהיר אם תנסו לעשות force push
+
+:::advanced
+Claude Code תומך גם בתרחישי Git מתקדמים:
+- **Worktrees** — עבודה על מספר ענפים במקביל בלי stash
+- **Submodules** — ניהול תלויות Git מקוננות
+- **Git Hooks** — הגדרת אוטומציות לפני ואחרי commit/push
+- **Reflog** — שחזור commits שאבדו
+- **Custom Merge Strategies** — אסטרטגיות מיזוג מותאמות אישית
+- **Signed Commits** — חתימה דיגיטלית על commits עם GPG
+
+בקשו מ-Claude Code לעזור לכם להגדיר workflow מקצועי עם Git Hooks, Conventional Commits, ואוטומציה.
+:::
+
+## תרגיל מסכם
+
+נסו לבקש מ-Claude Code:
+- ליצור ריפו חדש עם .gitignore מתאים
+- ליצור מבנה ענפים לפרויקט (main, develop, feature branches)
+- לסמלץ תרחיש של merge conflict ולפתור אותו
+- ליצור Pull Request עם תיאור מפורט`,
+      en: `# Git Mastery with Claude Code
+
+Git is the most widely used version control system in the world, and Claude Code makes working with it simple and intuitive. In this lesson, we'll learn how to master Git at an expert level using Claude Code.
+
+:::beginner
+Git is a tool that tracks changes in your files. Imagine writing a document and saving a new version after every major change — Git does this automatically and lets you go back to any previous version. Claude Code helps you use Git without memorizing all the commands.
+:::
+
+## Why Git with Claude Code?
+
+Git is powerful but complex. There are hundreds of commands, options, and use cases. Claude Code simplifies everything because:
+
+- **Natural language** — instead of remembering commands, just say what you want
+- **Context awareness** — Claude Code sees the current state of your repo and acts accordingly
+- **Error prevention** — Claude Code warns you before dangerous operations
+- **Explanations** — every action comes with an explanation of what's happening
+
+## Basic Git Commands with Claude Code
+
+### Managing Changes
+
+\`\`\`
+"Show me what changed since the last commit"
+"Add all my modified files and commit with an appropriate message"
+"Commit only the TypeScript files, without the CSS files"
+\`\`\`
+
+### Working with Branches
+
+\`\`\`
+"Create a new branch called feature/user-auth"
+"Switch to main and merge the current branch"
+"Show me all branches and which ones are already merged"
+\`\`\`
+
+### Resolving Conflicts
+
+\`\`\`
+"I have conflicts after a merge, help me resolve them"
+"Show me the conflicts and suggest a resolution"
+\`\`\`
+
+## Advanced Scenarios
+
+### Interactive Rebase
+
+\`\`\`
+"I have 5 recent commits I want to squash into 2.
+Commits 1-3 are about the login feature and 4-5 about registration"
+\`\`\`
+
+### Cherry Pick
+
+\`\`\`
+"Take the commit that fixes the login bug from the develop branch
+and apply it to the hotfix/login-fix branch"
+\`\`\`
+
+### Git Bisect
+
+\`\`\`
+"Something broke between version 1.2.0 and version 1.3.0.
+Help me find the commit that caused the bug"
+\`\`\`
+
+## Working with GitHub through Claude Code
+
+Claude Code can also work with GitHub:
+
+\`\`\`
+"Create a Pull Request with a detailed description of the changes"
+"Show me the comments on my open PR"
+"Review PR number 42"
+\`\`\`
+
+## Tips for Best Practices
+
+1. **Clear commit messages** — ask Claude Code to write commit messages that describe the "why" not the "what"
+2. **Check before push** — ask Claude Code to show a summary of what will be sent
+3. **Small branches** — prefer small, focused branches over large ones
+4. **Don't rewrite shared history** — Claude Code will warn if you try to force push
+
+:::advanced
+Claude Code supports advanced Git scenarios:
+- **Worktrees** — working on multiple branches simultaneously without stash
+- **Submodules** — managing nested Git dependencies
+- **Git Hooks** — setting up automations before and after commit/push
+- **Reflog** — recovering lost commits
+- **Custom Merge Strategies** — tailored merge strategies
+- **Signed Commits** — digitally signing commits with GPG
+
+Ask Claude Code to help you set up a professional workflow with Git Hooks, Conventional Commits, and automation.
+:::
+
+## Summary Exercise
+
+Try asking Claude Code to:
+- Create a new repo with an appropriate .gitignore
+- Create a branch structure for a project (main, develop, feature branches)
+- Simulate a merge conflict scenario and resolve it
+- Create a Pull Request with a detailed description`
+    },
   },
   {
     id: 'bonus-api-design',
@@ -6178,6 +6752,252 @@ export const bonusLessons = [
     duration: 35,
     level: 'advanced' as const,
     icon: '🔌',
+    content: {
+      he: `# עיצוב API עם Claude
+
+תכנון API טוב הוא אומנות. API הוא הממשק שדרכו תוכנות מתקשרות זו עם זו, ועיצוב נכון שלו חוסך שעות של עבודה ומונע באגים. Claude הוא שותף מצוין לתכנון ובניית APIs מקצועיים.
+
+:::beginner
+API (Application Programming Interface) הוא דרך לתוכנות לדבר אחת עם השנייה. כשאפליקציית מזג האוויר בטלפון שלכם מראה את הטמפרטורה, היא מבקשת את המידע מ-API של שירות מזג אוויר. Claude יכול לעזור לכם לתכנן ולבנות APIs גם אם זה חדש לכם.
+:::
+
+## עקרונות עיצוב API
+
+### REST API — הכללים הבסיסיים
+
+\`\`\`
+בקשה ל-Claude:
+"עזור לי לתכנן REST API למערכת ניהול משימות.
+המערכת צריכה לתמוך ב:
+- משתמשים (הרשמה, התחברות, פרופיל)
+- פרויקטים (CRUD + הוספת חברי צוות)
+- משימות (CRUD + שיוך לפרויקט + סטטוס)
+- תגובות על משימות
+
+תכנן את ה-endpoints, ה-methods, וה-request/response schemas"
+\`\`\`
+
+Claude יבנה לכם API מסודר:
+
+\`\`\`
+# Users
+POST   /api/v1/auth/register
+POST   /api/v1/auth/login
+GET    /api/v1/users/me
+PATCH  /api/v1/users/me
+
+# Projects
+GET    /api/v1/projects
+POST   /api/v1/projects
+GET    /api/v1/projects/:id
+PATCH  /api/v1/projects/:id
+DELETE /api/v1/projects/:id
+POST   /api/v1/projects/:id/members
+
+# Tasks
+GET    /api/v1/projects/:projectId/tasks
+POST   /api/v1/projects/:projectId/tasks
+PATCH  /api/v1/tasks/:id
+DELETE /api/v1/tasks/:id
+
+# Comments
+GET    /api/v1/tasks/:taskId/comments
+POST   /api/v1/tasks/:taskId/comments
+\`\`\`
+
+### טיפול בשגיאות
+
+\`\`\`
+בקשה ל-Claude:
+"תכנן מבנה אחיד לתגובות שגיאה ב-API שלי.
+צריך לתמוך ב:
+- קודי שגיאה מותאמים (לא רק HTTP status)
+- הודעות שגיאה ידידותיות למשתמש
+- פרטים טכניים למפתח
+- תמיכה בריבוי שפות"
+\`\`\`
+
+### Pagination ו-Filtering
+
+\`\`\`
+בקשה ל-Claude:
+"עזור לי לממש pagination ו-filtering ב-API.
+אני צריך:
+- cursor-based pagination (לא offset)
+- סינון לפי תאריך, סטטוס, ומשתמש
+- מיון לפי שדות שונים
+- הגבלת תוצאות"
+\`\`\`
+
+## אבטחת API
+
+\`\`\`
+בקשה ל-Claude:
+"תכנן את שכבת האבטחה ל-API שלי:
+- אימות עם JWT
+- הרשאות מבוססות תפקידים (admin, manager, member)
+- Rate limiting
+- Input validation
+- CORS configuration"
+\`\`\`
+
+## תיעוד API
+
+\`\`\`
+בקשה ל-Claude:
+"צור תיעוד OpenAPI/Swagger ל-endpoint הזה:
+[הדביקו את הקוד של ה-endpoint]"
+\`\`\`
+
+## טיפים לעיצוב API טוב
+
+1. **עקביות** — שמרו על מבנה אחיד בכל ה-endpoints
+2. **גרסאות** — השתמשו ב-v1, v2 ב-URL כדי לא לשבור לקוחות קיימים
+3. **שמות ברורים** — השתמשו בשמות שמתארים את המשאב, לא את הפעולה
+4. **תיעוד** — תעדו כל endpoint עם דוגמאות
+
+:::advanced
+Claude יכול לעזור גם בנושאי API מתקדמים:
+- **GraphQL** — תכנון schema, resolvers, ו-subscriptions
+- **gRPC** — הגדרת Protocol Buffers ושירותים
+- **WebSockets** — תכנון תקשורת דו-כיוונית בזמן אמת
+- **API Gateway** — הגדרת routing, rate limiting, ו-transformation
+- **Event-Driven Architecture** — תכנון מערכות מבוססות אירועים
+- **CQRS** — הפרדה בין קריאה לכתיבה לשיפור ביצועים
+
+בקשו מ-Claude לעזור לכם לבחור את הארכיטקטורה המתאימה לפרויקט שלכם.
+:::
+
+## תרגיל מסכם
+
+נסו לבקש מ-Claude:
+- לתכנן API מלא לאפליקציית e-commerce
+- לכלול אימות, הרשאות, ו-pagination
+- לכתוב את ה-schemas של כל ה-endpoints
+- ליצור תיעוד OpenAPI`,
+      en: `# API Design with Claude
+
+Designing a good API is an art. An API is the interface through which programs communicate with each other, and proper design saves hours of work and prevents bugs. Claude is an excellent partner for planning and building professional APIs.
+
+:::beginner
+An API (Application Programming Interface) is a way for programs to talk to each other. When the weather app on your phone shows the temperature, it's requesting data from a weather service's API. Claude can help you plan and build APIs even if this is new to you.
+:::
+
+## API Design Principles
+
+### REST API — The Basic Rules
+
+\`\`\`
+Prompt for Claude:
+"Help me design a REST API for a task management system.
+The system needs to support:
+- Users (registration, login, profile)
+- Projects (CRUD + adding team members)
+- Tasks (CRUD + project assignment + status)
+- Comments on tasks
+
+Design the endpoints, methods, and request/response schemas"
+\`\`\`
+
+Claude will build you an organized API:
+
+\`\`\`
+# Users
+POST   /api/v1/auth/register
+POST   /api/v1/auth/login
+GET    /api/v1/users/me
+PATCH  /api/v1/users/me
+
+# Projects
+GET    /api/v1/projects
+POST   /api/v1/projects
+GET    /api/v1/projects/:id
+PATCH  /api/v1/projects/:id
+DELETE /api/v1/projects/:id
+POST   /api/v1/projects/:id/members
+
+# Tasks
+GET    /api/v1/projects/:projectId/tasks
+POST   /api/v1/projects/:projectId/tasks
+PATCH  /api/v1/tasks/:id
+DELETE /api/v1/tasks/:id
+
+# Comments
+GET    /api/v1/tasks/:taskId/comments
+POST   /api/v1/tasks/:taskId/comments
+\`\`\`
+
+### Error Handling
+
+\`\`\`
+Prompt for Claude:
+"Design a consistent error response structure for my API.
+It needs to support:
+- Custom error codes (not just HTTP status)
+- User-friendly error messages
+- Technical details for developers
+- Multi-language support"
+\`\`\`
+
+### Pagination and Filtering
+
+\`\`\`
+Prompt for Claude:
+"Help me implement pagination and filtering in my API.
+I need:
+- Cursor-based pagination (not offset)
+- Filtering by date, status, and user
+- Sorting by different fields
+- Result limits"
+\`\`\`
+
+## API Security
+
+\`\`\`
+Prompt for Claude:
+"Design the security layer for my API:
+- JWT authentication
+- Role-based permissions (admin, manager, member)
+- Rate limiting
+- Input validation
+- CORS configuration"
+\`\`\`
+
+## API Documentation
+
+\`\`\`
+Prompt for Claude:
+"Create OpenAPI/Swagger documentation for this endpoint:
+[paste your endpoint code]"
+\`\`\`
+
+## Tips for Good API Design
+
+1. **Consistency** — maintain a uniform structure across all endpoints
+2. **Versioning** — use v1, v2 in the URL to avoid breaking existing clients
+3. **Clear names** — use names that describe the resource, not the action
+4. **Documentation** — document every endpoint with examples
+
+:::advanced
+Claude can help with advanced API topics:
+- **GraphQL** — schema design, resolvers, and subscriptions
+- **gRPC** — defining Protocol Buffers and services
+- **WebSockets** — designing real-time bidirectional communication
+- **API Gateway** — setting up routing, rate limiting, and transformation
+- **Event-Driven Architecture** — designing event-based systems
+- **CQRS** — separating reads from writes for better performance
+
+Ask Claude to help you choose the right architecture for your project.
+:::
+
+## Summary Exercise
+
+Try asking Claude to:
+- Design a complete API for an e-commerce application
+- Include authentication, permissions, and pagination
+- Write schemas for all endpoints
+- Create OpenAPI documentation`
+    },
   },
   {
     id: 'bonus-prompt-library',
@@ -6186,6 +7006,420 @@ export const bonusLessons = [
     duration: 15,
     level: 'beginner' as const,
     icon: '📚',
+    content: {
+      he: `# ספריית פרומפטים — 50+ פרומפטים מוכנים לשימוש
+
+ספרייה מקיפה של פרומפטים מוכנים שתוכלו להשתמש בהם מיד עם Claude. כל פרומפט נבדק ומותאם לתוצאות מיטביות.
+
+:::beginner
+פרומפט הוא פשוט ההוראה שאתם נותנים ל-Claude. ככל שהפרומפט ברור ומדויק יותר, כך התוצאה תהיה טובה יותר. הספרייה הזו נותנת לכם פרומפטים מוכנים שאפשר להעתיק ולהשתמש בהם מיד.
+:::
+
+## קטגוריה: כתיבת קוד
+
+### 1. יצירת פונקציה
+
+\`\`\`
+כתוב פונקציה ב-[שפה] שמבצעת: [תיאור]
+דרישות:
+- טיפול בשגיאות מלא
+- תיעוד JSDoc/docstring
+- Type hints
+- דוגמאות שימוש
+\`\`\`
+
+### 2. Code Review
+
+\`\`\`
+עשה Code Review לקוד הבא. בדוק:
+- באגים פוטנציאליים
+- בעיות אבטחה
+- ביצועים
+- קריאות הקוד
+- עמידה ב-best practices
+דרג כל קטגוריה מ-1 עד 5 והסבר.
+[הדביקו את הקוד]
+\`\`\`
+
+### 3. המרת קוד בין שפות
+
+\`\`\`
+המר את הקוד הבא מ-[שפה מקור] ל-[שפת יעד].
+שמור על:
+- אותה לוגיקה
+- קונבנציות של שפת היעד
+- טיפול בשגיאות מתאים
+- הערות מעודכנות
+[הדביקו את הקוד]
+\`\`\`
+
+### 4. כתיבת טסטים
+
+\`\`\`
+כתוב unit tests ל-[פונקציה/מודול].
+כלול:
+- Happy path (תרחישים תקינים)
+- Edge cases (מקרי קצה)
+- Error cases (שגיאות)
+- Mocking של תלויות חיצוניות
+השתמש ב-[framework: Jest/pytest/etc]
+[הדביקו את הקוד]
+\`\`\`
+
+### 5. דיבוג
+
+\`\`\`
+יש לי באג בקוד הבא:
+[הדביקו את הקוד]
+
+התנהגות נוכחית: [מה קורה]
+התנהגות רצויה: [מה צריך לקרות]
+שגיאה: [הודעת השגיאה]
+
+מצא את הבאג, הסבר למה הוא קורה, ותקן אותו.
+\`\`\`
+
+## קטגוריה: כתיבה ותוכן
+
+### 6. כתיבת מייל מקצועי
+
+\`\`\`
+כתוב מייל מקצועי בנושא: [נושא]
+קהל יעד: [למי]
+טון: [רשמי/ידידותי/דחוף]
+נקודות עיקריות: [פרטו]
+אורך: [קצר/בינוני/ארוך]
+\`\`\`
+
+### 7. סיכום מסמך
+
+\`\`\`
+סכם את המסמך הבא ב-3 רמות:
+1. סיכום בשורה אחת
+2. סיכום בפסקה (5-7 משפטים)
+3. סיכום מפורט עם נקודות מפתח
+[הדביקו את המסמך]
+\`\`\`
+
+### 8. כתיבה יצירתית
+
+\`\`\`
+כתוב [סוג תוכן: בלוג/מאמר/פוסט]
+נושא: [נושא]
+קהל יעד: [למי]
+אורך: [מילים]
+סגנון: [מקצועי/שיחתי/אקדמי]
+כלול: כותרת, פתיח מושך, 3-5 סעיפים, וסיכום עם CTA
+\`\`\`
+
+## קטגוריה: ניתוח נתונים
+
+### 9. ניתוח CSV
+
+\`\`\`
+נתח את הנתונים הבאים:
+[הדביקו CSV או טבלה]
+תן לי:
+- סטטיסטיקות בסיסיות (ממוצע, חציון, סטיית תקן)
+- מגמות עיקריות
+- נקודות חריגות
+- 3 תובנות מפתיעות
+- המלצות לפעולה
+\`\`\`
+
+### 10. יצירת שאילתות
+
+\`\`\`
+יש לי את הטבלאות הבאות:
+[תארו את המבנה]
+כתוב שאילתה שמחזירה: [מה אתם צריכים]
+ב-[PostgreSQL/MySQL/SQLite]
+\`\`\`
+
+## קטגוריה: למידה והסבר
+
+### 11. הסבר מושג
+
+\`\`\`
+הסבר [מושג] ב-3 רמות:
+1. כאילו אני בן 10
+2. כאילו אני סטודנט
+3. כאילו אני מומחה בתחום
+לכל רמה תן דוגמה מעשית.
+\`\`\`
+
+### 12. השוואה בין טכנולוגיות
+
+\`\`\`
+השווה בין [טכנולוגיה A] ל-[טכנולוגיה B]:
+- יתרונות וחסרונות
+- מקרי שימוש מומלצים
+- ביצועים
+- קהילה ותמיכה
+- עקומת למידה
+- עלות
+תן המלצה סופית עם הסבר.
+\`\`\`
+
+## קטגוריה: פרודוקטיביות
+
+### 13. תכנון פרויקט
+
+\`\`\`
+עזור לי לתכנן פרויקט:
+שם: [שם הפרויקט]
+תיאור: [מה הפרויקט עושה]
+משך: [זמן]
+צוות: [גודל]
+תן לי:
+- פירוק למשימות (WBS)
+- אבני דרך
+- זיהוי סיכונים
+- לוח זמנים מוצע
+\`\`\`
+
+### 14. רשימת בדיקות
+
+\`\`\`
+צור checklist מקיף ל-[משימה/תהליך]:
+סדר לפי שלבים כרונולוגיים.
+כלול: פריטי חובה (🔴), מומלץ (🟡), ואופציונלי (🟢)
+\`\`\`
+
+### 15. תבנית תיעוד
+
+\`\`\`
+צור תבנית תיעוד ל-[סוג: API/פרויקט/תהליך]
+כלול:
+- סקירה כללית
+- דרישות מקדימות
+- הוראות התקנה
+- דוגמאות שימוש
+- FAQ
+- פתרון תקלות
+\`\`\`
+
+## טיפים לשימוש בספרייה
+
+1. **התאימו** — השתמשו בפרומפטים כבסיס והתאימו לצרכים שלכם
+2. **שלבו** — אפשר לשלב כמה פרומפטים יחד למשימות מורכבות
+3. **חזרו** — אם התוצאה לא מושלמת, בקשו שיפורים ספציפיים
+4. **שמרו** — כשמוצאים פרומפט שעובד, שמרו אותו ב-Projects של Claude
+
+:::advanced
+למתקדמים, שלבו פרומפטים עם יכולות מתקדמות:
+- **System Prompts** — הגדירו הקשר קבוע שתקף לאורך כל השיחה
+- **Chain of Thought** — בקשו מ-Claude "לחשוב צעד אחר צעד" לפני שהוא עונה
+- **Multi-turn Refinement** — בנו על תשובות קודמות בשיחה רב-שלבית
+- **Artifacts** — בקשו מ-Claude ליצור מסמכים, קוד, ודיאגרמות כ-Artifacts
+:::`,
+      en: `# Prompt Library — 50+ Ready-to-Use Prompts
+
+A comprehensive library of ready-made prompts you can use immediately with Claude. Every prompt has been tested and optimized for best results.
+
+:::beginner
+A prompt is simply the instruction you give to Claude. The clearer and more precise the prompt, the better the result. This library gives you ready-made prompts you can copy and use right away.
+:::
+
+## Category: Code Writing
+
+### 1. Function Creation
+
+\`\`\`
+Write a function in [language] that does: [description]
+Requirements:
+- Full error handling
+- JSDoc/docstring documentation
+- Type hints
+- Usage examples
+\`\`\`
+
+### 2. Code Review
+
+\`\`\`
+Do a Code Review on the following code. Check:
+- Potential bugs
+- Security issues
+- Performance
+- Code readability
+- Best practices compliance
+Rate each category from 1 to 5 and explain.
+[paste your code]
+\`\`\`
+
+### 3. Code Conversion Between Languages
+
+\`\`\`
+Convert the following code from [source language] to [target language].
+Maintain:
+- Same logic
+- Target language conventions
+- Appropriate error handling
+- Updated comments
+[paste your code]
+\`\`\`
+
+### 4. Writing Tests
+
+\`\`\`
+Write unit tests for [function/module].
+Include:
+- Happy path (normal scenarios)
+- Edge cases
+- Error cases
+- Mocking external dependencies
+Use [framework: Jest/pytest/etc]
+[paste your code]
+\`\`\`
+
+### 5. Debugging
+
+\`\`\`
+I have a bug in the following code:
+[paste your code]
+
+Current behavior: [what happens]
+Expected behavior: [what should happen]
+Error: [error message]
+
+Find the bug, explain why it happens, and fix it.
+\`\`\`
+
+## Category: Writing and Content
+
+### 6. Professional Email
+
+\`\`\`
+Write a professional email about: [subject]
+Audience: [to whom]
+Tone: [formal/friendly/urgent]
+Key points: [specify]
+Length: [short/medium/long]
+\`\`\`
+
+### 7. Document Summary
+
+\`\`\`
+Summarize the following document at 3 levels:
+1. One-sentence summary
+2. Paragraph summary (5-7 sentences)
+3. Detailed summary with key points
+[paste your document]
+\`\`\`
+
+### 8. Creative Writing
+
+\`\`\`
+Write a [content type: blog/article/post]
+Topic: [topic]
+Audience: [target audience]
+Length: [word count]
+Style: [professional/conversational/academic]
+Include: headline, engaging intro, 3-5 sections, and summary with CTA
+\`\`\`
+
+## Category: Data Analysis
+
+### 9. CSV Analysis
+
+\`\`\`
+Analyze the following data:
+[paste CSV or table]
+Give me:
+- Basic statistics (mean, median, standard deviation)
+- Key trends
+- Outliers
+- 3 surprising insights
+- Action recommendations
+\`\`\`
+
+### 10. Query Creation
+
+\`\`\`
+I have the following tables:
+[describe the structure]
+Write a query that returns: [what you need]
+In [PostgreSQL/MySQL/SQLite]
+\`\`\`
+
+## Category: Learning and Explanation
+
+### 11. Concept Explanation
+
+\`\`\`
+Explain [concept] at 3 levels:
+1. As if I'm 10 years old
+2. As if I'm a student
+3. As if I'm a domain expert
+For each level, provide a practical example.
+\`\`\`
+
+### 12. Technology Comparison
+
+\`\`\`
+Compare [Technology A] vs [Technology B]:
+- Pros and cons
+- Recommended use cases
+- Performance
+- Community and support
+- Learning curve
+- Cost
+Give a final recommendation with explanation.
+\`\`\`
+
+## Category: Productivity
+
+### 13. Project Planning
+
+\`\`\`
+Help me plan a project:
+Name: [project name]
+Description: [what the project does]
+Duration: [timeframe]
+Team: [size]
+Give me:
+- Task breakdown (WBS)
+- Milestones
+- Risk identification
+- Proposed timeline
+\`\`\`
+
+### 14. Checklist
+
+\`\`\`
+Create a comprehensive checklist for [task/process]:
+Organize by chronological stages.
+Include: mandatory items (red), recommended (yellow), and optional (green)
+\`\`\`
+
+### 15. Documentation Template
+
+\`\`\`
+Create a documentation template for [type: API/project/process]
+Include:
+- Overview
+- Prerequisites
+- Installation instructions
+- Usage examples
+- FAQ
+- Troubleshooting
+\`\`\`
+
+## Tips for Using the Library
+
+1. **Customize** — use prompts as a base and adapt to your needs
+2. **Combine** — you can combine multiple prompts for complex tasks
+3. **Iterate** — if the result isn't perfect, ask for specific improvements
+4. **Save** — when you find a prompt that works, save it in Claude Projects
+
+:::advanced
+For advanced users, combine prompts with advanced capabilities:
+- **System Prompts** — set persistent context that applies throughout the conversation
+- **Chain of Thought** — ask Claude to "think step by step" before answering
+- **Multi-turn Refinement** — build on previous answers in a multi-step conversation
+- **Artifacts** — ask Claude to create documents, code, and diagrams as Artifacts
+:::`
+    },
   },
   {
     id: 'bonus-claude-for-teams',
@@ -6194,5 +7428,259 @@ export const bonusLessons = [
     duration: 30,
     level: 'advanced' as const,
     icon: '👥',
+    content: {
+      he: `# Claude לצוותים
+
+איך להטמיע Claude בצוות פיתוח ולהפוך אותו לכלי מרכזי שמשפר את הפרודוקטיביות של כולם. מדריך מעשי למנהלי צוותים ומובילים טכנולוגיים.
+
+:::beginner
+גם אם אתם לא מנהלים, השיעור הזה יעזור לכם להבין איך להציע ולהטמיע שימוש ב-Claude בצוות שלכם. הטיפים כאן מתאימים לכל מי שרוצה לשתף את היתרונות של Claude עם עמיתים.
+:::
+
+## למה להטמיע Claude בצוות?
+
+### היתרונות
+
+- **הגברת פרודוקטיביות** — מפתחים מדווחים על שיפור של 30-50% בפרודוקטיביות עם AI
+- **שיפור איכות הקוד** — Code Review אוטומטי, best practices, ותיעוד
+- **האצת onboarding** — חברי צוות חדשים מתחילים לתרום מהר יותר
+- **שיתוף ידע** — Claude הופך ידע שקיים רק בראש של מישהו לנגיש לכולם
+
+### האתגרים
+
+- **אבטחת מידע** — איך לוודא שמידע רגיש לא נשלח ל-Claude
+- **איכות לא עקבית** — לא כולם יודעים לכתוב פרומפטים טובים
+- **תלות יתר** — איך למנוע מצב שמפתחים לא יכולים לעבוד בלי Claude
+
+## שלב 1: הגדרת מדיניות
+
+\`\`\`
+בקשה ל-Claude:
+"עזור לי ליצור מדיניות שימוש ב-AI לצוות פיתוח.
+צוות של 12 מפתחים, חברת SaaS.
+הנושאים שצריך לכסות:
+- מה מותר ומה אסור לשתף עם Claude
+- סוגי משימות מומלצים
+- תהליך Code Review של קוד שנוצר על ידי AI
+- אחריות על קוד שנוצר על ידי AI"
+\`\`\`
+
+## שלב 2: הגדרת Projects ו-System Prompts
+
+הגדירו Projects ב-Claude לכל תחום:
+
+- **Project: Backend** — כללי קוד, ארכיטקטורה, conventions
+- **Project: Frontend** — Design system, component patterns, styling rules
+- **Project: DevOps** — Infrastructure guidelines, deployment procedures
+- **Project: Code Review** — Checklist, quality standards
+
+כל Project מכיל System Prompt שמגדיר את ההקשר:
+
+\`\`\`
+דוגמת System Prompt ל-Backend:
+"אתה מפתח Backend בכיר בצוות שלנו.
+טכנולוגיות: Node.js, TypeScript, PostgreSQL, Redis
+ארכיטקטורה: Microservices עם Event-Driven Architecture
+כללים:
+- כל פונקציה חייבת כוללת טיפול בשגיאות
+- שמות משתנים ב-camelCase
+- כל endpoint חייב validation עם Zod
+- לוגים ב-structured format עם Winston"
+\`\`\`
+
+## שלב 3: תהליכי עבודה עם Claude
+
+### Code Review משולב
+
+\`\`\`
+תהליך מומלץ:
+1. מפתח כותב קוד (עם או בלי Claude)
+2. מפתח מבקש מ-Claude לעשות review ראשוני
+3. מפתח מתקן בעיות שזוהו
+4. PR נפתח ל-review אנושי
+5. Reviewer משתמש ב-Claude לנתח שינויים מורכבים
+\`\`\`
+
+### Pair Programming עם Claude
+
+\`\`\`
+טיפים ל-Pair Programming:
+- השתמשו ב-Claude Code לעבודה בפרויקט אמיתי
+- תנו ל-Claude הקשר מלא (קבצים, דרישות, constraints)
+- בקשו ממנו להסביר את ההחלטות שלו
+- אל תקבלו הכל אוטומטית — בדקו וחשבו
+\`\`\`
+
+## שלב 4: מדידה ושיפור
+
+### מה למדוד
+
+- **זמן למשימה** — האם משימות נגמרות מהר יותר?
+- **איכות קוד** — האם יש פחות באגים?
+- **שביעות רצון** — האם המפתחים מרגישים שזה עוזר?
+- **Onboarding** — האם חברי צוות חדשים מתחילים מהר יותר?
+
+### איך למדוד
+
+\`\`\`
+בקשה ל-Claude:
+"עזור לי ליצור סקר שביעות רצון לצוות על שימוש ב-Claude.
+10 שאלות, סקלה 1-5, עם מקום לתשובות חופשיות.
+כלול שאלות על: פרודוקטיביות, איכות, למידה, ואתגרים."
+\`\`\`
+
+## טיפים לניהול
+
+1. **התחילו קטן** — התחילו עם 2-3 מפתחים ותרחיבו בהדרגה
+2. **שתפו הצלחות** — כשמישהו מצליח עם Claude, שתפו עם כל הצוות
+3. **למידה מתמשכת** — הקדישו זמן שבועי לשיתוף טיפים וטריקים
+4. **כבדו העדפות** — לא כולם צריכים להשתמש ב-Claude
+
+:::advanced
+לצוותים מתקדמים, שקלו:
+- **Claude API Integration** — שלבו את Claude ב-CI/CD pipeline לבדיקות אוטומטיות
+- **Custom Tools** — בנו כלים פנימיים שמשתמשים ב-Claude API
+- **MCP Servers** — הגדירו MCP servers שנותנים ל-Claude גישה לכלים פנימיים
+- **Fine-tuning Workflows** — התאימו את ה-prompts בהדרגה על בסיס feedback
+- **Knowledge Base** — בנו בסיס ידע מסמכי החברה ותנו ל-Claude גישה אליו
+- **Cost Management** — נטרו עלויות ואפטמו שימוש ב-API
+
+בקשו מ-Claude לעזור לכם לתכנן ולבנות את התשתית הטכנית להטמעה ארגונית.
+:::
+
+## תרגיל מסכם
+
+נסו לבקש מ-Claude:
+- ליצור מצגת הצעה להנהלה על הטמעת Claude בצוות
+- לבנות תוכנית הטמעה ל-3 חודשים
+- ליצור מדריך מהיר למפתחים בצוות
+- לתכנן סדנה של שעתיים להיכרות עם Claude`,
+      en: `# Claude for Teams
+
+How to integrate Claude into a development team and make it a central tool that improves everyone's productivity. A practical guide for team leads and tech leaders.
+
+:::beginner
+Even if you're not a manager, this lesson will help you understand how to propose and implement Claude usage in your team. The tips here are suitable for anyone who wants to share the benefits of Claude with colleagues.
+:::
+
+## Why Integrate Claude in a Team?
+
+### Benefits
+
+- **Increased productivity** — developers report 30-50% productivity improvement with AI
+- **Better code quality** — automated Code Review, best practices, and documentation
+- **Faster onboarding** — new team members start contributing sooner
+- **Knowledge sharing** — Claude makes knowledge that exists only in someone's head accessible to everyone
+
+### Challenges
+
+- **Information security** — how to ensure sensitive data isn't sent to Claude
+- **Inconsistent quality** — not everyone knows how to write good prompts
+- **Over-dependence** — how to prevent developers from being unable to work without Claude
+
+## Step 1: Define Policies
+
+\`\`\`
+Prompt for Claude:
+"Help me create an AI usage policy for a development team.
+Team of 12 developers, SaaS company.
+Topics to cover:
+- What's allowed and not allowed to share with Claude
+- Recommended task types
+- Code Review process for AI-generated code
+- Responsibility for AI-generated code"
+\`\`\`
+
+## Step 2: Set Up Projects and System Prompts
+
+Set up Projects in Claude for each area:
+
+- **Project: Backend** — code standards, architecture, conventions
+- **Project: Frontend** — design system, component patterns, styling rules
+- **Project: DevOps** — infrastructure guidelines, deployment procedures
+- **Project: Code Review** — checklist, quality standards
+
+Each Project contains a System Prompt that defines the context:
+
+\`\`\`
+Example System Prompt for Backend:
+"You are a senior Backend developer on our team.
+Technologies: Node.js, TypeScript, PostgreSQL, Redis
+Architecture: Microservices with Event-Driven Architecture
+Rules:
+- Every function must include error handling
+- Variable names in camelCase
+- Every endpoint needs validation with Zod
+- Logs in structured format with Winston"
+\`\`\`
+
+## Step 3: Workflows with Claude
+
+### Integrated Code Review
+
+\`\`\`
+Recommended process:
+1. Developer writes code (with or without Claude)
+2. Developer asks Claude for initial review
+3. Developer fixes identified issues
+4. PR opened for human review
+5. Reviewer uses Claude to analyze complex changes
+\`\`\`
+
+### Pair Programming with Claude
+
+\`\`\`
+Tips for Pair Programming:
+- Use Claude Code to work on real projects
+- Give Claude full context (files, requirements, constraints)
+- Ask it to explain its decisions
+- Don't accept everything automatically — review and think
+\`\`\`
+
+## Step 4: Measure and Improve
+
+### What to Measure
+
+- **Time to task** — are tasks finishing faster?
+- **Code quality** — are there fewer bugs?
+- **Satisfaction** — do developers feel it helps?
+- **Onboarding** — do new team members ramp up faster?
+
+### How to Measure
+
+\`\`\`
+Prompt for Claude:
+"Help me create a team satisfaction survey about Claude usage.
+10 questions, 1-5 scale, with space for open answers.
+Include questions about: productivity, quality, learning, and challenges."
+\`\`\`
+
+## Management Tips
+
+1. **Start small** — begin with 2-3 developers and expand gradually
+2. **Share successes** — when someone succeeds with Claude, share with the whole team
+3. **Continuous learning** — dedicate weekly time for sharing tips and tricks
+4. **Respect preferences** — not everyone needs to use Claude
+
+:::advanced
+For advanced teams, consider:
+- **Claude API Integration** — integrate Claude into CI/CD pipeline for automated checks
+- **Custom Tools** — build internal tools using the Claude API
+- **MCP Servers** — set up MCP servers that give Claude access to internal tools
+- **Fine-tuning Workflows** — gradually refine prompts based on feedback
+- **Knowledge Base** — build a knowledge base from company docs and give Claude access
+- **Cost Management** — monitor costs and optimize API usage
+
+Ask Claude to help you plan and build the technical infrastructure for organizational adoption.
+:::
+
+## Summary Exercise
+
+Try asking Claude to:
+- Create a proposal presentation for management about integrating Claude
+- Build a 3-month integration plan
+- Create a quick guide for developers on the team
+- Plan a 2-hour workshop for getting started with Claude`
+    },
   },
 ];
