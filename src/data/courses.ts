@@ -203,7 +203,8 @@ Constitutional AI ensures responses are helpful, honest, and safe.`
 ## Claude Code - תמחור נפרד
 Claude Code משתמש ב-API credits:
 - **כלול ב-Pro:** שימוש מוגבל
-- **Max Plan ($100/חודש):** שימוש מורחב ב-Claude Code
+- **Max 5x ($100/חודש):** שימוש מורחב ב-Claude Code
+- **Max 20x ($200/חודש):** שימוש כמעט ללא הגבלה
 - **API:** תשלום לפי שימוש בלבד`,
           en: `# Pricing & Plans
 
@@ -240,7 +241,8 @@ Claude Code משתמש ב-API credits:
 ## Claude Code - Separate Pricing
 Claude Code uses API credits:
 - **Included in Pro:** Limited usage
-- **Max Plan ($100/month):** Extended Claude Code usage
+- **Max 5x ($100/month):** Extended Claude Code usage
+- **Max 20x ($200/month):** Nearly unlimited usage
 - **API:** Pay-per-use only`
         }
       },
@@ -733,34 +735,58 @@ Create a \`CLAUDE.md\` file at your project root:
 
 ## Slash Commands - פקודות מהירות
 
+### פקודות בסיסיות
 | פקודה | תיאור |
 |--------|--------|
-| \`/help\` | הצגת עזרה |
-| \`/clear\` | ניקוי ההיסטוריה |
-| \`/compact\` | דחיסת ההקשר |
-| \`/cost\` | הצגת עלות השיחה |
-| \`/doctor\` | בדיקת תקינות |
-| \`/init\` | יצירת CLAUDE.md |
+| \`/help\` | הצגת עזרה ורשימת פקודות |
+| \`/clear\` | ניקוי ההיסטוריה של השיחה |
+| \`/compact\` | דחיסת ההקשר (שימושי כשמגיעים למגבלת חלון) |
+| \`/cost\` | הצגת עלות השיחה הנוכחית |
+| \`/status\` | מידע על חשבון, מודל, ושימוש |
+| \`/doctor\` | בדיקת תקינות ואבחון בעיות |
+
+### פקודות קוד ופרויקט
+| פקודה | תיאור |
+|--------|--------|
+| \`/init\` | יצירת CLAUDE.md - קובץ הגדרות לפרויקט |
+| \`/review\` | סקירת קוד (Code Review) |
+| \`/bug\` | דיווח על באג ועזרה באיתורו |
+| \`/pr\` | יצירת Pull Request |
+| \`/commit\` | ביצוע commit עם הודעה אוטומטית |
+| \`/diff\` | הצגת שינויים בקוד |
+
+### פקודות הגדרות
+| פקודה | תיאור |
+|--------|--------|
+| \`/model\` | בחירת מודל (Opus, Sonnet, Haiku) |
+| \`/permissions\` | ניהול הרשאות כלים |
+| \`/memory\` | ניהול זיכרון - מה Claude זוכר |
 | \`/login\` | התחברות מחדש |
 | \`/logout\` | התנתקות |
-| \`/memory\` | ניהול זיכרון |
-| \`/model\` | בחירת מודל |
-| \`/permissions\` | ניהול הרשאות |
-| \`/review\` | סקירת קוד |
-| \`/status\` | סטטוס נוכחי |
 | \`/terminal-setup\` | הגדרת טרמינל |
-| \`/vim\` | מצב vim |
+| \`/config\` | הגדרות כלליות |
+| \`/vim\` | מצב vim (לעורכי vim) |
+
+### פקודות מתקדמות
+| פקודה | תיאור |
+|--------|--------|
+| \`/fast\` | מעבר למצב מהיר (Fast Mode) - פלט מהיר יותר |
+| \`/think\` | הפעלת Extended Thinking - חשיבה מעמיקה |
+| \`/plan\` | מצב תכנון - Claude מתכנן לפני ביצוע |
 
 ## מקשי קיצור
 
 | מקש | פעולה |
 |------|--------|
 | \`Enter\` | שליחת הודעה |
-| \`Escape\` | ביטול פעולה |
-| \`Tab\` | השלמה אוטומטית |
+| \`Shift+Enter\` | שורה חדשה (בלי לשלוח) |
+| \`Escape\` | ביטול פעולה / יציאה מתכנון |
+| \`Tab\` | השלמה אוטומטית (שמות קבצים, פקודות) |
+| \`Shift+Tab\` | קבלת הצעה אוטומטית |
 | \`Up/Down\` | ניווט בהיסטוריה |
 | \`Ctrl+C\` | עצירת פעולה נוכחית |
 | \`Ctrl+L\` | ניקוי מסך |
+| \`Ctrl+J\` | שליחת הודעה (חלופה ל-Enter) |
 
 ## הפעלה מתקדמת
 
@@ -787,34 +813,58 @@ claude --model claude-sonnet-4-6
 
 ## Slash Commands
 
+### Basic Commands
 | Command | Description |
 |---------|-------------|
-| \`/help\` | Show help |
-| \`/clear\` | Clear history |
-| \`/compact\` | Compress context |
-| \`/cost\` | Show session cost |
-| \`/doctor\` | Health check |
-| \`/init\` | Create CLAUDE.md |
+| \`/help\` | Show help and list commands |
+| \`/clear\` | Clear conversation history |
+| \`/compact\` | Compress context (useful when reaching window limit) |
+| \`/cost\` | Show current session cost |
+| \`/status\` | Account, model, and usage info |
+| \`/doctor\` | Health check and diagnostics |
+
+### Code & Project Commands
+| Command | Description |
+|---------|-------------|
+| \`/init\` | Create CLAUDE.md - project config file |
+| \`/review\` | Code Review |
+| \`/bug\` | Report and help find a bug |
+| \`/pr\` | Create a Pull Request |
+| \`/commit\` | Commit with auto-generated message |
+| \`/diff\` | Show code changes |
+
+### Settings Commands
+| Command | Description |
+|---------|-------------|
+| \`/model\` | Select model (Opus, Sonnet, Haiku) |
+| \`/permissions\` | Manage tool permissions |
+| \`/memory\` | Manage memory - what Claude remembers |
 | \`/login\` | Re-authenticate |
 | \`/logout\` | Log out |
-| \`/memory\` | Manage memory |
-| \`/model\` | Select model |
-| \`/permissions\` | Manage permissions |
-| \`/review\` | Code review |
-| \`/status\` | Current status |
 | \`/terminal-setup\` | Terminal setup |
+| \`/config\` | General settings |
 | \`/vim\` | Vim mode |
+
+### Advanced Commands
+| Command | Description |
+|---------|-------------|
+| \`/fast\` | Toggle Fast Mode - faster output |
+| \`/think\` | Enable Extended Thinking - deeper reasoning |
+| \`/plan\` | Plan mode - Claude plans before executing |
 
 ## Keyboard Shortcuts
 
 | Key | Action |
 |-----|--------|
 | \`Enter\` | Send message |
-| \`Escape\` | Cancel action |
-| \`Tab\` | Auto-complete |
+| \`Shift+Enter\` | New line (without sending) |
+| \`Escape\` | Cancel action / exit plan mode |
+| \`Tab\` | Auto-complete (filenames, commands) |
+| \`Shift+Tab\` | Accept auto-suggestion |
 | \`Up/Down\` | Navigate history |
 | \`Ctrl+C\` | Stop current action |
 | \`Ctrl+L\` | Clear screen |
+| \`Ctrl+J\` | Send message (alternative to Enter) |
 
 ## Advanced Usage
 
@@ -1831,9 +1881,9 @@ console.log(message.content[0].text);
 
 | מודל | Input (1M tokens) | Output (1M tokens) |
 |------|-------------------|---------------------|
-| Opus 4.6 | $15 | $75 |
+| Opus 4.6 | $5 | $25 |
 | Sonnet 4.6 | $3 | $15 |
-| Haiku 4.5 | $0.80 | $4 |
+| Haiku 4.5 | $1 | $5 |
 
 ## Tool Use
 \`\`\`python
@@ -1920,9 +1970,9 @@ console.log(message.content[0].text);
 
 | Model | Input (1M tokens) | Output (1M tokens) |
 |-------|-------------------|---------------------|
-| Opus 4.6 | $15 | $75 |
+| Opus 4.6 | $5 | $25 |
 | Sonnet 4.6 | $3 | $15 |
-| Haiku 4.5 | $0.80 | $4 |
+| Haiku 4.5 | $1 | $5 |
 
 ## Tool Use
 \`\`\`python
@@ -2718,18 +2768,25 @@ Prioritize by severity."
 
 ---
 
-## 🚀 Max ($100 לחודש)
+## 🚀 Max (שתי רמות)
 
-### מה מקבלים מעבר ל-Pro?
-- **פי 20 יותר שימוש** מחשבון חינמי!
-- **Claude Code ללא הגבלה** (כמעט) - שימוש מורחב משמעותית
+### Max 5x ($100 לחודש)
+- **פי 5 יותר שימוש** מ-Pro
+- **Claude Code** - שימוש מורחב
 - **עדיפות בתור** - לא ממתינים כשיש עומס
-- אידיאלי למי ש**חי ב-Claude** כל היום
+- **גישה מוקדמת** לתכונות ומודלים חדשים
 
-### למי מתאים?
+### Max 20x ($200 לחודש)
+- **פי 20 יותר שימוש** מ-Pro!
+- **Claude Code ללא הגבלה** (כמעט) - שימוש מורחב משמעותית
+- אידיאלי למי ש**חי ב-Claude** כל היום
+- **כולל** Claude Code, Integrations, Research מתקדם, וחיפוש גלובלי
+
+### למי Max מתאים?
 ✅ מפתחים שעובדים עם Claude Code באופן יומיומי
 ✅ מי שמגיע למגבלת ה-Pro בקביעות
 ✅ פרילנסרים שClaude הוא הכלי המרכזי שלהם
+✅ בחרו 5x אם אתם משתמשים כבדים, 20x אם Claude הוא הכלי המרכזי שלכם
 
 ---
 
@@ -2769,16 +2826,16 @@ Prioritize by severity."
 
 ## 📊 טבלת השוואה מהירה
 
-| תכונה | חינמי | Pro $20 | Max $100 | Team $25/user | Enterprise |
-|--------|--------|---------|----------|---------------|------------|
-| Claude Sonnet | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Claude Opus | ❌ | ✅ | ✅ | ✅ | ✅ |
-| Extended Thinking | ❌ | ✅ | ✅ | ✅ | ✅ |
-| Claude Code | ❌ | מוגבל | מורחב | מוגבל | מותאם |
-| Projects | ❌ | ✅ | ✅ | ✅ (משותף) | ✅ (משותף) |
-| ניהול צוות | ❌ | ❌ | ❌ | ✅ | ✅ |
-| SSO | ❌ | ❌ | ❌ | ❌ | ✅ |
-| Audit Logs | ❌ | ❌ | ❌ | ❌ | ✅ |`,
+| תכונה | חינמי | Pro $20 | Max 5x $100 | Max 20x $200 | Team $25/user | Enterprise |
+|--------|--------|---------|-------------|--------------|---------------|------------|
+| Claude Sonnet | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Claude Opus | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Extended Thinking | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Claude Code | ❌ | מוגבל | מורחב | כמעט ללא הגבלה | מוגבל | מותאם |
+| Projects | ❌ | ✅ | ✅ | ✅ | ✅ (משותף) | ✅ (משותף) |
+| ניהול צוות | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ |
+| SSO | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
+| Audit Logs | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |`,
           en: `# Claude Account Types - Complete Guide
 
 ## Let's Start from the Beginning - What is a "Claude Account"?
@@ -2833,13 +2890,19 @@ Let's break it down:
 
 ---
 
-## 🚀 Max ($100/month)
+## 🚀 Max (Two Tiers)
 
-### What do you get beyond Pro?
-- **20x more usage** than free!
-- **Claude Code unlimited** (nearly) - significantly extended usage
+### Max 5x ($100/month)
+- **5x more usage** than Pro
+- **Claude Code** - extended usage
 - **Priority queue** - no waiting during peak times
+- **Early access** to new features and models
+
+### Max 20x ($200/month)
+- **20x more usage** than Pro!
+- **Claude Code unlimited** (nearly) - significantly extended usage
 - Ideal for those who **live in Claude** all day
+- **Includes** Claude Code, Integrations, advanced Research, and global web search
 
 ---
 
@@ -2869,16 +2932,16 @@ Let's break it down:
 
 ## 📊 Quick Comparison Table
 
-| Feature | Free | Pro $20 | Max $100 | Team $25/user | Enterprise |
-|---------|------|---------|----------|---------------|------------|
-| Claude Sonnet | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Claude Opus | ❌ | ✅ | ✅ | ✅ | ✅ |
-| Extended Thinking | ❌ | ✅ | ✅ | ✅ | ✅ |
-| Claude Code | ❌ | Limited | Extended | Limited | Custom |
-| Projects | ❌ | ✅ | ✅ | ✅ (shared) | ✅ (shared) |
-| Team Mgmt | ❌ | ❌ | ❌ | ✅ | ✅ |
-| SSO | ❌ | ❌ | ❌ | ❌ | ✅ |
-| Audit Logs | ❌ | ❌ | ❌ | ❌ | ✅ |`
+| Feature | Free | Pro $20 | Max 5x $100 | Max 20x $200 | Team $25/user | Enterprise |
+|---------|------|---------|-------------|--------------|---------------|------------|
+| Claude Sonnet | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Claude Opus | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Extended Thinking | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Claude Code | ❌ | Limited | Extended | Nearly unlimited | Limited | Custom |
+| Projects | ❌ | ✅ | ✅ | ✅ | ✅ (shared) | ✅ (shared) |
+| Team Mgmt | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ |
+| SSO | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
+| Audit Logs | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |`
         }
       },
       {
@@ -2917,7 +2980,7 @@ Let's break it down:
 5. ההיסטוריה נשמרת
 
 ### תשלום
-- **מנוי חודשי קבוע** ($0 / $20 / $100)
+- **מנוי חודשי קבוע** ($0 / $20 / $100 / $200)
 - לא משנה כמה משתמשים (עד המגבלה)
 - פשוט ונוח
 
@@ -2967,9 +3030,9 @@ print(response.content[0].text)
 
 | מודל | Input (1M tokens) | Output (1M tokens) | עלות משוערת לשיחה |
 |------|-------------------|---------------------|--------------------|
-| Haiku 4.5 | $0.80 | $4 | ~$0.01 |
+| Haiku 4.5 | $1 | $5 | ~$0.02 |
 | Sonnet 4.6 | $3 | $15 | ~$0.05 |
-| Opus 4.6 | $15 | $75 | ~$0.25 |
+| Opus 4.6 | $5 | $25 | ~$0.10 |
 
 > 💡 **טיפ:** 1 מיליון tokens זה בערך 750,000 מילים - ספר שלם!
 
@@ -2998,7 +3061,7 @@ print(response.content[0].text)
 → **חשבון רגיל** (חינמי או Pro)
 
 ### אני מפתח ורוצה Claude Code
-→ **חשבון Pro** ($20) או **Max** ($100)
+→ **חשבון Pro** ($20) או **Max** ($100/$200)
 
 ### אני רוצה לבנות אפליקציה שמשתמשת ב-Claude
 → **API**
@@ -3034,7 +3097,7 @@ You go to claude.ai, write a message, get an answer. That's it. Simple.
 - ✅ **Projects** - organizing ongoing work
 
 ### Payment
-- **Fixed monthly subscription** ($0 / $20 / $100)
+- **Fixed monthly subscription** ($0 / $20 / $100 / $200)
 - No matter how much you use (up to the limit)
 
 ---
@@ -3061,9 +3124,9 @@ API is an interface that lets **your software** talk to Claude. Instead of you t
 
 | Model | Input (1M tokens) | Output (1M tokens) | Est. cost per chat |
 |-------|-------------------|---------------------|--------------------|
-| Haiku 4.5 | $0.80 | $4 | ~$0.01 |
+| Haiku 4.5 | $1 | $5 | ~$0.02 |
 | Sonnet 4.6 | $3 | $15 | ~$0.05 |
-| Opus 4.6 | $15 | $75 | ~$0.25 |
+| Opus 4.6 | $5 | $25 | ~$0.10 |
 
 > 💡 **Tip:** 1 million tokens is about 750,000 words - an entire book!
 
@@ -3075,7 +3138,7 @@ API is an interface that lets **your software** talk to Claude. Instead of you t
 → **Regular Account** (Free or Pro)
 
 ### I'm a developer and want Claude Code
-→ **Pro Account** ($20) or **Max** ($100)
+→ **Pro Account** ($20) or **Max** ($100/$200)
 
 ### I want to build an app that uses Claude
 → **API**
@@ -3370,7 +3433,7 @@ Claude Code יכול לעבוד בשתי דרכים:
 - ✅ פשוט - לא צריך API key
 - ✅ מנוי קבוע - אין הפתעות בחיוב
 - ✅ Pro ($20) כולל שימוש בסיסי ב-Claude Code
-- ✅ Max ($100) כולל שימוש מורחב
+- ✅ Max ($100/$200) כולל שימוש מורחב
 
 **חסרונות:**
 - ❌ יש מגבלת שימוש (במיוחד ב-Pro)
@@ -3397,7 +3460,7 @@ claude
 - ✅ מתאים לעבודה אינטנסיבית
 
 **חסרונות:**
-- ❌ יכול להיות יקר (Opus עולה $15/$75 per 1M tokens)
+- ❌ יכול להיות יקר (Opus עולה $5/$25 per 1M tokens)
 - ❌ צריך לעקוב אחרי עלויות
 - ❌ דורש הגדרת API key
 
@@ -3418,7 +3481,7 @@ claude
 ### המלצות
 
 - **מתחילים:** Pro plan ($20/חודש) - מספיק לרוב השימושים
-- **משתמשים כבדים:** Max plan ($100/חודש) - שימוש כמעט ללא הגבלה
+- **משתמשים כבדים:** Max plan ($100-$200/חודש) - שימוש כמעט ללא הגבלה
 - **צוותים גדולים:** API credits - שליטה מלאה בעלויות
 - **פרויקטים גדולים:** API credits עם Sonnet (חסכוני) + Opus (למשימות קריטיות)
 
@@ -3469,7 +3532,7 @@ Claude Code can work in two ways:
 - ✅ Simple - no API key needed
 - ✅ Fixed subscription - no billing surprises
 - ✅ Pro ($20) includes basic Claude Code usage
-- ✅ Max ($100) includes extended usage
+- ✅ Max ($100/$200) includes extended usage
 
 **Cons:**
 - ❌ Usage limits (especially on Pro)
@@ -3493,7 +3556,7 @@ claude
 - ✅ Suitable for intensive work
 
 **Cons:**
-- ❌ Can be expensive (Opus costs $15/$75 per 1M tokens)
+- ❌ Can be expensive (Opus costs $5/$25 per 1M tokens)
 - ❌ Need to track costs
 - ❌ Requires API key setup
 
