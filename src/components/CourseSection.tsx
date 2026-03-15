@@ -5,7 +5,11 @@ import { courses } from '@/data/courses';
 import { Clock, BookOpen, ChevronDown, ChevronUp, ArrowLeft, ArrowRight } from 'lucide-react';
 import LessonViewer from './LessonViewer';
 
-export default function CourseSection() {
+interface CourseSectionProps {
+  selectedLevel?: string;
+}
+
+export default function CourseSection({ selectedLevel = 'all' }: CourseSectionProps) {
   const { t, dir, lang } = useLang();
   const [expandedCourse, setExpandedCourse] = useState<string | null>(null);
   const [activeLessonId, setActiveLessonId] = useState<string | null>(null);
@@ -23,6 +27,10 @@ export default function CourseSection() {
     advanced: 'badge-advanced',
   };
 
+  const filteredCourses = selectedLevel === 'all'
+    ? courses
+    : courses.filter(c => c.level === selectedLevel);
+
   if (activeLessonId && activeCourseId) {
     const course = courses.find(c => c.id === activeCourseId);
     const lesson = course?.lessons.find(l => l.id === activeLessonId);
@@ -34,7 +42,9 @@ export default function CourseSection() {
           onBack={() => { setActiveLessonId(null); setActiveCourseId(null); }}
           onNavigate={(lessonId: string) => {
             setActiveLessonId(lessonId);
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            setTimeout(() => {
+              document.getElementById('courses')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 50);
           }}
         />
       );
@@ -50,7 +60,7 @@ export default function CourseSection() {
         </div>
 
         <div className="space-y-6">
-          {courses.map((course, idx) => {
+          {filteredCourses.map((course) => {
             const isExpanded = expandedCourse === course.id;
             return (
               <div key={course.id} className="glass-card overflow-hidden">
@@ -93,7 +103,13 @@ export default function CourseSection() {
                     {course.lessons.map((lesson, lIdx) => (
                       <button
                         key={lesson.id}
-                        onClick={() => { setActiveLessonId(lesson.id); setActiveCourseId(course.id); }}
+                        onClick={() => {
+                          setActiveLessonId(lesson.id);
+                          setActiveCourseId(course.id);
+                          setTimeout(() => {
+                            document.getElementById('courses')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                          }, 50);
+                        }}
                         className="w-full flex items-center gap-4 p-4 px-6 hover:bg-claude-cream/50 transition-colors text-start border-b border-border-color/50 last:border-b-0"
                       >
                         <div

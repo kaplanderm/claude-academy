@@ -1,4 +1,5 @@
 'use client';
+import { useState } from 'react';
 import { LangProvider, useLang } from '@/lib/LangContext';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
@@ -13,14 +14,15 @@ import Footer from '@/components/Footer';
 
 function AppContent() {
   const { dir } = useLang();
+  const [selectedLevel, setSelectedLevel] = useState<string>('all');
 
   return (
     <div dir={dir}>
       <Header />
       <main>
         <Hero />
-        <LevelSelector />
-        <CourseSection />
+        <LevelSelector onLevelChange={setSelectedLevel} />
+        <CourseSection selectedLevel={selectedLevel} />
         <ToolsComparison />
         <PluginsSection />
         <UseCasesSection />

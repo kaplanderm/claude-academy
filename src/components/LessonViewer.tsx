@@ -65,7 +65,7 @@ export default function LessonViewer({ course, lesson, onBack, onNavigate }: Les
               <thead>
                 <tr className="bg-claude-warm">
                   {tableRows[0]?.map((cell, ci) => (
-                    <th key={ci} className="p-3 text-sm font-bold text-text-primary border-b border-claude-peach">{cell}</th>
+                    <th key={ci} className="p-3 text-sm font-bold text-text-primary border-b border-claude-peach"><span dangerouslySetInnerHTML={{ __html: formatInline(cell) }} /></th>
                   ))}
                 </tr>
               </thead>
@@ -73,7 +73,7 @@ export default function LessonViewer({ course, lesson, onBack, onNavigate }: Les
                 {tableRows.slice(1).map((row, ri) => (
                   <tr key={ri} className={ri % 2 === 0 ? 'bg-white' : 'bg-claude-cream/30'}>
                     {row.map((cell, ci) => (
-                      <td key={ci} className="p-3 text-sm text-text-secondary border-b border-border-color/30">{cell}</td>
+                      <td key={ci} className="p-3 text-sm text-text-secondary border-b border-border-color/30"><span dangerouslySetInnerHTML={{ __html: formatInline(cell) }} /></td>
                     ))}
                   </tr>
                 ))}
@@ -143,7 +143,7 @@ export default function LessonViewer({ course, lesson, onBack, onNavigate }: Les
             <thead>
               <tr className="bg-claude-warm">
                 {tableRows[0]?.map((cell, ci) => (
-                  <th key={ci} className="p-3 text-sm font-bold text-text-primary border-b border-claude-peach">{cell}</th>
+                  <th key={ci} className="p-3 text-sm font-bold text-text-primary border-b border-claude-peach"><span dangerouslySetInnerHTML={{ __html: formatInline(cell) }} /></th>
                 ))}
               </tr>
             </thead>
@@ -151,7 +151,7 @@ export default function LessonViewer({ course, lesson, onBack, onNavigate }: Les
               {tableRows.slice(1).map((row, ri) => (
                 <tr key={ri} className={ri % 2 === 0 ? 'bg-white' : 'bg-claude-cream/30'}>
                   {row.map((cell, ci) => (
-                    <td key={ci} className="p-3 text-sm text-text-secondary border-b border-border-color/30">{cell}</td>
+                    <td key={ci} className="p-3 text-sm text-text-secondary border-b border-border-color/30"><span dangerouslySetInnerHTML={{ __html: formatInline(cell) }} /></td>
                   ))}
                 </tr>
               ))}
