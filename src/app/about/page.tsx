@@ -144,7 +144,7 @@ export default function AboutPage() {
               </h2>
               <p className="text-text-secondary leading-relaxed mb-6">
                 {lang === 'he'
-                  ? 'ד"ר יהונתן קפלן הוא מומחה ברפואת עור, כירורגיית עור וניתוחי מוז מיקרוגרפיים. כשרופאים בונים את הכלים שלהם, הם לא מתאימים טכנולוגיה לרפואה אלא מעצבים רפואה טובה יותר מלכתחילה. מתוך אמונה זו נולד פרויקט המחקר DermUnbound, שבו ד"ר קפלן חוקר ומפתח כלים קליניים מבוססי AI שנבנים מתוך ההבנה העמוקה של מי שעומד מול המטופל.'
+                  ? 'ד"ר יהונתן קפלן הוא מומחה ברפואת עור, דרמטוכירורגיה וניתוחי מוז (Mohs). כשרופאים בונים את הכלים שלהם, הם לא מתאימים טכנולוגיה לרפואה אלא מעצבים רפואה טובה יותר מלכתחילה. מתוך אמונה זו נולד פרויקט המחקר DermUnbound, שבו ד"ר קפלן חוקר ומפתח כלים קליניים מבוססי AI שנבנים מתוך ההבנה העמוקה של מי שעומד מול המטופל.'
                   : 'Dr. Yehonatan Kaplan is a specialist in dermatology, dermatologic surgery, and Mohs micrographic surgery. When physicians build their own tools, they don\'t adapt technology to medicine, they shape better medicine from the ground up. This conviction led to the DermUnbound research project, where Dr. Kaplan develops AI-powered clinical tools born from the deep understanding of someone who stands in front of the patient every day.'}
               </p>
               <a
