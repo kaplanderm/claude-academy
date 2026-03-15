@@ -12,7 +12,7 @@ export const medicalUseCases: MedicalUseCase[] = [
     icon: '🏥',
     title: { he: 'אבחון וטיפול', en: 'Diagnosis & Treatment' },
     description: {
-      he: 'אבחון מבדל, פרוטוקולי טיפול, אינטראקציות תרופות ופרשנות מעבדה',
+      he: 'אבחנה מבדלת, פרוטוקולי טיפול, אינטראקציות תרופות ופרשנות מעבדה',
       en: 'Differential diagnosis, treatment protocols, drug interactions, and lab interpretation',
     },
     content: {
