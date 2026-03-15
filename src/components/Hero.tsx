@@ -62,7 +62,7 @@ export default function Hero() {
               { icon: BookOpen, value: '40+', label: t('hero.stat1Label') },
               { icon: Clock, value: '12+', label: t('hero.stat2Label') },
               { icon: Layers, value: '10+', label: t('hero.stat3Label') },
-              { icon: Calendar, value: '2025', label: t('hero.stat4Label') },
+              { icon: Calendar, value: '2026', label: t('hero.stat4Label') },
             ].map((stat, i) => (
               <div key={i} className="glass-card p-4 md:p-6 text-center">
                 <stat.icon className="mx-auto mb-2 text-claude-orange" size={24} />

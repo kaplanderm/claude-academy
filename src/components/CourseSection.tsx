@@ -43,7 +43,7 @@ export default function CourseSection({ selectedLevel = 'all' }: CourseSectionPr
           onNavigate={(lessonId: string) => {
             setActiveLessonId(lessonId);
             setTimeout(() => {
-              document.getElementById('courses')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              document.getElementById('lesson-viewer')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }, 50);
           }}
         />
@@ -107,7 +107,7 @@ export default function CourseSection({ selectedLevel = 'all' }: CourseSectionPr
                           setActiveLessonId(lesson.id);
                           setActiveCourseId(course.id);
                           setTimeout(() => {
-                            document.getElementById('courses')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            document.getElementById('lesson-viewer')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
                           }, 50);
                         }}
                         className="w-full flex items-center gap-4 p-4 px-6 hover:bg-claude-cream/50 transition-colors text-start border-b border-border-color/50 last:border-b-0"

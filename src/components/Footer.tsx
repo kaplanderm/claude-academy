@@ -62,7 +62,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-gray-500">
-            © 2025 Claude Academy. {t('footer.rights')}.
+            © 2026 Claude Academy. {t('footer.rights')}.
           </p>
           <p className="text-sm text-gray-500 flex items-center gap-1">
             {t('footer.madeWith')} <Heart size={14} className="text-red-500" /> {lang === 'he' ? 'ו-Claude AI' : 'and Claude AI'}

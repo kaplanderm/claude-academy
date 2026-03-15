@@ -207,7 +207,7 @@ export default function LessonViewer({ course, lesson, selectedLevel = 'beginner
   };
 
   return (
-    <section id="courses" className="py-20 bg-white" dir={dir}>
+    <section id="lesson-viewer" className="py-20 bg-white" dir={dir}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         {/* Back button */}
         <button
