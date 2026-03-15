@@ -6082,66 +6082,1554 @@ export const blogPosts = [
     id: 'claude-4-5-release',
     title: { he: 'Claude 4.5/4.6 - מה חדש?', en: 'Claude 4.5/4.6 - What\'s New?' },
     category: 'updates',
-    date: '2025-03-15',
+    date: '2026-03-15',
     readTime: 5,
     excerpt: {
       he: 'סקירת כל החידושים בגרסאות האחרונות של Claude, כולל שיפורים בקוד, ראייה, ו-Extended Thinking.',
       en: 'Overview of all innovations in the latest Claude versions, including improvements in code, vision, and Extended Thinking.'
+    },
+    content: {
+      he: `# Claude 4.5/4.6 - מה חדש?
+
+Anthropic שחררה את הגרסאות החדשות ביותר של Claude — גרסאות 4.5 ו-4.6 — עם שיפורים משמעותיים שמשנים את חוויית העבודה עם AI. בואו נסקור את כל החידושים.
+
+## Extended Thinking — חשיבה מעמיקה יותר
+
+אחד השיפורים הבולטים הוא Extended Thinking. בגרסה 4.5 השתפרה היכולת של Claude לחשוב לעומק לפני שהוא עונה. זה אומר:
+
+- **פתרון בעיות מורכבות** — Claude יכול עכשיו לפרק בעיות לשלבים, לשקול חלופות, ולהגיע לתשובה מדויקת יותר
+- **קוד מורכב** — כתיבת אלגוריתמים, ארכיטקטורה, ודיבוג מעמיקים יותר
+- **ניתוח נתונים** — הסקת מסקנות מנתונים מורכבים עם הסבר מפורט של תהליך החשיבה
+
+בפועל, כשאתם מבקשים מ-Claude לפתור בעיה מורכבת, הוא ייקח רגע "לחשוב" ויחזיר תשובה מלאה ומבוססת יותר.
+
+## שיפורים בכתיבת קוד
+
+Claude 4.5/4.6 הביאו קפיצת מדרגה ביכולות הקוד:
+
+- **הבנת פרויקטים גדולים** — Claude יכול עכשיו להבין codebase שלם ולבצע שינויים מדויקים בהקשר הנכון
+- **שיפור בדיבוג** — זיהוי באגים מהיר יותר עם הצעות תיקון מדויקות
+- **Agent mode** — Claude יכול להריץ פקודות, לערוך קבצים, ולנהל git ישירות מהטרמינל
+- **תמיכה בשפות נוספות** — ביצועים משופרים ב-Python, TypeScript, Rust, Go ועוד
+
+### Claude Code — הכלי שמשנה הכל
+
+Claude Code הוא כלי CLI שמאפשר לעבוד עם Claude ישירות מהטרמינל. עם הגרסאות החדשות:
+
+\`\`\`
+# התקנה
+npm install -g @anthropic-ai/claude-code
+
+# שימוש בסיסי
+claude "תסביר את הקוד הזה"
+claude "תתקן את הבאג ב-app.js"
+claude "תוסיף טסטים לכל הפונקציות"
+\`\`\`
+
+## Agent SDK — בניית סוכנים חכמים
+
+Anthropic שחררה Agent SDK שמאפשר לבנות סוכני AI מותאמים אישית:
+
+- **Tool Use** — הגדרת כלים מותאמים שהסוכן יכול להשתמש בהם
+- **Multi-step reasoning** — הסוכן יכול לתכנן ולבצע משימות מרובות שלבים
+- **Memory** — שמירת הקשר ומידע בין שיחות
+- **Orchestration** — ניהול מספר סוכנים שעובדים יחד
+
+## יכולות ראייה חדשות (Vision)
+
+Claude 4.5/4.6 כוללים שיפורים משמעותיים בהבנת תמונות:
+
+- **קריאת מסמכים** — זיהוי טקסט מתמונות, PDFs, וסריקות
+- **ניתוח גרפים ותרשימים** — הבנת נתונים ויזואליים
+- **עיצוב מ-screenshot** — יצירת קוד HTML/CSS מצילום מסך
+- **השוואת תמונות** — זיהוי הבדלים בין גרסאות עיצוב
+
+## MCP — חיבור לעולם
+
+Model Context Protocol מאפשר לחבר את Claude לכלים חיצוניים:
+
+- **גישה לקבצים מקומיים** — קריאה וכתיבה של קבצים
+- **חיבור למסדי נתונים** — שאילתות ועדכונים ישירים
+- **אינטגרציות** — Slack, GitHub, Jira, ועוד
+- **כלים מותאמים** — בנייה של MCP servers משלכם
+
+## סיכום
+
+גרסאות 4.5 ו-4.6 של Claude מביאות שיפורים משמעותיים בכל הקטגוריות. המודל חכם יותר, מהיר יותר, ומסוגל לבצע משימות מורכבות יותר. השילוב של Extended Thinking, Agent SDK, ו-MCP הופך את Claude לכלי עבודה חיוני עבור מפתחים.`,
+      en: `# Claude 4.5/4.6 - What's New?
+
+Anthropic has released the latest versions of Claude — versions 4.5 and 4.6 — with significant improvements that transform the experience of working with AI. Let's review all the innovations.
+
+## Extended Thinking — Deeper Reasoning
+
+One of the most notable improvements is Extended Thinking. In version 4.5, Claude's ability to think deeply before responding has been significantly enhanced. This means:
+
+- **Complex problem solving** — Claude can now break problems into steps, consider alternatives, and arrive at more accurate answers
+- **Complex code** — writing algorithms, architecture, and debugging at a deeper level
+- **Data analysis** — drawing conclusions from complex data with detailed explanation of the thinking process
+
+In practice, when you ask Claude to solve a complex problem, it will take a moment to "think" and return a more complete and well-founded answer.
+
+## Coding Improvements
+
+Claude 4.5/4.6 brought a quantum leap in coding capabilities:
+
+- **Understanding large projects** — Claude can now understand an entire codebase and make precise changes in the right context
+- **Improved debugging** — faster bug identification with accurate fix suggestions
+- **Agent mode** — Claude can run commands, edit files, and manage git directly from the terminal
+- **Additional language support** — improved performance in Python, TypeScript, Rust, Go, and more
+
+### Claude Code — The Game-Changing Tool
+
+Claude Code is a CLI tool that lets you work with Claude directly from the terminal. With the new versions:
+
+\`\`\`
+# Installation
+npm install -g @anthropic-ai/claude-code
+
+# Basic usage
+claude "explain this code"
+claude "fix the bug in app.js"
+claude "add tests for all functions"
+\`\`\`
+
+## Agent SDK — Building Smart Agents
+
+Anthropic released the Agent SDK that enables building custom AI agents:
+
+- **Tool Use** — define custom tools that the agent can use
+- **Multi-step reasoning** — the agent can plan and execute multi-step tasks
+- **Memory** — saving context and information between conversations
+- **Orchestration** — managing multiple agents working together
+
+## New Vision Capabilities
+
+Claude 4.5/4.6 includes significant improvements in image understanding:
+
+- **Document reading** — text recognition from images, PDFs, and scans
+- **Graph and chart analysis** — understanding visual data
+- **Design from screenshot** — generating HTML/CSS code from screenshots
+- **Image comparison** — identifying differences between design versions
+
+## MCP — Connecting to the World
+
+Model Context Protocol enables connecting Claude to external tools:
+
+- **Local file access** — reading and writing files
+- **Database connection** — direct queries and updates
+- **Integrations** — Slack, GitHub, Jira, and more
+- **Custom tools** — building your own MCP servers
+
+## Summary
+
+Claude versions 4.5 and 4.6 bring significant improvements across all categories. The model is smarter, faster, and capable of performing more complex tasks. The combination of Extended Thinking, Agent SDK, and MCP makes Claude an essential tool for developers.`
     }
   },
   {
     id: 'mcp-revolution',
     title: { he: 'מהפכת MCP - חיבור Claude לעולם', en: 'The MCP Revolution - Connecting Claude to the World' },
     category: 'updates',
-    date: '2025-02-20',
+    date: '2026-02-20',
     readTime: 7,
     excerpt: {
       he: 'Model Context Protocol משנה את הדרך שבה AI מתקשר עם כלים חיצוניים. למדו איך להשתמש בו.',
       en: 'Model Context Protocol changes how AI communicates with external tools. Learn how to use it.'
+    },
+    content: {
+      he: `# מהפכת MCP - חיבור Claude לעולם
+
+Model Context Protocol (MCP) הוא פרוטוקול פתוח שפיתחה Anthropic, שמאפשר ל-Claude להתחבר לכלים חיצוניים ומקורות מידע. זוהי מהפכה אמיתית באופן שבו AI מתקשר עם העולם.
+
+## מה זה MCP?
+
+חשבו על MCP כמו USB עבור AI. כמו ש-USB מאפשר לכל מכשיר להתחבר לכל מחשב, MCP מאפשר לכל כלי להתחבר לכל מודל AI. במקום לבנות אינטגרציה ייחודית לכל שירות, MCP מספק סטנדרט אחיד.
+
+### איך זה עובד?
+
+\`\`\`
+┌─────────────┐     MCP Protocol     ┌─────────────┐
+│   Claude     │◄──────────────────►│  MCP Server  │
+│  (Client)    │   JSON-RPC 2.0     │  (כלי חיצוני)  │
+└─────────────┘                     └─────────────┘
+\`\`\`
+
+1. **MCP Server** — תוכנה שמגדירה כלים (tools) שזמינים ל-Claude
+2. **MCP Client** — Claude Code או כל אפליקציה שתומכת ב-MCP
+3. **Protocol** — תקשורת סטנדרטית מבוססת JSON-RPC 2.0
+
+## למה MCP חשוב?
+
+### הבעיה לפני MCP
+
+לפני MCP, כל אינטגרציה עם AI דרשה:
+- כתיבת קוד ייחודי לכל שירות
+- תחזוקה מתמשכת כשה-API משתנה
+- חוסר סטנדרטיזציה בין כלים שונים
+- הגבלה למפתחים עם ניסיון ב-API ספציפי
+
+### הפתרון עם MCP
+
+עם MCP:
+- **סטנדרט אחיד** — כלי אחד עובד עם כל מודל AI שתומך ב-MCP
+- **קהילה פעילה** — אלפי MCP servers מוכנים לשימוש
+- **פשטות** — התקנה והגדרה בדקות
+- **אבטחה** — בקרת הרשאות מובנית
+
+## התחלה מהירה
+
+### התקנת MCP Server
+
+הוסיפו MCP server לתצורת Claude Code:
+
+\`\`\`
+// claude_desktop_config.json
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@anthropic-ai/mcp-filesystem"]
+    }
+  }
+}
+\`\`\`
+
+### MCP Servers פופולריים
+
+- **Filesystem** — גישה לקבצים מקומיים
+- **GitHub** — ניהול repos, issues, ו-PRs
+- **Slack** — שליחה וקריאה של הודעות
+- **PostgreSQL / SQLite** — שאילתות למסדי נתונים
+- **Puppeteer** — אוטומציה של דפדפן
+- **Brave Search** — חיפוש באינטרנט
+
+### בניית MCP Server משלכם
+
+\`\`\`
+// server.js - MCP Server בסיסי
+import { McpServer } from "@anthropic-ai/mcp";
+
+const server = new McpServer({
+  name: "my-server",
+  version: "1.0.0"
+});
+
+server.tool("get_weather", {
+  description: "Get weather for a city",
+  parameters: {
+    city: { type: "string" }
+  }
+}, async ({ city }) => {
+  const data = await fetchWeather(city);
+  return { temperature: data.temp, conditions: data.conditions };
+});
+
+server.start();
+\`\`\`
+
+## דוגמאות שימוש מעשיות
+
+### 1. עבודה עם קבצים
+
+\`\`\`
+Claude: "קרא את כל קבצי ה-TypeScript בפרויקט ותן סיכום של הארכיטקטורה"
+→ Claude משתמש ב-filesystem MCP כדי לקרוא את הקבצים ומחזיר ניתוח מפורט
+\`\`\`
+
+### 2. ניהול GitHub
+
+\`\`\`
+Claude: "תבדוק את כל ה-PRs הפתוחים ותתן סיכום של כל אחד"
+→ Claude משתמש ב-GitHub MCP כדי לגשת ל-PRs ומנתח את השינויים
+\`\`\`
+
+### 3. שאילתות מסד נתונים
+
+\`\`\`
+Claude: "תראה לי את 10 המשתמשים הכי פעילים החודש"
+→ Claude כותב ומריץ שאילתת SQL ומציג את התוצאות
+\`\`\`
+
+## העתיד של MCP
+
+MCP נמצא בצמיחה מהירה. הקהילה מפתחת עשרות MCP servers חדשים כל שבוע, וחברות גדולות מאמצות את הסטנדרט. זוהי רק ההתחלה של עולם שבו AI יכול לגשת לכל כלי ושירות בצורה אחידה ובטוחה.
+
+## סיכום
+
+MCP הוא הגשר בין Claude לבין כל הכלים שאתם כבר משתמשים בהם. הוא מאפשר ל-Claude לא רק לדבר אלא גם לעשות — לקרוא קבצים, לנהל פרויקטים, לשלוח הודעות, ולהריץ שאילתות. ההתקנה פשוטה, השימוש טבעי, וההשפעה על הפרודוקטיביות היא עצומה.`,
+      en: `# The MCP Revolution - Connecting Claude to the World
+
+Model Context Protocol (MCP) is an open protocol developed by Anthropic that enables Claude to connect to external tools and data sources. This is a true revolution in how AI interacts with the world.
+
+## What is MCP?
+
+Think of MCP like USB for AI. Just as USB allows any device to connect to any computer, MCP allows any tool to connect to any AI model. Instead of building a unique integration for each service, MCP provides a unified standard.
+
+### How Does It Work?
+
+\`\`\`
+┌─────────────┐     MCP Protocol     ┌─────────────┐
+│   Claude     │◄──────────────────►│  MCP Server  │
+│  (Client)    │   JSON-RPC 2.0     │ (External Tool)│
+└─────────────┘                     └─────────────┘
+\`\`\`
+
+1. **MCP Server** — software that defines tools available to Claude
+2. **MCP Client** — Claude Code or any MCP-supporting application
+3. **Protocol** — standard communication based on JSON-RPC 2.0
+
+## Why is MCP Important?
+
+### The Problem Before MCP
+
+Before MCP, every AI integration required:
+- Writing unique code for each service
+- Ongoing maintenance when APIs change
+- Lack of standardization between different tools
+- Limitation to developers with specific API experience
+
+### The Solution with MCP
+
+With MCP:
+- **Unified standard** — one tool works with any AI model that supports MCP
+- **Active community** — thousands of ready-to-use MCP servers
+- **Simplicity** — installation and configuration in minutes
+- **Security** — built-in permission controls
+
+## Quick Start
+
+### Installing an MCP Server
+
+Add an MCP server to your Claude Code configuration:
+
+\`\`\`
+// claude_desktop_config.json
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@anthropic-ai/mcp-filesystem"]
+    }
+  }
+}
+\`\`\`
+
+### Popular MCP Servers
+
+- **Filesystem** — local file access
+- **GitHub** — manage repos, issues, and PRs
+- **Slack** — send and read messages
+- **PostgreSQL / SQLite** — database queries
+- **Puppeteer** — browser automation
+- **Brave Search** — web search
+
+### Building Your Own MCP Server
+
+\`\`\`
+// server.js - Basic MCP Server
+import { McpServer } from "@anthropic-ai/mcp";
+
+const server = new McpServer({
+  name: "my-server",
+  version: "1.0.0"
+});
+
+server.tool("get_weather", {
+  description: "Get weather for a city",
+  parameters: {
+    city: { type: "string" }
+  }
+}, async ({ city }) => {
+  const data = await fetchWeather(city);
+  return { temperature: data.temp, conditions: data.conditions };
+});
+
+server.start();
+\`\`\`
+
+## Practical Use Cases
+
+### 1. Working with Files
+
+\`\`\`
+Claude: "Read all TypeScript files in the project and give an architecture summary"
+→ Claude uses the filesystem MCP to read files and returns a detailed analysis
+\`\`\`
+
+### 2. GitHub Management
+
+\`\`\`
+Claude: "Check all open PRs and give a summary of each"
+→ Claude uses the GitHub MCP to access PRs and analyze changes
+\`\`\`
+
+### 3. Database Queries
+
+\`\`\`
+Claude: "Show me the 10 most active users this month"
+→ Claude writes and runs an SQL query and displays the results
+\`\`\`
+
+## The Future of MCP
+
+MCP is growing rapidly. The community develops dozens of new MCP servers every week, and major companies are adopting the standard. This is just the beginning of a world where AI can access any tool and service in a unified and secure way.
+
+## Summary
+
+MCP is the bridge between Claude and all the tools you already use. It enables Claude not just to talk but also to act — read files, manage projects, send messages, and run queries. Installation is simple, usage is natural, and the impact on productivity is enormous.`
     }
   },
   {
     id: 'five-min-automation',
     title: { he: '💡 אוטומציה ב-5 דקות: תרגום אתר שלם', en: '💡 5-Min Automation: Translate an Entire Website' },
     category: 'five-min',
-    date: '2025-03-10',
+    date: '2026-03-10',
     readTime: 5,
     excerpt: {
       he: 'איך לתרגם אתר שלם לעברית עם Claude Code ב-5 דקות בלבד.',
       en: 'How to translate an entire website to Hebrew with Claude Code in just 5 minutes.'
+    },
+    content: {
+      he: `# אוטומציה ב-5 דקות: תרגום אתר שלם
+
+רוצים לתרגם את האתר שלכם לשפה נוספת? עם Claude Code, זה עניין של 5 דקות. הנה בדיוק איך לעשות את זה.
+
+## מה נצטרך
+
+- Claude Code מותקן (npm install -g @anthropic-ai/claude-code)
+- פרויקט אתר קיים (React, Next.js, HTML סטטי, או כל framework)
+- 5 דקות של זמן
+
+## שלב 1: ניתוח המצב (דקה 1)
+
+פתחו טרמינל בתיקיית הפרויקט והריצו:
+
+\`\`\`
+claude "סרוק את הפרויקט ותגיד לי איפה נמצאים כל הטקסטים שצריך לתרגם. תן סיכום של כמה קבצים יש, מה המבנה, ואיזה שפות כבר נתמכות."
+\`\`\`
+
+Claude יסרוק את הפרויקט ויחזיר דוח מפורט.
+
+## שלב 2: יצירת מערכת תרגום (דקה 2-3)
+
+\`\`\`
+claude "צור מערכת i18n לפרויקט הזה. אני רוצה:
+1. קובץ תרגומים לעברית ואנגלית
+2. hook או פונקציה שמאפשרת להחליף שפה
+3. תשמור על כל הטקסטים הקיימים כברירת מחדל באנגלית
+4. תוסיף את התרגומים לעברית"
+\`\`\`
+
+Claude ייצור את כל הקבצים הנדרשים, יחלץ את כל הטקסטים, ויוסיף תרגומים.
+
+## שלב 3: עדכון הקומפוננטות (דקה 3-4)
+
+\`\`\`
+claude "עכשיו עדכן את כל הקומפוננטות שישתמשו במערכת התרגום. החלף את כל הטקסטים הקשיחים בקריאות ל-t() או למערכת התרגום שיצרת."
+\`\`\`
+
+Claude יעבור על כל קובץ ויחליף טקסטים קשיחים בפניות למערכת התרגום.
+
+## שלב 4: הוספת כפתור החלפת שפה (דקה 4-5)
+
+\`\`\`
+claude "הוסף כפתור יפה להחלפת שפה ב-header. כשמחליפים לעברית, הכל צריך להיות RTL. עצב את הכפתור בסגנון מינימליסטי עם דגלים."
+\`\`\`
+
+## שלב 5: בדיקה (30 שניות)
+
+\`\`\`
+claude "הרץ את הפרויקט, בדוק שאין שגיאות, ואמת שהתרגום עובד לשתי השפות."
+\`\`\`
+
+## טיפים חשובים
+
+### איכות התרגום
+
+Claude מתרגם ברמה גבוהה, אבל כדאי:
+- **לציין הקשר** — "זה אתר רפואי, השתמש במינוח מקצועי"
+- **לתת דוגמאות** — "התרגום צריך להיות בסגנון רשמי, לא דיבורי"
+- **לבדוק מילות מפתח** — ודאו שמושגים טכניים תורגמו נכון
+
+### RTL Support
+
+כשמתרגמים לעברית או ערבית:
+
+\`\`\`
+claude "ודא שכל ה-CSS תומך ב-RTL. השתמש ב-logical properties (margin-inline-start במקום margin-left) והוסף dir attribute."
+\`\`\`
+
+### שפות נוספות
+
+רוצים להוסיף שפה שלישית? פשוט:
+
+\`\`\`
+claude "הוסף תרגום לרוסית לכל הטקסטים במערכת התרגום."
+\`\`\`
+
+## דוגמה אמיתית
+
+הנה מה שקרה כשתרגמנו את claude-academy:
+
+1. **25 קבצי TypeScript** — כל אחד עם טקסטים
+2. **מעל 500 מחרוזות** — תורגמו לעברית
+3. **RTL מלא** — כולל layout, טיפוגרפיה, ואייקונים
+4. **זמן כולל** — 5 דקות
+
+## סיכום
+
+תרגום אתר שלם עם Claude Code הוא אחד הדברים שהכי מרשימים. במקום שבועות של עבודה ידנית, אתם מקבלים תרגום מלא ומערכת i18n מקצועית ב-5 דקות. Claude מבין הקשר, מתרגם בצורה טבעית, ומטפל בכל הפרטים הטכניים כמו RTL ו-pluralization.`,
+      en: `# 5-Min Automation: Translate an Entire Website
+
+Want to translate your website to another language? With Claude Code, it's a 5-minute task. Here's exactly how to do it.
+
+## What You'll Need
+
+- Claude Code installed (npm install -g @anthropic-ai/claude-code)
+- An existing website project (React, Next.js, static HTML, or any framework)
+- 5 minutes of your time
+
+## Step 1: Analyze the Situation (Minute 1)
+
+Open a terminal in your project folder and run:
+
+\`\`\`
+claude "Scan the project and tell me where all the texts that need translation are. Give a summary of how many files there are, the structure, and which languages are already supported."
+\`\`\`
+
+Claude will scan the project and return a detailed report.
+
+## Step 2: Create Translation System (Minutes 2-3)
+
+\`\`\`
+claude "Create an i18n system for this project. I want:
+1. Translation files for Hebrew and English
+2. A hook or function that allows language switching
+3. Keep all existing texts as the default in English
+4. Add Hebrew translations"
+\`\`\`
+
+Claude will create all necessary files, extract all texts, and add translations.
+
+## Step 3: Update Components (Minutes 3-4)
+
+\`\`\`
+claude "Now update all components to use the translation system. Replace all hardcoded texts with calls to t() or the translation system you created."
+\`\`\`
+
+Claude will go through each file and replace hardcoded texts with translation system calls.
+
+## Step 4: Add Language Switcher (Minutes 4-5)
+
+\`\`\`
+claude "Add a nice language switching button in the header. When switching to Hebrew, everything should be RTL. Style the button minimally with flags."
+\`\`\`
+
+## Step 5: Test (30 seconds)
+
+\`\`\`
+claude "Run the project, check for errors, and verify the translation works in both languages."
+\`\`\`
+
+## Important Tips
+
+### Translation Quality
+
+Claude translates at a high level, but it's worth:
+- **Specifying context** — "this is a medical website, use professional terminology"
+- **Providing examples** — "the translation should be formal, not conversational"
+- **Checking keywords** — verify that technical terms are translated correctly
+
+### RTL Support
+
+When translating to Hebrew or Arabic:
+
+\`\`\`
+claude "Ensure all CSS supports RTL. Use logical properties (margin-inline-start instead of margin-left) and add dir attribute."
+\`\`\`
+
+### Additional Languages
+
+Want to add a third language? Simply:
+
+\`\`\`
+claude "Add Russian translation for all texts in the translation system."
+\`\`\`
+
+## Real-World Example
+
+Here's what happened when we translated claude-academy:
+
+1. **25 TypeScript files** — each with texts
+2. **Over 500 strings** — translated to Hebrew
+3. **Full RTL** — including layout, typography, and icons
+4. **Total time** — 5 minutes
+
+## Summary
+
+Translating an entire website with Claude Code is one of the most impressive things you can do. Instead of weeks of manual work, you get a complete translation and professional i18n system in 5 minutes. Claude understands context, translates naturally, and handles all technical details like RTL and pluralization.`
     }
   },
   {
     id: 'five-min-testing',
     title: { he: '💡 בדיקות ב-5 דקות: כיסוי מלא לפרויקט', en: '💡 5-Min Testing: Full Coverage for a Project' },
     category: 'five-min',
-    date: '2025-03-05',
+    date: '2026-03-05',
     readTime: 5,
     excerpt: {
       he: 'צרו test suite מלא לפרויקט Node.js עם Claude Code ב-5 דקות.',
       en: 'Create a full test suite for a Node.js project with Claude Code in 5 minutes.'
+    },
+    content: {
+      he: `# בדיקות ב-5 דקות: כיסוי מלא לפרויקט
+
+כתיבת טסטים היא אחת המשימות שמפתחים הכי אוהבים לדחות. עם Claude Code, אפשר ליצור test suite מלא לפרויקט Node.js ב-5 דקות. הנה בדיוק איך.
+
+## מה נצטרך
+
+- Claude Code מותקן
+- פרויקט Node.js/TypeScript קיים
+- 5 דקות
+
+## שלב 1: ניתוח הפרויקט (דקה 1)
+
+\`\`\`
+claude "סרוק את הפרויקט ותן לי דוח:
+1. כמה פונקציות/מודולים יש
+2. מה הכיסוי הנוכחי (אם יש טסטים)
+3. מה הפונקציות הכי קריטיות שצריכות טסטים ראשונות
+4. איזה framework טסטים הכי מתאים (Jest, Vitest, Mocha)"
+\`\`\`
+
+## שלב 2: הגדרת Framework (דקה 1-2)
+
+\`\`\`
+claude "התקן Jest (או Vitest) עם TypeScript support. הגדר את ה-config, הוסף scripts ל-package.json, וודא שהכל מוגדר נכון."
+\`\`\`
+
+Claude יתקין את כל התלויות, ייצור קובץ config, ויוסיף סקריפטים.
+
+## שלב 3: כתיבת טסטים (דקה 2-4)
+
+הנה הפקודה הקסומה:
+
+\`\`\`
+claude "כתוב טסטים מקיפים לכל הפונקציות בפרויקט. לכל פונקציה, כלול:
+1. Happy path - תרחישים תקינים
+2. Edge cases - ערכי קצה (null, undefined, מערך ריק, מספרים שליליים)
+3. Error cases - קלטים לא תקינים שצריכים לזרוק שגיאה
+4. Mock של תלויות חיצוניות (API calls, DB, file system)
+ארגן את הטסטים ב-describe blocks לוגיים."
+\`\`\`
+
+Claude יעבור על כל קובץ בפרויקט, יבין את הלוגיקה, וייצור טסטים מקיפים.
+
+## שלב 4: הרצה ותיקון (דקה 4-5)
+
+\`\`\`
+claude "הרץ את כל הטסטים, תקן כל מה שנכשל, ותן דוח סופי של הכיסוי."
+\`\`\`
+
+## מה Claude יוצר?
+
+### מבנה טיפוסי
+
+\`\`\`
+tests/
+├── unit/
+│   ├── utils.test.ts
+│   ├── auth.test.ts
+│   └── api.test.ts
+├── integration/
+│   ├── database.test.ts
+│   └── routes.test.ts
+└── setup.ts
+\`\`\`
+
+### דוגמת טסט
+
+\`\`\`
+describe('calculateDiscount', () => {
+  it('should apply 10% discount for orders over 100', () => {
+    expect(calculateDiscount(200, 'SAVE10')).toBe(180);
+  });
+
+  it('should not apply discount for invalid code', () => {
+    expect(calculateDiscount(200, 'INVALID')).toBe(200);
+  });
+
+  it('should handle zero amount', () => {
+    expect(calculateDiscount(0, 'SAVE10')).toBe(0);
+  });
+
+  it('should throw for negative amount', () => {
+    expect(() => calculateDiscount(-50, 'SAVE10')).toThrow();
+  });
+});
+\`\`\`
+
+## טיפים מתקדמים
+
+### כיסוי ממוקד
+
+\`\`\`
+claude "כתוב טסטים רק לפונקציות שמטפלות בתשלומים. אלו הכי קריטיות."
+\`\`\`
+
+### Snapshot Testing
+
+\`\`\`
+claude "הוסף snapshot tests לכל הקומפוננטות של React."
+\`\`\`
+
+### CI/CD Integration
+
+\`\`\`
+claude "צור GitHub Actions workflow שמריץ את הטסטים בכל PR."
+\`\`\`
+
+### Performance Tests
+
+\`\`\`
+claude "הוסף performance tests שבודקים שהפונקציות הקריטיות רצות מתחת ל-100ms."
+\`\`\`
+
+## מדדי הצלחה
+
+לאחר 5 דקות, אתם צריכים לראות:
+- **כיסוי של 80%+** — כל הפונקציות הקריטיות מכוסות
+- **0 failures** — כל הטסטים עוברים
+- **מבנה נקי** — טסטים מאורגנים בצורה לוגית
+- **CI ready** — מוכן לשילוב ב-pipeline
+
+## סיכום
+
+Claude Code הופך כתיבת טסטים ממשימה של ימים למשימה של 5 דקות. הוא מבין את הלוגיקה של הקוד, מזהה edge cases, ויוצר טסטים מקיפים ומקצועיים. התוצאה היא פרויקט בטוח יותר, קוד יציב יותר, ושקט נפשי.`,
+      en: `# 5-Min Testing: Full Coverage for a Project
+
+Writing tests is one of the tasks developers love to postpone. With Claude Code, you can create a full test suite for a Node.js project in 5 minutes. Here's exactly how.
+
+## What You'll Need
+
+- Claude Code installed
+- An existing Node.js/TypeScript project
+- 5 minutes
+
+## Step 1: Analyze the Project (Minute 1)
+
+\`\`\`
+claude "Scan the project and give me a report:
+1. How many functions/modules are there
+2. Current coverage (if tests exist)
+3. The most critical functions that need tests first
+4. Which test framework fits best (Jest, Vitest, Mocha)"
+\`\`\`
+
+## Step 2: Set Up Framework (Minutes 1-2)
+
+\`\`\`
+claude "Install Jest (or Vitest) with TypeScript support. Configure it, add scripts to package.json, and make sure everything is set up correctly."
+\`\`\`
+
+Claude will install all dependencies, create a config file, and add scripts.
+
+## Step 3: Write Tests (Minutes 2-4)
+
+Here's the magic command:
+
+\`\`\`
+claude "Write comprehensive tests for all functions in the project. For each function, include:
+1. Happy path - valid scenarios
+2. Edge cases - boundary values (null, undefined, empty array, negative numbers)
+3. Error cases - invalid inputs that should throw errors
+4. Mock external dependencies (API calls, DB, file system)
+Organize tests in logical describe blocks."
+\`\`\`
+
+Claude will go through every file in the project, understand the logic, and create comprehensive tests.
+
+## Step 4: Run and Fix (Minutes 4-5)
+
+\`\`\`
+claude "Run all tests, fix anything that fails, and give a final coverage report."
+\`\`\`
+
+## What Does Claude Create?
+
+### Typical Structure
+
+\`\`\`
+tests/
+├── unit/
+│   ├── utils.test.ts
+│   ├── auth.test.ts
+│   └── api.test.ts
+├── integration/
+│   ├── database.test.ts
+│   └── routes.test.ts
+└── setup.ts
+\`\`\`
+
+### Example Test
+
+\`\`\`
+describe('calculateDiscount', () => {
+  it('should apply 10% discount for orders over 100', () => {
+    expect(calculateDiscount(200, 'SAVE10')).toBe(180);
+  });
+
+  it('should not apply discount for invalid code', () => {
+    expect(calculateDiscount(200, 'INVALID')).toBe(200);
+  });
+
+  it('should handle zero amount', () => {
+    expect(calculateDiscount(0, 'SAVE10')).toBe(0);
+  });
+
+  it('should throw for negative amount', () => {
+    expect(() => calculateDiscount(-50, 'SAVE10')).toThrow();
+  });
+});
+\`\`\`
+
+## Advanced Tips
+
+### Focused Coverage
+
+\`\`\`
+claude "Write tests only for functions that handle payments. Those are the most critical."
+\`\`\`
+
+### Snapshot Testing
+
+\`\`\`
+claude "Add snapshot tests for all React components."
+\`\`\`
+
+### CI/CD Integration
+
+\`\`\`
+claude "Create a GitHub Actions workflow that runs tests on every PR."
+\`\`\`
+
+### Performance Tests
+
+\`\`\`
+claude "Add performance tests that verify critical functions run under 100ms."
+\`\`\`
+
+## Success Metrics
+
+After 5 minutes, you should see:
+- **80%+ coverage** — all critical functions are covered
+- **0 failures** — all tests pass
+- **Clean structure** — tests organized logically
+- **CI ready** — ready for pipeline integration
+
+## Summary
+
+Claude Code transforms writing tests from a days-long task to a 5-minute task. It understands the code logic, identifies edge cases, and creates comprehensive professional tests. The result is a safer project, more stable code, and peace of mind.`
     }
   },
   {
     id: 'tip-system-prompts',
     title: { he: '🎯 System Prompts שעובדים', en: '🎯 System Prompts That Work' },
     category: 'tips',
-    date: '2025-03-12',
+    date: '2026-03-12',
     readTime: 3,
     excerpt: {
       he: '5 תבניות system prompt שישפרו דרמטית את התוצאות שלכם.',
       en: '5 system prompt templates that will dramatically improve your results.'
+    },
+    content: {
+      he: `# System Prompts שעובדים — 5 תבניות מוכנות
+
+System prompts הם הדרך הכי יעילה להכווין את Claude. הם קובעים את הטון, הסגנון, וההתנהגות של המודל לאורך כל השיחה. הנה 5 תבניות מוכנות שאפשר להעתיק ולהשתמש בהן מיד.
+
+## למה System Prompts חשובים?
+
+System prompt הוא ההוראה הראשונה שClaude מקבל. הוא קובע:
+- **מי Claude בשיחה הזו** — מפתח בכיר, מורה, מנתח נתונים
+- **איך הוא כותב** — פורמלי, ידידותי, טכני, פשוט
+- **מה הוא עושה ולא עושה** — מגבלות, כללים, העדפות
+- **פורמט הפלט** — JSON, Markdown, קוד, טקסט חופשי
+
+## תבנית 1: מפתח בכיר
+
+\`\`\`
+You are a senior full-stack developer with 15 years of experience.
+
+Rules:
+- Write clean, production-ready code
+- Always include error handling
+- Add TypeScript types for everything
+- Follow SOLID principles
+- Prefer composition over inheritance
+- Write unit tests for critical functions
+- Use meaningful variable names
+- Add JSDoc comments for public APIs
+
+When reviewing code:
+- Point out potential bugs
+- Suggest performance improvements
+- Check for security vulnerabilities
+- Rate code quality 1-10 with explanation
+
+Response format: Start with a brief summary, then provide code with explanations.
+\`\`\`
+
+### מתי להשתמש?
+כשאתם עובדים על פרויקט אמיתי ורוצים קוד ברמה מקצועית.
+
+## תבנית 2: מורה סבלני
+
+\`\`\`
+You are a patient, encouraging programming teacher.
+
+Rules:
+- Explain concepts step by step
+- Use analogies from everyday life
+- Start with the simplest explanation, then add complexity
+- Always provide runnable code examples
+- After explaining, ask if the student understood
+- Never assume prior knowledge without checking
+- Celebrate progress and correct mistakes gently
+
+Teaching approach:
+1. Explain the concept simply
+2. Show a basic example
+3. Show a real-world example
+4. Provide a practice exercise
+5. Summarize key takeaways
+
+Language: Match the student's language (Hebrew/English)
+\`\`\`
+
+### מתי להשתמש?
+כשאתם לומדים נושא חדש ורוצים הסברים ברורים.
+
+## תבנית 3: DevOps Expert
+
+\`\`\`
+You are a DevOps and cloud infrastructure expert.
+
+Specialties: AWS, GCP, Docker, Kubernetes, Terraform, CI/CD
+
+Rules:
+- Always consider security best practices
+- Suggest cost-optimized solutions
+- Provide Infrastructure as Code when possible
+- Include monitoring and logging recommendations
+- Consider scalability and high availability
+- Add comments explaining each configuration section
+
+Response format:
+1. Architecture overview (brief)
+2. Implementation (code/config)
+3. Security considerations
+4. Cost estimate (if applicable)
+5. Monitoring recommendations
+\`\`\`
+
+### מתי להשתמש?
+כשאתם מגדירים תשתיות, pipelines, או environments.
+
+## תבנית 4: Code Reviewer
+
+\`\`\`
+You are a thorough but constructive code reviewer.
+
+Review checklist:
+- [ ] Code correctness and logic
+- [ ] Error handling completeness
+- [ ] Security vulnerabilities
+- [ ] Performance considerations
+- [ ] Code readability and maintainability
+- [ ] Test coverage
+- [ ] Documentation
+- [ ] Naming conventions
+
+Severity levels:
+- CRITICAL: Must fix before merge
+- WARNING: Should fix, creates technical debt
+- SUGGESTION: Nice to have, improves quality
+- PRAISE: Highlight good patterns
+
+Format each finding as:
+[SEVERITY] file:line - description
+  Suggestion: how to fix
+  Example: code example
+
+End with overall assessment and score (1-10).
+\`\`\`
+
+### מתי להשתמש?
+לפני merge של PR או כשאתם רוצים לשפר קוד קיים.
+
+## תבנית 5: Technical Writer
+
+\`\`\`
+You are a technical documentation specialist.
+
+Rules:
+- Write clear, concise documentation
+- Use consistent terminology
+- Include code examples for every feature
+- Add diagrams descriptions where helpful
+- Write for the target audience (beginners/advanced)
+- Follow the project's existing documentation style
+
+Document structure:
+1. Overview (what and why)
+2. Prerequisites
+3. Quick Start (get running in <5 minutes)
+4. Detailed Guide
+5. API Reference (if applicable)
+6. Troubleshooting
+7. FAQ
+
+Formatting:
+- Use headers for sections
+- Use bullet points for lists
+- Use code blocks for all code/commands
+- Use admonitions for warnings/tips
+- Use tables for comparing options
+\`\`\`
+
+### מתי להשתמש?
+כשאתם כותבים README, תיעוד API, או מדריכים.
+
+## איך להשתמש ב-System Prompts
+
+### ב-Claude Code
+
+צרו קובץ \`.claude/system-prompt.md\` בשורש הפרויקט:
+
+\`\`\`
+# בתיקיית הפרויקט
+echo "Your system prompt here" > .claude/system-prompt.md
+\`\`\`
+
+### ב-API
+
+\`\`\`
+const response = await anthropic.messages.create({
+  model: "claude-sonnet-4-20250514",
+  system: "Your system prompt here",
+  messages: [{ role: "user", content: "..." }]
+});
+\`\`\`
+
+## טיפים לכתיבת System Prompts
+
+1. **היו ספציפיים** — "כתוב קוד נקי" פחות טוב מ-"כתוב TypeScript עם error handling מלא ו-JSDoc"
+2. **תנו דוגמאות** — הראו ל-Claude בדיוק מה אתם מצפים
+3. **הגדירו מגבלות** — מה Claude לא צריך לעשות חשוב לא פחות ממה שהוא כן צריך
+4. **הגדירו פורמט** — ציינו איך אתם רוצים לקבל את התשובה
+5. **עדכנו לפי צורך** — שפרו את ה-prompt בהתאם לתוצאות שאתם מקבלים
+
+## סיכום
+
+System prompts הם הכלי הכי חזק שיש לכם להשפיע על איכות התוצאות מ-Claude. עם 5 התבניות האלה, יש לכם בסיס מוצק לכל סוג של משימה. התאימו אותן לצרכים שלכם, ותראו שיפור מיידי בתוצאות.`,
+      en: `# System Prompts That Work — 5 Ready-Made Templates
+
+System prompts are the most effective way to guide Claude. They set the tone, style, and behavior of the model throughout the entire conversation. Here are 5 ready-made templates you can copy and use immediately.
+
+## Why Are System Prompts Important?
+
+A system prompt is the first instruction Claude receives. It determines:
+- **Who Claude is in this conversation** — senior developer, teacher, data analyst
+- **How it writes** — formal, friendly, technical, simple
+- **What it does and doesn't do** — limitations, rules, preferences
+- **Output format** — JSON, Markdown, code, free text
+
+## Template 1: Senior Developer
+
+\`\`\`
+You are a senior full-stack developer with 15 years of experience.
+
+Rules:
+- Write clean, production-ready code
+- Always include error handling
+- Add TypeScript types for everything
+- Follow SOLID principles
+- Prefer composition over inheritance
+- Write unit tests for critical functions
+- Use meaningful variable names
+- Add JSDoc comments for public APIs
+
+When reviewing code:
+- Point out potential bugs
+- Suggest performance improvements
+- Check for security vulnerabilities
+- Rate code quality 1-10 with explanation
+
+Response format: Start with a brief summary, then provide code with explanations.
+\`\`\`
+
+### When to Use?
+When working on a real project and wanting professional-quality code.
+
+## Template 2: Patient Teacher
+
+\`\`\`
+You are a patient, encouraging programming teacher.
+
+Rules:
+- Explain concepts step by step
+- Use analogies from everyday life
+- Start with the simplest explanation, then add complexity
+- Always provide runnable code examples
+- After explaining, ask if the student understood
+- Never assume prior knowledge without checking
+- Celebrate progress and correct mistakes gently
+
+Teaching approach:
+1. Explain the concept simply
+2. Show a basic example
+3. Show a real-world example
+4. Provide a practice exercise
+5. Summarize key takeaways
+
+Language: Match the student's language
+\`\`\`
+
+### When to Use?
+When learning a new topic and wanting clear explanations.
+
+## Template 3: DevOps Expert
+
+\`\`\`
+You are a DevOps and cloud infrastructure expert.
+
+Specialties: AWS, GCP, Docker, Kubernetes, Terraform, CI/CD
+
+Rules:
+- Always consider security best practices
+- Suggest cost-optimized solutions
+- Provide Infrastructure as Code when possible
+- Include monitoring and logging recommendations
+- Consider scalability and high availability
+- Add comments explaining each configuration section
+
+Response format:
+1. Architecture overview (brief)
+2. Implementation (code/config)
+3. Security considerations
+4. Cost estimate (if applicable)
+5. Monitoring recommendations
+\`\`\`
+
+### When to Use?
+When setting up infrastructure, pipelines, or environments.
+
+## Template 4: Code Reviewer
+
+\`\`\`
+You are a thorough but constructive code reviewer.
+
+Review checklist:
+- [ ] Code correctness and logic
+- [ ] Error handling completeness
+- [ ] Security vulnerabilities
+- [ ] Performance considerations
+- [ ] Code readability and maintainability
+- [ ] Test coverage
+- [ ] Documentation
+- [ ] Naming conventions
+
+Severity levels:
+- CRITICAL: Must fix before merge
+- WARNING: Should fix, creates technical debt
+- SUGGESTION: Nice to have, improves quality
+- PRAISE: Highlight good patterns
+
+Format each finding as:
+[SEVERITY] file:line - description
+  Suggestion: how to fix
+  Example: code example
+
+End with overall assessment and score (1-10).
+\`\`\`
+
+### When to Use?
+Before merging a PR or when you want to improve existing code.
+
+## Template 5: Technical Writer
+
+\`\`\`
+You are a technical documentation specialist.
+
+Rules:
+- Write clear, concise documentation
+- Use consistent terminology
+- Include code examples for every feature
+- Add diagrams descriptions where helpful
+- Write for the target audience (beginners/advanced)
+- Follow the project's existing documentation style
+
+Document structure:
+1. Overview (what and why)
+2. Prerequisites
+3. Quick Start (get running in <5 minutes)
+4. Detailed Guide
+5. API Reference (if applicable)
+6. Troubleshooting
+7. FAQ
+
+Formatting:
+- Use headers for sections
+- Use bullet points for lists
+- Use code blocks for all code/commands
+- Use admonitions for warnings/tips
+- Use tables for comparing options
+\`\`\`
+
+### When to Use?
+When writing READMEs, API documentation, or guides.
+
+## How to Use System Prompts
+
+### In Claude Code
+
+Create a \`.claude/system-prompt.md\` file at the project root:
+
+\`\`\`
+# In your project directory
+echo "Your system prompt here" > .claude/system-prompt.md
+\`\`\`
+
+### In the API
+
+\`\`\`
+const response = await anthropic.messages.create({
+  model: "claude-sonnet-4-20250514",
+  system: "Your system prompt here",
+  messages: [{ role: "user", content: "..." }]
+});
+\`\`\`
+
+## Tips for Writing System Prompts
+
+1. **Be specific** — "write clean code" is less effective than "write TypeScript with full error handling and JSDoc"
+2. **Give examples** — show Claude exactly what you expect
+3. **Define limits** — what Claude shouldn't do is just as important as what it should
+4. **Define format** — specify how you want to receive the answer
+5. **Update as needed** — improve the prompt based on the results you get
+
+## Summary
+
+System prompts are the most powerful tool you have to influence the quality of results from Claude. With these 5 templates, you have a solid foundation for any type of task. Customize them to your needs, and you'll see immediate improvement in results.`
     }
   },
   {
     id: 'tip-context-management',
     title: { he: '🎯 ניהול הקשר - הטיפ שישנה לכם הכל', en: '🎯 Context Management - The Tip That Changes Everything' },
     category: 'tips',
-    date: '2025-03-08',
+    date: '2026-03-08',
     readTime: 3,
     excerpt: {
       he: 'איך לנהל את חלון ההקשר של Claude ולמנוע "שכחה" באמצע שיחה.',
       en: 'How to manage Claude\'s context window and prevent "forgetting" mid-conversation.'
+    },
+    content: {
+      he: `# ניהול הקשר — הטיפ שישנה לכם הכל
+
+אחת הבעיות הנפוצות ביותר בעבודה עם Claude היא "שכחה" באמצע שיחה ארוכה. Claude מתחיל לחזור על דברים, שוכח הוראות שנתתם, או מפסיק לעקוב אחרי ההקשר. הבעיה היא לא Claude — הבעיה היא ניהול ההקשר. הנה איך לפתור את זה.
+
+## מה זה חלון הקשר?
+
+לכל מודל AI יש "חלון הקשר" — כמות המידע שהוא יכול "לזכור" בשיחה אחת. ב-Claude, החלון הזה גדול (200K tokens), אבל עדיין מוגבל. ככל שהשיחה מתארכת, מידע ישן מתחיל "ליפול" מהחלון.
+
+### סימנים שהקשר הולך לאיבוד
+
+- Claude שוכח הוראות שנתתם קודם
+- תשובות מתחילות לסתור תשובות קודמות
+- Claude שואל שאלות שכבר ענתם עליהן
+- איכות הקוד יורדת ככל שהשיחה מתקדמת
+
+## פקודת /compact — הכלי הסודי
+
+Claude Code כולל פקודה מובנית שנקראת \`/compact\`. הפקודה הזו עושה דבר פשוט אבל חזק — היא מסכמת את כל השיחה עד כה ומתחילה הקשר חדש עם הסיכום.
+
+\`\`\`
+# בכל שלב בשיחה, פשוט הקלידו:
+/compact
+
+# או עם הוראות מותאמות:
+/compact "שמור את כל ההחלטות הטכניות ואת מבנה הפרויקט"
+\`\`\`
+
+### מתי להשתמש ב-/compact?
+
+- **כל 15-20 הודעות** — כלל אצבע טוב
+- **לפני משימה חדשה** — כשעוברים מנושא לנושא
+- **כשהתשובות מתחילות להידרדר** — סימן שהקשר מלא
+- **אחרי debug ארוך** — ה-debug יצר הרבה "רעש"
+
+## קובץ CLAUDE.md — זיכרון קבוע
+
+CLAUDE.md הוא קובץ שClaude Code קורא אוטומטית בתחילת כל שיחה. הוא משמש כ"זיכרון קבוע":
+
+\`\`\`
+# CLAUDE.md
+
+## Project: My App
+- Stack: Next.js 15, TypeScript, Tailwind
+- Database: PostgreSQL with Prisma
+- Auth: NextAuth.js with Google provider
+
+## Conventions
+- Use functional components only
+- All text must support i18n (Hebrew + English)
+- Use server components by default
+- Error handling: always use try/catch with specific error types
+
+## Current Sprint
+- Working on: user dashboard
+- Blocking issues: none
+- Done: auth, landing page, API routes
+\`\`\`
+
+### טיפים ל-CLAUDE.md
+
+1. **עדכנו אותו** — ככל שהפרויקט מתקדם, עדכנו את הקובץ
+2. **היו ממוקדים** — רק מידע שרלוונטי לפיתוח
+3. **מבנה ברור** — השתמשו ב-headers וב-bullet points
+4. **הגדרות טכניות** — ציינו stack, conventions, ו-patterns
+
+## פרומפטים מובנים
+
+במקום לכתוב הוראות ארוכות בכל הודעה, בנו את הפרומפטים בצורה מובנית:
+
+### מבנה פרומפט מובנה
+
+\`\`\`
+## Context
+[מה המצב הנוכחי — 1-2 משפטים]
+
+## Task
+[מה בדיוק צריך לעשות — ספציפי ומדיד]
+
+## Constraints
+[מגבלות — מה לא לעשות, גבולות, דרישות]
+
+## Expected Output
+[איך צריכה להיראות התוצאה]
+\`\`\`
+
+### דוגמה
+
+\`\`\`
+## Context
+אני עובד על דף Dashboard שמציג נתוני משתמש.
+הנתונים מגיעים מ-API route שכבר כתבנו.
+
+## Task
+צור קומפוננטת React שמציגה טבלת משתמשים עם:
+- שם, אימייל, תאריך הצטרפות
+- מיון לפי כל עמודה
+- חיפוש בזמן אמת
+- Pagination (10 בעמוד)
+
+## Constraints
+- Server component כברירת מחדל, client component רק למה שצריך
+- תמיכה ב-RTL
+- אין להשתמש בספריות חיצוניות (רק Tailwind)
+
+## Expected Output
+קובץ TSX אחד עם כל הלוגיקה
+\`\`\`
+
+## טכניקות מתקדמות
+
+### 1. שרשור משימות
+
+במקום בקשה אחת ארוכה, חלקו למשימות קטנות:
+
+\`\`\`
+# משימה 1
+claude "צור את ה-types עבור מערכת ההזמנות"
+
+# משימה 2
+claude "עכשיו צור את ה-API routes בהתבסס על ה-types"
+
+# משימה 3
+claude "עכשיו צור את הקומפוננטות בהתבסס על ה-API"
+\`\`\`
+
+### 2. סיכום ביניים
+
+בשיחות ארוכות, בקשו מ-Claude סיכום:
+
+\`\`\`
+"לפני שנמשיך, תן סיכום קצר של:
+1. מה עשינו עד כה
+2. מה ההחלטות שקיבלנו
+3. מה נשאר לעשות"
+\`\`\`
+
+### 3. הפניה לקבצים
+
+במקום להדביק קוד בשיחה, הפנו לקבצים:
+
+\`\`\`
+"תסתכל על src/components/Dashboard.tsx ותוסיף חיפוש"
+\`\`\`
+
+Claude Code יקרא את הקובץ ישירות, בלי לבזבז הקשר.
+
+## סיכום
+
+ניהול הקשר הוא המיומנות הכי חשובה בעבודה עם Claude. עם /compact, CLAUDE.md, ופרומפטים מובנים, תוכלו לעבוד בשיחות ארוכות בלי לאבד איכות. זכרו — Claude חכם מאוד, אבל הוא צריך את העזרה שלכם כדי לשמור על מיקוד.`,
+      en: `# Context Management — The Tip That Changes Everything
+
+One of the most common problems when working with Claude is "forgetting" in the middle of a long conversation. Claude starts repeating things, forgets instructions you gave, or stops following context. The problem isn't Claude — the problem is context management. Here's how to solve it.
+
+## What is a Context Window?
+
+Every AI model has a "context window" — the amount of information it can "remember" in a single conversation. With Claude, this window is large (200K tokens), but still limited. As the conversation gets longer, old information starts "falling off" the window.
+
+### Signs That Context is Being Lost
+
+- Claude forgets instructions you gave earlier
+- Answers start contradicting previous answers
+- Claude asks questions you already answered
+- Code quality drops as the conversation progresses
+
+## The /compact Command — The Secret Tool
+
+Claude Code includes a built-in command called \`/compact\`. This command does something simple but powerful — it summarizes the entire conversation so far and starts a new context with the summary.
+
+\`\`\`
+# At any point in the conversation, simply type:
+/compact
+
+# Or with custom instructions:
+/compact "keep all technical decisions and project structure"
+\`\`\`
+
+### When to Use /compact?
+
+- **Every 15-20 messages** — a good rule of thumb
+- **Before a new task** — when switching topics
+- **When answers start degrading** — a sign that context is full
+- **After a long debug session** — debugging creates a lot of "noise"
+
+## The CLAUDE.md File — Persistent Memory
+
+CLAUDE.md is a file that Claude Code automatically reads at the start of every conversation. It serves as "persistent memory":
+
+\`\`\`
+# CLAUDE.md
+
+## Project: My App
+- Stack: Next.js 15, TypeScript, Tailwind
+- Database: PostgreSQL with Prisma
+- Auth: NextAuth.js with Google provider
+
+## Conventions
+- Use functional components only
+- All text must support i18n (Hebrew + English)
+- Use server components by default
+- Error handling: always use try/catch with specific error types
+
+## Current Sprint
+- Working on: user dashboard
+- Blocking issues: none
+- Done: auth, landing page, API routes
+\`\`\`
+
+### Tips for CLAUDE.md
+
+1. **Keep it updated** — as the project progresses, update the file
+2. **Stay focused** — only information relevant to development
+3. **Clear structure** — use headers and bullet points
+4. **Technical specs** — specify stack, conventions, and patterns
+
+## Structured Prompts
+
+Instead of writing long instructions in every message, structure your prompts:
+
+### Structured Prompt Format
+
+\`\`\`
+## Context
+[Current situation — 1-2 sentences]
+
+## Task
+[Exactly what needs to be done — specific and measurable]
+
+## Constraints
+[Limitations — what not to do, boundaries, requirements]
+
+## Expected Output
+[What the result should look like]
+\`\`\`
+
+### Example
+
+\`\`\`
+## Context
+I'm working on a Dashboard page that displays user data.
+Data comes from an API route we already wrote.
+
+## Task
+Create a React component that displays a user table with:
+- Name, email, join date
+- Sorting by any column
+- Real-time search
+- Pagination (10 per page)
+
+## Constraints
+- Server component by default, client component only when needed
+- RTL support
+- No external libraries (only Tailwind)
+
+## Expected Output
+Single TSX file with all logic
+\`\`\`
+
+## Advanced Techniques
+
+### 1. Task Chaining
+
+Instead of one long request, break it into small tasks:
+
+\`\`\`
+# Task 1
+claude "Create the types for the order system"
+
+# Task 2
+claude "Now create the API routes based on the types"
+
+# Task 3
+claude "Now create the components based on the API"
+\`\`\`
+
+### 2. Interim Summaries
+
+In long conversations, ask Claude for a summary:
+
+\`\`\`
+"Before we continue, give a brief summary of:
+1. What we've done so far
+2. What decisions we made
+3. What's left to do"
+\`\`\`
+
+### 3. File References
+
+Instead of pasting code in the conversation, reference files:
+
+\`\`\`
+"Look at src/components/Dashboard.tsx and add search"
+\`\`\`
+
+Claude Code will read the file directly, without wasting context.
+
+## Summary
+
+Context management is the most important skill when working with Claude. With /compact, CLAUDE.md, and structured prompts, you can work in long conversations without losing quality. Remember — Claude is very smart, but it needs your help to stay focused.`
     }
   },
 ];
