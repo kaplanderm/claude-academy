@@ -10,7 +10,7 @@ import {
   Server,
   Code2,
   Microscope,
-  FileText,
+  Wrench,
   GraduationCap,
   Activity,
   ShieldCheck,
@@ -37,11 +37,11 @@ export default function AboutPage() {
       status: 'live' as const,
     },
     {
-      icon: <FileText size={24} className="text-green-600" />,
-      name: 'DermTemplates',
+      icon: <Wrench size={24} className="text-green-600" />,
+      name: 'DermTools',
       description: {
-        he: 'מערכת תיעוד דרמטולוגי קוד פתוח. תבניות מרפאה, תיעוד פרוצדורות ותקשורת עם מטופלים. עיבוד מקומי בלבד.',
-        en: 'Open-source dermatology documentation system. Clinical templates, procedure documentation, and patient communication. Client-side processing only.',
+        he: 'ארגז הכלים הדיגיטלי לרופא העור. טמפלייטים קליניים, אשף אבחנה מבדלת, אלגוריתמים דרמוסקופיים, מחשבוני Scores, סולם סטרואידים, מחשבון מינון, דפי הסבר למטופלים, קודי ICD-10, מעקב מעבדתי ועוד.',
+        en: 'The digital toolkit for dermatologists. Clinical templates, interactive DDx wizard, dermoscopic algorithms, scoring calculators, steroid ladder, drug dosing, patient handouts, ICD-10 codes, lab monitoring, and more.',
       },
       href: 'https://www.dermai.co.il',
       status: 'live' as const,
@@ -110,8 +110,8 @@ export default function AboutPage() {
       icon: <Code2 size={24} className="text-purple-600" />,
       title: { he: 'Vibe Coding', en: 'Vibe Coding' },
       description: {
-        he: 'פיתוח תוכנה בסיוע AI על ידי רופאים, נסקר דרך מימוש DermTemplates',
-        en: 'AI-assisted software development by physicians, reviewed through DermTemplates implementation',
+        he: 'פיתוח תוכנה בסיוע AI על ידי רופאים, נסקר דרך מימוש DermTools',
+        en: 'AI-assisted software development by physicians, reviewed through DermTools implementation',
       },
     },
   ];

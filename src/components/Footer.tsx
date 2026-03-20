@@ -47,12 +47,12 @@ export default function Footer() {
             <ExternalLink size={12} />
           </a>
           <a
-            href="https://dermai.co.il"
+            href="https://www.dermai.co.il"
             target="_blank"
             rel="dofollow"
             className="text-gray-400 hover:text-white transition-colors inline-flex items-center gap-1"
           >
-            DermAI
+            DermTools
             <ExternalLink size={12} />
           </a>
           <Link
