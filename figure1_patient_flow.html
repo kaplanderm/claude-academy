@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Figure 1 - Patient Flow Diagram</title>
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+  .flowchart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .box {
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 14px 24px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.5;
+    background: white;
+    min-width: 260px;
+    max-width: 340px;
+  }
+  .box.main {
+    background: #e8f0fe;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .box.result {
+    background: #e8f0fe;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .box.exclude {
+    background: #fff3e0;
+    border-color: #e65100;
+    font-size: 13.5px;
+    min-width: 220px;
+    max-width: 280px;
+    text-align: left;
+    padding: 10px 16px;
+  }
+  .arrow-down {
+    width: 2px;
+    height: 30px;
+    background: #333;
+    position: relative;
+  }
+  .arrow-down::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 10px solid #333;
+  }
+  .middle-row {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+  .arrow-right {
+    width: 60px;
+    height: 2px;
+    background: #333;
+    position: relative;
+  }
+  .arrow-right::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 10px solid #333;
+  }
+  .vertical-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .groups-row {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 0;
+  }
+  .group-box {
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 12px 18px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+    background: #e8f4e8;
+    min-width: 160px;
+  }
+  .group-box .label {
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+  .group-box .count {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1a5e1a;
+  }
+  .caption {
+    margin-top: 24px;
+    font-size: 13px;
+    color: #555;
+    text-align: center;
+    max-width: 600px;
+  }
+</style>
+</head>
+<body>
+<div class="flowchart">
+
+  <!-- Top box -->
+  <div class="box main">
+    Patients identified<br>
+    <span style="font-size: 22px;">N = 114</span>
+  </div>
+
+  <!-- Arrow down to middle section -->
+  <div class="middle-row">
+    <div class="vertical-section">
+      <div class="arrow-down"></div>
+    </div>
+    <div class="arrow-right" style="margin-left: 0;"></div>
+    <div class="box exclude">
+      <strong>Excluded (n = 7):</strong><br>
+      &bull; Lost to follow-up (n = 5)<br>
+      &bull; Reclassified as non-viral (n = 1)<br>
+      &bull; Incomplete outcome data (n = 1)
+    </div>
+  </div>
+
+  <!-- Arrow down -->
+  <div class="arrow-down"></div>
+
+  <!-- Evaluable patients -->
+  <div class="box result">
+    Evaluable patients<br>
+    <span style="font-size: 22px;">N = 107</span>
+  </div>
+
+  <!-- Arrow down -->
+  <div class="arrow-down"></div>
+
+  <!-- Treatment groups -->
+  <div class="groups-row">
+    <div class="group-box">
+      <div class="label">Nd:YAG 1064 nm</div>
+      <div class="count">n = 50</div>
+      <div style="font-size: 12px; color: #666; margin-top: 4px;">Monotherapy</div>
+    </div>
+    <div class="group-box">
+      <div class="label">Er:YAG 2940 nm</div>
+      <div class="count">n = 24</div>
+      <div style="font-size: 12px; color: #666; margin-top: 4px;">Monotherapy</div>
+    </div>
+    <div class="group-box">
+      <div class="label">Combination</div>
+      <div class="count">n = 33</div>
+      <div style="font-size: 12px; color: #666; margin-top: 4px;">Both wavelengths</div>
+    </div>
+  </div>
+
+  <div class="caption">
+    <strong>Figure 1.</strong> Patient flow diagram. Of 114 initially identified patients, 7 were excluded, yielding 107 evaluable patients allocated to three treatment groups.
+  </div>
+
+</div>
+</body>
+</html>
