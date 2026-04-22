@@ -1,11 +1,19 @@
 import { MetadataRoute } from 'next';
 import { medicalUseCases } from '@/data/medicalUseCases';
+import { featureGuides } from '@/data/featureGuides';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://academy.dermunbound.com';
 
   const medicalPages = medicalUseCases.map((uc) => ({
     url: `${baseUrl}/medical/${uc.id}`,
+    lastModified: new Date('2026-04-22'),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+
+  const featurePages = featureGuides.map((g) => ({
+    url: `${baseUrl}/features/${g.id}`,
     lastModified: new Date('2026-04-22'),
     changeFrequency: 'monthly' as const,
     priority: 0.8,
@@ -43,5 +51,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.3,
     },
     ...medicalPages,
+    ...featurePages,
   ];
 }

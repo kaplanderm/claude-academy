@@ -23,7 +23,7 @@ const Inline: React.FC<{ html: string }> = ({ html }) => (
   <span dangerouslySetInnerHTML={{ __html: html }} />
 );
 
-const renderContent = (content: string): React.ReactElement[] => {
+export const renderContent = (content: string): React.ReactElement[] => {
   const lines = content.split('\n');
   const elements: React.ReactElement[] = [];
   let inCodeBlock = false;
@@ -40,11 +40,11 @@ const renderContent = (content: string): React.ReactElement[] => {
     const key = `list-${target.length}`;
     if (listBuffer.type === 'ol') {
       target.push(
-        <ol key={key} className="list-decimal mr-6 my-3 space-y-1.5 text-text-secondary">{listBuffer.items}</ol>
+        <ol key={key} dir="auto" className="list-decimal ps-6 my-3 space-y-1.5 text-text-secondary">{listBuffer.items}</ol>
       );
     } else {
       target.push(
-        <ul key={key} className="list-disc mr-6 my-3 space-y-1.5 text-text-secondary">{listBuffer.items}</ul>
+        <ul key={key} dir="auto" className="list-disc ps-6 my-3 space-y-1.5 text-text-secondary">{listBuffer.items}</ul>
       );
     }
     listBuffer = null;
@@ -120,7 +120,7 @@ const renderContent = (content: string): React.ReactElement[] => {
         listBuffer = { type: 'ul', items: [] };
       }
       listBuffer.items.push(
-        <li key={i} className="leading-relaxed"><Inline html={formatInline(text)} /></li>
+        <li key={i} dir="auto" className="leading-relaxed"><Inline html={formatInline(text)} /></li>
       );
       return;
     }
@@ -131,7 +131,7 @@ const renderContent = (content: string): React.ReactElement[] => {
         listBuffer = { type: 'ol', items: [] };
       }
       listBuffer.items.push(
-        <li key={i} className="leading-relaxed"><Inline html={formatInline(text)} /></li>
+        <li key={i} dir="auto" className="leading-relaxed"><Inline html={formatInline(text)} /></li>
       );
       return;
     }

@@ -2,7 +2,8 @@
 import React from 'react';
 import { useLang } from '@/lib/LangContext';
 import { medicalUseCases } from '@/data/medicalUseCases';
-import { ArrowRight, ArrowLeft, BookOpen, ExternalLink, Shield, Brain, Users } from 'lucide-react';
+import { featureGuides } from '@/data/featureGuides';
+import { ArrowRight, ArrowLeft, BookOpen, ExternalLink, Shield, Brain, Users, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 import MedicalHero from '@/components/MedicalHero';
 
@@ -45,6 +46,49 @@ export default function Home() {
                 </h3>
                 <p className="text-sm text-text-secondary">
                   {useCase.description[lang]}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Feature Guides (new Claude features, physician-focused) */}
+      <section id="feature-guides" className="py-20 bg-gradient-to-b from-white to-claude-cream/40" dir={dir}>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-14">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-claude-orange/10 text-claude-orange text-xs font-semibold mb-3">
+              <Sparkles size={14} />
+              {lang === 'he' ? 'חדש' : 'NEW'}
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
+              {lang === 'he' ? 'מה חדש ב-Claude לרופא' : "What's New in Claude for Physicians"}
+            </h2>
+            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
+              {lang === 'he'
+                ? 'מדריכי עומק לפיצ\'רים האחרונים של Claude - Cowork, frontend-design ועוד. איך להפעיל אותם בשגרת העבודה הרפואית.'
+                : 'Deep-dive guides to the latest Claude features - Cowork, frontend-design and more. How to bring them into your medical workflow.'}
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {featureGuides.map(guide => (
+              <Link
+                key={guide.id}
+                href={`/features/${guide.id}`}
+                className="glass-card p-6 group cursor-pointer transition-all border border-transparent hover:border-claude-orange/30 hover:shadow-lg block"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-3xl">{guide.icon}</span>
+                  <div className="flex items-center gap-1 text-claude-orange opacity-0 group-hover:opacity-100 transition-opacity">
+                    {dir === 'rtl' ? <ArrowLeft size={16} /> : <ArrowRight size={16} />}
+                  </div>
+                </div>
+                <h3 className="text-lg font-bold mb-2 text-text-primary group-hover:text-claude-orange transition-colors">
+                  {guide.title[lang]}
+                </h3>
+                <p className="text-sm text-text-secondary">
+                  {guide.description[lang]}
                 </p>
               </Link>
             ))}
