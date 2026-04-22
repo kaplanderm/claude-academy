@@ -313,27 +313,38 @@ From a technical perspective, Claude and GPT-4 perform at a similar level on mos
 
 התוכנית החינמית נותנת לכם גישה ל-Claude Sonnet - דגם מצוין לרוב המשימות. המגבלה העיקרית היא מספר ההודעות ביום. בדרך כלל מדובר בכמה עשרות הודעות, אבל זה משתנה בהתאם לעומס על השרתים.
 
-מה כלול: שיחות עם Claude Sonnet, Artifacts, העלאת קבצים ותמונות. מה לא כלול: גישה ל-Opus, Extended Thinking, Projects, Claude Code.
+מה כלול: שיחות עם Claude Sonnet 4.6, Artifacts, העלאת קבצים ותמונות. מה לא כלול: גישה ל-Opus 4.7, Extended Thinking, Projects, Claude Code, Cowork.
+
+## הדגמים הזמינים (נכון ל-2026-04)
+
+| דגם | מהירות | יכולת | שימושים עיקריים |
+|------|---------|--------|--------|
+| **Opus 4.7** | בינונית | הגבוהה ביותר | סקירות ספרות ארוכות, ניתוח מקרים מורכבים, תכנון לימודי |
+| **Sonnet 4.6** | מהירה | גבוהה מאוד | יומיומי - תיעוד, הסברים, מיילים, הצעות אבחנה מבדלת |
+| **Haiku 4.5** | מהירה מאוד | טובה | תרגום, עיבוד טבלאות, אוטומציות קצרות |
+
+ב-Opus 4.7 יש גם **effort levels** (low/medium/high/xhigh/max). xhigh הוא ברירת המחדל ומתאים לרוב המשימות. max מיועד לעבודות מחקר ארוכות.
 
 ## Claude Pro - 20 דולר לחודש
 
 זו התוכנית שמתאימה לרוב המשתמשים שרוצים להשתמש ב-Claude באופן קבוע. עם Pro אתם מקבלים:
 
 - **שימוש מורחב** - פי 5 מהתוכנית החינמית
-- **גישה לכל הדגמים** - כולל Opus, הדגם החזק ביותר
+- **גישה לכל הדגמים** - כולל Opus 4.7
 - **Extended Thinking** - Claude חושב לעומק לפני שהוא עונה
 - **Projects** - ארגון שיחות עם הנחיות ובסיס ידע
-- **Claude Code** - גישה מוגבלת לכלי ה-CLI למפתחים
+- **Cowork** - טאב למשימות רקע ארוכות (חדש!)
+- **Claude Code** - גישה מוגבלת לכלי ה-CLI
 
-**למי זה מתאים?** לאנשים שמשתמשים ב-Claude כמה פעמים ביום - כותבים, מפתחים, חוקרים, סטודנטים, אנשי עסקים.
+**למי זה מתאים?** לרופא שמשתמש ב-Claude כמה פעמים ביום: סיכומי דוחות, ניסוח מכתבים, אבחנה מבדלת, סקירות מאמרים שבועיות.
 
 ## Claude Max - לצרכנים כבדים
 
 אם אתם מוצאים שאפילו Pro לא מספיק, יש שתי רמות Max:
 
-**Max 5x - 100 דולר לחודש** - פי 5 ממגבלות ה-Pro. מתאים למפתחים שמשתמשים ב-Claude Code באופן אינטנסיבי, או לאנשים שעובדים עם Claude כל היום.
+**Max 5x - 100 דולר לחודש** - פי 5 ממגבלות ה-Pro. כולל **חלון הקשר של מיליון טוקנים** ב-Opus ו-Sonnet. מתאים לרופא שסוקר הרבה מאמרים בבת אחת, עושה Dispatch יומי או Routines.
 
-**Max 20x - 200 דולר לחודש** - פי 20 ממגבלות ה-Pro. בעצם שימוש כמעט ללא הגבלה. מתאים לצוותים קטנים או לאנשי מקצוע שClaude הוא כלי העבודה המרכזי שלהם.
+**Max 20x - 200 דולר לחודש** - פי 20 ממגבלות ה-Pro. בעצם שימוש כמעט ללא הגבלה. מתאים לצוותים קטנים או לרופא שClaude הוא הכלי המרכזי שלו במחקר.
 
 ## Team - 30 דולר למשתמש לחודש
 
@@ -357,8 +368,22 @@ From a technical perspective, Claude and GPT-4 perform at a similar level on mos
 | Claude הוא הכלי המרכזי שלי | Max 20x ($200) |
 | צוות שעובד יחד | Team ($30/משתמש) |
 
+## המלצה לרופא - איך לבחור
+
+**רופא במרפאה קטנה (1-3 רופאים):**
+- התחל עם Pro. מספיק לאבחנה מבדלת, סיכומי דוחות, ומכתבי הפניה בנפח סביר.
+- שדרג ל-Max 5x אם אתה מתחיל להפעיל Routines יומיות (סקירת בוקר, follow-up שבועי).
+
+**רופא בבית חולים / מרפאה גדולה:**
+- Max 5x ואפילו Max 20x אם הצוות משתף חשבון אחד.
+- שקול Team ($30 למשתמש) אם 2+ רופאים משתמשים באופן פעיל.
+- לבתי חולים עם דרישות HIPAA/פרטיות - Enterprise עם BAA.
+
+**חוקר/אקדמיה:**
+- Pro לרוב מספיק. חלון ההקשר של Max (מיליון טוקנים) מועיל לסקירות ספרות מרובות מאמרים.
+
 :::advanced
-שימו לב שClaude Code ב-Pro מוגבל ברמת הטוקנים ליום. אם אתם מפתחים שמשתמשים ב-Claude Code כשעתיים ביום או יותר, שווה לשקול Max 5x. לחלופין, אפשר להשתמש ב-API ישירות ולשלם לפי שימוש.
+שימו לב שClaude Code ב-Pro מוגבל ברמת הטוקנים ליום. אם אתם משתמשים ב-Claude Code כשעתיים ביום או יותר, שווה לשקול Max 5x. לחלופין, אפשר להשתמש ב-API ישירות ולשלם לפי שימוש.
 :::`,
           en: `# Pricing & Plans - Which Plan is Right for You?
 
@@ -372,27 +397,38 @@ You don't need to pay anything to get started! The free plan is more than enough
 
 The free plan gives you access to Claude Sonnet - an excellent model for most tasks. The main limitation is the number of messages per day, typically a few dozen, varying based on server load.
 
-What's included: conversations with Claude Sonnet, Artifacts, file and image uploads. What's not included: access to Opus, Extended Thinking, Projects, Claude Code.
+What's included: conversations with Claude Sonnet 4.6, Artifacts, file and image uploads. What's not included: access to Opus 4.7, Extended Thinking, Projects, Claude Code, Cowork.
+
+## Available models (as of 2026-04)
+
+| Model | Speed | Capability | Primary uses |
+|-------|-------|------------|--------|
+| **Opus 4.7** | Medium | Highest | Long literature reviews, complex case analysis, teaching planning |
+| **Sonnet 4.6** | Fast | Very High | Daily - documentation, explanations, emails, differential diagnosis |
+| **Haiku 4.5** | Very Fast | Good | Translation, table processing, short automations |
+
+Opus 4.7 also has **effort levels** (low/medium/high/xhigh/max). xhigh is the default and appropriate for most tasks. max is for long research work.
 
 ## Claude Pro - $20/month
 
 This is the plan that fits most users who want to use Claude regularly. With Pro you get:
 
 - **Extended usage** - 5x the free plan
-- **Access to all models** - including Opus, the most powerful model
+- **Access to all models** - including Opus 4.7
 - **Extended Thinking** - Claude thinks deeply before answering
 - **Projects** - organize conversations with instructions and knowledge base
-- **Claude Code** - limited access to the developer CLI tool
+- **Cowork** - tab for long background tasks (new!)
+- **Claude Code** - limited access to the CLI tool
 
-**Who is it for?** People who use Claude several times a day - writers, developers, researchers, students, business professionals.
+**Who is it for?** A physician who uses Claude several times a day: report summaries, letter drafting, differential diagnosis, weekly paper reviews.
 
 ## Claude Max - For Heavy Users
 
 If you find that even Pro isn't enough, there are two Max tiers:
 
-**Max 5x - $100/month** - 5x Pro limits. Ideal for developers using Claude Code intensively, or people working with Claude all day.
+**Max 5x - $100/month** - 5x Pro limits. Includes **1M token context window** on Opus and Sonnet. Ideal for a physician reviewing many papers at once, running daily Dispatch or Routines.
 
-**Max 20x - $200/month** - 20x Pro limits. Essentially near-unlimited usage. For small teams or professionals where Claude is their primary work tool.
+**Max 20x - $200/month** - 20x Pro limits. Essentially near-unlimited usage. For small teams or a physician where Claude is their primary research tool.
 
 ## Team - $30/user/month
 
@@ -412,8 +448,22 @@ For large organizations needing: SSO, SCIM, Audit Logs, custom SLA, and dedicate
 | Claude is my primary tool | Max 20x ($200) |
 | Team working together | Team ($30/user) |
 
+## Physician recommendation - choosing a plan
+
+**Solo or small clinic (1-3 physicians):**
+- Start with Pro. Enough for differential diagnosis, report summaries, and routine referral letters.
+- Upgrade to Max 5x if you start running daily Routines (morning review, weekly follow-up).
+
+**Hospital / large practice:**
+- Max 5x and even Max 20x if the team shares one account.
+- Consider Team ($30/user) if 2+ physicians use it actively.
+- For hospitals with HIPAA/privacy requirements - Enterprise with BAA.
+
+**Researcher/academia:**
+- Pro is usually enough. Max's 1M token context window helps with multi-paper literature reviews.
+
 :::advanced
-Note that Claude Code on Pro is limited by daily token usage. If you're a developer using Claude Code two hours a day or more, consider Max 5x. Alternatively, you can use the API directly and pay per usage.
+Note that Claude Code on Pro is limited by daily token usage. If you're using Claude Code two hours a day or more, consider Max 5x. Alternatively, you can use the API directly and pay per usage.
 :::`
         }
       },
@@ -946,8 +996,22 @@ Claude Code:
 
 כל זה קורה אוטומטית. אתם רק צריכים לאשר את השינויים.
 
+## Claude Code לא-מפתחים - תרחישים קליניים
+
+המילה "Code" מבלבלת. Claude Code הוא סוכן שיודע לקרוא קבצים במחשב שלך, לעבד אותם, ולשמור תוצאות. הוא מתאים מעולה לרופא שרוצה לעבד תיקייה של מסמכים - בלי שורת קוד אחת.
+
+**הנקודת כניסה הקלה ביותר לרופא: Claude Desktop כעטיפת GUI ל-Code.** במסלולים שכוללים Claude Code, אפליקציית Desktop נותנת לך חלון צ'אט רגיל שמחובר ליכולות Code - אתה פשוט גורר תיקייה פנימה ומבקש בעברית מה לעשות.
+
+**שלושה תרחישים רפואיים שאפשר לעשות היום:**
+
+1. **"קח את כל ה-PDFים בתיקייה ושים בטבלה"** - 30 דוחות פתולוגיה → טבלת CSV עם תאריך, חומר, אבחנה, שוליים. 3 דקות.
+2. **"תסדר את תמונות הדרמוסקופיה לפי מטופל ותאריך"** - 500 תמונות מעורבבות → תיקיות מאורגנות.
+3. **"תכנן סקירת ספרות על Mohs vs excision"** - שימוש ב-/ultraplan להצעת מבנה סקירה + חלוקה ל-buckets נושאיים.
+
+לפירוט מלא: ראה את הפוסט [Claude Code לרופא שלא יודע לכתוב קוד](#claude-code-for-non-developers).
+
 :::advanced
-Claude Code עובד כ-agentic loop: הוא מקבל את הבקשה שלכם, מתכנן את הגישה, מבצע פעולות (קריאת קבצים, עריכה, הרצת פקודות), בודק את התוצאות, ומתקן אם צריך. התהליך ממשיך עד שהמשימה מושלמת. אפשר לשלוט ברמת האוטונומיה דרך Permission Modes.
+Claude Code עובד כ-agentic loop: הוא מקבל את הבקשה שלכם, מתכנן את הגישה, מבצע פעולות (קריאת קבצים, עריכה, הרצת פקודות), בודק את התוצאות, ומתקן אם צריך. התהליך ממשיך עד שהמשימה מושלמת. אפשר לשלוט ברמת האוטונומיה דרך Permission Modes. ב-Opus 4.7 יש effort levels (low/medium/high/xhigh/max) ו-1M token context ב-Max plan ומעלה.
 :::`,
           en: `# Introduction to Claude Code - A Coding Partner Living in Your Terminal
 
@@ -996,8 +1060,22 @@ Claude Code:
 
 This all happens automatically. You just need to approve the changes.
 
+## Claude Code for Non-Developers - Clinical Scenarios
+
+The word "Code" is misleading. Claude Code is an agent that reads files on your machine, processes them, and saves results. It's a great fit for a physician who wants to process a folder of documents - without a single line of code.
+
+**The easiest entry point for a physician: Claude Desktop as a GUI wrapper for Code.** On plans that include Claude Code, the Desktop app gives you a regular chat window connected to Code capabilities - you just drag a folder in and ask in plain language what to do.
+
+**Three medical scenarios you can do today:**
+
+1. **"Take all the PDFs in this folder and put them in a table"** - 30 pathology reports → CSV table with date, specimen, diagnosis, margins. 3 minutes.
+2. **"Organize my dermoscopy photos by patient and date"** - 500 mixed images → organized folders.
+3. **"Plan a literature review on Mohs vs excision"** - use /ultraplan to propose a review structure and group papers by theme.
+
+For the full walkthrough, see [Claude Code for Physicians Who Don't Code](#claude-code-for-non-developers).
+
 :::advanced
-Claude Code works as an agentic loop: it receives your request, plans the approach, executes actions (reading files, editing, running commands), checks results, and corrects if needed. The process continues until the task is complete. You can control the level of autonomy through Permission Modes.
+Claude Code works as an agentic loop: it receives your request, plans the approach, executes actions (reading files, editing, running commands), checks results, and corrects if needed. The process continues until the task is complete. You can control the level of autonomy through Permission Modes. Opus 4.7 adds effort levels (low/medium/high/xhigh/max) and 1M token context on Max plan and up.
 :::`
         }
       },
@@ -1585,6 +1663,18 @@ MCP, או Model Context Protocol, הוא אחד הדברים המרגשים בי
 דמיינו שיש לכם טלפון חכם. הטלפון עצמו יכול לעשות הרבה דברים, אבל כשמתקינים עליו אפליקציות - הוא יכול לעשות הרבה יותר. MCP עובד באותו עיקרון: הוא מאפשר להתקין "תוספים" ל-Claude Code שנותנים לו גישה לכלים נוספים - GitHub, בסיסי נתונים, Slack, Google Drive, ועוד.
 :::
 
+## MCP לרופא - שלוש דוגמאות מעשיות
+
+MCP נשמע טכני, אבל המשתמש הסופי מרוויח ממנו בלי לדעת שהוא קיים. הנה שלוש דוגמאות של איך רופא מרוויח מ-MCP בלי לגעת בקוד:
+
+**1. Google Drive connector** - חיבור לתיקיית Drive של המרפאה (תיקיות הדרכה, פרוטוקולים, קבצי שיתוף). הרופא מבקש "סקור את כל הפרוטוקולי Mohs ב-Drive ותוציא הבדלים בין הגרסאות". Claude Code משתמש ב-MCP connector של Drive - כל ההגדרה נעשית בלחיצת כפתור באפליקציית Desktop.
+
+**2. Slack connector** - לקליניקות שמתקשרות ב-Slack. "שלח לערוץ #pathology-alerts סיכום של כל הדוחות הדחופים שסרקתי הבוקר". MCP מטפל בשליחה בלי שהרופא יצטרך לצאת מ-Claude.
+
+**3. GitHub connector (לחוקרים)** - לרופאים שמשתתפים בפרויקטים של מחקר שמנוהלים ב-GitHub. "פתח issue על הbug שמצאנו ב-pipeline של עיבוד התמונות". ה-connector מטפל בכל הפעולה.
+
+בכל המקרים האלה, הרופא כותב בעברית (או באנגלית) מה הוא רוצה, וה-connector עושה את העבודה.
+
 ## איך MCP עובד
 
 המערכת מבוססת על שלושה חלקים פשוטים:
@@ -1676,6 +1766,18 @@ MCP, or Model Context Protocol, is one of the most exciting developments in AI t
 :::beginner
 Imagine you have a smartphone. The phone itself can do a lot, but when you install apps on it - it can do much more. MCP works on the same principle: it lets you install "plugins" for Claude Code that give it access to additional tools - GitHub, databases, Slack, Google Drive, and more.
 :::
+
+## MCP for Physicians - Three Practical Examples
+
+MCP sounds technical, but end users benefit from it without knowing it exists. Here are three ways a physician benefits from MCP without touching code:
+
+**1. Google Drive connector** - connect to the clinic's Drive folder (teaching folders, protocols, shared files). The physician asks "review all Mohs protocols on Drive and show me differences between versions". Claude Code uses the Drive MCP connector - all setup happens with a click in the Desktop app.
+
+**2. Slack connector** - for clinics that communicate on Slack. "Send a summary of all urgent reports I scanned this morning to the #pathology-alerts channel". MCP handles the delivery without the physician leaving Claude.
+
+**3. GitHub connector (for researchers)** - for physicians who participate in research projects managed on GitHub. "Open an issue about the bug we found in the image processing pipeline". The connector handles the operation.
+
+In all of these cases, the physician writes in plain language what they want, and the connector does the work.
 
 ## How MCP Works
 
@@ -2604,6 +2706,19 @@ Create an account at claude.ai and upgrade to Pro for access to Opus, Extended T
 **למה לא פשוט להשתמש ב-Web?** ממשק ה-Web מצוין לשיחות רגילות, אבל אפליקציית Desktop מוסיפה שכבה של חיבור למחשב שלכם. אם אתם רוצים ש-Claude יקרא קבצים מהמחשב, יתחבר ל-GitHub, או אפילו ישלוט במחשב - צריך את אפליקציית Desktop. חשבו על זה ככה: ה-Web זה כמו לדבר עם מישהו בטלפון, ו-Desktop זה כמו שהוא יושב לידכם ויכול לגעת במחשב.
 :::
 
+## מה חדש ב-Desktop (Q1 2026)
+
+Anthropic שחררה עדכונים משמעותיים לאפליקציית Desktop ברבעון הראשון של 2026:
+
+- **כמה שיחות במקביל (parallel sessions)** - שיחה אחת בצד שמאל לסקירת דוח פתולוגיה, שנייה בצד ימין לניסוח מכתב הפניה. בלי Alt+Tab, בלי איבוד הקשר.
+- **Computer Use GA** - Claude יכול "לראות" את המסך שלכם ולהפעיל אפליקציות אחרות. שימושי במיוחד לקבצים בפורמטים ישנים.
+- **Connectors מובנים** - Google Drive, Slack, Notion, GitHub - חיבור ישיר מהאפליקציה בלי להגדיר MCP server מקומי.
+- **Dispatch בטאב Cowork** - שולח משימות ארוכות לסוכן ברקע בזמן שאתם ממשיכים לעבוד.
+- **Scheduled tasks מקומיים** - משימות מתוזמנות שרצות במחשב שלכם (למשל: "כל בוקר ב-7:30 תסרוק תיקיית PDF ותוציא סיכום").
+- **Git worktrees ו-visual diff** - לשיפור עבודה עם קוד ב-Claude Code.
+
+לפירוט מלא על שימושים רפואיים של התכונות החדשות: ראו [Claude Desktop לרופא - המדריך המלא](#desktop-for-physicians).
+
 ## הורדה והתקנה
 
 הורידו את האפליקציה מ-**claude.ai/download** - יש גרסאות ל-Windows ול-macOS. ההתקנה פשוטה כמו כל תוכנה אחרת: הורדה, התקנה, והתחברות עם חשבון Claude שלכם. צריך חשבון Pro, Max, או Team כדי לקבל את מלוא התכונות.
@@ -2689,6 +2804,19 @@ The Claude Desktop application is software installed on your computer - Windows 
 :::beginner
 **Why not just use the Web?** The web interface is excellent for regular conversations, but the Desktop app adds a layer of connection to your computer. If you want Claude to read files from your machine, connect to GitHub, or even control your computer, you need the Desktop app. Think of it this way: the Web is like talking to someone on the phone, and Desktop is like having them sit next to you where they can touch the computer.
 :::
+
+## What's New in Desktop (Q1 2026)
+
+Anthropic shipped major updates to the Desktop app in the first quarter of 2026:
+
+- **Parallel sessions** - one conversation on the left to review a pathology report, another on the right to draft a referral letter. No Alt+Tab, no lost context.
+- **Computer Use GA** - Claude can "see" your screen and operate other apps. Especially useful for legacy file formats.
+- **Built-in connectors** - Google Drive, Slack, Notion, GitHub - direct connection from the app without configuring a local MCP server.
+- **Dispatch in the Cowork tab** - sends long tasks to a background agent while you keep working.
+- **Local scheduled tasks** - recurring tasks that run on your machine (e.g., "every morning at 7:30 scan the PDF folder and output a summary").
+- **Git worktrees and visual diff** - for improved Claude Code workflows.
+
+For a full walkthrough of medical applications of these new features, see [Claude Desktop for Physicians](#desktop-for-physicians).
 
 ## Download and Installation
 
@@ -7630,6 +7758,1751 @@ Claude Code will read the file directly, without wasting context.
 ## Summary
 
 Context management is the most important skill when working with Claude. With /compact, CLAUDE.md, and structured prompts, you can work in long conversations without losing quality. Remember - Claude is very smart, but it needs your help to stay focused.`
+    }
+  },
+  {
+    id: 'desktop-for-physicians',
+    title: { he: 'Claude Desktop לרופא - המדריך המלא', en: 'Claude Desktop for Physicians - The Complete Guide' },
+    category: 'updates',
+    date: '2026-04-22',
+    readTime: 7,
+    excerpt: {
+      he: 'האפליקציה Native של Claude למק ולחלונות מאפשרת לרופא לעבוד במקביל על סקירת מטופלים, דוחות פתולוגיה ומכתבי הפניה - בלי לפתוח דפדפן. כל מה שצריך לדעת.',
+      en: 'Claude\'s native app for Mac and Windows lets physicians work on patient reviews, pathology reports and referral letters in parallel - without a browser. Everything you need to know.'
+    },
+    content: {
+      he: `# Claude Desktop לרופא - המדריך המלא
+
+האם יצא לך לשבת בסוף יום מרפאה עם תיקייה של דוחות פתולוגיה שצריך לסקור, מכתב הפניה שצריך לנסח, ופרוטוקול של מטופל חדש שצריך לסכם? כולם פתוחים בכרטיסיות שונות של הדפדפן, וכל פעם שאתה מעביר מסך אתה מאבד את החוט. Claude Desktop - האפליקציה Native של Anthropic למק ולחלונות - פותרת בדיוק את הבעיה הזאת.
+
+:::beginner
+"Native" פירושו שזו אפליקציה אמיתית שמותקנת על המחשב שלך, לא אתר בדפדפן. זה אומר שהיא רצה מהר יותר, חוסכת זיכרון, ויכולה לעבוד גם כשהרשת שלך איטית.
+:::
+
+## מה Claude Desktop יודעת לעשות
+
+האפליקציה תומכת ב-macOS (גם Intel וגם Apple Silicon) וב-Windows (x64 ו-ARM64). היא זמינה להורדה ב-claude.ai/download. היא לא רק "הדפדפן בחלון נפרד" - היא מוסיפה חמישה כלים שאי אפשר להפעיל בדפדפן רגיל:
+
+1. **כמה שיחות במקביל (parallel sessions)** - אתה פותח שיחה אחת לסקירת פתולוגיה ושנייה לכתיבת מכתב הפניה, בלי שהן מתבלבלות זו עם זו.
+2. **Computer use** - Claude יכול "לראות" את המסך שלך ולהפעיל אפליקציות אחרות שפתוחות אצלך (בזהירות - ראה סקציית פרטיות בהמשך).
+3. **Connectors** - חיבור ישיר ל-Google Drive, Slack, Notion. אפשר לבקש מ-Claude למשוך מסמך מ-Drive בלי להוריד אותו קודם.
+4. **Dispatch בטאב Cowork** - מטיל משימה ארוכה לסוכן שעובד ברקע בזמן שאתה ממשיך בשיחה אחרת.
+5. **Scheduled tasks מקומיים** - משימות מתוזמנות שרצות במחשב שלך ("כל בוקר בשמונה תסרוק את תיקיית הדוחות ותוציא סיכום").
+
+:::advanced
+Computer use באפליקציית Desktop רץ ב-sandbox מבודד. Anthropic ממליצה להפעיל אותו רק על מסכי עבודה שבהם אין מידע רגיש פתוח, או להשתמש ב-Dispatch כדי להריץ את המשימה בסביבה נקייה.
+:::
+
+## חמש שימושים רפואיים ספציפיים
+
+### 1. סקירת PDF פתולוגיה במקביל למכתב הפניה
+
+תרחיש: קיבלת דוח פתולוגיה של ביופסיה שעשית לפני שבוע וצריך לנסח מכתב הפניה לאונקולוג. בדפדפן זה שתי כרטיסיות ו-Alt+Tab אינסופי. ב-Desktop פשוט תפתח שתי שיחות בחלון מפוצל:
+
+\`\`\`
+שיחה 1 (שמאל):
+"סכם את דוח הפתולוגיה המצורף ב-5 נקודות: אבחנה, דרגת מלנומה לפי Breslow, שוליים,
+מעורבות לימפטית, וצורך באחד מהטיפולים (wide excision / SLNB / חמור)."
+
+[העלאת ה-PDF]
+
+שיחה 2 (ימין):
+"נסח מכתב הפניה דחוף לאונקולוג בהר חולים, לפי 5 הנקודות שסיכמתי בשיחה המקבילה."
+\`\`\`
+
+השיחות לא משתפות הקשר אבל פתוחות במקביל, ואתה גוזר ומדביק ביניהן.
+
+### 2. Connector ל-Google Drive לתיקיות מטופלים
+
+אם אתה משתמש ב-Google Drive לתיקיות פנימיות (לא לנתוני מטופלים רגישים - ראה אזהרה למטה), אפשר לחבר את התיקייה ישירות ל-Claude. דוגמה:
+
+\`\`\`
+"חבר את התיקייה /teaching-cases/dermoscopy מ-Google Drive.
+מצא את כל התמונות שתויגו 'atypical' ב-3 החודשים האחרונים וסדר אותן
+בטבלה עם: תאריך, תיאור, אבחנה סופית, מה היה ייחודי בהן."
+\`\`\`
+
+זה מחליף עבודת סריקה ידנית של חצי שעה בתוצאה תוך 2 דקות.
+
+### 3. Scheduled task מקומי לסריקת בוקר
+
+Scheduled task מקומי הוא משימה שרצה במחשב שלך בזמן שהגדרת. שימושי למשל לסקירת בוקר של דוחות פתולוגיה שהגיעו בלילה:
+
+**איך מגדירים:**
+
+1. פתח Claude Desktop ועבור לטאב Scheduled Tasks.
+2. צור משימה חדשה עם הפרומפט:
+
+\`\`\`
+בכל בוקר ב-7:30:
+סרוק את תיקיית ~/Documents/Pathology/Daily
+הוצא רשימה של כל ה-PDFים החדשים שהגיעו ב-24 השעות האחרונות
+לכל PDF, ציין: תאריך דיווח, שם חומר, אבחנה, האם יש משהו דחוף (malignant / atypical / לא וודאי)
+סדר את התוצאה בטבלה
+שמור את הטבלה ב-~/Documents/Pathology/Daily/summary-YYYY-MM-DD.md
+\`\`\`
+
+3. מצב: yיומי ב-7:30.
+4. כשתפתח את המחשב בבוקר, הסיכום כבר מחכה לך.
+
+### 4. Computer use לקריאת דוחות ישנים
+
+קיבלת דוח פתולוגיה בפורמט ישן (Word 97 או PDF לא-searchable), והאקסטנשן לא עולה בדפדפן? Computer use יכול לפתוח את הקובץ באפליקציה המתאימה במחשב שלך ולקרוא לך אותו:
+
+\`\`\`
+"פתח את הקובץ ~/Downloads/pathology-1998-biopsy.doc ב-Word
+קרא לי את סקציית FINAL DIAGNOSIS ותשים אותה כאן ב-chat."
+\`\`\`
+
+**אזהרה חשובה:** Computer use גם רואה את כל מה שפתוח אצלך על המסך. אל תפעיל אותו כשפתוח אצלך EMR עם נתוני מטופלים, מיילים רגישים, או כל מידע שלא אמור להגיע ל-Anthropic.
+
+### 5. Dispatch בטאב Cowork למשימה ארוכה
+
+נניח שצריך לסכם 40 מאמרים לסקירת ספרות. זה יכול לקחת ל-Claude 15-20 דקות. במקום לחכות מול המסך:
+
+\`\`\`
+טאב Cowork:
+Dispatch למשימה:
+"קרא את 40 ה-PDFים שהעליתי, סנן למאמרי ניסוי קליני (RCT) על dupilumab
+באטופיק דרמטיטיס בחולים מעל גיל 65, והוצא טבלה: מחבר, שנה, N, primary outcome,
+זמן מעקב. בסוף, כתוב פסקה של חמש שורות על הטרנד הכללי."
+\`\`\`
+
+Dispatch שולח את המשימה לסוכן ברקע, ואתה ממשיך להשתמש בשיחות אחרות בזמן שהוא עובד.
+
+## פרטיות והגנה על נתוני מטופלים
+
+החוק הישראלי (חוק הגנת הפרטיות תשמ"א-1981, תיקון 13 משנת 2024) מחייב שמירה מוקפדת על מידע רפואי מזהה. כמה כללים חשובים:
+
+- **אל תעלה PII של מטופלים** (שם מלא, ת.ז., תאריך לידה מדויק, כתובת, טלפון) ל-Claude.ai או ל-Claude Desktop בחשבון רגיל. אין בין Anthropic לבין המרפאה שלך הסכם DPA/BAA.
+- **לפני העלאה של PDF, עבור deidentification:** מחק שמות, ת.ז., תאריכי לידה. אפשר להשתמש בכלים חינמיים כמו PDFgear או Claude עצמו ("הסר את כל ה-PII מהדוח הזה לפני שתעלה אותו").
+- **Computer use + EMR = סכנה.** אל תפעיל computer use בזמן ש-Epic/Matrix/Clicks/EMR אחר פתוח.
+- **Scheduled tasks מקומיים = טוב יותר מ-cloud** לנתונים רגישים, כי העיבוד יכול לקרות רק במחשב שלך - אבל כשהפרומפט שולח מידע ל-Claude, המידע עובר דרך שרתים של Anthropic.
+- לפרטיות מלאה - בדוק את Claude for Enterprise עם HIPAA BAA, או המתן להכרזה על מסלול תואם ישראל.
+
+## מגבלות שכדאי להכיר
+
+- **אין תמיכה ב-Linux** (נכון ל-2026-04). רק macOS ו-Windows.
+- **RTL בממשק** - רוב הממשק תומך, אבל ייתכן שמצבי preview של HTML או תרשימים ייראו הפוך. אם אתה נתקע, חזור ל-web-interface.
+- **Connectors עדיין בפיתוח** - לא כל השירותים מחוברים; בדוק ב-docs.claude.com את הרשימה המעודכנת.
+
+## מה לקרוא הלאה
+
+- [Cowork לרופא](#cowork-for-clinics) - איך להפעיל משימות רקע בצורה שיטתית.
+- [Claude Code לרופא שלא יודע לכתוב קוד](#claude-code-for-non-developers) - הרחבה של Desktop ליכולות אוטומציה עוצמתיות יותר.
+
+## מקורות
+
+1. Anthropic. Claude Desktop documentation. https://docs.claude.com/en/docs/claude-apps/desktop
+2. Anthropic. Claude Desktop download page. https://claude.ai/download
+3. Anthropic. Computer use overview. https://docs.claude.com/en/docs/agents-and-tools/computer-use
+4. Anthropic. Connectors reference. https://docs.claude.com/en/docs/mcp
+5. חוק הגנת הפרטיות תשמ"א-1981, תיקון 13 (2024). משרד המשפטים. https://www.gov.il/he/departments/legalInfo
+
+---
+
+**הערת עזר קלינית:** Claude הוא כלי עזר ואינו מחליף את השיפוט הקליני שלך. אמת כל המלצה קלינית מול מקור מהימן (UpToDate, קווים מנחים עדכניים, או התייעצות עם עמית) לפני החלטה לגבי מטופל.`,
+      en: `# Claude Desktop for Physicians - The Complete Guide
+
+Ever sat down at the end of a clinic day with a folder of pathology reports to review, a referral letter to draft, and a new patient protocol to summarize? All open in different browser tabs, and every Alt+Tab you lose your train of thought. Claude Desktop - Anthropic's native app for Mac and Windows - was built for exactly this problem.
+
+:::beginner
+"Native" means this is a real app installed on your computer, not a website in a browser. That means it runs faster, uses less memory, and works even when your internet is slow.
+:::
+
+## What Claude Desktop does
+
+The app supports macOS (both Intel and Apple Silicon) and Windows (x64 and ARM64). It's available at claude.ai/download. It isn't just "the browser in a separate window" - it adds five capabilities that aren't available in a regular browser:
+
+1. **Parallel sessions** - you open one conversation for pathology review and another for the referral letter, without them interfering.
+2. **Computer use** - Claude can "see" your screen and operate other applications you have open (carefully - see the privacy section below).
+3. **Connectors** - direct links to Google Drive, Slack, Notion. You can ask Claude to pull a document from Drive without downloading it first.
+4. **Dispatch in the Cowork tab** - hand off a long task to an agent running in the background while you continue in another conversation.
+5. **Local scheduled tasks** - recurring tasks that run on your computer at the time you set ("every morning at 8, scan the reports folder and output a summary").
+
+:::advanced
+Computer use in the Desktop app runs in an isolated sandbox. Anthropic recommends enabling it only on desktops where no sensitive information is currently open, or using Dispatch to run the task in a clean environment.
+:::
+
+## Five specific medical use cases
+
+### 1. Pathology PDF review in parallel with the referral letter
+
+Scenario: a pathology report from a biopsy you did last week just came in and you need to draft a referral to oncology. In the browser that's two tabs and endless Alt+Tab. In Desktop you just open two conversations in a split window:
+
+\`\`\`
+Conversation 1 (left):
+"Summarize the attached pathology report in 5 points: diagnosis, Breslow depth,
+margins, lymphovascular involvement, and treatment recommendation (wide excision / SLNB /
+systemic)."
+
+[PDF attached]
+
+Conversation 2 (right):
+"Draft an urgent referral letter to oncology based on the 5 points I summarized
+in the parallel conversation."
+\`\`\`
+
+The conversations don't share context but are open at the same time, and you copy-paste between them.
+
+### 2. Google Drive connector for teaching folders
+
+If you use Google Drive for internal teaching folders (not sensitive patient data - see warning below), you can connect the folder directly to Claude. Example:
+
+\`\`\`
+"Connect the folder /teaching-cases/dermoscopy from Google Drive.
+Find all images tagged 'atypical' from the last 3 months and organize them in a table:
+date, description, final diagnosis, what was unique about this case."
+\`\`\`
+
+That replaces half an hour of manual scanning with a result in 2 minutes.
+
+### 3. Local scheduled task for morning review
+
+A local scheduled task is a job that runs on your computer at a time you configure. Useful, for example, for a morning review of pathology reports that arrived overnight.
+
+**How to set up:**
+
+1. Open Claude Desktop and go to the Scheduled Tasks tab.
+2. Create a new task with the prompt:
+
+\`\`\`
+Every morning at 7:30:
+Scan the folder ~/Documents/Pathology/Daily
+Output a list of all new PDFs from the last 24 hours
+For each PDF, note: report date, specimen, diagnosis, and whether anything is urgent
+(malignant / atypical / uncertain)
+Output a table
+Save the table to ~/Documents/Pathology/Daily/summary-YYYY-MM-DD.md
+\`\`\`
+
+3. Frequency: daily at 7:30.
+4. When you open the computer in the morning, the summary is already waiting.
+
+### 4. Computer use for reading legacy reports
+
+Received a pathology report in an old format (Word 97 or a non-searchable PDF), and the extension won't open in the browser? Computer use can open the file in the right app on your computer and read it for you:
+
+\`\`\`
+"Open the file ~/Downloads/pathology-1998-biopsy.doc in Word.
+Read me the FINAL DIAGNOSIS section and paste it here in chat."
+\`\`\`
+
+**Important warning:** Computer use also sees everything open on your screen. Don't run it while your EMR is open with patient data, with sensitive email visible, or with any information that shouldn't reach Anthropic.
+
+### 5. Dispatch in the Cowork tab for a long task
+
+Suppose you need to summarize 40 papers for a literature review. That can take Claude 15-20 minutes. Instead of waiting at the screen:
+
+\`\`\`
+Cowork tab:
+Dispatch task:
+"Read the 40 PDFs I uploaded, filter to randomized trials (RCTs) on dupilumab in
+atopic dermatitis in patients over 65, and output a table: author, year, N, primary
+outcome, follow-up duration. At the end, write a five-line paragraph on the overall trend."
+\`\`\`
+
+Dispatch hands the task to a background agent, and you continue using other conversations while it works.
+
+## Privacy and patient data
+
+Any clinic using Claude with patient information needs to know:
+
+- **Do not upload patient PII** (full name, ID number, precise date of birth, address, phone) to Claude.ai or Claude Desktop on a regular account. There is no DPA/BAA between Anthropic and your clinic.
+- **Before uploading a PDF, deidentify it:** remove names, IDs, dates of birth. You can use free tools like PDFgear, or ask Claude itself ("remove all PII from this report before I upload it").
+- **Computer use + EMR = danger.** Don't run computer use while your EMR (Epic, Cerner, or similar) is open.
+- **Local scheduled tasks = better than cloud** for sensitive data, because the processing can happen only on your machine - but once the prompt sends data to Claude, it travels through Anthropic servers.
+- For full compliance - check Claude for Enterprise with HIPAA BAA, or wait for a region-specific compliant track.
+
+## Current limitations
+
+- **No Linux support** (as of 2026-04). macOS and Windows only.
+- **RTL in the interface** - most of the UI supports Hebrew and Arabic, but HTML previews or diagrams may render backwards. If you're stuck, fall back to the web interface.
+- **Connectors are still expanding** - not every service is connected; check docs.claude.com for the current list.
+
+## What to read next
+
+- [Cowork for Clinics](#cowork-for-clinics) - how to set up background routines systematically.
+- [Claude Code for Physicians Who Don't Code](#claude-code-for-non-developers) - an extension of Desktop into more powerful automation.
+
+## Sources
+
+1. Anthropic. Claude Desktop documentation. https://docs.claude.com/en/docs/claude-apps/desktop
+2. Anthropic. Claude Desktop download page. https://claude.ai/download
+3. Anthropic. Computer use overview. https://docs.claude.com/en/docs/agents-and-tools/computer-use
+4. Anthropic. Connectors reference. https://docs.claude.com/en/docs/mcp
+5. Israel Privacy Protection Law 5741-1981, Amendment 13 (2024). Ministry of Justice. https://www.gov.il/en/departments/legalInfo
+
+---
+
+**Clinical note:** Claude is a helper tool and does not replace your clinical judgment. Verify every clinical recommendation against a trusted source (UpToDate, current guidelines, or a colleague consultation) before deciding on patient care.`
+    }
+  },
+  {
+    id: 'cowork-for-clinics',
+    title: { he: 'Cowork לרופא - לעבוד עם סוכן במקום לחכות לו', en: 'Cowork for Physicians - Working With an Agent, Not Waiting For One' },
+    category: 'updates',
+    date: '2026-04-22',
+    readTime: 8,
+    excerpt: {
+      he: 'Cowork הוא הטאב החדש באפליקציית Claude שמאפשר לרופא להפעיל משימות רקע ולחזור לעסוק במטופלים. הסבר מלא של Cowork, Dispatch, Routines וכיצד להפעיל אותם במרפאה.',
+      en: 'Cowork is the new tab in the Claude app that lets physicians run background tasks and return to patients. A complete guide to Cowork, Dispatch, Routines and how to deploy them in clinical practice.'
+    },
+    content: {
+      he: `# Cowork לרופא - לעבוד עם סוכן במקום לחכות לו
+
+במרפאה טיפוסית, יום של רופא מחולק לחלקים קטנים: 15 דקות עם מטופל, 5 דקות לתיעוד, 3 דקות בין מטופלים לבדוק משהו. בכל "חור" הרופא מנסה לגנוב זמן ל-journal club, סקירת דוחות או תשובה לייעוצים. זה המקום שבו Cowork - הטאב החדש באפליקציית Claude - נכנס לתמונה.
+
+## מה זה Cowork, מה זה Dispatch, ומה זה Routines
+
+יש שלושה מושגים חדשים שמתבלבלים בקלות. ננקה את הבלבול:
+
+**Cowork** - טאב בתוך אפליקציית Claude (זמין ב-Desktop וב-Web במנוי Pro ומעלה). תפקיד הטאב: מקום ריכוזי שבו הרופא נותן ל-Claude משימות ארוכות ולא יושב ומחכה להן.
+
+**Dispatch** - המכניקה שבה משימה ארוכה מ-Cowork מועברת לסוכן רקע שמטפל בה. אתה לוחץ Dispatch, והסוכן "מוריד" את המשימה מהשיחה וחוזר אליך רק כשהוא סיים.
+
+**Routines** - משימות חוזרות שרצות בענן של Anthropic לפי לוח זמנים שקבעת ("כל יום ראשון בשמונה בבוקר, סקור את המאמרים החדשים בתחום העור"). Routines הן לא חלק מ-Cowork אלא מוצר משלים. **Scheduled tasks ב-Claude Desktop** הן עוד אופציה - אלו משימות שרצות במחשב שלך, לא בענן.
+
+:::beginner
+הדרך הפשוטה ביותר לזכור:
+- Cowork = המקום
+- Dispatch = השליחה למשימה
+- Routines = משימות שחוזרות בענן של Anthropic
+- Desktop scheduled tasks = משימות שחוזרות במחשב שלך
+:::
+
+## חמישה שימושים רפואיים
+
+### 1. בוקר במרפאה - סקירת דוחות שהגיעו בלילה
+
+תרחיש: אתה מגיע למרפאה ב-7:45. ב-8:15 המטופל הראשון. אתה רוצה שיהיה לך בראש מה חדש בדוחות הפתולוגיה שהגיעו בלילה.
+
+**פתרון עם Routine:**
+
+הגדר Routine יומית שרצה ב-7:30 עם הפרומפט:
+
+\`\`\`
+סרוק את תיבת האימייל שלי (דרך ה-Gmail connector) לכל הודעה מ-pathology@maccabi.org.il
+שהגיעה בין 18:00 אתמול ל-6:00 היום. לכל דוח (PDF מצורף):
+
+1. הוצא: שם חומר, מיקום אנטומי, אבחנה סופית, שוליים (אם רלוונטי)
+2. סווג דחיפות: דחוף (malignant, atypical severe), בינוני (atypical mild), רגיל
+3. הוצא טבלה עם כל הדוחות מסודרת לפי דחיפות
+4. שלח את הטבלה לתיבה שלי עם נושא "סקירת בוקר YYYY-MM-DD"
+\`\`\`
+
+ב-8:00 אתה פותח את האימייל ויודע בדיוק מה לפניך היום.
+
+### 2. Journal club אוטומטי
+
+תרחיש: Journal club במרפאה ב-12:00 בחמישי. בכל שבוע מישהו צריך להכין רשימת מאמרים חדשים ולבחור אחד.
+
+**פתרון עם Routine:**
+
+\`\`\`
+כל יום שלישי ב-18:00:
+חפש ב-PubMed מאמרים מ-7 הימים האחרונים בנושאים:
+- Mohs micrographic surgery
+- Basal cell carcinoma surgical margins
+- Melanoma dermoscopy
+- Skin cancer screening AI
+
+לכל מאמר הוצא: שם, מחברים, journal, PMID, abstract מסוכם לשתי שורות, ורלוונטיות קלינית (1-10).
+סנן ל-5 המאמרים המובילים לפי רלוונטיות.
+שמור בקובץ ~/Documents/journal-club/YYYY-Wxx.md.
+\`\`\`
+
+ביום שלישי בערב הקובץ מוכן. ביום שלישי ב-22:00 אתה בוחר אחד ומוסיף לו הערות לדיון. ב-12:00 בחמישי אתה נכנס ל-journal club מוכן.
+
+### 3. Onboarding מתמחה חדש - סדרת Dispatch
+
+תרחיש: מתמחה חדש מצטרף למרפאה. יש 4-5 מסמכים שהוא צריך: נהלי מרפאה, פרוטוקולי Mohs, רשימת telemedicine-friendly conditions, טפסים סטנדרטיים.
+
+**פתרון עם Cowork + Dispatch:**
+
+בטאב Cowork, שיחה אחת עם סדרת Dispatch:
+
+\`\`\`
+Dispatch 1:
+"בהתבסס על הקבצים בתיקייה /clinic-protocols, כתוב מדריך של עמוד אחד למתמחה חדש על
+ניהול יום במרפאה: מה הסדר הבוקר-צהריים, מי אחראי על מה, איך מטפלים בתיעוד."
+
+Dispatch 2:
+"מתוך כל הדוחות של Mohs בתיקייה /mohs-archive של השנה האחרונה, הוצא רשימה של
+10 מצבים הכי שכיחים ולכל אחד פרוטוקול של 3 שלבים."
+
+Dispatch 3:
+"כתוב 5 שאלות עצמיות שהמתמחה יכול להעריך בעזרתן את עצמו אחרי חודש במרפאה,
+ממוקדות בפרקטיקה - לא טריוויה מקצועית."
+\`\`\`
+
+שלוש משימות ארוכות רצות במקביל ברקע. בזמן שהן רצות, אתה ממשיך לראות מטופלים. שעה אחר כך יש לך 3 מסמכים מוכנים.
+
+### 4. ניהול follow-up - משימה שבועית
+
+תרחיש: במרפאה שלך יש מטופלים עם ממאירויות עור שצריכים חזרה כל 3/6/12 חודשים. אין אצלך מערכת ייעודית שמזכירה מי התחייב לחזור.
+
+**פתרון עם Routine + Google Sheets connector:**
+
+\`\`\`
+כל יום שישי ב-16:00:
+פתח את Google Sheet "follow-up tracker".
+חפש בעמודה "next visit" את כל התאריכים ב-14 הימים הקרובים.
+לכל מטופל (בלי PII מלא - רק קוד מטופל):
+- סוג אבחנה ראשונה
+- תאריך אבחנה
+- Interval של follow-up
+- האם המזכירה כבר זימנה? (עמודה "scheduled")
+
+הוצא טבלה של מטופלים שצריכים לבוא בשבועיים הקרובים אבל עוד לא זומנו.
+שלח אותה לתיבה של המזכירה עם נושא "Follow-up לזימון".
+\`\`\`
+
+יום ראשון אחרי הפעלת ה-Routine הראשונה, המזכירה מקבלת רשימה. שיבוץ שגרתי ולא אד-הוק.
+
+### 5. Dispatch למשימה חד-פעמית ארוכה
+
+לא הכל צריך Routine. לפעמים יש משימה חד-פעמית שלוקחת זמן. למשל: הכנת הרצאה על "עדכוני Mohs ב-2025-2026".
+
+**פתרון עם Dispatch:**
+
+\`\`\`
+בטאב Cowork:
+Dispatch:
+"חפש ב-PubMed את כל המאמרים על Mohs surgery שפורסמו ב-2025 ואילך בז'ורנלים:
+JAAD, JAMA Dermatology, Dermatologic Surgery, JAMA Surgery. סנן למאמרים עם רלוונטיות
+גבוהה לפרקטיקה (לא case reports בודדים). הוצא רשימה של 20 מאמרים עם: PMID, כותרת,
+מה חדש בו, איך זה משנה פרקטיקה. אחר כך קבץ לפי 5 נושאים מרכזיים.
+
+בסוף, הצע מבנה של הרצאה של 45 דקות על הנושאים האלה, עם slide deck outline."
+\`\`\`
+
+20 דקות אחר כך יש לך הכנה של הרצאה על השולחן.
+
+## כלים שחסרים (נכון ל-2026-04)
+
+- **אין אינטגרציית EMR ישירה** - Claude Cowork לא מחובר ל-Epic/Matrix/Clicks. צריך לייצא ידנית ו/או להשתמש בקנקטורים תומכים (Google Drive, Gmail).
+- **Routines עדיין יקרות ב-compute** - Routine יומית עם פרומפטים ארוכים יכולה לצרוך חלק ניכר מהמכסה במסלול Pro. Max עדיף למי שמתכנן להריץ מספר Routines.
+- **אין HIPAA compliance** באופן גלובלי. לקלינאי ישראלי: בדוק את עמוד ה-Data Processing של Anthropic ואם נחוץ, שקול Enterprise plan.
+
+## פרטיות והגנה על נתוני מטופלים
+
+שימוש ב-Cowork דורש זהירות יתר כי המשימות רצות ברקע:
+
+- **אל תכלול PII בפרומפט של Routine.** השתמש בקודי מטופל (לא ת.ז.), ומחק שמות מלאים.
+- **Gmail connector רואה את כל התיבה.** אם אתה משתמש בו לסריקת דוחות, ודא שתיבת המייל הזו לא מכילה מידע מזהה רחב יותר של מטופלים. עדיף תיבה ייעודית.
+- **שיחות Cowork נשמרות בהיסטוריה של Claude.** אם אתה לא רוצה שפרומפט מסוים יישמר, הפעל Incognito mode לפני הפעלתו.
+- לקלינאים בישראל - חוק הגנת הפרטיות, תיקון 13, מחייב רישום פעילות עיבוד של נתוני בריאות. ודא שהשימוש שלך ב-Cowork עובר את רישום פעילות העיבוד של המרפאה.
+
+## מה לקרוא הלאה
+
+- [Claude Desktop לרופא - המדריך המלא](#desktop-for-physicians) - איך מתקינים ומגדירים את האפליקציה שמריצה את Cowork.
+- [Claude Code לרופא שלא יודע לכתוב קוד](#claude-code-for-non-developers) - לחלופה עוצמתית יותר כשהרופא מוכן ללכת צעד אחד הלאה.
+
+## מקורות
+
+1. Anthropic. Claude Cowork documentation. https://docs.claude.com/en/docs/claude-apps/cowork
+2. Anthropic. Routines and scheduled tasks overview. https://support.anthropic.com
+3. Anthropic. Pricing and plans. https://www.anthropic.com/pricing
+4. רשות הגנת הפרטיות, משרד המשפטים. רישום פעילות עיבוד. https://www.gov.il/he/departments/the_privacy_protection_authority
+5. חוק הגנת הפרטיות תשמ"א-1981, תיקון 13 (2024). https://www.gov.il/he/departments/legalInfo
+
+---
+
+**הערת עזר קלינית:** Claude הוא כלי עזר ואינו מחליף את השיפוט הקליני שלך. אמת כל המלצה קלינית מול מקור מהימן (UpToDate, קווים מנחים עדכניים, או התייעצות עם עמית) לפני החלטה לגבי מטופל.`,
+      en: `# Cowork for Physicians - Working With an Agent, Not Waiting For One
+
+In a typical clinic, a physician's day is chopped into small pieces: 15 minutes with a patient, 5 minutes to document, 3 minutes between patients to check one thing. In every "hole" the physician tries to steal time for journal club, report review, or consult replies. That's where Cowork - the new tab in the Claude app - comes in.
+
+## Cowork, Dispatch, and Routines - what's the difference
+
+Three new concepts that are easy to confuse. Let's clear it up:
+
+**Cowork** - a tab inside the Claude app (available on Desktop and Web on Pro and up). Its role: a central place where the physician gives Claude long tasks and doesn't sit waiting for them.
+
+**Dispatch** - the mechanism by which a long task from Cowork is handed off to a background agent. You click Dispatch, and the agent "pulls" the task out of the conversation and returns only when done.
+
+**Routines** - recurring tasks that run in Anthropic's cloud on a schedule you set ("every Sunday at 8 AM, review this week's new dermatology papers"). Routines are not part of Cowork but a complementary product. **Claude Desktop scheduled tasks** are another option - those run on your own machine, not in the cloud.
+
+:::beginner
+The easy way to remember:
+- Cowork = the place
+- Dispatch = sending to a task
+- Routines = recurring tasks in Anthropic's cloud
+- Desktop scheduled tasks = recurring tasks on your own machine
+:::
+
+## Five medical use cases
+
+### 1. Morning clinic - reviewing reports that came in overnight
+
+Scenario: you arrive at 7:45. First patient at 8:15. You want to know what's in the pathology reports that came in overnight before you see anyone.
+
+**Solution with a Routine:**
+
+Set up a daily Routine that runs at 7:30 with the prompt:
+
+\`\`\`
+Scan my inbox (via Gmail connector) for any email from pathology@hospital.org
+that arrived between 18:00 yesterday and 6:00 today. For each report (attached PDF):
+
+1. Extract: specimen, anatomical site, final diagnosis, margins (if relevant)
+2. Classify urgency: urgent (malignant, severe atypia), moderate (mild atypia), routine
+3. Output a table of all reports sorted by urgency
+4. Email it to me with subject "Morning review YYYY-MM-DD"
+\`\`\`
+
+By 8:00 you open the email and know exactly what's in front of you today.
+
+### 2. Automated journal club
+
+Scenario: journal club Thursday at noon. Each week someone has to prepare a list of new papers and pick one.
+
+**Solution with a Routine:**
+
+\`\`\`
+Every Tuesday at 18:00:
+Search PubMed for papers from the last 7 days on:
+- Mohs micrographic surgery
+- Basal cell carcinoma surgical margins
+- Melanoma dermoscopy
+- Skin cancer screening AI
+
+For each paper extract: title, authors, journal, PMID, two-line abstract summary,
+clinical relevance (1-10).
+Filter to the top 5 by relevance.
+Save to ~/Documents/journal-club/YYYY-Wxx.md.
+\`\`\`
+
+Tuesday evening the file is ready. Tuesday at 22:00 you pick one and add discussion notes. Thursday at noon you walk into journal club prepared.
+
+### 3. Onboarding a new resident - a chain of Dispatches
+
+Scenario: a new resident joins the clinic. There are 4-5 documents they need: clinic procedures, Mohs protocols, a list of telemedicine-friendly conditions, standard forms.
+
+**Solution with Cowork + Dispatch:**
+
+In the Cowork tab, one conversation with a chain of Dispatches:
+
+\`\`\`
+Dispatch 1:
+"Based on the files in /clinic-protocols, write a one-page guide for a new resident
+on running a clinic day: morning-noon order, who's responsible for what, how to
+handle documentation."
+
+Dispatch 2:
+"From all the Mohs reports in /mohs-archive for the last year, extract a list of
+the 10 most common conditions and for each a 3-step protocol."
+
+Dispatch 3:
+"Write 5 self-assessment questions a new resident can use to evaluate themselves
+after a month in the clinic, focused on practice - not trivia."
+\`\`\`
+
+Three long tasks run in parallel in the background. While they run, you keep seeing patients. An hour later you have three documents ready.
+
+### 4. Managing follow-up - a weekly routine
+
+Scenario: your clinic has patients with skin malignancies who need to return every 3/6/12 months. You don't have a dedicated system reminding who's due.
+
+**Solution with Routine + Google Sheets connector:**
+
+\`\`\`
+Every Friday at 16:00:
+Open the Google Sheet "follow-up tracker".
+In the "next visit" column, find all dates in the next 14 days.
+For each patient (no full PII - only patient code):
+- Primary diagnosis
+- Date of diagnosis
+- Follow-up interval
+- Has the secretary already scheduled? (column "scheduled")
+
+Output a table of patients due in the next 2 weeks who aren't yet scheduled.
+Email it to the secretary with subject "Follow-up to schedule".
+\`\`\`
+
+The Sunday after you first enable the Routine, the secretary gets a list. Scheduling becomes routine instead of ad-hoc.
+
+### 5. Dispatch for a one-off long task
+
+Not everything needs a Routine. Sometimes there's a one-off task that takes time. Example: preparing a talk on "Mohs updates 2025-2026".
+
+**Solution with Dispatch:**
+
+\`\`\`
+In the Cowork tab:
+Dispatch:
+"Search PubMed for all papers on Mohs surgery published in 2025 or later in:
+JAAD, JAMA Dermatology, Dermatologic Surgery, JAMA Surgery. Filter to papers with high
+practice relevance (not individual case reports). Output a list of 20 papers with: PMID,
+title, what's new, how it changes practice. Then group into 5 key themes.
+
+Finally, propose a structure for a 45-minute talk on these themes, with slide deck outline."
+\`\`\`
+
+Twenty minutes later you have a talk outline on your desk.
+
+## What's missing (as of 2026-04)
+
+- **No direct EMR integration** - Claude Cowork isn't connected to Epic/Cerner. You have to export manually or use supported connectors (Google Drive, Gmail).
+- **Routines are still compute-heavy** - a daily Routine with long prompts can eat a significant part of your Pro quota. Max is preferable if you plan multiple Routines.
+- **No global HIPAA compliance.** For an Israeli clinician: check Anthropic's Data Processing page and, if needed, consider an Enterprise plan.
+
+## Privacy and patient data
+
+Using Cowork requires extra care because tasks run in the background:
+
+- **Don't include PII in a Routine prompt.** Use patient codes (not national IDs), and remove full names.
+- **The Gmail connector sees your whole inbox.** If you use it for report scanning, make sure that inbox doesn't contain broader identifying patient information. Better: a dedicated inbox.
+- **Cowork conversations are saved in Claude's history.** If you don't want a particular prompt saved, enable Incognito mode before running it.
+- For clinicians in Israel - the Privacy Protection Law Amendment 13 requires a registry of processing activities for health data. Make sure your Cowork usage is listed in your clinic's processing registry.
+
+## What to read next
+
+- [Claude Desktop for Physicians](#desktop-for-physicians) - how to install and configure the app that runs Cowork.
+- [Claude Code for Physicians Who Don't Code](#claude-code-for-non-developers) - a more powerful alternative when you're ready to go one step further.
+
+## Sources
+
+1. Anthropic. Claude Cowork documentation. https://docs.claude.com/en/docs/claude-apps/cowork
+2. Anthropic. Routines and scheduled tasks overview. https://support.anthropic.com
+3. Anthropic. Pricing and plans. https://www.anthropic.com/pricing
+4. Israel Privacy Protection Authority, Ministry of Justice. Registry of processing activities. https://www.gov.il/en/departments/the_privacy_protection_authority
+5. Israel Privacy Protection Law 5741-1981, Amendment 13 (2024). https://www.gov.il/en/departments/legalInfo
+
+---
+
+**Clinical note:** Claude is a helper tool and does not replace your clinical judgment. Verify every clinical recommendation against a trusted source (UpToDate, current guidelines, or a colleague consultation) before deciding on patient care.`
+    }
+  },
+  {
+    id: 'claude-code-for-non-developers',
+    title: { he: 'Claude Code לרופא שלא יודע לכתוב קוד', en: 'Claude Code for Physicians Who Don\'t Code' },
+    category: 'five-min',
+    date: '2026-04-22',
+    readTime: 6,
+    excerpt: {
+      he: 'Claude Code הוא לא רק למפתחים. הוא כלי מעולה לרופא שרוצה לעבד תיקייה של PDFים, לסדר תמונות דרמוסקופיה, או לחלץ נתונים מדוחות פתולוגיה - בלי לכתוב שורת קוד אחת.',
+      en: 'Claude Code isn\'t just for developers. It\'s a great tool for physicians who want to process a folder of PDFs, organize dermoscopy photos, or extract data from pathology reports - without writing a single line of code.'
+    },
+    content: {
+      he: `# Claude Code לרופא שלא יודע לכתוב קוד
+
+"Claude Code? זה לא לתכנות?" נשמע הרבה במרפאות. התשובה הקצרה: לא. Claude Code הוא סוכן שיודע לקרוא קבצים במחשב שלך, להפעיל פעולות עליהם, ולכתוב תוצאות. התכנות הוא רק דרך אחת להשתמש בו. יש לפחות שלוש דרכים אחרות שרופא משתמש בהן היטב - בלי לכתוב שורת קוד אחת.
+
+:::beginner
+חשוב על Claude Code כמו על עוזר אישי ש"יושב" במחשב שלך ויכול: (1) לקרוא קבצים שאתה מצביע עליהם, (2) לסכם או לעבד אותם, (3) לשמור תוצאות בקבצים חדשים. אתה לא צריך להבין איך הוא עושה את זה כדי להשתמש בו - רק להגיד לו מה אתה רוצה, בעברית או באנגלית רגילה.
+:::
+
+## מה חדש שעוזר לרופא (2026 Q1)
+
+שלושה עדכונים מהרבעון הראשון של 2026 חשובים במיוחד לרופא:
+
+1. **Opus 4.7 עם effort level** - המודל החזק ביותר של Anthropic עכשיו תומך ברמות מאמץ (low/medium/high/xhigh/max). xhigh היא ברירת המחדל וטובה לרוב המשימות הרפואיות. max מתאימה רק למשימות מחקר ארוכות מאוד.
+2. **חלון הקשר של מיליון טוקנים** - ב-Opus 4.7, Opus 4.6 ו-Sonnet 4.6 (מופעל במסלול Max ומעלה). זה אומר שאפשר להעלות תיקיית PDFים שלמה לשיחה אחת ולסכם את הכול.
+3. **/ultraplan ו-/ultrareview** - שתי פקודות ענן חדשות. /ultraplan מתכננת משימה מורכבת לפני שהיא מתחילה, /ultrareview עושה סקירה מעמיקה של תוצאה. מועיל מאוד לסקירות ספרות או לניתוח דוחות רבים.
+
+## שלושה תרחישים רפואיים - בלי שורת קוד
+
+### תרחיש 1: "קח את כל ה-PDFים בתיקייה הזאת ושים בטבלה"
+
+יש לך תיקייה עם 30 דוחות פתולוגיה מהחודש. אתה רוצה טבלה: תאריך, שם חומר, אבחנה, שוליים.
+
+**מה שאתה עושה:**
+
+1. פתח Claude Code (גם ב-Terminal וגם באפליקציית Desktop - במסלול שיש בו Code).
+2. עבור לתיקייה של ה-PDFים (ב-Desktop: פשוט גרור את התיקייה).
+3. הקלד:
+
+\`\`\`
+קרא את כל קובצי ה-PDF בתיקייה זו.
+לכל דוח הוצא:
+- תאריך דיווח
+- שם חומר (specimen)
+- אבחנה סופית (final diagnosis)
+- שוליים (margins) - ציין ירוק אם שלם, אדום אם מעורב
+
+שמור את הטבלה כ-CSV בקובץ ~/Desktop/pathology-summary-2026-04.csv.
+בסוף, הצג סיכום של מספר המקרים הממאירים, הבלתי וודאיים, והשפירים.
+\`\`\`
+
+4. Claude Code יתחיל לעבוד. הוא יודע לקרוא PDF בלי שלימדת אותו. הוא ישאל לפני שישמור קובץ. אתה מאשר - זהו.
+
+**למה זה טוב יותר מ-Claude.ai רגיל?** ב-Claude.ai תצטרך להעלות 30 PDFים אחד אחד, ואז לבקש ניתוח. עם Code אתה מצביע על תיקייה ורואה תוצאה.
+
+### תרחיש 2: "תסדר את התמונות הדרמוסקופיה שלי לפי מטופל ותאריך"
+
+יש לך 500 תמונות דרמוסקופיה ב-tjfjr~/Pictures/dermoscopy, הכל מעורבב. חלק עם שם מטופל בקובץ, חלק רק עם מספר. אתה רוצה תיקיות לפי מטופל, בתוך כל אחת לפי שנה.
+
+\`\`\`
+תיקייה ~/Pictures/dermoscopy מכילה תמונות דרמוסקופיה של מטופלים.
+שמות הקבצים בפורמטים שונים:
+- PATIENT-NAME_YYYY-MM-DD.jpg
+- PATIENT-ID-NNNN_YYYY-MM-DD.jpg
+- MIXED_DATES.jpg (לא לארגן, לשים בתיקיית UNSORTED)
+
+צור מבנה תיקיות:
+~/Pictures/dermoscopy-sorted/
+  PATIENT-NAME-OR-ID/
+    YYYY/
+
+העתק את הקבצים מסודרים לשם. אל תמחק את המקור.
+בסוף, הוצא דוח: כמה מטופלים, כמה תמונות לכל מטופל, כמה הלכו ל-UNSORTED.
+\`\`\`
+
+Claude Code ישאל לפני כל פעולה של שכפול קבצים. 10 דקות והתיקייה מסודרת.
+
+### תרחיש 3: "תכנן סקירת ספרות עם /ultraplan"
+
+אתה כותב סקירה על "Mohs vs standard excision לBCC בפנים, עדכון 2024-2026". יש לך 50 מאמרים בתיקייה. איך מתחילים?
+
+\`\`\`
+/ultraplan
+
+אני כותב סקירת ספרות על: Mohs vs standard excision לBCC בפנים, 2024-2026.
+יש לי 50 מאמרים בתיקייה ~/research/bcc-mohs-2026.
+אני רוצה לקבל:
+1. מבנה מוצע לסקירה (אני רופא לא מחקר מובנה, אני צריך הכוונה)
+2. חלוקה של המאמרים ל-buckets נושאיים
+3. פער במאמרים - אילו שאלות לא נענות?
+4. 5 נקודות חידוש עיקריות שכדאי להדגיש
+
+תכנן את העבודה לפני שתתחיל. הראה לי את התוכנית לאישור.
+\`\`\`
+
+/ultraplan תכין תוכנית מעמיקה. תאשר אותה (או תתקן), והביצוע עצמו נעשה אחר כך. זה חוסך שעות של פלפולים.
+
+## הדרך הכי נוחה לרופא - Claude Desktop כ-GUI ל-Code
+
+אם המילה "terminal" מפחידה - אל תדאג. Claude Desktop במסלול שכולל את Claude Code נותן לך חלון רגיל של צ'אט שמחובר ליכולות של Code. אתה רואה את אותם כפתורים רגילים, אבל Claude יודע:
+
+- לקרוא קבצים שאתה גורר לחלון
+- לעבוד על תיקייה שבחרת (צד שמאל - "Select working folder")
+- להריץ משימות ארוכות עם /ultraplan
+- לכתוב קבצי פלט למקום שתגדיר
+
+זו נקודת הכניסה הטבעית לרופא שרוצה להשתמש ב-Code בלי טרמינל.
+
+## אזהרות מעשיות
+
+- **Claude Code יכול למחוק קבצים.** הוא תמיד שואל לפני, אבל הקפד לא לאשר אוטומטית. קרא מה הוא עומד לעשות.
+- **Claude Code יוצר קבצים חדשים.** ודא שיש מקום בדיסק, ובדוק מה הוא יוצר לפני שאתה מתרשם מהתוצאה.
+- **עברית בקבצי פלט** - Code יכול לכתוב עברית, אבל לפעמים הקידוד של הקובץ יוצא שבור. בקש מפורשות "שמור ב-UTF-8".
+- **PowerShell ב-Windows** - אם אתה על חלונות, Code יכול להריץ פקודות PowerShell. זה עוצמתי אבל מסוכן - אתה יכול לבקש בטעות מחיקה של קבצים שלמים. עדיף להפעיל רק במצב "ask before running".
+
+## פרטיות והגנה על נתוני מטופלים
+
+Claude Code רץ במחשב שלך, אבל **התוכן של הקבצים שהוא קורא נשלח לענן של Anthropic** לעיבוד. זה אומר:
+
+- **אל תצביע על תיקייה עם PII מלא של מטופלים** (שמות, ת.ז., תאריכי לידה) אלא אם אתה משתמש ב-Claude Enterprise עם BAA.
+- **deidentification מקדים** - בקש מ-Code: "לפני שאתה מעבד כל קובץ, הסר ממנו את השם, ת.ז. ותאריך לידה; השתמש רק בקוד מטופל."
+- **פרומפטים נשמרים בהיסטוריה.** אם יש בפרומפט מידע רגיש - מחק את ההיסטוריה או השתמש ב-Incognito.
+- חוק הגנת הפרטיות בישראל - כל עיבוד של מידע בריאות מזהה דורש רישום בפנקס עיבוד הנתונים של המרפאה.
+
+## מה לקרוא הלאה
+
+- [Claude Desktop לרופא](#desktop-for-physicians) - הנקודה הנוחה להתחיל להשתמש ב-Code בלי terminal.
+- [Cowork לרופא](#cowork-for-clinics) - איך להריץ את המשימות האלה באופן מתוזמן ולקבל תוצאות בלי להפעיל ידנית.
+
+## מקורות
+
+1. Anthropic. Claude Code documentation. https://docs.claude.com/en/docs/claude-code
+2. Anthropic. /ultraplan slash command. https://code.claude.com/docs/en/ultraplan
+3. Anthropic. /ultrareview slash command. https://code.claude.com/docs/en/ultrareview
+4. Anthropic. 1M context window availability. https://docs.claude.com/en/docs/build-with-claude/context-windows
+5. Anthropic. PowerShell on Windows (opt-in). https://code.claude.com/docs/en/windows-setup
+
+---
+
+**הערת עזר קלינית:** Claude הוא כלי עזר ואינו מחליף את השיפוט הקליני שלך. אמת כל המלצה קלינית מול מקור מהימן (UpToDate, קווים מנחים עדכניים, או התייעצות עם עמית) לפני החלטה לגבי מטופל.`,
+      en: `# Claude Code for Physicians Who Don't Code
+
+"Claude Code? Isn't that for coding?" you hear a lot in clinics. Short answer: no. Claude Code is an agent that knows how to read files on your computer, run operations on them, and write out results. Coding is just one way to use it. There are at least three other ways physicians use it well - without writing a single line of code.
+
+:::beginner
+Think of Claude Code as a personal assistant that "sits" on your computer and can: (1) read files you point to, (2) summarize or process them, (3) save results to new files. You don't need to understand how it works to use it - just tell it what you want, in plain English or Hebrew.
+:::
+
+## What's new that helps physicians (2026 Q1)
+
+Three updates from Q1 2026 matter especially to physicians:
+
+1. **Opus 4.7 with effort level** - Anthropic's strongest model now supports effort levels (low/medium/high/xhigh/max). xhigh is the default and fine for most medical tasks. max only makes sense for very long research tasks.
+2. **One million token context window** - in Opus 4.7, Opus 4.6, and Sonnet 4.6 (enabled on Max plan and up). That means you can upload an entire folder of PDFs into one conversation and summarize everything.
+3. **/ultraplan and /ultrareview** - two new cloud commands. /ultraplan plans a complex task before it starts; /ultrareview does a deep review of a result. Very useful for literature reviews or analyzing many reports.
+
+## Three medical scenarios - without a line of code
+
+### Scenario 1: "Take all the PDFs in this folder and put them in a table"
+
+You have a folder with 30 pathology reports from this month. You want a table: date, specimen, diagnosis, margins.
+
+**What you do:**
+
+1. Open Claude Code (in Terminal, or in the Desktop app on a plan that includes Code).
+2. Navigate to the PDF folder (in Desktop: just drag the folder in).
+3. Type:
+
+\`\`\`
+Read all PDF files in this folder.
+For each report extract:
+- Report date
+- Specimen name
+- Final diagnosis
+- Margins - mark green if clear, red if involved
+
+Save the table as CSV to ~/Desktop/pathology-summary-2026-04.csv.
+At the end, show me a summary of how many cases are malignant, uncertain, or benign.
+\`\`\`
+
+4. Claude Code gets to work. It knows how to read PDFs without you teaching it. It asks before saving any file. You confirm - that's it.
+
+**Why is this better than plain Claude.ai?** In Claude.ai you'd have to upload 30 PDFs one by one and then ask for analysis. With Code you point at a folder and see a result.
+
+### Scenario 2: "Organize my dermoscopy photos by patient and date"
+
+You have 500 dermoscopy images in ~/Pictures/dermoscopy, all mixed up. Some have a patient name in the filename, some only a number. You want folders per patient, with subfolders per year.
+
+\`\`\`
+The folder ~/Pictures/dermoscopy contains patient dermoscopy images.
+Filenames come in different formats:
+- PATIENT-NAME_YYYY-MM-DD.jpg
+- PATIENT-ID-NNNN_YYYY-MM-DD.jpg
+- MIXED_DATES.jpg (don't try to organize, put in UNSORTED folder)
+
+Create this folder structure:
+~/Pictures/dermoscopy-sorted/
+  PATIENT-NAME-OR-ID/
+    YYYY/
+
+Copy files (sorted) there. Don't delete the originals.
+At the end, output a report: how many patients, how many images per patient, how many went to UNSORTED.
+\`\`\`
+
+Claude Code asks before every file copy. 10 minutes and the folder is organized.
+
+### Scenario 3: "Plan a literature review with /ultraplan"
+
+You're writing a review on "Mohs vs standard excision for facial BCC, 2024-2026 update". You have 50 papers in a folder. Where do you start?
+
+\`\`\`
+/ultraplan
+
+I'm writing a literature review on: Mohs vs standard excision for facial BCC, 2024-2026.
+I have 50 papers in ~/research/bcc-mohs-2026.
+I want:
+1. A suggested structure for the review (I'm a clinician not a methodologist, I need guidance)
+2. A topical grouping of the papers
+3. Gaps - which questions aren't answered?
+4. 5 main novelty points worth highlighting
+
+Plan the work before starting. Show me the plan for approval.
+\`\`\`
+
+/ultraplan will prepare a deep plan. You approve it (or adjust), and the actual work happens after that. It saves hours of trial and error.
+
+## The easiest entry point for physicians - Claude Desktop as a GUI for Code
+
+If the word "terminal" scares you - don't worry. Claude Desktop on a plan that includes Claude Code gives you a regular chat window connected to Code capabilities. You see the same regular buttons, but Claude knows how to:
+
+- Read files you drag into the window
+- Work in a folder you select (left side - "Select working folder")
+- Run long tasks with /ultraplan
+- Write output files to a place you specify
+
+This is the natural entry point for a physician who wants to use Code without a terminal.
+
+## Practical warnings
+
+- **Claude Code can delete files.** It always asks first, but don't confirm automatically. Read what it's about to do.
+- **Claude Code creates new files.** Make sure there's disk space, and check what it's creating before you're impressed by the result.
+- **Hebrew in output files** - Code can write Hebrew, but sometimes file encoding breaks. Ask explicitly for "save in UTF-8".
+- **PowerShell on Windows** - if you're on Windows, Code can run PowerShell commands. That's powerful but risky - you can accidentally request a full file deletion. Better to only enable "ask before running" mode.
+
+## Privacy and patient data
+
+Claude Code runs on your computer, but **the content of files it reads is sent to Anthropic's cloud** for processing. That means:
+
+- **Don't point it at a folder with full patient PII** (names, IDs, dates of birth) unless you're using Claude Enterprise with a BAA.
+- **Pre-deidentification** - ask Code: "before processing any file, remove name, ID, and date of birth; use only a patient code."
+- **Prompts are saved in history.** If there's sensitive info in a prompt - clear history or use Incognito.
+- Israeli Privacy Protection Law - any processing of identifiable health information requires registration in the clinic's data processing registry.
+
+## What to read next
+
+- [Claude Desktop for Physicians](#desktop-for-physicians) - the easy entry point for using Code without a terminal.
+- [Cowork for Physicians](#cowork-for-clinics) - how to run these tasks on a schedule and get results without running them manually.
+
+## Sources
+
+1. Anthropic. Claude Code documentation. https://docs.claude.com/en/docs/claude-code
+2. Anthropic. /ultraplan slash command. https://code.claude.com/docs/en/ultraplan
+3. Anthropic. /ultrareview slash command. https://code.claude.com/docs/en/ultrareview
+4. Anthropic. 1M context window availability. https://docs.claude.com/en/docs/build-with-claude/context-windows
+5. Anthropic. PowerShell on Windows (opt-in). https://code.claude.com/docs/en/windows-setup
+
+---
+
+**Clinical note:** Claude is a helper tool and does not replace your clinical judgment. Verify every clinical recommendation against a trusted source (UpToDate, current guidelines, or a colleague consultation) before deciding on patient care.`
+    }
+  },
+  {
+    id: 'frontend-design-patient-education',
+    title: { he: 'מסך הסבר למטופל תוך 5 דקות - frontend-design לרופאים', en: 'A Patient Explainer in 5 Minutes - frontend-design for Physicians' },
+    category: 'tips',
+    date: '2026-04-22',
+    readTime: 5,
+    excerpt: {
+      he: 'skill בשם frontend-design הופכת את Claude למעצב ממשק מקצועי. ארבע דוגמאות של חומרי הסבר למטופל שרופא יכול להכין ב-5 דקות: מסך הסבר BCC, ציר זמן החלמה אחרי Mohs, טופס הסכמה, ו-infographic על הגנה מהשמש.',
+      en: 'A skill called frontend-design turns Claude into a professional UI designer. Four patient education examples a physician can build in 5 minutes: a BCC explainer, a Mohs recovery timeline, a consent form, and a sun protection infographic.'
+    },
+    content: {
+      he: `# מסך הסבר למטופל תוך 5 דקות - frontend-design לרופאים
+
+מטופלת יושבת מולך ושואלת "מה זה BCC?". אתה עונה, היא מהנהנת, אתה מציע לה דף הסבר. בפועל - הדפים שיש בקליניקה מיושנים, באנגלית, או פשוט לא מדויקים למקרה שלה. אתה רוצה להכין דף חדש, אבל אין לך שעתיים לעצב אותו ב-Canva.
+
+**skill frontend-design של Claude** עושה את זה ב-5 דקות. זו סקיל (תוסף) שהופכת את Claude למעצב ממשק - במקום לייצר UI גנרי ומשעמם, היא יוצרת דפים בעיצוב מקצועי וברור למטופל.
+
+:::beginner
+"Skill" בעולם Claude הוא כמו הרחבה שמלמדת אותו לעשות משהו מסוים טוב יותר. frontend-design היא skill רשמית של Anthropic שהתקינה אצלך את Claude (בדוק בטאב הגדרות את רשימת ה-skills שלך).
+:::
+
+## למה בכלל ליצור חומרים ויזואליים?
+
+מחקרים הראו שחומרי הסבר מצוירים/סכמתיים מעלים משמעותית את היענות המטופל וההבנה לעומת הסבר טקסטואלי בלבד. בדרמטולוגיה כירורגית זה בולט במיוחד: מטופל שמקבל דף עם ציר זמן החלמה ממוזוטומה לפני הניתוח, מגיע פחות ב-emergency ושואל פחות שאלות מיותרות בטלפון.
+
+## ארבע דוגמאות ב-5 דקות כל אחת
+
+### 1. מסך הסבר BCC למטופל
+
+פתח שיחה חדשה עם Claude (Desktop או Web) והכנס את הפרומפט:
+
+\`\`\`
+השתמש ב-skill בשם frontend-design.
+
+בנה דף HTML עצמאי (standalone, בלי תלויות חיצוניות) בנושא:
+"קרצינומה של תאי בסיס (BCC) - מה זה ומה הלאה" למטופל בגיל 55+.
+
+דרישות:
+- עברית מלאה (RTL)
+- שני מסכים בדף: מסך 1 "מה זה BCC" (איור פשוט של עור + שכבות, סימון הנגע),
+  מסך 2 "אפשרויות טיפול" (טבלה: Mohs / excision רגיל / קריותרפיה / קרם imiquimod)
+- פונט גדול (לפחות 18px), צבעים חמים ורגועים, לא מפחיד
+- סקציית FAQ למטה: "מתי הגידול מסוכן?", "מה הסיכוי לחזרה?", "מה אסור אחרי ניתוח?"
+- קישור צר בתחתית לאתר הקליניקה וטלפון למזכירה
+- **בלי תמונות רפואיות ריאליסטיות** - רק איקונים סכמתיים וצבעים.
+
+שמור ב-~/Desktop/bcc-patient.html
+\`\`\`
+
+5 דקות אחר כך יש לך דף HTML שתפתח אצלך בדפדפן ותדפיס.
+
+### 2. ציר זמן החלמה אחרי Mohs
+
+\`\`\`
+השתמש ב-skill בשם frontend-design.
+
+בנה דף HTML עצמאי: ציר זמן החלמה אחרי Mohs בפנים.
+
+מבנה:
+- יום 0: תום הניתוח (מה לצפות בשעות הראשונות)
+- יום 1-3: החלפת תחבושות, ניקיון
+- יום 7: הסרת תפרים (או לא, לפי סוג התפר)
+- שבוע 2-4: נפיחות, אודם, תחושות
+- חודש 1-3: השלמת ריפוי, תהליך הצטלקות
+- חודש 6-12: שלב ההבשלה של הצלקת
+
+לכל שלב:
+- מה צפוי להיראות
+- מה לעשות
+- מתי להתקשר למרפאה (דגלים אדומים)
+
+עיצוב אופקי - הציר זמן מימין לשמאל (RTL).
+בסוף הדף - קישורי חירום + טלפון מרפאה.
+
+שמור ב-~/Desktop/mohs-recovery-timeline.html
+\`\`\`
+
+הדף עובד גם ב-mobile (מטופל פותח ב-WhatsApp ורואה) וגם בדפוס.
+
+### 3. טופס הסכמה מודעת אינטראקטיבי
+
+\`\`\`
+השתמש ב-skill בשם frontend-design.
+
+בנה טופס הסכמה מודעת ל-excision של נגע עור חשוד, בפורמט אינטראקטיבי:
+
+- מחולק ל-6 סקציות ברורות, כל אחת עם checkbox "קראתי והבנתי":
+  1. מה הניתוח - תיאור פשוט
+  2. מטרת הניתוח וחלופות
+  3. סיכונים נפוצים (זיהום, דימום, צלקת)
+  4. סיכונים נדירים (פגיעה בעצב, איבוד תחושה)
+  5. מה קורה אם יש ממצא ממאיר בפתולוגיה
+  6. ציפיות לגבי הצלקת
+
+- בסוף: חתימת מטופל + תאריך (שדה)
+
+- פונט 18px+, כותרות ברורות, עברית מלאה, RTL.
+
+שים לב: הטופס הוא **טיוטה** לעריכה משפטית, לא תחליף להסכמה החוקית הסופית.
+
+שמור ב-~/Desktop/consent-draft.html
+\`\`\`
+
+שלח לעורך דין/רב-כירורג אחראי לעריכה סופית. אתה חוסך להם שעה של הכנה מקדימה.
+
+### 4. Infographic על הגנה מהשמש
+
+\`\`\`
+השתמש ב-skill בשם frontend-design.
+
+בנה infographic של דף A4 יחיד על הגנה מהשמש, לקליניקה בישראל.
+
+תוכן:
+- UV Index - מה זה ואיפה לבדוק (פיסקה קצרה)
+- 5 כללים פשוטים: קרם הגנה, בגדים, כובע, צל 11:00-15:00, משקפיים
+- כמה פעמים ביום למרוח מחדש
+- SPF 30 vs 50 - מתי כן מתי לא
+- שאלון עצמי: האם אני ב-sun-sensitive פוטוטיפ?
+- קישור למאמר באתר הקליניקה על מניעה שניונית למטופלי עור
+
+עיצוב: צבעי שמש (צהוב/כתום), אייקונים סכמתיים, יחס גובה-רוחב של A4.
+
+שמור ב-~/Desktop/sun-protection-infographic.html
+\`\`\`
+
+מדפיסים על נייר או מפיצים בדיגיטל.
+
+## אזהרות מעשיות
+
+- **frontend-design מייצרת HTML - לא PDF.** כדי להדפיס, פתח בדפדפן ועשה Ctrl+P → Save as PDF. הכול יישמר נכון.
+- **ה-skill לא מבינה דיוק רפואי.** אם אתה מבקש "תוסיף מידע על אחוזי חזרה של BCC" - צריך להזין לה את המספר, לא להסתמך עליה.
+- **אל תעלה PII של מטופלים לדוגמאות.** הדפים האלה גנריים לכל מטופל - השם והפרטים מוקלדים אחר כך ביד.
+- **RTL לפעמים שבור** - אם הרכיב הלא-נכון מיוצר (למשל ציר זמן הפוך), בקש ב-prompt מפורשות: "כל הדף RTL, כיוון קריאה ימין-לשמאל, פונט עברי מובנה (Assistant או Heebo)".
+
+## פרטיות והגנה על נתוני מטופלים
+
+- **הדפים נוצרים בצד הלקוח** (Claude מייצר HTML, HTML נשמר אצלך). אין שליחת PII בעת היצירה כל עוד לא הזנת כזה ב-prompt.
+- **אם ההסבר מותאם אישית** (למשל "מסך הסבר למטופל ספציפי X") - אל תכלול את שמו או ת.ז. ב-prompt. תעשה את ההתאמה ידנית אחרי שקיבלת את הטמפלייט.
+
+## מה לקרוא הלאה
+
+- [Claude Desktop לרופא](#desktop-for-physicians) - איפה מפעילים את ה-skill.
+- קורס Bonus "frontend-design" (בהכנה) - העמקה בטכניקות.
+
+## מקורות
+
+1. Anthropic. frontend-design skill documentation. https://github.com/anthropics/claude-code/blob/main/plugins/frontend-design
+2. Anthropic. Skills overview. https://docs.claude.com/en/docs/claude-apps/skills
+3. Coulter A, et al. Patient information materials for health professionals. *BMJ*. 2015;350:h1285. https://pubmed.ncbi.nlm.nih.gov/25820612/
+4. Shapiro BL, et al. Effect of visual aids on informed consent comprehension. *Plast Reconstr Surg Glob Open*. 2020;8(4):e2759. https://pubmed.ncbi.nlm.nih.gov/32440403/
+
+---
+
+**הערת עזר קלינית:** חומרי ההסבר שנוצרים הם עזר חינוכי. הם אינם מחליפים את שיחת ההסכמה מדעת עם המטופל ולא את הדרישות המשפטיות של הסכמה חוקית לטיפול.`,
+      en: `# A Patient Explainer in 5 Minutes - frontend-design for Physicians
+
+A patient sits across from you and asks "what is BCC?" You answer, she nods, you offer her an explainer sheet. In reality - the sheets in the clinic are outdated, in English, or just not precise to her case. You want to make a new one, but you don't have two hours to design it in Canva.
+
+**Claude's frontend-design skill** does it in 5 minutes. It's a skill (plugin) that turns Claude into a UI designer - instead of producing generic, boring UI, it creates polished, patient-friendly pages.
+
+:::beginner
+A "skill" in Claude's world is like an extension that teaches it to do something specific better. frontend-design is an official Anthropic skill installed in your Claude (check the skills list in the settings tab).
+:::
+
+## Why create visual materials at all?
+
+Studies have shown that illustrated/schematic educational materials significantly improve patient adherence and understanding compared to text-only explanations. In dermatologic surgery this is especially striking: a patient who gets a sheet with a mohs recovery timeline before the procedure comes to the ED less and calls the clinic less with unnecessary questions.
+
+## Four examples, 5 minutes each
+
+### 1. BCC patient explainer
+
+Open a new Claude conversation (Desktop or Web) and paste:
+
+\`\`\`
+Use the skill called frontend-design.
+
+Build a standalone HTML page (no external dependencies) on:
+"Basal cell carcinoma (BCC) - what it is and what's next" for a 55+ year old patient.
+
+Requirements:
+- Two screens in the page: Screen 1 "What is BCC" (simple illustration of skin + layers,
+  lesion marked), Screen 2 "Treatment options" (table: Mohs / standard excision /
+  cryotherapy / imiquimod cream)
+- Large font (at least 18px), warm soothing colors, not scary
+- FAQ section at the bottom: "When is the tumor dangerous?", "What's the recurrence risk?",
+  "What's restricted after surgery?"
+- Narrow link strip at the footer with clinic website and secretary's phone
+- **No realistic medical images** - only schematic icons and colors.
+
+Save to ~/Desktop/bcc-patient.html
+\`\`\`
+
+5 minutes later you have an HTML page you open in the browser and print.
+
+### 2. Mohs recovery timeline
+
+\`\`\`
+Use the skill called frontend-design.
+
+Build a standalone HTML page: recovery timeline after facial Mohs.
+
+Structure:
+- Day 0: end of surgery (what to expect in the first hours)
+- Days 1-3: dressing changes, cleaning
+- Day 7: suture removal (or not, depending on suture type)
+- Weeks 2-4: swelling, redness, sensations
+- Months 1-3: wound healing complete, scar maturation process
+- Months 6-12: scar maturation phase
+
+For each phase:
+- What it's expected to look like
+- What to do
+- When to call the clinic (red flags)
+
+Horizontal timeline layout.
+At the bottom - emergency contacts + clinic phone.
+
+Save to ~/Desktop/mohs-recovery-timeline.html
+\`\`\`
+
+The page works on mobile (a patient opens it in WhatsApp and sees it) and in print.
+
+### 3. Interactive informed consent draft
+
+\`\`\`
+Use the skill called frontend-design.
+
+Build an informed consent form for excision of a suspicious skin lesion, in an interactive format:
+
+- Divided into 6 clear sections, each with an "I read and understood" checkbox:
+  1. The procedure - simple description
+  2. Purpose and alternatives
+  3. Common risks (infection, bleeding, scar)
+  4. Rare risks (nerve injury, sensation loss)
+  5. What happens if pathology shows malignancy
+  6. Scar expectations
+
+- At the bottom: patient signature + date fields
+
+- Font 18px+, clear headings.
+
+Note: this form is a **draft** for legal review, not a substitute for the final legal consent.
+
+Save to ~/Desktop/consent-draft.html
+\`\`\`
+
+Send to legal counsel or the responsible senior surgeon for final editing. You save them an hour of preliminary prep.
+
+### 4. Sun protection infographic
+
+\`\`\`
+Use the skill called frontend-design.
+
+Build a single A4-page infographic on sun protection, for a clinic in a high-UV region.
+
+Content:
+- UV Index - what it is and where to check (short paragraph)
+- 5 simple rules: sunscreen, clothing, hat, shade 11:00-15:00, sunglasses
+- How often to reapply during the day
+- SPF 30 vs 50 - when each applies
+- Self-quiz: Am I a sun-sensitive phototype?
+- Link to a clinic website article on secondary prevention for post-cancer patients
+
+Design: sun tones (yellow/orange), schematic icons, A4 aspect ratio.
+
+Save to ~/Desktop/sun-protection-infographic.html
+\`\`\`
+
+Print on paper or share digitally.
+
+## Practical warnings
+
+- **frontend-design produces HTML - not PDF.** To print, open in a browser and use Ctrl+P → Save as PDF. Everything saves correctly.
+- **The skill doesn't understand medical accuracy.** If you ask it to "add BCC recurrence percentages" - you have to feed it the numbers; don't rely on it to know them.
+- **Don't upload patient PII in examples.** These pages are generic for any patient - the name and details are typed later by hand.
+- **RTL sometimes breaks** for Hebrew or Arabic - if the wrong component renders (e.g., a timeline flipped), ask explicitly in the prompt: "entire page RTL, right-to-left reading direction, native Hebrew font (Assistant or Heebo)".
+
+## Privacy and patient data
+
+- **Pages are created on your end** (Claude generates HTML, HTML is saved locally). No PII is transmitted during creation as long as you didn't enter any in the prompt.
+- **If the explainer is personalized** (e.g., "explainer for specific patient X") - don't include their name or ID in the prompt. Do the customization manually after you have the template.
+
+## What to read next
+
+- [Claude Desktop for Physicians](#desktop-for-physicians) - where to activate the skill.
+- Bonus course "frontend-design" (in preparation) - deeper techniques.
+
+## Sources
+
+1. Anthropic. frontend-design skill documentation. https://github.com/anthropics/claude-code/blob/main/plugins/frontend-design
+2. Anthropic. Skills overview. https://docs.claude.com/en/docs/claude-apps/skills
+3. Coulter A, et al. Patient information materials for health professionals. *BMJ*. 2015;350:h1285. https://pubmed.ncbi.nlm.nih.gov/25820612/
+4. Shapiro BL, et al. Effect of visual aids on informed consent comprehension. *Plast Reconstr Surg Glob Open*. 2020;8(4):e2759. https://pubmed.ncbi.nlm.nih.gov/32440403/
+
+---
+
+**Clinical note:** The educational materials created are learning aids. They do not replace the informed consent conversation with the patient and do not substitute for the legal requirements of lawful consent to treatment.`
+    }
+  },
+  {
+    id: 'tip-differential-diagnosis-60s',
+    title: { he: '🎯 פרומפט אבחנה מבדלת ב-60 שניות', en: '🎯 Differential Diagnosis Prompt in 60 Seconds' },
+    category: 'tips',
+    date: '2026-04-22',
+    readTime: 3,
+    excerpt: {
+      he: 'תבנית פרומפט אחת שמפיקה אבחנה מבדלת דרמטולוגית מסודרת תוך 60 שניות. כוללת דוגמה מלאה עם case דרמטולוגי.',
+      en: 'A single prompt template that produces a structured dermatologic differential diagnosis in 60 seconds. Includes a full example with a dermatology case.'
+    },
+    content: {
+      he: `# פרומפט אבחנה מבדלת ב-60 שניות
+
+רוב הפרומפטים ל-Claude בעבודה קלינית נכתבים אד-הוק. התוצאה - רעש, שכחת פרטים, ותשובות לא עקביות. הנה תבנית פרומפט אחת שתפיק ממנו אבחנה מבדלת מסודרת בכל פעם.
+
+## התבנית
+
+\`\`\`
+אני רופא/ה [התמחות]. מטופל/ת [מין] בן/בת [גיל], [פוטוטיפ אם רלוונטי].
+
+תלונה עיקרית: [תיאור קצר]
+משך סימפטומים: [זמן]
+אופי התפתחות: [חד/הדרגתי/חוזר]
+
+רקע רפואי: [מחלות רקע רלוונטיות]
+תרופות קבועות: [רשימה]
+
+ממצאי בדיקה: [סימנים קליניים מפורטים]
+
+בדיקות שנעשו: [תוצאות]
+
+אנא ספק:
+1. אבחנה מבדלת מסודרת לפי סבירות (3-5 אבחנות)
+2. לכל אבחנה: עד כמה מתאימה + דגלים אדומים נגדה
+3. המלצה לבירור הבא (מה לבדוק, לא איך לטפל)
+4. 3 סימנים דרמוסקופיים לחפש (אם נגע פיגמנטי)
+
+אל תמליץ טיפול - רק בירור.
+\`\`\`
+
+## דוגמה מלאה
+
+\`\`\`
+אני רופא/ת עור. מטופל בן 52, גבר, פוטוטיפ II.
+
+תלונה עיקרית: נגע פיגמנטי בגב עליון שהשתנה.
+משך: 6 חודשים.
+אופי: גדילה הדרגתית + כהייה.
+
+רקע: ללא מחלות רקע משמעותיות. היסטוריה של כוויות שמש בילדות.
+תרופות: ללא.
+
+ממצאי בדיקה (ABCDE):
+- Asymmetry: א-סימטריה ברורה
+- Border: גבולות לא סדירים עם notching
+- Color: רב-גוניות - חום כהה, שחור, אזור כחלחל
+- Diameter: 8 מ"מ
+- Evolution: גדילה וכהייה ב-6 חודשים
+
+בדיקות: אין בינתיים.
+
+אנא ספק:
+1. אבחנה מבדלת לפי סבירות
+2. לכל אבחנה: מתאים/לא מתאים + דגלים אדומים
+3. המלצה לבירור הבא
+4. 3 סימנים דרמוסקופיים לחפש
+
+אל תמליץ טיפול - רק בירור.
+\`\`\`
+
+## למה התבנית עובדת
+
+**מבנה עקבי** = פלט עקבי. כל שדה מכריח אותך למלא מידע שלולא התבנית היית שוכח.
+
+**"אל תמליץ טיפול"** חשוב - Claude נוטה לקפוץ לטיפול מהר מדי. להפריד שלבי בירור מטיפול נותן לך תשובה ממוקדת.
+
+**בקשה מפורשת ל-3 סימנים דרמוסקופיים** - מוציא מידע שימושי שלא היית מקבל בבקשה כללית.
+
+## פרטיות
+
+אל תכלול שם מלא, ת.ז., תאריך לידה מדויק, או כל PII מזהה. השתמש ב"בן/בת X" ודי.
+
+## מקורות
+
+1. Friedman RJ, et al. Early detection of malignant melanoma: the role of physician examination and self-examination of the skin. *CA Cancer J Clin*. 1985;35(3):130-151. https://pubmed.ncbi.nlm.nih.gov/3921200/
+2. Argenziano G, et al. Dermoscopy of pigmented skin lesions - results of a consensus meeting. *J Am Acad Dermatol*. 2003;48(5):679-693. https://pubmed.ncbi.nlm.nih.gov/12734496/`,
+      en: `# Differential Diagnosis Prompt in 60 Seconds
+
+Most clinical prompts to Claude get written ad-hoc. The result: noise, forgotten details, inconsistent answers. Here's one prompt template that produces a structured differential diagnosis every time.
+
+## The Template
+
+\`\`\`
+I'm a [specialty] physician. Patient is [sex], [age], [phototype if relevant].
+
+Chief complaint: [brief description]
+Duration: [time]
+Evolution: [acute/gradual/recurrent]
+
+Medical history: [relevant comorbidities]
+Medications: [list]
+
+Examination findings: [detailed clinical signs]
+
+Workup done so far: [results]
+
+Please provide:
+1. Structured differential diagnosis by likelihood (3-5 diagnoses)
+2. For each: how well it fits + red flags against it
+3. Recommendation for next workup (what to check, not how to treat)
+4. 3 dermoscopic signs to look for (if pigmented lesion)
+
+Do NOT recommend treatment - only workup.
+\`\`\`
+
+## Full Example
+
+\`\`\`
+I'm a dermatologist. Male patient, 52 years old, phototype II.
+
+Chief complaint: changing pigmented lesion on upper back.
+Duration: 6 months.
+Evolution: gradual growth + darkening.
+
+History: No significant comorbidities. Childhood sunburns.
+Medications: none.
+
+Examination (ABCDE):
+- Asymmetry: clear asymmetry
+- Border: irregular with notching
+- Color: multicolor - dark brown, black, bluish area
+- Diameter: 8 mm
+- Evolution: growth and darkening over 6 months
+
+Workup: none yet.
+
+Please provide:
+1. Differential diagnosis by likelihood
+2. For each: fits/doesn't fit + red flags
+3. Next workup
+4. 3 dermoscopic signs to look for
+
+Do NOT recommend treatment - only workup.
+\`\`\`
+
+## Why the Template Works
+
+**Consistent structure** = consistent output. Every field forces you to fill in information you'd otherwise forget.
+
+**"Do NOT recommend treatment"** matters - Claude tends to jump to treatment too fast. Separating workup from treatment gives you a focused answer.
+
+**Explicit request for 3 dermoscopic signs** surfaces useful information you wouldn't get from a generic query.
+
+## Privacy
+
+Don't include full name, national ID, exact date of birth, or any identifying PII. "Patient X" is enough.
+
+## Sources
+
+1. Friedman RJ, et al. Early detection of malignant melanoma: the role of physician examination and self-examination of the skin. *CA Cancer J Clin*. 1985;35(3):130-151. https://pubmed.ncbi.nlm.nih.gov/3921200/
+2. Argenziano G, et al. Dermoscopy of pigmented skin lesions - results of a consensus meeting. *J Am Acad Dermatol*. 2003;48(5):679-693. https://pubmed.ncbi.nlm.nih.gov/12734496/`
+    }
+  },
+  {
+    id: 'tip-pathology-to-table',
+    title: { he: '🎯 מדוח פתולוגיה לטבלת Excel ב-3 שלבים', en: '🎯 From Pathology Report to Excel Table in 3 Steps' },
+    category: 'tips',
+    date: '2026-04-22',
+    readTime: 3,
+    excerpt: {
+      he: 'יש לך 50 דוחות פתולוגיה ואתה רוצה טבלה מסודרת. הנה 3 שלבים פשוטים עם Claude Desktop לתוצאה ב-5 דקות.',
+      en: 'You have 50 pathology reports and want an organized table. Here are 3 simple steps with Claude Desktop for a result in 5 minutes.'
+    },
+    content: {
+      he: `# מדוח פתולוגיה לטבלת Excel ב-3 שלבים
+
+תרחיש מוכר: אתה צריך סטטיסטיקה חודשית למרפאה. יש לך תיקייה עם 50 דוחות פתולוגיה PDF. הרעיון להעתיק-הדבק כל שדה לאקסל נשמע נורא.
+
+עם Claude Desktop זה 3 שלבים ו-5 דקות.
+
+## שלב 1: הכן את התיקייה
+
+שים את כל ה-PDFים בתיקייה אחת:
+
+\`\`\`
+~/Documents/Pathology/April-2026/
+  report-001.pdf
+  report-002.pdf
+  ...
+  report-050.pdf
+\`\`\`
+
+ודא שכל שם קובץ לא מכיל PII. אם כן, שנה לשם כללי (report-001, report-002).
+
+## שלב 2: פרומפט יחיד ב-Claude Desktop
+
+פתח שיחה חדשה ב-Claude Desktop. גרור את התיקייה כולה לחלון. הקלד:
+
+\`\`\`
+לכל PDF בתיקייה, הוצא את השדות הבאים:
+
+1. תאריך דיווח
+2. שם חומר (specimen)
+3. אבחנה סופית (final diagnosis)
+4. שוליים (אם רלוונטי)
+5. עומק Breslow (אם מלנומה)
+6. דירוג SCC / invasion (אם רלוונטי)
+
+סדר את הפלט כטבלה CSV עם כותרות באנגלית:
+report_id, report_date, specimen, final_diagnosis, margins, breslow_depth, invasion_grade
+
+אם שדה לא רלוונטי - שים "N/A".
+שמור את ה-CSV ב-~/Desktop/pathology-april-2026.csv.
+\`\`\`
+
+## שלב 3: פתח באקסל
+
+Claude שומר קובץ CSV. פתח אותו באקסל או Google Sheets - הכל מסודר בטבלה.
+
+## אופטימיזציות
+
+**חזרתי כל חודש?** הפוך ל-Routine יומית או חודשית שמעבדת את תיקיית החודש החדש אוטומטית.
+
+**רוצה ויזואליזציה?** הוסף לפרומפט: "בסוף, הוצא גם גרף pie chart של חלוקת האבחנות (benign / premalignant / malignant) כ-HTML".
+
+**רוצה התראה אם יש ממצא דחוף?** הוסף: "אם יש אבחנה של malignant melanoma או high-grade SCC, תדגיש זאת בכותרת הפלט".
+
+## פרטיות
+
+**הדוחות מכילים PII.** Claude מעבד אותם בענן של Anthropic. למשתמשים ישראלים:
+
+- אם אין BAA עם Anthropic, **עשה deidentification מקדים**. אפשר להריץ סקריפט Python מקומי שמחליף שמות ות.ז. בקודים, או לבקש מ-Claude לעשות זאת לפני ההעלאה.
+- **הנה פרומפט deidentification:** "עבור על כל PDF והחלף: שם מלא → 'PATIENT-###' (עם מספר רץ), ת.ז. → 'ID-###', תאריך לידה → 'DOB-REDACTED'. שמור עותק מנוקה ב-~/Documents/Pathology/April-2026-deid/"
+- החוק הישראלי (חוק הגנת הפרטיות תיקון 13) מחייב רישום פעילות עיבוד של נתוני בריאות.
+
+## מקורות
+
+1. Anthropic. Claude Desktop file handling. https://docs.claude.com/en/docs/claude-apps/desktop
+2. חוק הגנת הפרטיות תשמ"א-1981, תיקון 13 (2024). https://www.gov.il/he/departments/legalInfo`,
+      en: `# From Pathology Report to Excel Table in 3 Steps
+
+Familiar scenario: you need monthly clinic statistics. You have a folder with 50 pathology PDF reports. The idea of copy-pasting every field into Excel sounds awful.
+
+With Claude Desktop it's 3 steps and 5 minutes.
+
+## Step 1: Prepare the Folder
+
+Put all PDFs in one folder:
+
+\`\`\`
+~/Documents/Pathology/April-2026/
+  report-001.pdf
+  report-002.pdf
+  ...
+  report-050.pdf
+\`\`\`
+
+Make sure no filename contains PII. If it does, rename to a generic name (report-001, report-002).
+
+## Step 2: Single Prompt in Claude Desktop
+
+Open a new conversation in Claude Desktop. Drag the whole folder into the window. Type:
+
+\`\`\`
+For each PDF in the folder, extract these fields:
+
+1. Report date
+2. Specimen
+3. Final diagnosis
+4. Margins (if relevant)
+5. Breslow depth (if melanoma)
+6. SCC grade / invasion (if relevant)
+
+Output as CSV with headers:
+report_id, report_date, specimen, final_diagnosis, margins, breslow_depth, invasion_grade
+
+If a field isn't relevant - write "N/A".
+Save the CSV to ~/Desktop/pathology-april-2026.csv.
+\`\`\`
+
+## Step 3: Open in Excel
+
+Claude saves a CSV file. Open it in Excel or Google Sheets - everything is organized in a table.
+
+## Optimizations
+
+**Recurring every month?** Turn this into a daily or monthly Routine that automatically processes the current month's folder.
+
+**Want visualization?** Add to the prompt: "Also produce a pie chart as HTML showing the distribution of diagnoses (benign / premalignant / malignant)".
+
+**Want alerts on urgent findings?** Add: "If there's a malignant melanoma or high-grade SCC diagnosis, flag it prominently in the output header".
+
+## Privacy
+
+**The reports contain PII.** Claude processes them in Anthropic's cloud. For users in regulated settings:
+
+- If there's no BAA with Anthropic, **deidentify first**. You can run a local Python script that replaces names and IDs with codes, or ask Claude to do it before upload.
+- **Deidentification prompt:** "Go through each PDF and replace: full name → 'PATIENT-###' (with a running number), ID → 'ID-###', date of birth → 'DOB-REDACTED'. Save a cleaned copy to ~/Documents/Pathology/April-2026-deid/"
+- Israeli law (Privacy Protection Amendment 13) requires a registry of processing activities for health data.
+
+## Sources
+
+1. Anthropic. Claude Desktop file handling. https://docs.claude.com/en/docs/claude-apps/desktop
+2. Israel Privacy Protection Law 5741-1981, Amendment 13 (2024). https://www.gov.il/en/departments/legalInfo`
+    }
+  },
+  {
+    id: 'tip-prompt-library-dermatology',
+    title: { he: '🎯 ספריית פרומפטים לרופא עור', en: '🎯 Prompt Library for Dermatologists' },
+    category: 'tips',
+    date: '2026-04-22',
+    readTime: 5,
+    excerpt: {
+      he: 'שבעה פרומפטים מוכנים לשימוש יומיומי ברופא עור: אבחנה מבדלת, סיכום biopsy, הסבר למטופל, מכתב הפניה, דרמוסקופיה, תרגום מאמר, הסכמה מודעת.',
+      en: 'Seven ready-to-use prompts for a dermatologist\'s daily practice: differential diagnosis, biopsy summary, patient explanation, referral letter, dermoscopy, paper translation, informed consent.'
+    },
+    content: {
+      he: `# ספריית פרומפטים לרופא עור
+
+שמור את הדף הזה ב-Claude Projects כ-"ספריית פרומפטים". בכל פעם שנתקלים בתרחיש מוכר, העתק את הפרומפט המתאים, החלף את הפרטים, והמשך.
+
+## 1. אבחנה מבדלת
+
+\`\`\`
+רופא/ת עור. מטופל/ת [מין] בן/בת [גיל], פוטוטיפ [I-VI].
+תלונה: [תיאור]. משך: [זמן].
+רקע: [מחלות, תרופות].
+בדיקה: [ממצאים].
+ספק 3-5 אבחנות מבדלות לפי סבירות + דגלים אדומים. המלץ על בירור בלבד - לא טיפול.
+\`\`\`
+
+## 2. סיכום biopsy למטופל
+
+\`\`\`
+הנה דוח biopsy (מצורף). כתוב סיכום של 4 שורות בשפה פשוטה למטופל:
+1. מה נמצא (בלי ז'רגון רפואי)
+2. האם זה דורש טיפול
+3. מה השלב הבא
+4. לוח זמנים משוער
+
+שפה: [עברית / ערבית / רוסית].
+הימנע ממילים מפחידות כשלא חובה.
+\`\`\`
+
+## 3. הסבר למטופל לפני Mohs
+
+\`\`\`
+כתוב דף הסבר של 3 פסקאות למטופל שעומד לעבור ניתוח Mohs ב-[מיקום: לחי/אף/כתף/וכו'].
+- פסקה 1: למה Mohs ולא excision רגיל
+- פסקה 2: מה קורה ביום הניתוח (לוח זמנים)
+- פסקה 3: דגלים אדומים אחרי הניתוח
+
+פונט גדול, שפה פשוטה, 300-400 מילים סה"כ.
+\`\`\`
+
+## 4. מכתב הפניה לאונקולוג
+
+\`\`\`
+כתוב מכתב הפניה דחוף מרופא/ת עור לאונקולוג.
+
+פרטי מטופל (קוד פנימי): [code]
+אבחנה: [מ-biopsy]
+ממצאים רלוונטיים: [staging]
+דחיפות: [routine / urgent]
+הסיבה להפניה: [מה רוצים מהאונקולוג]
+
+פורמט: מכתב רשמי, 4-5 שורות פסקת פתיחה + רקע קליני + המלצה.
+\`\`\`
+
+## 5. קריאת דרמוסקופיה
+
+\`\`\`
+מצורפת תמונת דרמוסקופיה של נגע פיגמנטי.
+מטופל/ת בן/בת [גיל], פוטוטיפ [I-VI], מיקום הנגע: [אזור].
+
+ספק:
+1. תיאור סטרוקטורלי (רשת פיגמנט, דוטים, גלובולים, vessels)
+2. סיווג לפי two-step algorithm (melanocytic/non-melanocytic → benign/malignant)
+3. אבחנה מבדלת דרמוסקופית
+4. המלצה: מעקב / biopsy / excision
+
+זכור: אבחנת דרמוסקופיה אינה תחליף ל-biopsy במקרים חשודים.
+\`\`\`
+
+## 6. תרגום מאמר לעברית
+
+\`\`\`
+תרגם את המאמר המצורף מאנגלית לעברית רפואית אבל נגישה.
+
+הנחיות:
+- שמור מונחים מקצועיים באנגלית בסוגריים בהופעה הראשונה
+- תרגם בשפה של רופא ישראלי מודרני, לא Google Translate
+- שמור את מבנה המאמר (Abstract, Introduction, Methods, Results, Discussion)
+- לא תרגום מילולי - עדיפות לבהירות בעברית
+
+פלט: טקסט מתורגם + טבלה של 10 מונחים מרכזיים עם תרגום מקובל.
+\`\`\`
+
+## 7. טיוטת הסכמה מודעת
+
+\`\`\`
+טיוטת הסכמה מודעת ל-[שם הליך: Mohs surgery / excision / cryotherapy].
+
+סקציות חובה:
+1. תיאור ההליך בשפה פשוטה
+2. מטרה
+3. חלופות (כולל "לא לעשות כלום")
+4. סיכונים שכיחים (>1%)
+5. סיכונים נדירים אך חשובים
+6. מה לצפות אחרי
+7. חתימת המטופל + רופא + עד
+
+מטרה: טיוטה לעיון של יועץ משפטי, לא תחליף לטופס חוקי סופי.
+\`\`\`
+
+---
+
+## איך להשתמש בספרייה
+
+1. **צור Project ב-Claude** בשם "ספריית פרומפטים - רופא עור".
+2. העלה את הקובץ הזה כ-knowledge base.
+3. בשימוש: פתח שיחה בפרויקט ואמר "פרומפט 1 - [פרטי המקרה]".
+4. **עדכן פעם ב-3 חודשים** - הוסף פרומפטים חדשים שפיתחת, החלף כאלה שלא עבדו טוב.
+
+## פרטיות
+
+כל הפרומפטים האלה מיועדים לשימוש **בלי PII**. אם מופיעים בטעות שמות/תעודות זהות - מחק לפני שליחה ל-Claude.
+
+## מקורות
+
+1. Argenziano G, et al. Seven-point checklist of dermoscopy. *Arch Dermatol*. 1998;134(12):1563-1570. https://pubmed.ncbi.nlm.nih.gov/9875193/
+2. Kittler H, et al. Standardization of terminology in dermoscopy/dermatoscopy. *J Am Acad Dermatol*. 2016;74(6):1093-1106. https://pubmed.ncbi.nlm.nih.gov/26896294/
+3. AAD guidelines on informed consent. https://www.aad.org
+
+---
+
+**הערת עזר קלינית:** הפרומפטים הם תבניות לחיסכון בזמן. בכל מקרה - אמת את הפלט מול מקור קליני מהימן לפני שהוא משמש בטיפול במטופל.`,
+      en: `# Prompt Library for Dermatologists
+
+Save this page in Claude Projects as "Prompt Library". Whenever you encounter a familiar scenario, copy the matching prompt, swap the details, and move on.
+
+## 1. Differential Diagnosis
+
+\`\`\`
+Dermatologist. [Sex] patient, age [X], phototype [I-VI].
+Complaint: [description]. Duration: [time].
+History: [comorbidities, meds].
+Exam: [findings].
+Provide 3-5 differentials by likelihood + red flags. Recommend workup only - no treatment.
+\`\`\`
+
+## 2. Biopsy Summary for Patient
+
+\`\`\`
+Here's a biopsy report (attached). Write a 4-line summary in plain language for the patient:
+1. What was found (no medical jargon)
+2. Whether treatment is needed
+3. Next step
+4. Approximate timeline
+
+Language: [English / Hebrew / Arabic / Russian].
+Avoid frightening words unnecessarily.
+\`\`\`
+
+## 3. Patient Explanation Before Mohs
+
+\`\`\`
+Write a 3-paragraph explainer for a patient about to undergo Mohs at [site: cheek/nose/shoulder/etc].
+- Paragraph 1: why Mohs over standard excision
+- Paragraph 2: what happens on surgery day (timeline)
+- Paragraph 3: red flags after surgery
+
+Large font, simple language, 300-400 words total.
+\`\`\`
+
+## 4. Referral Letter to Oncology
+
+\`\`\`
+Write an urgent referral letter from a dermatologist to an oncologist.
+
+Patient details (internal code): [code]
+Diagnosis: [from biopsy]
+Relevant findings: [staging]
+Urgency: [routine / urgent]
+Reason for referral: [what you want from oncology]
+
+Format: formal letter, 4-5 line opening + clinical background + recommendation.
+\`\`\`
+
+## 5. Dermoscopy Reading
+
+\`\`\`
+Attached is a dermoscopy image of a pigmented lesion.
+Patient [sex], age [X], phototype [I-VI], lesion site: [area].
+
+Provide:
+1. Structural description (pigment network, dots, globules, vessels)
+2. Classification via two-step algorithm (melanocytic/non-melanocytic → benign/malignant)
+3. Dermoscopic differential
+4. Recommendation: monitor / biopsy / excision
+
+Remember: dermoscopy diagnosis doesn't substitute for biopsy in suspicious cases.
+\`\`\`
+
+## 6. Paper Translation
+
+\`\`\`
+Translate the attached paper from English to medical [target language] that's accessible.
+
+Guidelines:
+- Keep professional terms in English in parentheses on first appearance
+- Translate in the style of a modern practicing physician, not Google Translate
+- Preserve paper structure (Abstract, Introduction, Methods, Results, Discussion)
+- Not literal translation - prefer clarity
+
+Output: translated text + table of 10 key terms with accepted translation.
+\`\`\`
+
+## 7. Informed Consent Draft
+
+\`\`\`
+Informed consent draft for [procedure: Mohs surgery / excision / cryotherapy].
+
+Required sections:
+1. Procedure description in plain language
+2. Purpose
+3. Alternatives (including "do nothing")
+4. Common risks (>1%)
+5. Rare but important risks
+6. What to expect after
+7. Patient signature + physician + witness
+
+Purpose: draft for legal counsel review, not a substitute for final legal form.
+\`\`\`
+
+---
+
+## How to Use the Library
+
+1. **Create a Claude Project** called "Prompt Library - Dermatology".
+2. Upload this file as knowledge base.
+3. In use: open a chat in the project and say "Prompt 1 - [case details]".
+4. **Update every 3 months** - add new prompts you developed, replace ones that didn't work well.
+
+## Privacy
+
+All these prompts are designed for use **without PII**. If names or IDs appear by accident - remove them before sending to Claude.
+
+## Sources
+
+1. Argenziano G, et al. Seven-point checklist of dermoscopy. *Arch Dermatol*. 1998;134(12):1563-1570. https://pubmed.ncbi.nlm.nih.gov/9875193/
+2. Kittler H, et al. Standardization of terminology in dermoscopy/dermatoscopy. *J Am Acad Dermatol*. 2016;74(6):1093-1106. https://pubmed.ncbi.nlm.nih.gov/26896294/
+3. AAD guidelines on informed consent. https://www.aad.org
+
+---
+
+**Clinical note:** The prompts are templates for saving time. In every case - verify the output against a trusted clinical source before using it in patient care.`
     }
   },
 ];
