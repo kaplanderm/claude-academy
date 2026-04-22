@@ -24,16 +24,67 @@ const formatInline = (text: string): string => {
     .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" class="text-claude-orange hover:underline" target="_blank">$1</a>');
 };
 
+// Content here comes only from internal static data files (src/data/courses.ts blogPosts),
+// never from user input. The formatInline helper only converts a fixed set of
+// markdown-like patterns into a small HTML subset, so XSS risk is bounded.
+const Inline: React.FC<{ html: string }> = ({ html }) => (
+  <span dangerouslySetInnerHTML={{ __html: html }} />
+);
+
 const renderContent = (content: string): React.ReactElement[] => {
   const lines = content.split('\n');
   const elements: React.ReactElement[] = [];
   let inCodeBlock = false;
   let codeContent = '';
+  let inCallout: 'beginner' | 'advanced' | null = null;
+  let calloutBuffer: React.ReactElement[] = [];
+  let listBuffer: { type: 'ul' | 'ol'; items: React.ReactElement[] } | null = null;
+
+  const getTarget = () => (inCallout ? calloutBuffer : elements);
+
+  const flushList = () => {
+    if (!listBuffer) return;
+    const target = getTarget();
+    const key = `list-${target.length}`;
+    if (listBuffer.type === 'ol') {
+      target.push(
+        <ol key={key} className="list-decimal mr-6 my-3 space-y-1 text-text-secondary">{listBuffer.items}</ol>
+      );
+    } else {
+      target.push(
+        <ul key={key} className="list-disc mr-6 my-3 space-y-1 text-text-secondary">{listBuffer.items}</ul>
+      );
+    }
+    listBuffer = null;
+  };
+
+  const flushCallout = (idx: number) => {
+    if (!inCallout) return;
+    flushList();
+    const isBeginner = inCallout === 'beginner';
+    const emoji = isBeginner ? '\u{1F4A1}' : '\u{1F52C}';
+    const label = isBeginner ? 'Beginner / למתחיל' : 'Advanced / למתקדם';
+    const classes = isBeginner
+      ? 'bg-green-50 border-green-300'
+      : 'bg-blue-50 border-blue-300';
+    const kids = calloutBuffer;
+    elements.push(
+      <div key={`callout-${idx}`} className={`${classes} border-l-4 px-4 py-3 my-4 rounded-r-lg`}>
+        <div className="text-xs font-semibold text-text-muted mb-2 uppercase tracking-wide">{emoji} {label}</div>
+        {kids}
+      </div>
+    );
+    calloutBuffer = [];
+    inCallout = null;
+  };
 
   lines.forEach((line, i) => {
-    if (line.trim().startsWith('```')) {
+    const trimmed = line.trim();
+
+    if (trimmed.startsWith('```')) {
+      flushList();
       if (inCodeBlock) {
-        elements.push(
+        getTarget().push(
           <pre key={`code-${i}`} className="code-block my-4 overflow-x-auto">
             <code>{codeContent}</code>
           </pre>
@@ -51,43 +102,76 @@ const renderContent = (content: string): React.ReactElement[] => {
       return;
     }
 
-    if (line.trim().startsWith('> ')) {
-      const text = line.trim().slice(2);
-      elements.push(
+    if (trimmed === ':::beginner') {
+      flushList();
+      flushCallout(i);
+      inCallout = 'beginner';
+      calloutBuffer = [];
+      return;
+    }
+    if (trimmed === ':::advanced') {
+      flushList();
+      flushCallout(i);
+      inCallout = 'advanced';
+      calloutBuffer = [];
+      return;
+    }
+    if (trimmed === ':::') {
+      flushCallout(i);
+      return;
+    }
+
+    if (trimmed.startsWith('- ')) {
+      const text = trimmed.slice(2);
+      if (!listBuffer || listBuffer.type !== 'ul') {
+        flushList();
+        listBuffer = { type: 'ul', items: [] };
+      }
+      listBuffer.items.push(
+        <li key={i}><Inline html={formatInline(text)} /></li>
+      );
+      return;
+    }
+    if (trimmed.match(/^\d+\.\s/)) {
+      const text = trimmed.replace(/^\d+\.\s/, '');
+      if (!listBuffer || listBuffer.type !== 'ol') {
+        flushList();
+        listBuffer = { type: 'ol', items: [] };
+      }
+      listBuffer.items.push(
+        <li key={i}><Inline html={formatInline(text)} /></li>
+      );
+      return;
+    }
+
+    flushList();
+
+    if (trimmed.startsWith('> ')) {
+      const text = trimmed.slice(2);
+      getTarget().push(
         <blockquote key={i} className="border-l-4 border-claude-orange/40 bg-claude-cream/50 px-4 py-2 my-3 rounded-r-lg text-text-secondary">
-          <span dangerouslySetInnerHTML={{ __html: formatInline(text) }} />
+          <Inline html={formatInline(text)} />
         </blockquote>
       );
     } else if (line.startsWith('# ')) {
-      elements.push(<h1 key={i} className="text-3xl font-bold text-text-primary mt-8 mb-4">{line.slice(2)}</h1>);
+      getTarget().push(<h1 key={i} className="text-3xl font-bold text-text-primary mt-8 mb-4">{line.slice(2)}</h1>);
     } else if (line.startsWith('## ')) {
-      elements.push(<h2 key={i} className="text-2xl font-bold text-text-primary mt-6 mb-3">{line.slice(3)}</h2>);
+      getTarget().push(<h2 key={i} className="text-2xl font-bold text-text-primary mt-6 mb-3">{line.slice(3)}</h2>);
     } else if (line.startsWith('### ')) {
-      elements.push(<h3 key={i} className="text-xl font-semibold text-text-primary mt-5 mb-2">{line.slice(4)}</h3>);
-    } else if (line.trim().startsWith('- ')) {
-      const text = line.trim().slice(2);
-      elements.push(
-        <li key={i} className="text-text-secondary ml-4 my-1 list-disc">
-          <span dangerouslySetInnerHTML={{ __html: formatInline(text) }} />
-        </li>
-      );
-    } else if (line.trim().match(/^\d+\.\s/)) {
-      const text = line.trim().replace(/^\d+\.\s/, '');
-      elements.push(
-        <li key={i} className="text-text-secondary ml-4 my-1 list-decimal">
-          <span dangerouslySetInnerHTML={{ __html: formatInline(text) }} />
-        </li>
-      );
-    } else if (line.trim()) {
-      elements.push(
+      getTarget().push(<h3 key={i} className="text-xl font-semibold text-text-primary mt-5 mb-2">{line.slice(4)}</h3>);
+    } else if (trimmed) {
+      getTarget().push(
         <p key={i} className="text-text-secondary my-2 leading-relaxed">
-          <span dangerouslySetInnerHTML={{ __html: formatInline(line) }} />
+          <Inline html={formatInline(line)} />
         </p>
       );
     } else {
-      elements.push(<div key={i} className="h-2" />);
+      getTarget().push(<div key={i} className="h-2" />);
     }
   });
+
+  flushList();
+  flushCallout(lines.length);
 
   return elements;
 };
