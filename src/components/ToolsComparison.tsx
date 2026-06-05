@@ -48,18 +48,18 @@ const tools: ToolInfo[] = [
     rating: 4.5,
     color: '#27AE60',
     pros: {
-      he: ['MCP support', 'Computer Use', 'קיצורי מקלדת', 'Always available'],
-      en: ['MCP support', 'Computer Use', 'Keyboard shortcuts', 'Always available']
+      he: ['MCP + Connectors מובנים', 'Cowork למשימות רקע', 'שיחות במקביל', 'Computer Use'],
+      en: ['Built-in MCP + Connectors', 'Cowork for background tasks', 'Parallel sessions', 'Computer Use']
     },
     cons: {
       he: ['לא זמין ל-Linux', 'צורך משאבים', 'MCP דורש הגדרה'],
       en: ['Not available for Linux', 'Resource intensive', 'MCP requires setup']
     },
     setup: {
-      he: ['הורידו מ-claude.ai/download', 'התקינו', 'הגדירו MCP (אופציונלי)'],
-      en: ['Download from claude.ai/download', 'Install', 'Configure MCP (optional)']
+      he: ['הורידו מ-claude.ai/download', 'התקינו', 'הגדירו MCP/Connectors (אופציונלי)'],
+      en: ['Download from claude.ai/download', 'Install', 'Configure MCP/Connectors (optional)']
     },
-    bestFor: { he: 'עבודה עם MCP, Computer Use', en: 'Working with MCP, Computer Use' },
+    bestFor: { he: 'MCP, Cowork, ושיחות במקביל', en: 'MCP, Cowork, and parallel sessions' },
     features: { artifacts: false, projects: true, mcp: true, code_exec: false, file_access: true, vision: true }
   },
   {

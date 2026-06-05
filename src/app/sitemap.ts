@@ -22,13 +22,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: baseUrl,
-      lastModified: new Date('2026-04-22'),
+      lastModified: new Date('2026-06-05'),
       changeFrequency: 'weekly',
       priority: 1,
     },
     {
       url: `${baseUrl}/academy`,
-      lastModified: new Date('2026-04-22'),
+      lastModified: new Date('2026-06-05'),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
