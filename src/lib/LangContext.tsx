@@ -1,5 +1,5 @@
 'use client';
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useContext, useState, ReactNode } from 'react';
 import { Lang, t as translate } from './i18n';
 
 interface LangContextType {
@@ -16,21 +16,25 @@ const LangContext = createContext<LangContextType>({
   dir: 'rtl',
 });
 
-export function LangProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>('he');
-
-  // Restore language from localStorage on mount
-  useEffect(() => {
-    const saved = typeof window !== 'undefined' ? localStorage.getItem('claude-academy-lang') : null;
-    if (saved === 'en' || saved === 'he') {
-      setLangState(saved);
-    }
-  }, []);
+// initialLang comes from the server (cookie), so the first paint already matches
+// the chosen language. No localStorage round-trip, no he-default flash.
+export function LangProvider({
+  children,
+  initialLang = 'he',
+}: {
+  children: ReactNode;
+  initialLang?: Lang;
+}) {
+  const [lang, setLangState] = useState<Lang>(initialLang);
 
   const setLang = (newLang: Lang) => {
     setLangState(newLang);
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('claude-academy-lang', newLang);
+    if (typeof document !== 'undefined') {
+      // one-year cookie drives SSR lang/dir on the next request
+      document.cookie = `lang=${newLang};path=/;max-age=31536000;samesite=lax`;
+      // keep the live document attributes in sync immediately
+      document.documentElement.lang = newLang;
+      document.documentElement.dir = newLang === 'he' ? 'rtl' : 'ltr';
     }
   };
 
@@ -41,11 +45,7 @@ export function LangProvider({ children }: { children: ReactNode }) {
     dir: lang === 'he' ? 'rtl' : 'ltr',
   };
 
-  return (
-    <LangContext.Provider value={value}>
-      {children}
-    </LangContext.Provider>
-  );
+  return <LangContext.Provider value={value}>{children}</LangContext.Provider>;
 }
 
 export function useLang() {

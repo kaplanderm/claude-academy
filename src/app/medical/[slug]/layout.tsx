@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `${useCase.title.en} - Claude AI for Physicians`,
       description: useCase.description.en,
-      url: `https://claude-academy-il.vercel.app/medical/${slug}`,
+      url: `/medical/${slug}`,
     },
   };
 }

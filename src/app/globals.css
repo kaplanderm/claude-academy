@@ -3,9 +3,14 @@
 :root {
   --background: #fafafa;
   --foreground: #1a1a2e;
-  --claude-orange: #E07A2F;
-  --claude-orange-light: #F5A623;
+  --claude-orange: #E07A2F;        /* decoration only: gradients, glows, dividers */
+  --claude-orange-light: #F5A623;  /* decoration only */
   --claude-orange-dark: #C56A1F;
+  /* interactive tokens - AA contrast on white (>=4.5:1). Use for links, button fills, active text. */
+  --interactive: #B5560E;
+  --interactive-hover: #8F430A;
+  --on-brand: #ffffff;
+  --focus-ring: #1A56DB;
   --claude-cream: #FFF8F0;
   --claude-warm: #FEF0E1;
   --claude-peach: #FDDCB5;
@@ -16,7 +21,7 @@
   --accent-purple: #8E44AD;
   --text-primary: #1a1a2e;
   --text-secondary: #4a4a6a;
-  --text-muted: #8a8aa0;
+  --text-muted: #6B6B85;
   --border-color: #e8e8f0;
   --card-bg: #ffffff;
   --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
@@ -28,6 +33,9 @@
   --color-foreground: var(--foreground);
   --color-claude-orange: var(--claude-orange);
   --color-claude-orange-light: var(--claude-orange-light);
+  --color-interactive: var(--interactive);
+  --color-interactive-hover: var(--interactive-hover);
+  --color-focus-ring: var(--focus-ring);
   --color-claude-cream: var(--claude-cream);
   --color-claude-warm: var(--claude-warm);
   --color-claude-peach: var(--claude-peach);
@@ -62,6 +70,39 @@ body {
 [dir="rtl"] {
   text-align: right;
 }
+
+/* Global visible focus indicator (keyboard users), independent of the a11y toggle */
+:where(a, button, input, select, textarea, summary, [role="button"], [tabindex]:not([tabindex="-1"])):focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Respect the OS-level reduced-motion preference automatically */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  html { scroll-behavior: auto; }
+}
+
+/* Accessible interactive helpers (AA on white) */
+.link-accent {
+  color: var(--interactive);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.link-accent:hover { color: var(--interactive-hover); }
+
+.btn-primary {
+  background: var(--interactive);
+  color: var(--on-brand);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+.btn-primary:hover { background: var(--interactive-hover); }
 
 /* Scrollbar */
 ::-webkit-scrollbar {
@@ -235,6 +276,11 @@ html[data-a11y-font="120"] { font-size: 120% !important; }
 html[data-a11y-font="130"] { font-size: 130% !important; }
 html[data-a11y-font="140"] { font-size: 140% !important; }
 html[data-a11y-font="150"] { font-size: 150% !important; }
+html[data-a11y-font="160"] { font-size: 160% !important; }
+html[data-a11y-font="170"] { font-size: 170% !important; }
+html[data-a11y-font="180"] { font-size: 180% !important; }
+html[data-a11y-font="190"] { font-size: 190% !important; }
+html[data-a11y-font="200"] { font-size: 200% !important; }
 
 /* High Contrast */
 html[data-a11y-contrast] {
@@ -244,6 +290,9 @@ html[data-a11y-contrast] {
   --border-color: #555555 !important;
   --claude-orange: #FFD700 !important;
   --claude-orange-dark: #FFD700 !important;
+  --interactive: #FFD700 !important;
+  --interactive-hover: #FFE54C !important;
+  --text-muted: #e0e0e0 !important;
 }
 
 /* Inverted Contrast */

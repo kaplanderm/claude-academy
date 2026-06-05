@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Claude Academy for Physicians',
     description: 'Comprehensive AI training courses for medical professionals',
-    url: 'https://claude-academy-il.vercel.app/academy',
+    url: '/academy',
   },
 };
 

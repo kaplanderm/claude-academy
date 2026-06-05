@@ -229,7 +229,7 @@ export default function AccessibilityToolbar() {
     onChange: (v: number) => void;
   }) => (
     <div className="mt-2 text-center">
-      <p className="text-xs text-gray-400 mb-1.5">{label}</p>
+      <p className="text-xs text-gray-600 mb-1.5">{label}</p>
       <div className="flex items-center gap-2">
         <button
           onClick={() => onChange(Math.max(min, value - step))}
@@ -311,7 +311,7 @@ export default function AccessibilityToolbar() {
             label={t.fontSize}
             value={settings.font}
             min={100}
-            max={150}
+            max={200}
             step={10}
             suffix="%"
             onChange={(v) => update({ ...settings, font: v })}

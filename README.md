@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Claude Academy for Physicians (DermUnbound)
 
-## Getting Started
+A bilingual (Hebrew-first / English) learning site that teaches dermatologists and other
+physicians how to use Claude AI in clinical practice, with **no technical background required**.
 
-First, run the development server:
+The site is built around **Claude Desktop** and its three tabs:
+
+- **Chat** - regular conversations (ask, get answers).
+- **Cowork** - longer agentic work with no code ("Work in a Folder", Dispatch, background tasks).
+- **Code** - Claude Code with a full graphical interface (sessions, file editor, visual diff,
+  app previews). The terminal is optional.
+
+The terminal/CLI path is demoted to an optional advanced track. Content is current as of
+June 2026 (Claude Opus 4.8).
+
+Live: https://academy.dermunbound.com
+
+## Stack
+
+- Next.js 16 (App Router), React 19
+- Tailwind CSS v4 (CSS-first `@theme` in `src/app/globals.css`)
+- lucide-react icons, framer-motion
+- Bilingual i18n via cookie-driven SSR `lang`/`dir` (`src/lib/LangContext.tsx`)
+
+## Project layout
+
+- `src/app/` - routes (App Router). Homepage, `academy/[track]/[lesson]`, `blog/`, `medical/[slug]`, `features/[slug]`.
+- `src/content/` - typed content (tracks, lessons, blog posts) split per file, loaded on demand.
+- `src/components/` - UI; `content/MarkdownRenderer.tsx` is the single shared mini-markdown renderer.
+- `src/data/` - `medicalUseCases.ts`, `featureGuides.ts`.
+
+## Development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # production build
+npx tsc --noEmit # type-check
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Accessibility
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The site targets WCAG 2.1 AA / Israeli Standard 5568: cookie-driven SSR `lang`/`dir`,
+accessible color tokens (`--interactive`), a global focus-visible outline, automatic
+`prefers-reduced-motion`, an accessibility widget (font scaling to 200%, contrast modes),
+and an accessibility statement at `/accessibility`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## License
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Content: CC BY-NC-SA 4.0. An independent educational project, not affiliated with Anthropic.
