@@ -12,7 +12,7 @@ export default function AccessibilityPage() {
         <div className="mb-6">
           <Link
             href="/"
-            className="inline-flex items-center gap-1.5 text-sm text-text-muted hover:text-claude-orange transition-colors"
+            className="inline-flex items-center gap-1.5 text-sm text-text-muted hover:text-interactive transition-colors"
           >
             {dir === 'rtl' ? <ArrowRight size={14} /> : <ArrowLeft size={14} />}
             {lang === 'he' ? 'חזרה לדף הראשי' : 'Back to Home'}
@@ -22,7 +22,7 @@ export default function AccessibilityPage() {
         {lang === 'he' ? (
           <article className="prose prose-gray max-w-none [&_h1]:text-3xl [&_h1]:font-bold [&_h1]:mb-6 [&_h2]:text-xl [&_h2]:font-bold [&_h2]:mt-8 [&_h2]:mb-3 [&_h3]:text-lg [&_h3]:font-semibold [&_h3]:mt-6 [&_h3]:mb-2 [&_p]:text-text-secondary [&_p]:leading-relaxed [&_p]:mb-4 [&_ul]:list-disc [&_ul]:pr-6 [&_ul]:mb-4 [&_li]:text-text-secondary [&_li]:mb-1">
             <h1>הצהרת נגישות</h1>
-            <p>תאריך עדכון: 2026-03-15</p>
+            <p>תאריך עדכון: 2026-06-05</p>
 
             <p>
               ד&quot;ר יהונתן קפלן אחראי על הקמת והפעלת אתר academy.dermunbound.com. אנו רואים חשיבות רבה במתן שירות שוויוני לכלל האזרחים ובשיפור השירות הניתן לאזרחים עם מוגבלות. אנו משקיעים משאבים רבים בהנגשת האתר והנכסים הדיגיטליים שלנו על מנת להפוך את שירותי החברה לזמינים יותר עבור אנשים עם מוגבלות.
@@ -33,7 +33,7 @@ export default function AccessibilityPage() {
 
             <h2>רמת הנגישות באתר - AA</h2>
             <p>
-              האתר מותאם בהתאם לדרישות תקנות שוויון זכויות לאנשים עם מוגבלות 5568 התשע&quot;ג 2013 ברמת AA, ומיישם את המלצות מסמך WCAG 2.2 מאת ארגון W3C.
+              האתר מותאם בהתאם לדרישות תקנות שוויון זכויות לאנשים עם מוגבלות 5568 התשע&quot;ג 2013 ברמת AA, ומיישם את המלצות מסמך WCAG 2.1 מאת ארגון W3C.
             </p>
 
             <h2>כיצד עוברים למצב נגיש?</h2>
@@ -49,7 +49,9 @@ export default function AccessibilityPage() {
               <li>התאמה לדפדפנים מודרניים</li>
               <li>תצוגה תואמת מגוון מסכים ורזולוציות</li>
               <li>מבנה כותרות היררכי (H1/H2/H3)</li>
-              <li>הסבר טקסטואלי חלופי (alt) לכל תמונה</li>
+              <li>הסבר טקסטואלי חלופי לתמונות בעלות משמעות; אלמנטים דקורטיביים מוסתרים מקוראי מסך</li>
+              <li>הגדלת גופן עד 200 אחוז</li>
+              <li>הפחתת אנימציות בהתאם להעדפת המערכת</li>
             </ul>
 
             <h2>פונקציונליות כלי נגישות</h2>
@@ -86,7 +88,7 @@ export default function AccessibilityPage() {
         ) : (
           <article className="prose prose-gray max-w-none [&_h1]:text-3xl [&_h1]:font-bold [&_h1]:mb-6 [&_h2]:text-xl [&_h2]:font-bold [&_h2]:mt-8 [&_h2]:mb-3 [&_h3]:text-lg [&_h3]:font-semibold [&_h3]:mt-6 [&_h3]:mb-2 [&_p]:text-text-secondary [&_p]:leading-relaxed [&_p]:mb-4 [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:mb-4 [&_li]:text-text-secondary [&_li]:mb-1">
             <h1>Accessibility Statement</h1>
-            <p>Last updated: 2026-03-15</p>
+            <p>Last updated: 2026-06-05</p>
 
             <p>
               Dr. Yehonatan Kaplan is responsible for establishing and operating the website academy.dermunbound.com. We attach great importance to providing equal service to all citizens and improving service for citizens with disabilities. We invest significant resources in making our website and digital assets accessible.
@@ -94,7 +96,7 @@ export default function AccessibilityPage() {
 
             <h2>Accessibility Level - AA</h2>
             <p>
-              This site complies with the Israeli Equal Rights for People with Disabilities Regulations 5568, at AA level, and implements WCAG 2.2 recommendations by W3C.
+              This site complies with the Israeli Equal Rights for People with Disabilities Regulations 5568, at AA level, and implements WCAG 2.1 recommendations by W3C.
             </p>
 
             <h2>How to Access Accessibility Mode?</h2>
@@ -110,7 +112,9 @@ export default function AccessibilityPage() {
               <li>Modern browser compatibility</li>
               <li>Responsive design for all screen sizes</li>
               <li>Hierarchical heading structure (H1/H2/H3)</li>
-              <li>Alternative text (alt) for all images</li>
+              <li>Alternative text for meaningful images; decorative elements are hidden from screen readers</li>
+              <li>Font scaling up to 200%</li>
+              <li>Reduced motion honoring the system preference</li>
             </ul>
 
             <h2>Accessibility Features</h2>

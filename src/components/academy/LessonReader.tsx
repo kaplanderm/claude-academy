@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { ArrowRight, ArrowLeft, Clock, BookOpen } from 'lucide-react';
 import Icon from '@/components/ui/Icon';
 import MarkdownRenderer from '@/components/content/MarkdownRenderer';
+import JsonLd from '@/components/seo/JsonLd';
 
 export default function LessonReader({ trackSlug, lessonId }: { trackSlug: string; lessonId: string }) {
   const { dir, lang } = useLang();
@@ -42,6 +43,16 @@ export default function LessonReader({ trackSlug, lessonId }: { trackSlug: strin
 
   return (
     <div className="min-h-screen pt-24 pb-20" dir={dir}>
+      <JsonLd data={{
+        '@context': 'https://schema.org',
+        '@type': 'LearningResource',
+        name: meta.title[lang],
+        description: meta.description[lang],
+        inLanguage: lang,
+        learningResourceType: 'Lesson',
+        educationalLevel: track.recommendedLevel,
+        isPartOf: { '@type': 'Course', name: track.title[lang] },
+      }} />
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
         <Link href={`/academy/${track.slug}`} className="inline-flex items-center gap-1.5 text-sm text-text-muted hover:text-interactive transition-colors mb-6">
           <Icon icon={dir === 'rtl' ? ArrowRight : ArrowLeft} size={14} />

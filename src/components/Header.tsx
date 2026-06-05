@@ -99,18 +99,22 @@ export default function Header() {
               {he ? 'האקדמיה' : 'Academy'}
             </Link>
 
-            {/* First three tracks */}
-            {academyItems.slice(0, 3).map(item => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`px-3 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-claude-cream ${
-                  pathname === item.href ? 'text-interactive' : 'text-text-secondary hover:text-interactive'
-                }`}
-              >
-                {item.label[lang]}
-              </Link>
-            ))}
+            <Link
+              href="/tools"
+              className={`px-3 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-claude-cream ${
+                pathname === '/tools' ? 'text-interactive' : 'text-text-secondary hover:text-interactive'
+              }`}
+            >
+              {he ? 'דרכי שימוש' : 'Ways to Use'}
+            </Link>
+            <Link
+              href="/blog"
+              className={`px-3 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-claude-cream ${
+                pathname.startsWith('/blog') ? 'text-interactive' : 'text-text-secondary hover:text-interactive'
+              }`}
+            >
+              {he ? 'בלוג' : 'Blog'}
+            </Link>
 
             <Link
               href="/about"
@@ -198,6 +202,12 @@ export default function Header() {
                 {item.label[lang]}
               </Link>
             ))}
+            <Link href="/tools" className="block px-4 py-2.5 rounded-xl text-text-secondary hover:text-interactive hover:bg-claude-cream transition-colors text-sm font-medium" onClick={() => setMenuOpen(false)}>
+              {he ? 'דרכי שימוש' : 'Ways to Use'}
+            </Link>
+            <Link href="/blog" className="block px-4 py-2.5 rounded-xl text-text-secondary hover:text-interactive hover:bg-claude-cream transition-colors text-sm font-medium" onClick={() => setMenuOpen(false)}>
+              {he ? 'בלוג' : 'Blog'}
+            </Link>
 
             <div className="border-t border-orange-50 my-2" />
 
