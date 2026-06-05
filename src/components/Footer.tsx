@@ -76,13 +76,13 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="text-center text-sm text-gray-500">
+        <div className="text-center text-sm text-gray-300">
           <p>&copy; 2026 Dr. Yehonatan Kaplan &middot; CC BY-NC-SA 4.0</p>
         </div>
 
         {/* Disclaimer */}
         <div className="mt-4 text-center">
-          <p className="text-xs text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xs text-gray-400 max-w-2xl mx-auto">
             {lang === 'he'
               ? 'אתר זה הוא פרויקט חינוכי עצמאי ואינו מסונף ל-Anthropic. Claude ו-Anthropic הם סימנים מסחריים של Anthropic, PBC.'
               : 'This is an independent educational project and is not affiliated with Anthropic. Claude and Anthropic are trademarks of Anthropic, PBC.'}
