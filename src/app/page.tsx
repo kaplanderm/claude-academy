@@ -1,30 +1,35 @@
 'use client';
-import React from 'react';
 import { useLang } from '@/lib/LangContext';
 import { medicalUseCases } from '@/data/medicalUseCases';
-import { featureGuides } from '@/data/featureGuides';
-import { ArrowRight, ArrowLeft, BookOpen, ExternalLink, Shield, Brain, Users, Sparkles } from 'lucide-react';
+import { ArrowRight, ArrowLeft, BookOpen, ExternalLink, Shield, Brain, Users } from 'lucide-react';
 import Link from 'next/link';
-import MedicalHero from '@/components/MedicalHero';
+import Icon from '@/components/ui/Icon';
+import Hero from '@/components/home/Hero';
+import ThreeTabsDiagram from '@/components/home/ThreeTabsDiagram';
+import ChatVsCode from '@/components/home/ChatVsCode';
 
 export default function Home() {
   const { dir, lang } = useLang();
+  const he = lang === 'he';
+  const Arrow = dir === 'rtl' ? ArrowLeft : ArrowRight;
 
   return (
     <>
-      <MedicalHero />
+      <Hero />
+      <ThreeTabsDiagram />
+      <ChatVsCode />
 
-      {/* Medical Use Cases Grid */}
+      {/* Medical use cases */}
       <section id="medical-uses" className="py-20 bg-white" dir={dir}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
-              {lang === 'he' ? 'Claude AI בפרקטיקה הרפואית' : 'Claude AI in Medical Practice'}
+              {he ? 'מה אפשר לעשות עם זה במרפאה' : 'What you can do with it in the clinic'}
             </h2>
             <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-              {lang === 'he'
-                ? 'לחצו על כל תחום כדי לקרוא מדריך מפורט עם דוגמאות מעשיות, פרומפטים מוכנים, והמלצות פלטפורמה'
-                : 'Click each area for a detailed guide with practical examples, ready-to-use prompts, and platform recommendations'}
+              {he
+                ? 'לחץ על כל תחום למדריך מפורט עם דוגמאות מעשיות ופרומפטים מוכנים.'
+                : 'Click each area for a detailed guide with practical examples and ready-to-use prompts.'}
             </p>
           </div>
 
@@ -33,160 +38,93 @@ export default function Home() {
               <Link
                 key={useCase.id}
                 href={`/medical/${useCase.id}`}
-                className="glass-card p-6 group cursor-pointer transition-all border border-transparent hover:border-claude-orange/30 hover:shadow-lg block"
+                className="glass-card p-6 group transition-all border border-transparent hover:border-interactive/30 hover:shadow-lg block"
               >
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-3xl">{useCase.icon}</span>
-                  <div className="flex items-center gap-1 text-claude-orange opacity-0 group-hover:opacity-100 transition-opacity">
-                    {dir === 'rtl' ? <ArrowLeft size={16} /> : <ArrowRight size={16} />}
-                  </div>
+                  <span className="text-3xl" aria-hidden="true">{useCase.icon}</span>
+                  <span className="text-interactive opacity-0 group-hover:opacity-100 transition-opacity">
+                    <Icon icon={Arrow} size={16} />
+                  </span>
                 </div>
-                <h3 className="text-lg font-bold mb-2 text-text-primary group-hover:text-claude-orange transition-colors">
+                <h3 className="text-lg font-bold mb-2 text-text-primary group-hover:text-interactive transition-colors">
                   {useCase.title[lang]}
                 </h3>
-                <p className="text-sm text-text-secondary">
-                  {useCase.description[lang]}
-                </p>
+                <p className="text-sm text-text-secondary">{useCase.description[lang]}</p>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Feature Guides (new Claude features, physician-focused) */}
-      <section id="feature-guides" className="py-20 bg-gradient-to-b from-white to-claude-cream/40" dir={dir}>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-14">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-claude-orange/10 text-claude-orange text-xs font-semibold mb-3">
-              <Sparkles size={14} />
-              {lang === 'he' ? 'חדש' : 'NEW'}
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
-              {lang === 'he' ? 'מה חדש ב-Claude לרופא' : "What's New in Claude for Physicians"}
-            </h2>
-            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-              {lang === 'he'
-                ? 'מדריכי עומק לפיצ\'רים האחרונים של Claude - Cowork, frontend-design ועוד. איך להפעיל אותם בשגרת העבודה הרפואית.'
-                : 'Deep-dive guides to the latest Claude features - Cowork, frontend-design and more. How to bring them into your medical workflow.'}
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {featureGuides.map(guide => (
-              <Link
-                key={guide.id}
-                href={`/features/${guide.id}`}
-                className="glass-card p-6 group cursor-pointer transition-all border border-transparent hover:border-claude-orange/30 hover:shadow-lg block"
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-3xl">{guide.icon}</span>
-                  <div className="flex items-center gap-1 text-claude-orange opacity-0 group-hover:opacity-100 transition-opacity">
-                    {dir === 'rtl' ? <ArrowLeft size={16} /> : <ArrowRight size={16} />}
-                  </div>
-                </div>
-                <h3 className="text-lg font-bold mb-2 text-text-primary group-hover:text-claude-orange transition-colors">
-                  {guide.title[lang]}
-                </h3>
-                <p className="text-sm text-text-secondary">
-                  {guide.description[lang]}
-                </p>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* About DermUnbound Research */}
+      {/* DermUnbound method pillars */}
       <section className="py-16 bg-gradient-to-b from-white to-claude-cream/20" dir={dir}>
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-text-primary mb-3">
-              {lang === 'he' ? 'שיטת DermUnbound' : 'The DermUnbound Method'}
+              {he ? 'שיטת DermUnbound' : 'The DermUnbound Method'}
             </h2>
             <p className="text-text-secondary text-lg max-w-2xl mx-auto">
-              {lang === 'he'
+              {he
                 ? 'מחקר וזיקוק של שיטות עבודה בטוחות ויעילות עם AI בפרקטיקה הרפואית'
                 : 'Researching and refining safe, effective AI workflows for medical practice'}
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-10">
-            <div className="glass-card p-6 text-center">
-              <div className="w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center mx-auto mb-4">
-                <Shield className="text-green-600" size={24} />
+            {[
+              { icon: Shield, bg: 'bg-green-50', fg: 'text-green-700',
+                t: { he: 'פרטיות קודמת לכל', en: 'Privacy First' },
+                d: { he: 'פרוטוקולים לאנונימיזציה ולשימוש בטוח ב-AI עם מידע רפואי, בהתאם לחוק הגנת הפרטיות הישראלי', en: 'Protocols for anonymization and safe AI use with medical data, compliant with Israeli privacy law' } },
+              { icon: Brain, bg: 'bg-blue-50', fg: 'text-blue-700',
+                t: { he: 'מבוסס מחקר', en: 'Research-Based' },
+                d: { he: 'כל השיטות מבוססות על ניסיון קליני מעשי ומחקר שוטף בתחום ה-AI הרפואי', en: 'All methods are based on practical clinical experience and ongoing medical AI research' } },
+              { icon: Users, bg: 'bg-purple-50', fg: 'text-purple-700',
+                t: { he: 'מותאם לרופאים', en: 'Built for Physicians' },
+                d: { he: 'תוכן ללא צורך בידע טכני מוקדם. כל מושג טכני מוסבר בשפה פשוטה', en: 'No prior tech knowledge needed. Every technical concept is explained in plain language' } },
+            ].map((p, i) => (
+              <div key={i} className="glass-card p-6 text-center">
+                <div className={`w-12 h-12 rounded-xl ${p.bg} flex items-center justify-center mx-auto mb-4`}>
+                  <Icon icon={p.icon} size={24} className={p.fg} />
+                </div>
+                <h3 className="text-lg font-bold text-text-primary mb-2">{p.t[lang]}</h3>
+                <p className="text-sm text-text-secondary leading-relaxed">{p.d[lang]}</p>
               </div>
-              <h3 className="text-lg font-bold text-text-primary mb-2">
-                {lang === 'he' ? 'פרטיות קודמת לכל' : 'Privacy First'}
-              </h3>
-              <p className="text-sm text-text-secondary leading-relaxed">
-                {lang === 'he'
-                  ? 'פרוטוקולים מוגדרים לאנונימיזציה ולשימוש בטוח ב-AI עם מידע רפואי, בהתאם לחוק הגנת הפרטיות הישראלי'
-                  : 'Defined protocols for anonymization and safe AI use with medical data, compliant with Israeli privacy law'}
-              </p>
-            </div>
-
-            <div className="glass-card p-6 text-center">
-              <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mx-auto mb-4">
-                <Brain className="text-blue-600" size={24} />
-              </div>
-              <h3 className="text-lg font-bold text-text-primary mb-2">
-                {lang === 'he' ? 'מבוסס מחקר' : 'Research-Based'}
-              </h3>
-              <p className="text-sm text-text-secondary leading-relaxed">
-                {lang === 'he'
-                  ? 'כל השיטות מבוססות על ניסיון קליני מעשי ומחקר שוטף בתחום ה-AI הרפואי'
-                  : 'All methods are based on practical clinical experience and ongoing medical AI research'}
-              </p>
-            </div>
-
-            <div className="glass-card p-6 text-center">
-              <div className="w-12 h-12 rounded-xl bg-purple-50 flex items-center justify-center mx-auto mb-4">
-                <Users className="text-purple-600" size={24} />
-              </div>
-              <h3 className="text-lg font-bold text-text-primary mb-2">
-                {lang === 'he' ? 'מותאם לרופאים' : 'Built for Physicians'}
-              </h3>
-              <p className="text-sm text-text-secondary leading-relaxed">
-                {lang === 'he'
-                  ? 'תוכן מותאם לרופאים - ללא צורך בידע טכני מוקדם. כל מושגי הטכנולוגיה מוסברים בשפה פשוטה'
-                  : 'Content tailored for physicians - no prior tech knowledge needed. All tech concepts explained in plain language'}
-              </p>
-            </div>
+            ))}
           </div>
 
           <div className="text-center">
             <a
-              href={`https://kaplanclinic.co.il/${lang === 'he' ? 'he' : 'en'}/derm-ai`}
+              href={`https://kaplanclinic.co.il/${he ? 'he' : 'en'}/derm-ai`}
               target="_blank"
-              rel="dofollow"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-claude-orange text-claude-orange hover:bg-claude-orange hover:text-white transition-all font-semibold"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-interactive text-interactive hover:bg-interactive hover:text-white transition-colors font-semibold"
             >
-              {lang === 'he' ? 'קראו עוד על מחקר DermUnbound' : 'Read More About DermUnbound Research'}
-              <ExternalLink size={16} />
+              {he ? 'קרא עוד על מחקר DermUnbound' : 'Read more about DermUnbound research'}
+              <Icon icon={ExternalLink} size={16} />
             </a>
           </div>
         </div>
       </section>
 
-      {/* CTA to Academy */}
+      {/* CTA to academy */}
       <section className="py-16 bg-claude-cream/30" dir={dir}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <div className="glass-card p-8 md:p-12">
-            <BookOpen className="mx-auto mb-4 text-claude-orange" size={40} />
+            <Icon icon={BookOpen} size={40} className="mx-auto mb-4 text-interactive" />
             <h2 className="text-2xl md:text-3xl font-bold text-text-primary mb-4">
-              {lang === 'he' ? 'רוצים ללמוד לעומק?' : 'Want to Learn In-Depth?'}
+              {he ? 'מוכן להתחיל ללמוד צעד אחר צעד?' : 'Ready to start learning step by step?'}
             </h2>
             <p className="text-text-secondary text-lg mb-8 max-w-2xl mx-auto">
-              {lang === 'he'
-                ? 'ב-Claude Academy תמצאו קורסים מלאים, שיעורי בונוס, השוואת כלים, ומדריכים מפורטים - מותאמים לרמה שלכם'
-                : 'In Claude Academy you\'ll find full courses, bonus lessons, tool comparisons, and detailed guides - adapted to your level'}
+              {he
+                ? 'באקדמיה תמצא מסלולים מסודרים: התחלה בלי קוד, Cowork, Claude Code דרך הטאב Code, ומסלול מתקדם למי שרוצה טרמינל.'
+                : 'The academy has structured tracks: a no-code start, Cowork, Claude Code through the Code tab, and an advanced track for those who want the terminal.'}
             </p>
             <Link
               href="/academy"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-r from-claude-orange to-claude-orange-light text-white font-semibold text-lg shadow-xl hover:shadow-2xl transition-all hover:scale-[1.02]"
+              className="btn-primary inline-flex items-center gap-2 px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl"
             >
-              {lang === 'he' ? 'כנסו ל-Claude Academy' : 'Enter Claude Academy'}
-              {dir === 'rtl' ? <ArrowLeft size={20} /> : <ArrowRight size={20} />}
+              {he ? 'כנס לאקדמיה' : 'Enter the academy'}
+              <Icon icon={Arrow} size={20} />
             </Link>
           </div>
         </div>
