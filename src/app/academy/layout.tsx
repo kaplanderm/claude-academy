@@ -1,16 +1,23 @@
 import type { Metadata } from 'next';
+import { cookies } from 'next/headers';
+import { LevelProvider } from '@/lib/LevelContext';
+import type { Level } from '@/content/types';
 
 export const metadata: Metadata = {
-  title: 'Claude Academy | קורסים ללימוד Claude AI לרופאים',
-  description: 'קורסים מקיפים ללימוד Claude AI - מהמתחילים ועד המתקדמים. שיעורים מפורטים, כלים, תוספים, ומדריכים מעשיים לרופאים.',
-  keywords: ['Claude Academy', 'AI courses for doctors', 'Claude AI training', 'medical AI courses', 'קורסים AI לרופאים'],
+  title: 'האקדמיה - מסלולי לימוד Claude לרופאים',
+  description:
+    'מסלולי לימוד מסודרים: התחלה בלי קוד, Cowork, Claude Code דרך הטאב Code, ומסלול מתקדם לטרמינל. מותאם לרופאים ללא רקע טכני.',
+  alternates: { canonical: '/academy' },
   openGraph: {
     title: 'Claude Academy for Physicians',
-    description: 'Comprehensive AI training courses for medical professionals',
+    description: 'Structured learning tracks for using Claude in clinical work, no technical background required.',
     url: '/academy',
   },
 };
 
-export default function AcademyLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+export default async function AcademyLayout({ children }: { children: React.ReactNode }) {
+  const c = await cookies();
+  const v = c.get('academy-level')?.value;
+  const initialLevel: Level = v === 'intermediate' || v === 'advanced' ? v : 'beginner';
+  return <LevelProvider initialLevel={initialLevel}>{children}</LevelProvider>;
 }
