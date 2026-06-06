@@ -2,7 +2,7 @@
 // Lesson bodies live in per-lesson files and load on demand; the index holds
 // metadata only, so the homepage and hubs never pull lesson bodies into the bundle.
 
-export type Level = 'beginner' | 'intermediate' | 'advanced';
+export type Level = 'beginner' | 'advanced';
 
 export type TrackSlug = 'getting-started' | 'cowork' | 'claude-code' | 'advanced';
 

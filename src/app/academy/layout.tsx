@@ -18,6 +18,6 @@ export const metadata: Metadata = {
 export default async function AcademyLayout({ children }: { children: React.ReactNode }) {
   const c = await cookies();
   const v = c.get('academy-level')?.value;
-  const initialLevel: Level = v === 'intermediate' || v === 'advanced' ? v : 'beginner';
+  const initialLevel: Level = v === 'advanced' ? 'advanced' : 'beginner';
   return <LevelProvider initialLevel={initialLevel}>{children}</LevelProvider>;
 }

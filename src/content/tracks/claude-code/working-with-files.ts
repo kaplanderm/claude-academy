@@ -31,6 +31,10 @@ const lesson: Lesson = {
 
 זה כמו מסמך עם "עקוב אחר שינויים" בתוכנת מסמכים: רואים בדיוק מה השתנה ומחליטים אם לקבל. בנוסף, לקבצים כמו \`HTML\` או \`PDF\` יש **תצוגה מקדימה** (preview) - חלון שמציג את הדף המוגמר כמו שהמטופל יראה אותו, לא את הקוד שמאחוריו.
 
+:::beginner
+diff זו פשוט תצוגה של ההבדל בין הקובץ הישן לחדש, אדום ליורד וירוק לנוסף. אל תדאג: שום דבר לא קורה לבד, השינוי רק מחכה לך. כל מה שעליך לעשות זה לקרוא ואז ללחוץ "אשר".
+:::
+
 ## דוגמה מהמרפאה, צעד אחר צעד
 
 נבקש דף הסבר בן עמוד אחד לטיפול בפצע אחרי ניתוח מוז, כקובץ \`HTML\`, נראה תצוגה מקדימה, ורק אז נאשר.
@@ -66,6 +70,10 @@ const lesson: Lesson = {
 - תצוגה מקדימה מראה את הדף המוגמר \`HTML\` או \`PDF\`, כמו שהמטופל יראה אותו.
 - האחריות שלך פשוטה: לקרוא, ואז לאשר.
 
+:::advanced
+ה-diff החזותי הוא בקרת הבטיחות הקלינית שלך: שום דבר לא נשמר עד שאתה מאשר את ההשוואה בין הלפני לאחרי, כך שאתה מוודא שסיכום או מכתב נכונים לפני שהם נכתבים. פאנל התצוגה המקדימה יודע להציג \`HTML\` ו-\`PDF\` ישירות בתוך האפליקציה.
+:::
+
 ## מה הלאה
 
 בשיעור הבא, [חיבורים (Connectors)](/academy/claude-code/connectors), תלמד לחבר את הכלי Claude ל-Drive ול-Gmail בלחיצה, כך שיוכל לעבוד ישירות על הקבצים שכבר יש לך.`,
@@ -88,6 +96,10 @@ Say you ask for a patient handout after Mohs surgery, or you update an existing 
 When you ask Claude to create or edit a file, it does not change it behind your back. First it shows a **diff** (a before-and-after comparison): removed text is marked in red, added text is marked in green. You read it, then click "approve" or "reject". Only after approval does the file actually change.
 
 It is like a document with "track changes" in a word processor: you see exactly what changed and decide whether to accept it. In addition, files like \`HTML\` or \`PDF\` get a **preview** - a window that shows the finished page the way the patient will see it, not the code behind it.
+
+:::beginner
+A diff is just a view of the difference between the old file and the new one, red for removed and green for added. Do not worry: nothing happens on its own, the change is only waiting for you. All you have to do is read it and then click "approve".
+:::
 
 ## A clinic example, step by step
 
@@ -123,6 +135,10 @@ Ask Claude: "create a short \`HTML\` file with the heading 'Test' and one paragr
 - Claude shows a diff before any change, and nothing is saved until you approve.
 - The preview shows the finished \`HTML\` or \`PDF\` page, the way the patient will see it.
 - Your job is simple: read, then approve.
+
+:::advanced
+The visual diff is your clinical safety control: nothing is saved until you approve the before-and-after comparison, so you confirm a summary or a letter is correct before it is written. The preview pane can render \`HTML\` and \`PDF\` right inside the app.
+:::
 
 ## What is next
 

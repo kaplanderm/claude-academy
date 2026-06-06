@@ -27,6 +27,10 @@ const lesson: Lesson = {
 
 חשוב על התוכניות כמו על מנויים לחדר כושר. במנוי החינמי תוכל להיכנס ולהשתמש במכשירים הבסיסיים, וזה מספיק לשאלה מזדמנת. במנוי בתשלום (Pro ומעלה) נפתחים כל החדרים, כל המכשירים, והמאמן האישי, כלומר אפליקציית Desktop המלאה על שלושת הטאבים שלה, עם Cowork ו-Code שעושים עבורך את העבודה מקצה לקצה.
 
+:::beginner
+"תוכנית" כאן היא פשוט סוג המנוי שלך, בדיוק כמו מסלול בחברת סלולר. החינמית מאפשרת לטעום, והתוכנית בתשלום פותחת את הכלים שעושים עבורך עבודה אמיתית. אם אתה מתלבט, התחל ב-Pro, ותמיד תוכל לשנות אחר כך.
+:::
+
 הדגם החזק ביותר כיום הוא **Opus 4.8** (זה שם של "מנוע" התשובות), והוא זמין בכל תוכנית בתשלום. קיים גם **מצב מהיר** (הפקודה \`/fast\`) שמאיץ את קצב הפלט עד פי 2.5, למקרים שבהם אתה רוצה תשובה במהירות ולא אכפת לך מעט פחות עומק. אין צורך לזכור את הפרטים האלה עכשיו, מספיק לדעת שהדגם החזק והמצב המהיר קיימים, ושניהם כלולים ברגע שיש לך מנוי בתשלום, בלי תוספת מחיר.
 
 ## דוגמה מהמרפאה, צעד אחר צעד
@@ -78,6 +82,10 @@ const lesson: Lesson = {
 - רופא יחיד מתחיל ב-Pro, ומרפאה עם כמה משתמשים שוקלת Team.
 - הדגם החזק הוא Opus 4.8, וקיים מצב מהיר (\`/fast\`) אם תרצה תשובה מהר יותר.
 
+:::advanced
+מעבר למנויים החודשיים אפשר לשלם לפי שימוש דרך ה-API, והדגם מציע רמות מאמץ (ברירת המחדל גבוהה) לצד אפשרות \`/fast\` (מהירה עד פי 2.5) בתמחור פרימיום. לתאימות מחייבת לעבודה עם נתוני מטופלים תזדקק להסכם ארגוני (BAA או DPA), ולא למנוי אישי.
+:::
+
 ## מה הלאה
 
 עכשיו, כשיש לך תוכנית שפותחת את הכלים, הצעד הבא הוא ללמוד לתת ל-Claude לעבוד על תיקייה שלמה לבד: [המסלול הבא: Cowork](/academy/cowork).`,
@@ -96,6 +104,10 @@ The tabs that do the heavy lifting, namely **Cowork** (autonomous work with no c
 ## The explanation, simply
 
 Think of the plans like gym memberships. With the free membership you can come in and use the basic machines, and that is enough for an occasional question. With a paid membership (Pro and up) all the rooms, all the machines, and the personal trainer open up, that is, the full Desktop app with its three tabs, with Cowork and Code doing the work for you end to end.
+
+:::beginner
+A "plan" here is simply the kind of subscription you have, just like a phone carrier tier. The free one lets you taste it, and the paid plan unlocks the tools that do real work for you. If you are unsure, start with Pro, and you can always change later.
+:::
 
 The most capable model today is **Opus 4.8** (the name of the answer "engine"), and it is available on every paid plan. There is also a **fast mode** (the \`/fast\` command) that speeds up the output rate by up to 2.5x, for cases where you want an answer quickly and do not mind slightly less depth. No need to memorize these details now: it is enough to know that the strong model and the fast mode exist, and that both are included the moment you have a paid plan, at no extra cost.
 
@@ -147,6 +159,10 @@ The right approach is to start small: choose Pro, work with it for a week or two
 - A paid plan (Pro and up) is what unlocks the Desktop app with Cowork and Code.
 - A solo physician starts with Pro, and a clinic with several users considers Team.
 - The most capable model is Opus 4.8, and a fast mode (\`/fast\`) exists if you want an answer faster.
+
+:::advanced
+Beyond the monthly plans you can pay per use through the API, and the model offers effort levels (the default is high) alongside a \`/fast\` option (up to 2.5x faster) at premium pricing. For binding compliance when working with patient data you need an enterprise agreement (a BAA or DPA), not a personal plan.
+:::
 
 ## What is next
 

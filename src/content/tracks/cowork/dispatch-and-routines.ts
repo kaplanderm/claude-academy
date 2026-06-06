@@ -72,6 +72,10 @@ Dispatch:
 - שגרה רצה בענן, משימה מתוזמנת מקומית רצה על המחשב שלך - זו ידית הפרטיות שלך.
 - כל הערכת זמן כאן היא להמחשה בלבד; משך אמיתי תלוי בגודל החומר ובעומס.
 
+:::advanced
+שגרה (Routine) רצה לפי לוח זמנים בענן של Anthropic, בעוד משימה מתוזמנת מקומית רצה על המחשב שלך. האפשרות המקומית שומרת את העיבוד על המחשב שלך, אבל ברגע שנשלח פרומפט התוכן עדיין נוסע לענן. בחר לפי מידת הרגישות של הנתונים.
+:::
+
 ## מה הלאה
 
 בשיעור הבא, [תרחישים רפואיים](/academy/cowork/derm-scenarios), תראה ארבעה תרחישי מרפאה מלאים שמחברים את כל מה שלמדת ל-Cowork לכדי עבודה אחת רציפה.`,
@@ -135,6 +139,10 @@ Download two or three open-access papers into a folder, tick **"Work in a Folder
 - Dispatch sends one long task to the background so you keep working; a Routine runs a recurring task on a clock.
 - A Routine runs in the cloud, a local scheduled task runs on your computer, that is your privacy lever.
 - Every time estimate here is illustrative only; real duration depends on the size of the material and the load.
+
+:::advanced
+A Routine runs on a schedule in Anthropic's cloud, while a local scheduled task runs on your own machine. The local option keeps the processing on your computer, but the moment a prompt is sent the content still travels to the cloud. Choose based on how sensitive the data is.
+:::
 
 ## What is next
 

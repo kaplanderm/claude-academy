@@ -73,6 +73,10 @@ const lesson: Lesson = {
 - שלושה משפטי הגנה בכל משימה: בלי מזהים, אל תמחק את המקור, שמור ב-UTF-8.
 - הפלט הוא קובץ אמיתי שנשמר בתיקייה שלך, מוכן לפתיחה ב-Excel.
 
+:::advanced
+ההרשאה שאתה נותן מוגבלת אך ורק לתיקייה האחת שבחרת, ו-Claude עובד כלולאה אוטונומית: הוא מתכנן, מבצע, בודק את התוצאה, ומתקן את עצמו בעת הצורך. כשאתה מבקש "תאר לי את התוכנית לפני שאתה מתחיל", אתה מקבל הזדמנות לאשר את הצעדים עוד לפני שנכתב קובץ כלשהו לדיסק.
+:::
+
 ## מה הלאה
 
 בשיעור הבא, [Dispatch ו-Routines](/academy/cowork/dispatch-and-routines), תלמד לשלוח משימה כזו לרקע ולתזמן אותה שתרוץ לבד.`,
@@ -117,6 +121,10 @@ Save the file in UTF-8 encoding so the Hebrew reads correctly.
 
 What you will see: Claude goes through the files one by one and then creates a single table file named \`pathology-summary.csv\` (a \`csv\` is a simple table format that every spreadsheet program can open) with columns for date, specimen type, diagnosis, margins, and a "review" flag, ready to open in Excel. The numbers are illustrative, but work that takes you about an hour becomes a few minutes.
 
+:::beginner
+If you are not sure what Claude is about to do before you grant permission, just write to it "describe the plan before you start". It will explain the steps in plain language, and only after you approve will it begin working.
+:::
+
 ## Try it yourself
 
 Take one non-sensitive PDF (a paper, a drug leaflet, a protocol), put it in an empty folder, tick **"Work in a Folder"** on it, and ask: "Summarize this file in three points." Under three minutes, and you already know the whole loop.
@@ -133,6 +141,10 @@ Take one non-sensitive PDF (a paper, a drug leaflet, a protocol), put it in an e
 - Instead of uploading files one by one, you point at one folder and Claude works on all of them.
 - Three protective sentences in every task: no identifiers, do not delete the source, save in UTF-8.
 - The output is a real file saved in your folder, ready to open in Excel.
+
+:::advanced
+The permission you grant is scoped to the one folder you pick, and Claude works as an agentic loop: it plans, acts, checks its result, and corrects itself when needed. When you ask it to "describe the plan before you start", you get a chance to approve the steps before any file is written to disk.
+:::
 
 ## What is next
 

@@ -31,6 +31,10 @@ const lesson: Lesson = {
 
 חשוב על זה כמו על הבדל בין שתי בקשות לעוזר. בטאב \`Chat\` אתה שואל שאלה ומקבל תשובה מיד, כמו לשאול עמית בפרוזדור. בטאב \`Cowork\` אתה מוסר משימה לעוזר שעובד עליה ברקע בזמן שאתה ממשיך לקבל מטופלים, ומניח על שולחנך תיקייה גמורה כשהוא מסיים.
 
+:::beginner
+אל תדאג אם המילה "סוכנותית" עדיין מרגישה מופשטת. כל מה שצריך לזכור: בטאב \`Chat\` אתה מקבל תשובה לקרוא, ובטאב \`Cowork\` אתה מקבל קובץ מוכן ביד. זהו ההבדל היחיד שחשוב כרגע.
+:::
+
 ## ההבדל בטבלה
 
 | מאפיין | Chat | Cowork |
@@ -74,6 +78,10 @@ const lesson: Lesson = {
 - עבודה סוכנותית פירושה שהכלי מבצע שורת פעולות ומחזיר תוצר, ולא תשובה בודדת.
 - שאלה קצרה עדיף לשאול בטאב \`Chat\`, ומשימה ארוכה על קבצים שייכת לטאב \`Cowork\`.
 
+:::advanced
+מתחת למכסה המנוע, הטאב \`Cowork\` מריץ את אותו מנוע סוכנותי של הטאב \`Code\`: הוא מתכנן את המשימה, פועל, בודק את התוצאה של עצמו ומתקן, רק בלי שתראה את המסוף. לכן שאלה מעורפלת של שורה אחת עדיף להשאיר לטאב \`Chat\`, שם מחזור התשובה מהיר יותר. ככל שתנסח את המשימה בצעדים ברורים, כך הבדיקה העצמית של הכלי מדויקת יותר.
+:::
+
 ## מה הלאה
 
 בשיעור הבא, ["Work in a Folder"](/academy/cowork/work-in-a-folder), תלמד את הפעולה המדויקת שמצביעה על תיקייה ומחזירה קובץ פלט.`,
@@ -96,6 +104,10 @@ Suppose you have a folder with dozens of pathology reports, or a stack of referr
 The key word here is agentic. In plain language: Claude does not just answer you, it carries out a multi-step task and hands back an output. It reads files, extracts data, organizes it, and saves a file - a series of actions, not a single answer.
 
 Think of it as the difference between two requests to an assistant. In Chat you ask a question and get an answer right away, like asking a colleague in the hallway. In Cowork you hand a task to an assistant who works on it in the background while you keep seeing patients, and places a finished folder on your desk when done.
+
+:::beginner
+Do not worry if the word "agentic" still feels abstract. All you need to remember: in Chat you get an answer to read, and in Cowork you get a finished file in hand. That is the only difference that matters right now.
+:::
 
 ## The Difference in a Table
 
@@ -139,6 +151,10 @@ Take three non-sensitive text files, for example notes on a study topic, point a
 - In Chat you ask and copy, in Cowork you give a task and get a finished file.
 - agentic means Claude carries out a series of actions and returns an output, not a single answer.
 - A short question is better asked in Chat, a long task over files belongs in Cowork.
+
+:::advanced
+Under the hood, Cowork runs the same agentic engine as the Code tab: it plans the task, acts, checks its own result, and corrects, only you do not see the terminal. That is why a vague one-line question is better left to Chat, where the answer cycle is faster. The clearer the steps you give, the more accurate the tool's self-check becomes.
+:::
 
 ## What Is Next
 

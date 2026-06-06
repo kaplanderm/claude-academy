@@ -27,6 +27,10 @@ const lesson: Lesson = {
 
 הכלי Claude זמין בכמה מקומות, וכל מקום מתאים למשהו אחר. יש את האתר בדפדפן (\`claude.ai\`), יש את אפליקציית ה-Desktop שמתקינים על המחשב, ויש את המובייל בטלפון. תחשוב על זה כמו על מרפאה: המובייל הוא הסטטוסקופ בכיס, מהיר וזמין לשאלה קצרה. האתר בדפדפן הוא חדר בדיקה רגיל, מספיק לרוב המקרים. אפליקציית ה-Desktop היא חדר הניתוח המלא, שם נמצאים כל הכלים למשימות הכבדות. כמו שלא תפתח ניתוח בחדר בדיקה, כך לא תפתח עיבוד של תיקייה שלמה מהדפדפן או מהטלפון.
 
+:::beginner
+אל תדאג לזכור הכל מההתחלה. "משטח" פירושו פשוט המקום שבו אתה מריץ את Claude: האתר בדפדפן, האפליקציה על המחשב, או הטלפון. הכלל הפשוט: שאלה קצרה - הטלפון או הצ'אט; עבודה כבדה עם הרבה קבצים - האפליקציה על המחשב.
+:::
+
 באפליקציית ה-Desktop יש שלושה טאבים, ושניים מהם קיימים רק שם. הטאב צ'אט (Chat) הוא לשאלה ותשובה רגילה, כשאתה מעתיק ומדביק את הטקסט בעצמך. הטאב עבודה משותפת (Cowork) הוא לעבודה ארוכה על תיקיות וקבצים בלי לכתוב שורת קוד אחת, והוא מחזיר לך קובץ מוכן בסוף. הטאב קוד (Code) הוא לעבודה מתקדמת עם פרויקטים. שים לב: הטאב עבודה משותפת והטאב קוד אינם קיימים בדפדפן כלל, ולכן מי שעובד רק מהאתר לא יראה אותם בכלל.
 
 | משטח | מתאים בעיקר ל | שלושת הטאבים |
@@ -66,6 +70,10 @@ const lesson: Lesson = {
 - הטאב עבודה משותפת והטאב קוד קיימים רק באפליקציית ה-Desktop, ולא בדפדפן.
 - בחירת המשטח הנכון מראש חוסכת לך התחלה מחדש באמצע משימה ביום עמוס.
 
+:::advanced
+הטאבים עבודה משותפת (Cowork) וקוד (Code) קיימים רק באפליקציית ה-Desktop המותקנת על המחשב, ורק במנוי בתשלום. האתר בדפדפן (\`claude.ai\`) כולל את הצ'אט בלבד, בלי עבודה משותפת ובלי קוד. זו הסיבה שמי שמחפש את הטאבים האלה מתוך הדפדפן פשוט לא מוצא אותם שם.
+:::
+
 ## מה הלאה
 
 בשיעור הבא [התקנת Claude Desktop](/academy/getting-started/install-desktop) תתקין את אפליקציית ה-Desktop ותפתח את הגישה לטאב עבודה משותפת ולטאב קוד.`,
@@ -84,6 +92,10 @@ When a full afternoon of pathology reports lands on you for summary, or a folder
 ## The Explanation, Simply
 
 The tool Claude is available in a few places, and each one fits something different. There is the website in a browser (\`claude.ai\`), there is the Desktop app you install on your computer, and there is mobile on your phone. Think of it like a clinic: mobile is the stethoscope in your pocket, fast and ready for a quick question. The website in a browser is a regular exam room, enough for most cases. The Desktop app is the full operating room, where every tool for the heavy tasks lives. Just as you would not start an operation in an exam room, you would not start processing a whole folder from the browser or the phone.
+
+:::beginner
+Do not worry about memorizing all of this at the start. A "surface" simply means the place where you run Claude: the website in a browser, the app on your computer, or your phone. The simple rule: a short question goes on the phone or in Chat; heavy work with many files goes in the app on your computer.
+:::
 
 The Desktop app has three tabs, and two of them exist only there. The Chat tab is for regular question and answer, where you copy and paste the text yourself. The Cowork tab is for longer work on folders and files without writing a single line of code, and it hands you a finished file at the end. The Code tab is for advanced project work. Note: the Cowork tab and the Code tab do not exist in the browser at all, so anyone working only from the website will never see them.
 
@@ -123,6 +135,10 @@ Take three non-sensitive PDF files from your computer, such as public clinical g
 - The website in a browser and mobile are good for short questions and a quick photo, and the Desktop app is the base for heavy tasks with files and folders.
 - The Cowork tab and the Code tab exist only in the Desktop app, not in the browser.
 - Choosing the right surface in advance saves you from restarting mid-task on a busy day.
+
+:::advanced
+The Cowork and Code tabs exist only in the installed Desktop app and only on a paid plan. The website (\`claude.ai\` in a browser) has Chat but not Cowork or Code. That is why people looking for those tabs from the browser simply cannot find them there.
+:::
 
 ## What Is Next
 

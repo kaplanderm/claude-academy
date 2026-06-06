@@ -70,6 +70,10 @@ claude --version
 - במחשב Windows הפעל את שורת הפקודה כמנהל כדי להימנע משגיאת הרשאות.
 - שורת הפקודה והטאב Code מריצים את אותו מנוע; ההבדל היחיד הוא הממשק.
 
+:::advanced
+ההתקנה דרך \`npm\` היא התקנה גלובלית (\`-g\`), כלומר הכלי זמין מכל תיקייה במחשב, והוא מריץ בדיוק את אותו מנוע שמפעיל את הטאב Code - לכן שורת הפקודה לא פותחת שום יכולת קלינית חדשה, אלא רק ממשק טרמינל. במחשב Windows שגיאת הרשאות בזמן ההתקנה מעידה כמעט תמיד שצריך טרמינל עם הרשאות מנהל (Run as administrator).
+:::
+
 ## מה הלאה
 
 בשיעור הבא, [פקודות ומקשי קיצור](/academy/advanced/terminal-basics), תלמד את הפקודות והקיצורים שמזרזים את העבודה בתוך שורת הפקודה אחרי שהתקנת אותה.`,
@@ -131,6 +135,10 @@ Open the command line and run just the command \`claude --version\`. If a versio
 - The tool installs with one command, \`npm install -g @anthropic-ai/claude-code\`, after a one-time Node.js install.
 - On a Windows computer, run the command line as administrator to avoid a permission error.
 - The command line and the Code tab run the same engine; the only difference is the interface.
+
+:::advanced
+The \`npm\` install is global (\`-g\`), so the tool is available from any folder, and it runs the exact same engine that powers the Code tab - which is why the command line opens no new clinical capability, only a terminal interface. On Windows, a permission error during install almost always means you need an elevated (administrator) terminal.
+:::
 
 ## What is next
 

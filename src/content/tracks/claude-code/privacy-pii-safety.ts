@@ -70,7 +70,7 @@ const lesson: Lesson = {
 - גם עיבוד מקומי שולח את התוכן לענן, אז ניקוי מקדים הוא שכבת ההגנה.
 
 :::advanced
-חוק הגנת הפרטיות בישראל, על תיקון 13, מחייב אותך לעבד מידע בריאות במצב מעומעם ולרשום את פעילות העיבוד במרפאה. לתאימות מלאה עם מידע מזהה דרושים Claude for Enterprise והסכם עיבוד נתונים חתום.
+גם משימה מתוזמנת שרצה במחשב שלך שולחת את תוכן הפרומפט לעיבוד בענן, אז "מקומי" אינו זהה ל"פרטי". מצב גלישה בסתר (Incognito) מונע שמירת שיחה בהיסטוריה שלך, אך אינו פוטר אותך מעמעום. כל עיבוד של מידע בריאות מזהה צריך להירשם בפנקס פעילויות העיבוד של המרפאה.
 :::
 
 > זהירות נוספת: שילוב של שליטה במחשב (Computer-use) עם תוכנת ניהול מטופלים פתוחה על המסך עלול לחשוף רשומות מזוהות. סגור את התוכנה הקלינית לפני הפעלת יכולת כזו.
@@ -137,7 +137,7 @@ Take a paragraph from a professional article or a made-up text not tied to any r
 - Even local processing sends the content to the cloud, so cleaning first is the layer of protection.
 
 :::advanced
-The Privacy Protection Law in Israel, with Amendment 13, requires you to process health information in a de-identified form and to register the processing activity at the clinic. Full compliance with identifying data needs Claude for Enterprise and a signed data processing agreement.
+Even a scheduled task that runs on your own computer still sends the prompt content to the cloud for processing, so "local" is not the same as "private". Incognito mode keeps a chat out of your history, but it does not exempt you from de-identifying first. Any processing of identifying health data should be recorded in the clinic's processing registry.
 :::
 
 > Extra caution: combining computer control (Computer-use) with patient-management software left open on screen can expose identified records. Close the clinical software before turning on such a capability.

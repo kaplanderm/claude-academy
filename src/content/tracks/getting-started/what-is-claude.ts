@@ -63,6 +63,10 @@ const lesson: Lesson = {
 - הוא מתמחה מהיר ולא תחליף לשיקול הדעת שלך, ולכן אתה מאשר כל פלט.
 - אף פעם אל תקליד פרט מזהה של מטופל בחשבון רגיל.
 
+:::advanced
+בקצרה: Claude מגיע בשלושה דגמים. Opus 4.8 הוא החזק ביותר ומתאים לחשיבה מורכבת, Sonnet 4.6 מהיר לעבודה יומיומית, ו-Haiku 4.5 זריז וזול. הכלי גם מחליט בעצמו כמה "לחשוב" על כל שאלה, לפי מידת המורכבות שלה.
+:::
+
 ## מה הלאה
 
 בשיעור הבא, [דרכי השימוש](/academy/getting-started/usage-paths), תלמד איפה בדיוק מריצים את הכלי Claude כדי שיתאים לעבודה שלך.`,
@@ -120,6 +124,10 @@ Pick one non-sensitive lab value, for example a low vitamin D, and ask the tool 
 - The tool Claude is an assistant you talk to in Hebrew, and it is excellent for drafting, summarizing, and explaining.
 - It is a fast resident and not a substitute for your judgment, so you approve every output.
 - Never type a patient identifier into a regular account.
+
+:::advanced
+In brief: Claude comes in three models. Opus 4.8 is the strongest and suits hard reasoning, Sonnet 4.6 is fast for daily work, and Haiku 4.5 is quick and cheap. The tool also decides on its own how much to "think" per question, based on how complex it is.
+:::
 
 ## What is next
 

@@ -2,24 +2,25 @@
 import { useLang } from '@/lib/LangContext';
 import { useLevel } from '@/lib/LevelContext';
 import type { Level } from '@/content/types';
-import { GraduationCap, Activity, Wrench } from 'lucide-react';
+import { GraduationCap, Wrench } from 'lucide-react';
 import Icon from '@/components/ui/Icon';
 
 const OPTIONS: { id: Level; icon: typeof GraduationCap; color: string; label: { he: string; en: string }; desc: { he: string; en: string } }[] = [
   {
     id: 'beginner', icon: GraduationCap, color: '#1E874B',
     label: { he: 'מתחיל', en: 'Beginner' },
-    desc: { he: 'בלי רקע טכני. הסברים מלאים ופשוטים.', en: 'No technical background. Full, simple explanations.' },
-  },
-  {
-    id: 'intermediate', icon: Activity, color: '#B5560E',
-    label: { he: 'בינוני', en: 'Intermediate' },
-    desc: { he: 'כבר מכיר את הבסיס. פחות הסברי יסוד.', en: 'Already know the basics. Fewer foundational notes.' },
+    desc: {
+      he: 'השיעור המלא עם הערות עזר בסיסיות. בלי הערות טכניות מעמיקות.',
+      en: 'The full lesson with basic helper notes. No deep technical notes.',
+    },
   },
   {
     id: 'advanced', icon: Wrench, color: '#7A3C9E',
     label: { he: 'מתקדם', en: 'Advanced' },
-    desc: { he: 'מציג גם הערות טכניות מעמיקות.', en: 'Shows deeper technical notes too.' },
+    desc: {
+      he: 'אותו שיעור, בלי הערות הבסיס, עם הערות טכניות וקליניות מעמיקות.',
+      en: 'The same lesson, without the basics, with deeper technical and clinical notes.',
+    },
   },
 ];
 
@@ -36,11 +37,11 @@ export default function LevelSelector() {
         </h2>
         <p className="text-sm text-text-muted">
           {lang === 'he'
-            ? 'משנה רק את עומק ההסברים, לא את התוכן עצמו. אפשר לשנות בכל רגע.'
-            : 'Changes only how detailed the explanations are, not the content itself. Change it any time.'}
+            ? 'משנה אילו הערות נוספות מוצגות בשיעור, לא את גוף השיעור. אפשר לשנות בכל רגע.'
+            : 'Changes which extra notes appear in a lesson, not the lesson body. Change it any time.'}
         </p>
       </div>
-      <div role="radiogroup" aria-label={lang === 'he' ? 'רמת ההסבר' : 'Explanation depth'} className="grid sm:grid-cols-3 gap-3">
+      <div role="radiogroup" aria-label={lang === 'he' ? 'רמת ההסבר' : 'Explanation depth'} className="grid sm:grid-cols-2 gap-3">
         {OPTIONS.map(opt => {
           const selected = level === opt.id;
           return (

@@ -28,6 +28,10 @@ const lesson: Lesson = {
 
 חשוב לדעת: האפליקציה דורשת מנוי בתשלום (Pro או Max או Team). אם תיכנס בלי מנוי, חלק מהיכולות יופיעו אבל לא ייפתחו. אם עוד אין לך חשבון, אפשר ליצור אחד בחינם תוך דקה ואז לשדרג למנוי, ועל סוגי המנויים נדבר בשיעור נפרד.
 
+:::beginner
+"להתקין" פירושו פשוט להעתיק את התוכנה אל המחשב שלך פעם אחת, בדיוק כמו אפליקציה חדשה בטלפון. אינך צריך להבין שום דבר טכני, רק לעקוב אחרי המסך וללחוץ כשמבקשים. בסוף תהיה לך אפליקציה עם סמל קבוע, ותפתח אותה כמו כל תוכנה אחרת.
+:::
+
 ## דוגמה מהמרפאה, צעד אחר צעד
 
 המשימה: להתקין את האפליקציה ולפתוח אותה, כדי שתוכל מחר לגרור אליה דוח ולבקש סיכום.
@@ -56,6 +60,10 @@ const lesson: Lesson = {
 בשיעור הזה אנחנו עוצרים אחרי שראינו את שלושת הטאבים. בהמשך המסלול ניכנס לכל אחד מהם לעומק.
 
 בחלונות ייתכן שתופיע פעם אחת בקשה להתקין רכיב עזר בשם \`Git for Windows\`, וזו בקשה רגילה וחד-פעמית שאפשר לאשר אותה בשקט. זה רכיב רקע שעוזר לאפליקציה לעבוד; אתה לעולם לא תפתח אותו או תשתמש בו בעצמך, והוא פשוט יושב ברקע. אל תיבהל מהשם הטכני, זה צעד שגרתי שקורה פעם אחת בלבד.
+
+:::advanced
+בחלונות האפליקציה מבקשת את \`Git for Windows\` פעם אחת מפני שהטאב Code נשען עליו מאחורי הקלעים; אתה עצמך לעולם לא מריץ אותו. גם החיבורים (connectors) והגדרות הבחירה של המודל יושבים בהגדרות של האפליקציה עצמה, ולא בקובץ טקסט כלשהו שצריך לערוך ידנית.
+:::
 
 > אם אתה במק או בחלונות, האפליקציה זהה ושלושת הטאבים נראים אותו דבר. במחשבי Linux אין אפליקציה כזו, ושם משתמשים בדרך אחרת שמיועדת למפתחים ולא נדרשת לך.
 
@@ -99,6 +107,10 @@ The Claude desktop app is ordinary software you install once, just like installi
 
 Important to know: the app requires a paid plan (Pro or Max or Team). If you enter without a plan, some capabilities will appear but will not open.
 
+:::beginner
+"Install" simply means copying the software onto your computer once, exactly like a new app on your phone. You do not need to understand anything technical, just follow the screen and click when asked. At the end you will have an app with a permanent icon, and you open it like any other program.
+:::
+
 ## A clinic example, step by step
 
 The task: install the app and open it, so that tomorrow you can drag a report into it and ask for a summary.
@@ -127,6 +139,10 @@ Here is a short reminder of what each tab is for, just so you recognize them at 
 In this lesson we stop once we have seen the three tabs. Later in the track we go into each of them in depth.
 
 On Windows a one-time prompt may appear asking to install a helper component named Git for Windows. This is a normal, one-time prompt and you can safely approve it. It is a background component that helps the app work; you will never open it or use it yourself, and it simply sits in the background. Do not be alarmed by the technical name, this is a routine step that happens only once.
+
+:::advanced
+On Windows the app asks for Git for Windows once because the Code tab relies on it behind the scenes; you yourself never run it. The connectors and the model selection settings also live inside the app's own Settings, not in any text file you have to edit by hand.
+:::
 
 > Whether you are on Mac or Windows, the app is identical and the three tabs look the same. On Linux computers there is no such app, and there a different path meant for developers is used, which you do not need.
 

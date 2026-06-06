@@ -67,6 +67,10 @@ const lesson: Lesson = {
 - מצב ההרשאות הוא הבורר בין אוטונומיה למשנה זהירות, והברירה הבטוחה בחומר רפואי היא הזהירה.
 - הפקודה \`/fast\` מאיצה את קצב הפלט עד פי 2.5 בלי לשנות את התוכן.
 
+:::advanced
+מצב ההרשאות הוא הבורר החשוב ביותר: הוא קובע כמה הכלי רשאי לעשות לפני שהוא שואל אותך, מאישור כל צעד ועד עבודה אוטונומית יותר. הפקודה \`/fast\` מאיצה את קצב הפלט עד פי 2.5, והפקודה \`/init\` כותבת קובץ \`CLAUDE.md\` שמלמד את הכלי את כללי העבודה שלך בתיקייה.
+:::
+
 ## מה הלאה
 
 בשיעור הבא, [כלי עוצמה](/academy/advanced/power-tools), תלמד להרחיב את הכלי עם שרתי MCP ו-hooks כדי לחבר אותו למערכות שלך.`,
@@ -125,6 +129,10 @@ Open a completely empty folder, start the tool, and type \`/review\` on a small 
 - A quick command like \`/init\` or \`/review\` saves typing a long instruction.
 - The permission mode is the switch between autonomy and extra caution, and the safe choice on medical material is the careful one.
 - The \`/fast\` command speeds the output rate up to 2.5x without changing the content.
+
+:::advanced
+The permission mode is the most important control: it sets how much the tool may do before asking you, from confirming every step to working more autonomously. The \`/fast\` command speeds the output rate up to 2.5x, and \`/init\` writes a \`CLAUDE.md\` file that teaches the tool your project conventions.
+:::
 
 ## What is next
 

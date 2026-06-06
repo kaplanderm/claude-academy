@@ -66,6 +66,10 @@ const lesson: Lesson = {
 - הרשימה שבצד (sidebar) מרכזת את כל השיחות, ואפשר להריץ כמה במקביל בלי שיתערבבו.
 - הטרמינל בטאב Code הוא אופציונלי, ומתחיל יכול להתעלם ממנו לגמרי ולעבוד רק בעברית.
 
+:::advanced
+כל שיחה מבודדת לחלוטין, עם תיקייה והיסטוריה נפרדות משלה, כך שאפשר להריץ כמה שיחות במקביל בלי שיתערבבו זו בזו. מצבי התצוגה (Verbose, Normal, Summary) קובעים כמה מהפעילות צעד-אחר-צעד תראה על המסך. בנוסף, שיחת צד מאפשרת לך לשאול שאלה קצרה בלי להפריע למשימה המרכזית שרצה.
+:::
+
 ## מה הלאה
 
 בשיעור הבא, [עבודה עם קבצים](/academy/claude-code/working-with-files), תלמד לראות בדיוק מה Claude עומד לשנות לפני שזה נשמר, ולאשר או לדחות כל שינוי.`,
@@ -123,6 +127,10 @@ After a few seconds you will see an organized list of the files inside the conve
 - A conversation (session) is one workspace with one folder and its own history, and it is saved so you can return to it.
 - The list on the side (sidebar) holds all your conversations, and you can run several in parallel without mixing them.
 - The terminal in the Code tab is optional, and a beginner can ignore it entirely and work only in plain language.
+
+:::advanced
+Each conversation is fully isolated, with its own folder and history, so you can run several in parallel without them mixing into one another. The view modes (Verbose, Normal, Summary) control how much of the step-by-step activity you see on screen. A side chat also lets you ask a quick question without disturbing the main task that is running.
+:::
 
 ## What is next
 

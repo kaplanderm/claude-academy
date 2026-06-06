@@ -28,6 +28,10 @@ const lesson: Lesson = {
 
 ב-Chat אתה מנהל שיחה: שואל, מקבל תשובה, ומעתיק את מה שצריך. במצב הזה Claude לא נוגע בקבצים שלך - הוא רק מדבר. בטאב Code, לעומת זאת, אתה נותן ל-Claude תיקייה, והוא קורא ועורך בה קבצים בעצמו, בכמה צעדים, ומציג לך כל שינוי לאישור.
 
+:::beginner
+במילים הכי פשוטות: Chat הוא כמו שיחה - אתה שואל ומעתיק לבד את התשובה. Code הוא כמו לתת לעוזר מפתח לתיקייה, כדי שיעבוד על הקבצים בעצמו. אין מה לחשוש, כלום לא נשמר עד שתאשר.
+:::
+
 הדבר שהטאב Code מוסיף מעבר לטאב Cowork (הטאב שבו Claude עושה עבודה ארוכה על קבצים בלי קוד) הוא השליטה החזותית: אתה **רואה** כל שינוי כ-diff ומאשר אותו, ויכולה להיות לך תצוגה מקדימה (preview) של התוצאה. תחשוב על זה כמו על מסמך עם מעקב אחר שינויים: העוזר מסמן בצהוב מה הוא רוצה לשנות, ואתה מאשר או דוחה כל סימון לפני שהוא נכנס לקובץ.
 
 ## דוגמה מהמרפאה, צעד אחר צעד
@@ -67,6 +71,10 @@ const lesson: Lesson = {
 - בטאב Code אתה רואה כל שינוי כ-diff ומאשר אותו לפני שהוא נשמר.
 - אין כאן תכנות ואין צורך בטרמינל - רק לחיצות ואישורים.
 
+:::advanced
+שיחת Code שומרת את ההקשר של הפרויקט לאורך כל ההודעות, כך שתוכל לחדד תוצאה על פני כמה הודעות בלי להדביק שוב את החומר בכל פעם. כל שינוי בקובץ מוצג כ-diff שאתה מאשר, וזה בלם הבטיחות שהופך את הטאב למתאים למסמכי מרפאה.
+:::
+
 ## מה הלאה
 
 בשיעור הבא, [הטאב Code](/academy/claude-code/the-code-tab), תכיר את הממשק עצמו ותלמד לפתוח שיחה, לבחור תיקייה, ולעבוד בכמה שיחות במקביל.`,
@@ -89,6 +97,10 @@ The rule of thumb is easy to remember: as long as you only ask and copy answers 
 ## The idea in plain language
 
 In Chat you hold a conversation: you ask, you get an answer, and you copy what you need. In that mode Claude does not touch your files - it only talks. In the Code tab, by contrast, you hand Claude a folder, and it reads and edits files in it on its own, across several steps, showing you every change for approval.
+
+:::beginner
+In the simplest terms: Chat is like a conversation - you ask and copy the answer yourself. Code is like handing an assistant a key to a folder so it works on the files for you. There is nothing to worry about, since nothing is saved until you approve it.
+:::
 
 The thing the Code tab adds beyond the Cowork tab (the tab where Claude does longer work on files with no code) is visual control: you **see** every change as a diff and approve it, and you can have a preview of the result. Think of it like a document with track changes: the assistant highlights in yellow what it wants to change, and you accept or reject each mark before it enters the file.
 
@@ -128,6 +140,10 @@ What you will see: Claude works through the files in steps, shows you a diff vie
 - In Chat you copy answers yourself, and in the Code tab you let Claude read and edit files in a folder.
 - In the Code tab you see every change as a diff and approve it before it is saved.
 - There is no programming here and no terminal needed - only clicks and approvals.
+
+:::advanced
+A Code session keeps the project context across all your messages, so you can refine a result over several messages without pasting the material again each time. Every file change is shown as a diff that you approve, and that approval is the safety control that makes the tab suitable for clinic documents.
+:::
 
 ## What is next
 

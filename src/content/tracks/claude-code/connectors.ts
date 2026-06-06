@@ -69,6 +69,10 @@ const lesson: Lesson = {
 - הצעד החשוב ביותר הוא להגביל את ההרשאה לתיקייה אחת, לא לכל החשבון.
 - חבר רק חומר מעומעם או כללי, אף פעם לא קבצים שמזהים מטופל.
 
+:::advanced
+מתחת לפני השטח, חיבור (connector) הוא חיבור MCP מוכן מראש - דרך תקנית לקשר את Claude לשירותים חיצוניים. תמיד הגבל אותו לתיקייה האחת או לתיבת הדואר האחת שאתה באמת צריך, אף פעם לא לכל ה-Drive או לכל תיבת הדואר.
+:::
+
 ## מה הלאה
 
 בשיעור הבא, [תרחישים רפואיים מלאים](/academy/claude-code/derm-scenarios), תלמד להריץ משימה מרפאתית שלמה מתחילתה ועד הפלט הסופי.`,
@@ -131,6 +135,10 @@ Connecting a connector is just three steps: click, sign in to the account, appro
 - A connector gives Claude access to an external service in one click, with no technical setup.
 - The single most important step is to limit the permission to one folder, not the whole account.
 - Connect only de-identified or general material, never files that identify a patient.
+
+:::advanced
+Under the hood, a connector is a ready-made MCP connection - a standard way to link Claude to outside services. Always scope it to the single folder or mailbox you actually need, never your whole Drive or your entire inbox.
+:::
 
 ## What is next
 

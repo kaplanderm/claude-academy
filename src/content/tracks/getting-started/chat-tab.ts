@@ -26,6 +26,10 @@ const lesson: Lesson = {
 
 חשוב על זה כמו על תדרוך למתמחה. אם תיתן לו דף ותגיד "תקרא ותחזיר לי שלוש נקודות עיקריות", תקבל בדיוק את זה. אם תגיד רק "מה דעתך?", תקבל תשובה כללית. אותו היגיון בדיוק עובד כאן: ההבדל בין תשובה שמשרתת אותך לתשובה כללית הוא כמעט תמיד בניסוח הבקשה, לא ביכולת של הכלי.
 
+:::beginner
+אם זה נשמע מסובך, אל תדאג. שיחה כאן היא בדיוק כמו לכתוב הודעה: אתה כותב מה שאתה רוצה, ובמידת הצורך מצרף קובץ או תמונה. אין מה לזכור פקודות מיוחדות, מספיק לבקש בעברית פשוטה את מה שאתה צריך.
+:::
+
 ## דוגמה מהמרפאה, צעד אחר צעד
 
 המשימה: לקבל סיכום של שלוש נקודות מדוח פתולוגיה מנוקה מזיהוי (בלי שם, בלי תעודת זהות, בלי תאריך לידה).
@@ -77,14 +81,8 @@ const lesson: Lesson = {
 - בקשה ספציפית עם פורמט, אורך ושפה עדיפה תמיד על בקשה כללית.
 - ה-Artifact הוא חלון צד שבו המסמך פתוח לעריכה והורדה.
 
-:::beginner
-ה-Project הוא תיקיית שיחות עם הנחיות קבועות וקצת חומר רקע, כך שלא תצטרך לחזור על ההקשר בכל פעם. הנה גוש הנחיות שתוכל להדביק פעם אחת בהגדרות ה-Project, ואז כל שיחה חדשה כבר תפעל לפיו:
-
-\`\`\`
-אני רופא עור בישראל. ענה תמיד בעברית, בטון מקצועי אך נגיש.
-כשאני מצרף דוח, סכם בשלוש נקודות לפני כל הרחבה.
-אל תשמור או תצטט פרטים מזהים של מטופלים.
-\`\`\`
+:::advanced
+ה-Project מאפשר לך להגדיר פעם אחת הנחיות קבועות ולצרף מאגר ידע קטן, כך שכל שיחה חדשה באותו Project כבר מכירה את הסגנון וההקשר שלך. ההקשר (context window) הוא כמות הטקסט ש-Claude יכול להחזיק בבת אחת, עד מיליון טוקנים בתוכניות הגבוהות. כך הנחיות קבועות וחומר הרקע נטענים אוטומטית בכל שיחה בלי שתצטרך לחזור עליהם.
 :::
 
 ## מה הלאה
@@ -107,6 +105,10 @@ A pathology report or a lab result lands on your desk, several pages long, and y
 The Chat tab is an ordinary conversation: you type, Claude answers, and you can attach a file or an image to the conversation. The key word here is context (הקשר), everything Claude "sees" in that conversation: what you wrote, what you uploaded, and everything said earlier in this conversation. The clearer and more focused the context, the more accurate the answer. Opening a new conversation starts from an empty context, which is an advantage when you want a clean topic with no carryover from an earlier discussion.
 
 Think of it like a briefing for a resident. Hand over a page and say "read it and give me three main points," and you get exactly that. Say only "what do you think?" and you get a generic answer. The same logic works here: the difference between an answer that serves you and a generic one is almost always in how you phrase the request, not in the tool's ability.
+
+:::beginner
+If this sounds complicated, do not worry. A conversation here is just like writing a message: you type what you want, and attach a file or an image if you need to. There are no special commands to memorize; it is enough to ask in plain words for what you need.
+:::
 
 ## A Clinic Example, Step By Step
 
@@ -159,14 +161,8 @@ What you will see: the explanation appears in the side panel rather than in the 
 - A specific request with format, length, and language always beats a general one.
 - An Artifact is a side panel where the document opens for editing and download.
 
-:::beginner
-A Project is a folder of conversations with standing instructions and a small knowledge base, so you do not repeat the context every time. Here is an instruction block you can paste once into the Project settings, and then every new conversation already follows it:
-
-\`\`\`
-אני רופא עור בישראל. ענה תמיד בעברית, בטון מקצועי אך נגיש.
-כשאני מצרף דוח, סכם בשלוש נקודות לפני כל הרחבה.
-אל תשמור או תצטט פרטים מזהים של מטופלים.
-\`\`\`
+:::advanced
+A Project lets you set reusable instructions once and attach a small knowledge base, so every new conversation in that Project already knows your style and context. The context window is how much text Claude can hold at once, up to one million tokens on the higher plans. That way your standing instructions and background material load automatically in every conversation, with no need to repeat them.
 :::
 
 ## What Is Next

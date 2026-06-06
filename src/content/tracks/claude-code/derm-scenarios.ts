@@ -26,6 +26,10 @@ const lesson: Lesson = {
 
 תחשוב על זה כמו עוזר מחקר שמניח על השולחן את הטיוטה עם הסימונים בעיפרון, ואתה מסמן מה לאשר לפני שזה נכנס לתיק. שום מסמך לא יוצא בלי החתימה שלך.
 
+:::beginner
+diff זה פשוט תצוגה של "מה היה" מול "מה יהיה", ירוק לשורה שנוספה ואדום לשורה שהוסרה. אל תדאג: כלום לא נשמר עד שתלחץ אישור, ואם משהו לא נראה לך פשוט תדחה והכל נשאר כמו שהיה. זו רק הצעה שמחכה לך על השולחן.
+:::
+
 ## דוגמה מהמרפאה, צעד אחר צעד
 
 נתחיל במשימה המלאה הראשונה: שלושה דוחות פתולוגיה מעומעמים שהופכים לטבלת Excel.
@@ -84,6 +88,10 @@ const lesson: Lesson = {
 - תצוגה מקדימה ל-HTML נותנת לך לראות את דף ההסבר כפי שהמטופל יראה אותו, לפני ההורדה.
 - עבוד תמיד על נתונים מעומעמים בלבד, כבר משלב יצירת הקובץ.
 
+:::advanced
+למשימות ענק אפשר להריץ את המודל ברמת מאמץ גבוהה או במצב /fast (מהיר עד פי 2.5 בפלט), ו-Dynamic Workflows יכולים לפצל משימה עצומה בין מספר עוזרים שעובדים במקביל. זה שימושי בהיקפים גדולים, אבל כמעט אף פעם לא נדרש למשימה בודדת של המרפאה. בכל מצב, ה-diff והתצוגה המקדימה נשארים נקודת הבדיקה שלך לפני אישור.
+:::
+
 ## מה הלאה
 
 השיעור הבא, [פרטיות והגנה על נתוני מטופלים](/academy/claude-code/privacy-pii-safety), ייתן לך את הכללים המדויקים לעמעום נכון לפני כל משימה כזו.`,
@@ -104,6 +112,10 @@ Every week pathology reports pile up, requests for a post-Mohs handout come in, 
 In the Code tab each session is open on a project folder, and every file change is shown as a diff (a "before and after" view, green for added, red for removed) that you approve or reject before it is saved.
 
 Think of it like a research assistant who lays the marked-up draft on your desk in pencil, and you mark what to approve before it goes into the file. No document leaves without your sign-off.
+
+:::beginner
+A diff is simply a view of "what was there" next to "what would change", green for an added line and red for a removed line. Do not worry: nothing is saved until you click approve, and if something looks off you just reject and everything stays as it was. It is only a suggestion waiting for you on the desk.
+:::
 
 ## A clinic example, step by step
 
@@ -162,6 +174,10 @@ Create an empty folder, put in it a short text file with three made-up lines (si
 - In the Code tab no file is saved before you approve the diff yourself.
 - A preview for HTML lets you see the handout as the patient will see it, before downloading.
 - Always work on de-identified data only, from the moment the file is created.
+
+:::advanced
+For very large jobs you can run the model at high effort or in /fast mode (output up to 2.5x faster), and Dynamic Workflows can split a huge task across several helpers working in parallel. This is useful at scale, but it is rarely needed for a single clinic task. Either way, the diff and the preview stay your review checkpoint before you approve.
+:::
 
 ## What is next
 

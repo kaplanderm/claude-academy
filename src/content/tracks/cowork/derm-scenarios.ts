@@ -29,6 +29,10 @@ const lesson: Lesson = {
 
 ברגע שהתבנית הזו ברורה לך, כל תרחיש חדש הוא רק וריאציה עליה: אותם שלושה צעדים, רק בקשה אחרת. אתה לא לומד ארבע משימות שונות, אלא משימה אחת עם ארבעה ניסוחים. זו בדיוק הסיבה שאפשר להתחיל כבר היום בלי שום רקע טכני.
 
+:::beginner
+אל תדאג אם המילה "סוכנותי" נשמעת מורכבת. כל מה שאתה עושה זה להצביע על תיקייה ולכתוב במילים רגילות מה אתה רוצה בסוף. אתה לא צריך לדעת שום דבר טכני, ואי אפשר לשבור כלום כשמבקשים לשמור את הקבצים המקוריים.
+:::
+
 ## דוגמה מהמרפאה, צעד אחר צעד
 
 נניח שבתיקייה אחת יש 30 דוחות פתולוגיה כקובצי PDF מעומעמים (בלי שם וללא תעודת זהות, רק קוד מטופל ותאריך). המטרה: טבלת סיכום אחת.
@@ -88,6 +92,10 @@ const lesson: Lesson = {
 - כל תרחיש חדש הוא וריאציה על אותה תבנית, רק עם בקשה אחרת.
 - שמור על המקור ועל העמעום בכל בקשה, בלי יוצא מן הכלל.
 
+:::advanced
+מאותה שיחת \`Cowork\` אתה יכול להריץ כמה משימות (Dispatches) במקביל, כל אחת על תיקייה אחרת. ככל שהבקשה שלך מסודרת וברורה יותר - אילו שדות להוציא, באיזה פורמט פלט, ומה אסור לגעת בו - כך התוצאה אמינה יותר לאורך עשרות קבצים. ניסוח מובנה הוא מה שמבדיל בין סיכום שדורש בדיקה ידנית לבין סיכום שאפשר לסמוך עליו.
+:::
+
 ## מה הלאה
 
 עכשיו שאתה שולט בתבנית בלי קוד, הצעד הבא נותן לך לראות ולאשר כל שינוי לפני שהוא קורה: [המסלול הבא: Claude Code](/academy/claude-code).`,
@@ -108,6 +116,10 @@ By the end of a week you have dozens of pathology reports as PDF files, folders 
 The process is the same every time: point at a folder, describe the task in plain words, get a file. It is like handing an assistant in the clinic a binder full of paperwork and saying "summarize this into a table" - you do not explain how to read each page, only what you want at the end. The Cowork tab (an agentic workspace, meaning Claude performs a long task on its own and hands back finished files) works the same way.
 
 Once that pattern is clear to you, every new scenario is just a variation on it: the same three steps, only a different request. You are not learning four different tasks, but one task with four phrasings. That is exactly why you can start today with no technical background.
+
+:::beginner
+Do not worry if the word "agentic" sounds complicated. All you do is point at a folder and write, in plain words, what you want at the end. You need no technical knowledge, and nothing can break as long as you ask to keep the original files.
+:::
 
 ## A clinic example, step by step
 
@@ -167,6 +179,10 @@ Save as a formatted Word file.
 - The process is the same every time: point at a folder, describe the task, get a file.
 - Every new scenario is a variation on the same pattern, just with a different request.
 - Protect the originals and keep the de-identification in every request, with no exception.
+
+:::advanced
+From one \`Cowork\` conversation you can run several tasks (Dispatches) in parallel, each on a different folder. The clearer and more structured your request - which fields to extract, what output format, and what not to touch - the more reliable the result across dozens of files. Structured phrasing is what separates a summary you have to check by hand from one you can trust.
+:::
 
 ## What is next
 

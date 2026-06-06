@@ -74,6 +74,10 @@ const lesson: Lesson = {
 - מפתח \`API\` הוא סוד אישי - אף פעם לא משתפים אותו ולא מעלים אותו לגיט.
 - לרופא, הציר המומלץ נשאר הטאב \`Code\` באפליקציית Claude Desktop למחשב.
 
+:::advanced
+שרתי \`MCP\` מרחיבים את Claude בכלים מותאמים אישית, \`hooks\` מריצים סקריפטים בתגובה לאירועים, וה-\`API\` וה-\`SDK\` מאפשרים לבנות אינטגרציות משלך - כולם עוצמתיים, וכולם מיותרים לעבודה הקלינית השוטפת. הכלל אחד שחשוב כאן מכל השאר: לעולם אל תשתף מפתח \`API\` ואל תעלה אותו לגיט.
+:::
+
 ## מה הלאה
 
 סיימת את המסלול המתקדם; [חזרה לאקדמיה](/academy) תחזיר אותך למסלול המומלץ, שבמרכזו הטאב \`Code\` לעבודה היומית.`,
@@ -139,6 +143,10 @@ Open a regular conversation in the Chat tab and paste: "Explain to me in two lin
 - MCP connects Claude to external tools, a hook runs an action automatically, and the API is for building your own integration.
 - An API key is a personal secret - you never share it and never upload it to git.
 - For a physician, the recommended axis stays the Code tab in the Claude Desktop app.
+
+:::advanced
+\`MCP\` servers extend Claude with custom tools, \`hooks\` fire scripts in response to events, and the \`API\` and \`SDK\` let you build your own integrations - all powerful, all unnecessary for routine clinical use. The one rule that matters most here: never share an \`API\` token or commit it to git.
+:::
 
 ## What is next
 
