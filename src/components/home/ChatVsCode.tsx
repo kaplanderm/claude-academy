@@ -12,7 +12,7 @@ export default function ChatVsCode() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
-            {he ? 'Chat מול Code - מה ההבדל?' : 'Chat vs Code - what is the difference?'}
+            {he ? 'ההבדל בין Chat ל-Code' : 'The difference between Chat and Code'}
           </h2>
           <p className="text-text-secondary text-lg max-w-2xl mx-auto">
             {he

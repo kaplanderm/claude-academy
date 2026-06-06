@@ -5,90 +5,128 @@ const lesson: Lesson = {
   track: 'claude-code',
   title: { he: 'הטאב Code - sessions, תיקיית פרויקט וה-sidebar', en: 'The Code Tab - Sessions, Project Folder, and the Sidebar' },
   description: {
-    he: 'סיור בממשק הגרפי של Claude Code: איך פותחים session, בוחרים תיקייה, ועובדים בכמה שיחות במקביל.',
-    en: 'A tour of the Claude Code GUI: how to open a session, pick a folder, and work in several conversations in parallel.',
+    he: 'סיור בממשק הגרפי: לפתוח session, לבחור תיקייה, ולעבוד במקביל.',
+    en: 'A tour of the GUI: open a session, pick a folder, and work in parallel.',
   },
   duration: 9,
-  updated: '2026-06-05',
+  updated: '2026-06-06',
   content: {
-    he: `# הטאב Code
+    he: `אחרי השיעור הזה תדע לפתוח שיחת עבודה חדשה בטאב Code, להצמיד לה תיקייה, ולמצוא אותה ברשימה שבצד.
 
-הטאב השלישי באפליקציה. כאן Claude Code חי בממשק גרפי מלא - בלי שתצטרך טרמינל.
+## מה תלמד כאן
 
-## המושג המרכזי: session
+- תוכל לפתוח שיחת עבודה (session) חדשה ולחבר אותה לתיקייה אחת במחשב.
+- תוכל למצוא את כל השיחות הפתוחות שלך ברשימה שבצד (sidebar) ולעבור ביניהן.
+- תוכל להריץ כמה שיחות במקביל, כל אחת על תיקייה משלה.
 
-כל שיחה בטאב Code היא **session** עם:
-- **תיקיית פרויקט משלה** - התיקייה ש-Claude עובד עליה.
-- **היסטוריית שיחה משלה** - נפרדת מ-sessions אחרים.
-- **שינויים משלה** - מה ש-Claude ערך בתוך הפרויקט הזה.
+## למה זה חשוב לך במרפאה
 
-ב-**sidebar** (סרגל הצד) רואים את כל ה-sessions ואפשר להריץ כמה במקביל. למשל: session אחד לסקירת דוחות, אחר לכתיבת חומרי הסבר - בלי שיתערבבו.
+נניח שאתה רוצה לארגן את דוחות הפתולוגיה של החודש בתיקייה אחת, ובמקביל לנסח מכתב הפניה בתיקייה אחרת. בלי שיחות נפרדות הכול מתערבב, וקשה לזכור איפה עצרת. בטאב Code כל משימה יושבת בשיחה משלה, עם התיקייה שלה וההיסטוריה שלה, כך שתוכל לחזור אליה מחר בדיוק במקום שעזבת. כך אפשר להחזיק במקביל שיחה אחת לסיכום היומי של המרפאה, שיחה נוספת לסידור תמונות דרמוסקופיה, ושיחה שלישית לטיוטת מכתב למטופל, בלי שאחת תדרוס את השנייה.
 
-## איך מתחילים session
+## ההסבר בפשטות
 
-1. בטאב Code, לחץ "session חדש".
-2. בחר את **תיקיית הפרויקט** (התיקייה שתרצה ש-Claude יעבוד בה).
-3. כתוב את הבקשה בעברית. זהו.
+שיחת עבודה (session) היא פשוט סביבת עבודה אחת: תיקייה אחת במחשב, ושיחה אחת מתמשכת מול הכלי \`Claude\` שזוכרת מה כבר נעשה בה. כל שיחה עומדת בפני עצמה ולא רואה את התיקיות של השיחות האחרות, כך שמה שעשית בשיחה אחת לא דולף לאחרת. בכל פעם שאתה פותח שיחה חדשה אתה בעצם פותח שולחן עבודה נקי, מצמיד אליו תיקייה אחת, ומתחיל לעבוד.
 
-:::beginner
-"פרויקט" נשמע טכני, אבל זו פשוט תיקייה במחשב שלך: תיקיית הדוחות, תיקיית המאמרים, תיקיית התמונות. אתה בוחר אותה, ו-Claude עובד רק בתוכה.
-:::
-
-## מה יש במסך
-
-- **sidebar** - רשימת ה-sessions, מקובצים לפי פרויקט. אפשר לסנן לפי סטטוס.
-- **אזור השיחה** - שם אתה כותב ו-Claude עונה ופועל.
-- **פאנלים** - עורך קבצים, diff, ותצוגה מקדימה (בשיעור הבא).
-- **side chat** (קיצור Cmd+;) - לשאלה צדדית בלי להעמיס הקשר על השיחה הראשית.
-
-## מצבי תצוגה
-
-אפשר לבחור כמה מהפעילות של Claude לראות: Verbose (הכול), Normal, או Summary (רק עיקרי). מתחילים? Normal או Summary נוחים יותר.
-
-:::advanced
-sessions במקביל מבודדים זה מזה (כל אחד עם תיקייה והקשר משלו), כך שאפשר להריץ כמה משימות כבדות בלי בלבול. ב-Opus 4.8 sessions ארוכים נשארים על המסלול עם פחות "כיווצי הקשר". בטאב Code יש גם terminal מובנה ו-PR monitoring - אבל אלה למתקדמים ואופציונליים לחלוטין.
-:::
-
-בשיעור הבא: **עבודה עם קבצים** - עורך, diff חזותי ותצוגה מקדימה.`,
-    en: `# The Code Tab
-
-The third tab in the app. Here Claude Code lives in a full graphical interface - with no terminal required.
-
-## The key concept: a session
-
-Every conversation in the Code tab is a **session** with:
-- **Its own project folder** - the folder Claude works on.
-- **Its own chat history** - separate from other sessions.
-- **Its own changes** - what Claude edited inside this project.
-
-In the **sidebar** you see all your sessions and can run several in parallel. For example: one session for reviewing reports, another for writing handouts - without them mixing.
-
-## How to start a session
-
-1. In the Code tab, click "new session".
-2. Pick the **project folder** (the folder you want Claude to work in).
-3. Write the request in plain language. That is it.
+תחשוב על זה כמו על שולחנות עבודה בחדר הרופאים. על כל שולחן יושב תיק מטופל אחד עם כל הניירת שלו. אתה יכול לעבור משולחן לשולחן, אבל הניירת לא מתערבבת, וכל שולחן זוכר היכן עצרת בו. הרשימה שבצד (sidebar) היא בעצם מפת השולחנות - היא מראה לך אילו שיחות פתוחות, מה שם התיקייה של כל אחת, ובלחיצה אחת אתה קופץ לכל אחת מהן. מכיוון שכל שיחה שמורה, אתה לא חייב לסיים משימה בישיבה אחת: אפשר לעזוב באמצע, לטפל במטופל, ולחזור.
 
 :::beginner
-"Project" sounds technical, but it is simply a folder on your computer: the reports folder, the papers folder, the images folder. You pick it, and Claude works only inside it.
+בתוך הטאב Code יש גם חלון טרמינל (חלון פקודות טקסט). הוא אופציונלי לחלוטין. מתחיל יכול להתעלם ממנו ולעבוד שעות בלי לפתוח אותו - הכול נעשה בעברית בתיבת השיחה.
 :::
 
-## What is on the screen
+## דוגמה מהמרפאה, צעד אחר צעד
 
-- **sidebar** - the list of sessions, grouped by project. You can filter by status.
-- **conversation area** - where you write and Claude answers and acts.
-- **panels** - file editor, diff, and preview (next lesson).
-- **side chat** (shortcut Cmd+;) - for a side question without loading context onto the main conversation.
+המשימה: לפתוח שיחה חדשה על תיקייה לא רגישה ולקבל רשימה של מה שיש בה.
 
-## View modes
+1. פתח את אפליקציית \`Claude\` ולחץ על הטאב **Code** למעלה.
+2. לחץ על כפתור **New session** (שיחה חדשה) בראש הרשימה שבצד.
+3. לחץ על **Choose folder** (בחר תיקייה) ובחר תיקייה לא רגישה, למשל תיקיית הדגמה ריקה שיצרת לעצמך.
+4. בתיבת השיחה למטה הקלד את הבקשה והקש על מקש \`Enter\`.
 
-You can choose how much of Claude's activity to see: Verbose (everything), Normal, or Summary (just the essentials). Just starting? Normal or Summary are more comfortable.
+\`\`\`
+תעבור על התיקייה הזאת ותראה לי רשימה של כל הקבצים שיש בה, מסודרים לפי סוג.
+\`\`\`
 
-:::advanced
-Parallel sessions are isolated from each other (each with its own folder and context), so you can run several heavy tasks without confusion. On Opus 4.8 long sessions stay on track with fewer "compactions". The Code tab also has a built-in terminal and PR monitoring - but those are advanced and entirely optional.
+לאחר כמה שניות תראה בתוך השיחה רשימה מסודרת של הקבצים, והשיחה תופיע ברשימה שבצד עם שם התיקייה. מעכשיו כל בקשה שתכתוב בשיחה הזאת תעבוד על אותה תיקייה, בלי שתצטרך לבחור אותה שוב.
+
+> טיפ: כדי לפתוח שיחה חדשה במקלדת, השתמש בצירוף \`Ctrl+N\` ב-Windows או בצירוף \`Cmd+N\` במחשב מסוג Mac. רוצה לפתוח שיחה שנייה במקביל בלי לסגור את הראשונה? פשוט פתח עוד שיחה חדשה והצמד לה תיקייה אחרת.
+
+## נסה בעצמך
+
+- [ ] פתח שיחה חדשה על תיקיית ההורדות שלך או על תיקיית הדגמה ריקה, ובקש: "תראה לי כמה קבצים יש כאן ומאיזה סוג." זה לוקח פחות משלוש דקות ואינו נוגע בנתוני מטופלים. אחרי שתקבל את הרשימה, הסתכל ברשימה שבצד וודא שהשיחה החדשה מופיעה שם עם שם התיקייה שבחרת.
+
+## טעויות נפוצות
+
+- **פתיחת שיחה על תיקייה רגישה.** אל תצביע על תיקייה עם מסמכי מטופלים אמיתיים. הפתרון: צור תיקייה נפרדת להתנסות, או הצבע על תיקייה ללא נתונים מזהים.
+- **לחשוב שחובה להשתמש בטרמינל.** חלון הפקודות אופציונלי. הפתרון: התעלם ממנו ופשוט כתוב את הבקשה בעברית בתיבת השיחה.
+- **לבלבל בין שיחות.** אם פתחת כמה שיחות, קל לכתוב בקשה בשיחה הלא נכונה. הפתרון: לפני שאתה כותב, ודא ברשימה שבצד שאתה עומד על השיחה הנכונה.
+
+## נקודות לזכירה
+
+- שיחה (session) היא סביבת עבודה אחת עם תיקייה אחת והיסטוריה משלה, והיא נשמרת כדי שתוכל לחזור אליה.
+- הרשימה שבצד (sidebar) מרכזת את כל השיחות, ואפשר להריץ כמה במקביל בלי שיתערבבו.
+- הטרמינל בטאב Code הוא אופציונלי, ומתחיל יכול להתעלם ממנו לגמרי ולעבוד רק בעברית.
+
+## מה הלאה
+
+בשיעור הבא, [עבודה עם קבצים](/academy/claude-code/working-with-files), תלמד לראות בדיוק מה Claude עומד לשנות לפני שזה נשמר, ולאשר או לדחות כל שינוי.`,
+    en: `After this lesson you will be able to open a new work conversation in the Code tab, attach a folder to it, and find it again in the list on the side.
+
+## What you will learn
+
+- You will be able to open a new work conversation (session) and connect it to one folder on your computer.
+- You will be able to find all your open conversations in the list on the side (sidebar) and switch between them.
+- You will be able to run several conversations in parallel, each on its own folder.
+
+## Why this matters in your clinic
+
+Suppose you want to organize this month's pathology reports in one folder, and at the same time draft a referral letter in another folder. Without separate conversations everything blends together, and it is hard to remember where you stopped. In the Code tab each task sits in its own conversation, with its own folder and its own history, so you can come back to it tomorrow exactly where you left off. This way you can hold, in parallel, one conversation for the clinic's daily summary, another for sorting dermoscopy images, and a third for a draft letter to a patient, without one overrunning the other.
+
+## The plain explanation
+
+A work conversation (session) is simply one workspace: one folder on your computer, and one ongoing conversation with the \`Claude\` tool that remembers what has already been done in it. Each conversation stands on its own and does not see the folders of the other conversations, so what you did in one conversation does not leak into another. Each time you open a new conversation you are opening a clean desk, attaching one folder to it, and getting to work.
+
+Think of it like the desks in the doctors' room. On each desk sits one patient file with all of its paperwork. You can move from desk to desk, but the paperwork does not get mixed up, and each desk remembers where you left it. The list on the side (sidebar) is the map of the desks - it shows you which conversations are open, the folder name of each, and with one click you jump to each of them. Because every conversation is saved, you do not have to finish a task in one sitting: you can leave in the middle, see a patient, and come back.
+
+:::beginner
+Inside the Code tab there is also a terminal window (a text-command window). It is entirely optional. A beginner can ignore it and work for hours without opening it - everything is done in plain language in the conversation box.
 :::
 
-Next: **working with files** - editor, visual diff, and preview.`,
+## A clinic example, step by step
+
+The task: open a new conversation on a non-sensitive folder and get a list of what is inside it.
+
+1. Open the \`Claude\` app and click the **Code** tab at the top.
+2. Click the **New session** button at the top of the list on the side.
+3. Click **Choose folder** and pick a non-sensitive folder, for example an empty demo folder you made for yourself.
+4. In the conversation box at the bottom type the request and press Enter.
+
+\`\`\`
+Go over this folder and show me a list of all the files in it, grouped by type.
+\`\`\`
+
+After a few seconds you will see an organized list of the files inside the conversation, and the conversation will appear in the list on the side with the folder name. From now on every request you write in this conversation works on that same folder, without your having to choose it again.
+
+> Tip: to open a new conversation from the keyboard, use Ctrl+N on Windows or Cmd+N on Mac. Want a second conversation in parallel without closing the first? Just open another new conversation and attach a different folder to it.
+
+## Try it yourself
+
+- [ ] Open a new conversation on your Downloads folder or on an empty demo folder, and ask: "Show me how many files are here and of what type." This takes under three minutes and touches no patient data. After you get the list, look at the list on the side and confirm the new conversation appears there with the folder name you chose.
+
+## Common mistakes
+
+- **Opening a conversation on a sensitive folder.** Do not point at a folder with real patient documents. The fix: create a separate folder to experiment in, or point at a folder with no identifying data.
+- **Thinking you must use the terminal.** The command window is optional. The fix: ignore it and simply type your request in plain language in the conversation box.
+- **Mixing up conversations.** If you have several conversations open, it is easy to type a request into the wrong one. The fix: before you type, confirm in the list on the side that you are on the right conversation.
+
+## Points to remember
+
+- A conversation (session) is one workspace with one folder and its own history, and it is saved so you can return to it.
+- The list on the side (sidebar) holds all your conversations, and you can run several in parallel without mixing them.
+- The terminal in the Code tab is optional, and a beginner can ignore it entirely and work only in plain language.
+
+## What is next
+
+In the next lesson, [Working with files](/academy/claude-code/working-with-files), you will learn to see exactly what Claude is about to change before it is saved, and to approve or reject each change.`,
   },
 };
 

@@ -3,76 +3,130 @@ import type { Lesson } from '@/content/types';
 const lesson: Lesson = {
   id: 'usage-paths',
   track: 'getting-started',
-  title: { he: 'דרכי השימוש - איפה מריצים את Claude', en: 'Ways to Use Claude - Where You Run It' },
+  title: { he: 'איפה מריצים את Claude - דרכי השימוש', en: 'Ways to Use Claude - Where You Run It' },
   description: {
-    he: 'אתר, אפליקציית Desktop, מובייל - מה ההבדל ומה מתאים לרופא. והיכרות עם שלושת הטאבים.',
-    en: 'Web, Desktop app, mobile - the differences and what fits a physician. Plus an intro to the three tabs.',
+    he: 'אתר, Desktop, מובייל - מה מתאים לרופא, והיכרות עם שלושת הטאבים.',
+    en: 'Web, Desktop, mobile - what fits a physician, and an intro to the three tabs.',
   },
   duration: 8,
-  updated: '2026-06-05',
+  updated: '2026-06-06',
   content: {
-    he: `# איפה אפשר להשתמש ב-Claude?
+    he: `בסוף השיעור תוכל לבחור נכון בין הדפדפן, אפליקציית ה-Desktop והמובייל לכל משימה במרפאה, ולמצוא את שלושת הטאבים שבהם עובדים.
 
-יש כמה דרכים. לרופא, המומלצת היא **אפליקציית Claude Desktop**, ועליה נשען כל האתר הזה.
+## מה תלמד כאן
 
-## הדרכים העיקריות
+- תוכל לבחור את המשטח הנכון (אתר, Desktop, מובייל) לפי סוג המשימה שלפניך.
+- תוכל לזהות איפה נמצאים שלושת הטאבים: צ'אט (Chat), עבודה משותפת (Cowork) וקוד (Code).
+- תוכל להסביר למה משימה כבדה דורשת את ה-Desktop ולא את הדפדפן.
 
-- **אתר (claude.ai)** - נפתח בדפדפן, בלי התקנה. מצוין לשיחה מהירה. מוגבל: אין גישה לקבצים במחשב.
-- **אפליקציית Desktop (Mac/Windows)** - תוכנה שמתקינים על המחשב. כאן נמצא הכוח האמיתי לרופא: שלושת הטאבים (Chat, Cowork, Code). דורשת מנוי בתשלום (Pro ומעלה).
-- **מובייל (iOS/Android)** - לשאלות בדרכים ולצילום תמונה לניתוח. מסך קטן, פחות מתאים לעבודה מסודרת.
+## למה זה חשוב לך במרפאה
 
-:::beginner
-"להתקין אפליקציה" זה בדיוק כמו להתקין כל תוכנה אחרת: מורידים מ-claude.ai/download, לוחצים התקנה, ומתחברים עם החשבון. אין שום שלב טכני.
-:::
+כשמגיע אליך אחר צהריים שלם של דוחות פתולוגיה לסיכום, או תיקייה של 30 קבצי PDF להשוואה, חשוב לדעת מראש שזה לא עובד מתוך הדפדפן הרגיל. אם תתחיל את המשימה במקום הלא נכון, תגלה באמצע שחסרות לך היכולות, ותצטרך להתחיל מחדש. לעומת זאת שאלה קצרה בין שני מטופלים, למשל ניסוח שורה למכתב הפניה או בדיקה מהירה של מינון, יושבת מצוין על המובייל או על הצ'אט. גם תמונה דרמוסקופית שצילמת בטלפון נוחה לשאלה זריזה ישירות מהמובייל, בלי להעביר אותה קודם למחשב. בחירת המשטח הנכון מראש חוסכת לך זמן יקר באמצע יום עמוס, ומונעת את התסכול של עבודה שמתחילה ולא מסתיימת.
 
-## הלב: שלושת הטאבים של Claude Desktop
+## ההסבר בפשטות
 
-אפליקציית Desktop היא אפליקציה אחת עם שלושה טאבים בראש המסך:
+הכלי Claude זמין בכמה מקומות, וכל מקום מתאים למשהו אחר. יש את האתר בדפדפן (\`claude.ai\`), יש את אפליקציית ה-Desktop שמתקינים על המחשב, ויש את המובייל בטלפון. תחשוב על זה כמו על מרפאה: המובייל הוא הסטטוסקופ בכיס, מהיר וזמין לשאלה קצרה. האתר בדפדפן הוא חדר בדיקה רגיל, מספיק לרוב המקרים. אפליקציית ה-Desktop היא חדר הניתוח המלא, שם נמצאים כל הכלים למשימות הכבדות. כמו שלא תפתח ניתוח בחדר בדיקה, כך לא תפתח עיבוד של תיקייה שלמה מהדפדפן או מהטלפון.
 
-| טאב | בשביל מה | דוגמה |
-|------|----------|-------|
-| **Chat** | שיחה רגילה - שאלה ותשובה | "נסח מכתב הפניה" |
-| **Cowork** | עבודה agentic בלי קוד, על תיקייה שלמה | "סכם את כל הדוחות בתיקייה לטבלה" |
-| **Code** | Claude Code בממשק גרפי | פרויקטים, קבצים, תצוגה מקדימה |
+באפליקציית ה-Desktop יש שלושה טאבים, ושניים מהם קיימים רק שם. הטאב צ'אט (Chat) הוא לשאלה ותשובה רגילה, כשאתה מעתיק ומדביק את הטקסט בעצמך. הטאב עבודה משותפת (Cowork) הוא לעבודה ארוכה על תיקיות וקבצים בלי לכתוב שורת קוד אחת, והוא מחזיר לך קובץ מוכן בסוף. הטאב קוד (Code) הוא לעבודה מתקדמת עם פרויקטים. שים לב: הטאב עבודה משותפת והטאב קוד אינם קיימים בדפדפן כלל, ולכן מי שעובד רק מהאתר לא יראה אותם בכלל.
 
-ההבדל המרכזי: ב-**Chat** אתה מעתיק ומדביק בעצמך. ב-**Cowork** וב-**Code**, Claude עובד ישירות על הקבצים שלך ומחזיר תוצאה מוכנה.
+| משטח | מתאים בעיקר ל | שלושת הטאבים |
+|---|---|---|
+| אתר בדפדפן (\`claude.ai\`) | שאלות ותשובות רגילות, הדבקת טקסט | רק צ'אט (Chat) |
+| אפליקציית Desktop | עיבוד תיקיות, משימות ארוכות, פרויקטים | צ'אט, עבודה משותפת, קוד |
+| מובייל בטלפון | שאלה מהירה, צילום נגע בין מטופלים | רק צ'אט (Chat) |
 
-:::advanced
-הטרמינל / CLI (שורת פקודה) הוא דרך שימוש נוספת, אבל היא מיועדת למפתחים ולמשתמשי Linux. רופא מתחיל לא צריך אותה - כל מה שהיא עושה זמין דרך הטאב Code בממשק גרפי. הקדשנו לה מסלול "מתקדם" נפרד.
-:::
+## דוגמה מהמרפאה, צעד אחר צעד
 
-בשיעור הבא: **התקנת Claude Desktop** צעד אחר צעד.`,
-    en: `# Where Can You Use Claude?
+נניח שיש לך תיקייה עם 30 דוחות פתולוגיה מאונימים (בלי שם ובלי תעודת זהות), ואתה רוצה סיכום מרוכז של כל הממצאים. זו משימה כבדה, ולכן צריך את אפליקציית ה-Desktop.
 
-There are several ways. For a physician, the recommended one is the **Claude Desktop app**, and this whole site is built around it.
+1. פתח את אפליקציית ה-Desktop על המחשב.
+2. לחץ על הטאב עבודה משותפת (Cowork) למעלה.
+3. בחר באפשרות \`Work in a Folder\` והצבע על התיקייה עם הדוחות.
+4. הדבק את הבקשה הבאה בשורת ההודעה ולחץ שליחה.
 
-## The main options
+\`\`\`
+עבור על כל קבצי ה-PDF בתיקייה הזו. לכל קובץ הוצא: סוג הנגע, האבחנה ההיסטולוגית, ומצב השוליים. סכם הכל בטבלה אחת מרוכזת, שורה לכל קובץ.
+\`\`\`
 
-- **Web (claude.ai)** - opens in a browser, no install. Great for a quick chat. Limited: no access to files on your computer.
-- **Desktop app (Mac/Windows)** - software installed on your computer. This is where the real power for a physician lives: the three tabs (Chat, Cowork, Code). Requires a paid plan (Pro and up).
-- **Mobile (iOS/Android)** - for questions on the go and photographing something for analysis. Small screen, less suited to organized work.
+לאחר השליחה תראה את הכלי פותח את הקבצים אחד אחרי השני, ובסוף מפיק קובץ טבלה מסודר עם שורה לכל דוח.
 
-:::beginner
-"Installing an app" is exactly like installing any other software: download from claude.ai/download, click install, and sign in with your account. There is no technical step.
-:::
+## נסה בעצמך
 
-## The heart: Claude Desktop's three tabs
+קח שלושה קבצי PDF לא רגישים מהמחשב שלך, למשל הנחיות קליניות פומביות או מאמר, ובקש בטאב עבודה משותפת (Cowork) סיכום של שלוש נקודות עיקריות מכל קובץ. זה ייקח פחות משלוש דקות וייתן לך תחושה איך עובד משטח התיקיות.
 
-The Desktop app is one app with three tabs at the top of the screen:
+## טעויות נפוצות
 
-| Tab | What it is for | Example |
-|------|----------------|---------|
-| **Chat** | A normal conversation - ask and answer | "Draft a referral letter" |
-| **Cowork** | Agentic work with no code, over a whole folder | "Summarize all the reports in this folder into a table" |
-| **Code** | Claude Code in a graphical interface | Projects, files, preview |
+- **פותחים את האתר בדפדפן ומחפשים את הטאב עבודה משותפת.** הטאב עבודה משותפת והטאב קוד קיימים רק באפליקציית ה-Desktop. הפתרון: התקן את ה-Desktop והרץ משם.
+- **מתחילים משימה כבדה של עשרות קבצים בצ'אט.** הצ'אט מצוין לשאלה קצרה, לא לעיבוד תיקיות. הפתרון: עבור לטאב עבודה משותפת לפני שתתחיל.
+- **מנסים לעבוד עם תיקיות מהמובייל.** המובייל נועד לשאלה מהירה ולתמונה, לא לעבודה כבדה. הפתרון: שמור משימות תיקיות לאפליקציית ה-Desktop.
 
-The key difference: in **Chat** you copy and paste yourself. In **Cowork** and **Code**, Claude works directly on your files and returns a finished result.
+## נקודות לזכירה
 
-:::advanced
-The terminal / CLI is another way to use Claude, but it is meant for developers and Linux users. A beginner physician does not need it - everything it does is available through the Code tab in a graphical interface. We gave it a separate "advanced" track.
-:::
+- האתר בדפדפן והמובייל טובים לשאלות קצרות ולתמונה מהירה, ואפליקציית ה-Desktop היא הבסיס למשימות הכבדות עם קבצים ותיקיות.
+- הטאב עבודה משותפת והטאב קוד קיימים רק באפליקציית ה-Desktop, ולא בדפדפן.
+- בחירת המשטח הנכון מראש חוסכת לך התחלה מחדש באמצע משימה ביום עמוס.
 
-Next: **installing Claude Desktop** step by step.`,
+## מה הלאה
+
+בשיעור הבא [התקנת Claude Desktop](/academy/getting-started/install-desktop) תתקין את אפליקציית ה-Desktop ותפתח את הגישה לטאב עבודה משותפת ולטאב קוד.`,
+    en: `By the end of this lesson you will be able to pick the right place to run Claude for each clinic task, and find the three tabs where the work happens.
+
+## What You Will Learn
+
+- You will be able to choose the right surface (web, Desktop, mobile) for the task in front of you.
+- You will be able to find the three tabs: Chat, Cowork, and Code.
+- You will be able to explain why a heavy task needs the Desktop app and not the browser.
+
+## Why This Matters In Your Clinic
+
+When a full afternoon of pathology reports lands on you for summary, or a folder of 30 PDF files needs comparing, it helps to know up front that this does not run from an ordinary browser. Start the task in the wrong place and you will discover halfway through that the capabilities are missing, and have to begin again. A short question between two patients, such as phrasing a line for a referral letter or a quick dosing check, sits perfectly on mobile or in Chat. A dermoscopy photo you took on your phone is also easy to ask about straight from mobile, without moving it to the computer first. Picking the right surface in advance saves real time during a busy day, and spares you the frustration of work that starts but never finishes.
+
+## The Explanation, Simply
+
+The tool Claude is available in a few places, and each one fits something different. There is the website in a browser (\`claude.ai\`), there is the Desktop app you install on your computer, and there is mobile on your phone. Think of it like a clinic: mobile is the stethoscope in your pocket, fast and ready for a quick question. The website in a browser is a regular exam room, enough for most cases. The Desktop app is the full operating room, where every tool for the heavy tasks lives. Just as you would not start an operation in an exam room, you would not start processing a whole folder from the browser or the phone.
+
+The Desktop app has three tabs, and two of them exist only there. The Chat tab is for regular question and answer, where you copy and paste the text yourself. The Cowork tab is for longer work on folders and files without writing a single line of code, and it hands you a finished file at the end. The Code tab is for advanced project work. Note: the Cowork tab and the Code tab do not exist in the browser at all, so anyone working only from the website will never see them.
+
+| Surface | Best for | Tabs available |
+|---|---|---|
+| Website in a browser (\`claude.ai\`) | Regular questions and answers, pasting text | Chat only |
+| Desktop app | Folder processing, long tasks, projects | Chat, Cowork, Code |
+| Mobile on your phone | A quick question, photographing a lesion between patients | Chat only |
+
+## A Clinic Example, Step By Step
+
+Suppose you have a folder with 30 de-identified pathology reports (no name and no ID number), and you want one consolidated summary of all the findings. This is a heavy task, so it needs the Desktop app.
+
+1. Open the Desktop app on your computer.
+2. Click the Cowork tab at the top.
+3. Choose \`Work in a Folder\` and point it at the folder with the reports.
+4. Paste the request below into the message line and click send.
+
+\`\`\`
+עבור על כל קבצי ה-PDF בתיקייה הזו. לכל קובץ הוצא: סוג הנגע, האבחנה ההיסטולוגית, ומצב השוליים. סכם הכל בטבלה אחת מרוכזת, שורה לכל קובץ.
+\`\`\`
+
+After you send it you will see the tool open the files one by one, and at the end produce a tidy table file with a row for each report.
+
+## Try It Yourself
+
+Take three non-sensitive PDF files from your computer, such as public clinical guidelines or an article, and in the Cowork tab ask for a three-point summary of each file. It takes under three minutes and gives you a feel for how the folder surface works.
+
+## Common Mistakes
+
+- **Opening the website in a browser and looking for the Cowork tab.** The Cowork tab and the Code tab exist only in the Desktop app. The fix: install the Desktop app and run it from there.
+- **Starting a heavy job of dozens of files in Chat.** Chat is great for a short question, not for processing folders. The fix: switch to the Cowork tab before you begin.
+- **Trying to work with folders from mobile.** Mobile is built for a quick question and a photo, not for heavy work. The fix: keep folder tasks for the Desktop app.
+
+## Points To Remember
+
+- The website in a browser and mobile are good for short questions and a quick photo, and the Desktop app is the base for heavy tasks with files and folders.
+- The Cowork tab and the Code tab exist only in the Desktop app, not in the browser.
+- Choosing the right surface in advance saves you from restarting mid-task on a busy day.
+
+## What Is Next
+
+In the next lesson, [Installing Claude Desktop](/academy/getting-started/install-desktop), you will install the Desktop app and open access to the Cowork tab and the Code tab.`,
   },
 };
 

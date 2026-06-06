@@ -4,73 +4,126 @@ const lesson: Lesson = {
   id: 'what-is-claude',
   track: 'getting-started',
   title: { he: 'מה זה Claude ואיך הוא עוזר לרופא', en: 'What Claude Is and How It Helps a Physician' },
-  description: {
-    he: 'היכרות קצרה: מה Claude יודע לעשות, ולמה הוא שימושי בעבודה הקלינית - בלי שום ידע טכני.',
-    en: 'A short intro: what Claude can do and why it is useful in clinical work - with no technical knowledge.',
-  },
+  description: { he: 'היכרות קצרה: מה Claude יודע לעשות, ולמה הוא שימושי בעבודה הקלינית.', en: 'A short intro: what Claude can do and why it is useful in clinical work.' },
   duration: 7,
-  updated: '2026-06-05',
+  updated: '2026-06-06',
   content: {
-    he: `# מה זה Claude?
+    he: `בסוף השיעור תדע מה הכלי Claude יודע לעשות, איפה הוא עוזר לך ביום העבודה, ואיפה חשוב לשמור על שיקול הדעת שלך.
 
-Claude הוא עוזר מבוסס בינה מלאכותית מבית Anthropic. בפועל זה כמו לדבר עם קולגה חכם שזמין 24/7: אתה כותב לו בעברית פשוטה מה אתה צריך, והוא עונה, מנסח, מסכם, מתרגם ומנתח.
+## מה תלמד כאן
+
+- תוכל להסביר במילים פשוטות מה הכלי Claude עושה ולמי הוא מתאים.
+- תוכל לזהות שלוש משימות קליניות שבהן הוא חוסך לך זמן כבר היום.
+- תוכל לקבוע אילו גבולות לשמור, ובמיוחד מה אסור להקליד בחשבון רגיל.
+
+## למה זה חשוב לך במרפאה
+
+כל יום נוחתים עליך טקסטים שדורשים ניסוח: מכתב הפניה שצריך לצאת ברור, תשובת פתולוגיה ארוכה שצריך לזקק לשורות החשובות, והסבר לחולה שצריך להיות בגובה העיניים. הכלי Claude לוקח את החלק הזה על עצמו ומחזיר לך טיוטה תוך שניות, כך שאתה רק עובר ומאשר. במקום לשבת מול עמוד ריק בסוף יום ארוך, אתה מתחיל מטיוטה מסודרת ומשפר אותה. הוא גם קורא תמונה שאתה מעלה, למשל צילום של מסמך סרוק או של גרף מעבדה, ומסכם לך מה כתוב בו. החיסכון אינו בזמן בלבד: טקסט ברור יותר אל המטופל ואל הרופא המפנה מצמצם אי הבנות וטלפונים חוזרים.
+
+## ההסבר בפשטות
+
+הכלי Claude הוא עוזר מבוסס בינה מלאכותית שמדברים איתו בעברית רגילה, בדיוק כמו בהתכתבות. אתה כותב בקשה במילים שלך, והוא עונה בטקסט: מנסח, מסכם, מסביר, מתרגם. אין צורך בשום ידע טכני, ואין שום פקודה מיוחדת ללמוד מראש. ככל שתסביר לו טוב יותר מה אתה רוצה, כך התשובה תהיה קרובה יותר לצורך שלך, בדיוק כמו שהיית מסביר למתמחה.
+
+הדימוי הכי קרוב הוא **מתמחה חד ומסור שזמין לך בכל שעה**. הוא קורא מהר, מנסח יפה, ולא מתעייף, אבל הוא לא מחליף את הרופא. אתה נותן לו את ההקשר, הוא מחזיר טיוטה, ואתה מאשר או מתקן, ממש כמו עבודה עם מתמחה טוב. אתה הסמכות הקלינית, ואתה זה שמאשר כל מילה לפני שהיא יוצאת. חשוב לזכור: הכלי Claude אינו מכשיר רפואי, הוא יכול לטעות בפרטים או להמציא מקור שלא קיים, ולכן כל פלט קליני עובר אימות שלך מול מקור מהימן. בחשבון רגיל אין לו גישה לאינטרנט חי אלא אם חיברת אותו, וזה בסדר לרוב המשימות של ניסוח וסיכום, שבהן הוא עובד על מה שאתה נותן לו ולא על מידע חיצוני.
+
+## דוגמה מהמרפאה, צעד אחר צעד
+
+נניח שיש לך משפט מכתב הפניה מסורבל, ואתה רוצה לנסח אותו ברור יותר, בלי שום פרט מזהה.
+
+1. פתח את הכלי Claude ובחר את הטאב Chat (צ'אט) לכתיבה.
+2. לחץ על תיבת ההקלדה בתחתית המסך.
+3. הדבק את הבקשה הבאה:
+
+\`\`\`
+נסח מחדש את משפט ההפניה הבא בעברית קלינית ברורה וקצרה, בלי שום פרט מזהה:
+"מועבר בזאת לבדיקתכם נגע פיגמנטרי באזור הגב העליון אשר הופיע לדברי המטופל בחודשים האחרונים ואשר מעורר חשד לשינוי במראהו ועל כן מומלץ על הערכה דרמטוסקופית."
+\`\`\`
+
+4. לחץ על כפתור השליחה (החץ).
+
+מיד תראה גרסה קצרה וברורה של אותו משפט, מוכנה להעתקה אל המכתב שלך. אם הגרסה ארוכה מדי או רשמית מדי, פשוט כתוב בהמשך השיחה "קצר עוד יותר" או "בטון פחות רשמי", והכלי Claude יתקן בלי שתצטרך להתחיל מחדש.
 
 :::beginner
-לא צריך שום רקע טכני. אתה לא "מתכנת" כלום - אתה פשוט כותב בקשה בשפה רגילה, כמו הודעת וואטסאפ, ומקבל תשובה.
+אם משהו בתשובה לא מדויק, אל תתחיל שיחה חדשה. כתוב פשוט מה לשנות, כמו "החלף הערכה דרמטוסקופית בבדיקת עור", והוא ימשיך מאותה נקודה.
 :::
 
-## מה הוא יודע לעשות שימושי לרופא
+## נסה בעצמך
 
-- **לנסח ולסכם** - מכתבי הפניה, סיכומי ביקור, תשובות למטופלים, חומרי הסבר.
-- **לנתח טקסט ומסמכים** - להעלות דוח פתולוגיה או מאמר ולקבל סיכום ממוקד.
-- **לקרוא תמונות** - להראות צילום מסך, גרף או טבלה ולשאול עליהם.
-- **לעבוד בעברית** - Claude חזק בעברית, כולל ניסוח רפואי וטון מותאם למטופל.
+בחר ערך מעבדה אחד לא רגיש, למשל ויטמין D נמוך, ובקש מהכלי Claude הסבר קצר בעברית ידידותית לחולה. הקלד: "הסבר בעברית פשוטה למטופל מה המשמעות של רמת ויטמין D נמוכה ולמה כדאי לטפל בה." קרא את התשובה ושים לב כמה היא נגישה.
 
-## מה חשוב לזכור
+## טעויות נפוצות
 
-- **הוא יכול לטעות.** אמת כל מידע קליני מול מקור מהימן לפני החלטה לגבי מטופל.
-- **פרטיות.** אל תזין פרטים מזהים של מטופלים (שם, ת"ז, תאריך לידה) בחשבון רגיל. על כך נרחיב במסלול Claude Code.
-- **הוא לא מחליף שיקול דעת.** הוא כלי עזר, לא רופא.
+- **לסמוך בלי לאמת.** התיקון: קרא כל טיוטה קלינית כאילו מתמחה כתב אותה, ותקן לפני שאתה משתמש.
+- **להקליד שם או תעודת זהות של מטופל בחשבון רגיל.** התיקון: עבוד תמיד עם נתונים מנוטרלי זיהוי, כמו בדוגמה שלמעלה.
+- **לצפות לאינטרנט חי בחשבון רגיל.** התיקון: למשימות עדכניות חבר מקור מתאים, אבל לניסוח וסיכום אין צורך בכך.
 
-## הדגם שמאחורי הקלעים
+## נקודות לזכירה
 
-נכון ליוני 2026, הדגם החזק ביותר נקרא **Claude Opus 4.8**. יש גם דגמים מהירים יותר (Sonnet, Haiku) למשימות פשוטות. אתה לא צריך לבחור ידנית - ברירת המחדל טובה לרוב המשימות.
+- הכלי Claude הוא עוזר שמדברים איתו בעברית, ומצוין לניסוח, סיכום והסבר.
+- הוא מתמחה מהיר ולא תחליף לשיקול הדעת שלך, ולכן אתה מאשר כל פלט.
+- אף פעם אל תקליד פרט מזהה של מטופל בחשבון רגיל.
 
-:::advanced
-Opus 4.8 (מאי 2026) מצטיין במשימות ארוכות ומורכבות, תומך בחלון הקשר של עד מיליון טוקנים, ומריץ "adaptive thinking" - הוא חושב לעומק רק כשצריך. למשימות יומיומיות מהירות, Sonnet 4.6 לרוב מספיק.
-:::
+## מה הלאה
 
-בשיעור הבא נראה את **דרכי השימוש השונות** - איפה בכלל מריצים את Claude.`,
-    en: `# What Is Claude?
+בשיעור הבא, [דרכי השימוש](/academy/getting-started/usage-paths), תלמד איפה בדיוק מריצים את הכלי Claude כדי שיתאים לעבודה שלך.`,
+    en: `By the end of this lesson you will know what the tool Claude can do, where it helps in your workday, and where it is important to keep your own judgment in charge.
 
-Claude is an AI assistant from Anthropic. In practice it is like talking to a smart colleague available 24/7: you write what you need in plain language, and it answers, drafts, summarizes, translates, and analyzes.
+## What you will learn here
+
+- You will be able to explain in plain words what the tool Claude does and who it fits.
+- You will be able to name three clinical tasks where it saves you time today.
+- You will be able to keep the right limits, especially what you must never type into a regular account.
+
+## Why this matters in your clinic
+
+Every day brings text that needs wording: a referral letter that must read clearly, a long pathology report that needs distilling to the lines that matter, and an explanation for a patient that has to be at eye level. The tool Claude takes that part on and returns a draft within seconds, so you only review and approve. Instead of facing a blank page at the end of a long day, you start from an organized draft and improve it. It also reads an image you upload, for example a photo of a scanned document or a lab graph, and summarizes what it says. The saving is not only in time: clearer text to the patient and to the referring physician cuts misunderstandings and callback phone calls.
+
+## The plain explanation
+
+The tool Claude is an AI-based assistant that you talk to in everyday Hebrew, exactly like a chat. You write a request in your own words, and it answers in text: it drafts, summarizes, explains, translates. No technical knowledge is needed, and there is no special command to learn in advance. The better you describe what you want, the closer the answer fits your need, just like explaining a task to a resident.
+
+The closest picture is **a sharp, dedicated resident available to you at any hour**. The resident reads fast, writes well, and never tires, but does not replace the physician. You give the context, it returns a draft, and you approve or correct, exactly like working with a good resident. You are the clinical authority, and you approve every word before it goes out. Remember: the tool Claude is not a medical device, it can be wrong on details or invent a source that does not exist, so every clinical output passes your verification against a trusted source. In a regular account it has no live internet unless you connect it, and that is fine for most drafting and summarizing tasks, where it works on what you give it rather than on outside information.
+
+## A clinic example, step by step
+
+Say you have a clumsy referral-letter sentence, and you want to word it more clearly, with no identifying detail.
+
+1. Open the tool Claude in the **Chat** tab.
+2. Click the text box at the bottom of the screen.
+3. Paste the following request:
+
+\`\`\`
+נסח מחדש את משפט ההפניה הבא בעברית קלינית ברורה וקצרה, בלי שום פרט מזהה:
+"מועבר בזאת לבדיקתכם נגע פיגמנטרי באזור הגב העליון אשר הופיע לדברי המטופל בחודשים האחרונים ואשר מעורר חשד לשינוי במראהו ועל כן מומלץ על הערכה דרמטוסקופית."
+\`\`\`
+
+4. Click the send button (the arrow).
+
+You will immediately see a short, clear version of that sentence, ready to copy into your letter. If the version is too long or too formal, just write next in the same chat "even shorter" or "less formal tone," and the tool Claude will revise without your having to start over.
 
 :::beginner
-No technical background is needed. You are not "programming" anything - you just write a request in plain language, like a text message, and get an answer.
+If something in the answer is off, do not start a new chat. Just write what to change, like "replace dermoscopic assessment with skin exam," and it will continue from that point.
 :::
 
-## What it does that is useful to a physician
+## Try it yourself
 
-- **Draft and summarize** - referral letters, visit summaries, replies to patients, handouts.
-- **Analyze text and documents** - upload a pathology report or paper and get a focused summary.
-- **Read images** - show a screenshot, graph, or table and ask about it.
-- **Work in Hebrew** - Claude is strong in Hebrew, including clinical phrasing and a patient-appropriate tone.
+Pick one non-sensitive lab value, for example a low vitamin D, and ask the tool Claude for a short patient-friendly explanation in Hebrew. Type: "הסבר בעברית פשוטה למטופל מה המשמעות של רמת ויטמין D נמוכה ולמה כדאי לטפל בה." Read the answer and notice how accessible it is.
 
-## What to keep in mind
+## Common mistakes
 
-- **It can be wrong.** Verify every clinical fact against a trusted source before deciding on patient care.
-- **Privacy.** Do not enter identifying patient details (name, ID, date of birth) in a regular account. More on this in the Claude Code track.
-- **It does not replace judgment.** It is a helper tool, not a physician.
+- **Trusting without verifying.** The fix: read every clinical draft as if a resident wrote it, and correct it before you use it.
+- **Typing a patient name or ID into a regular account.** The fix: always work with de-identified data, as in the example above.
+- **Expecting live internet in a regular account.** The fix: for up-to-date tasks connect a suitable source, but drafting and summarizing do not need it.
 
-## The model behind the scenes
+## Points to remember
 
-As of June 2026, the most capable model is **Claude Opus 4.8**. There are also faster models (Sonnet, Haiku) for simpler tasks. You do not need to choose manually - the default is good for most tasks.
+- The tool Claude is an assistant you talk to in Hebrew, and it is excellent for drafting, summarizing, and explaining.
+- It is a fast resident and not a substitute for your judgment, so you approve every output.
+- Never type a patient identifier into a regular account.
 
-:::advanced
-Opus 4.8 (May 2026) excels at long, complex tasks, supports a context window of up to one million tokens, and runs "adaptive thinking" - it reasons deeply only when needed. For quick everyday tasks, Sonnet 4.6 is usually enough.
-:::
+## What is next
 
-Next we will look at the **different ways to use Claude** - where you actually run it.`,
+In the next lesson, [Ways to Use Claude](/academy/getting-started/usage-paths), you will learn exactly where to run the tool Claude so it fits your work.`,
   },
 };
 

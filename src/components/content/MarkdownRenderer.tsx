@@ -21,17 +21,44 @@ import type { Level } from '@/content/types';
  * omitted (blog / medical), every callout renders as a styled box.
  */
 
-const formatInline = (text: string): string =>
-  text
+// Wrap each maximal LTR run (Latin words, numbers, slashes, paths, pure-Latin
+// parentheticals) in <bdi> so the Unicode bidi algorithm cannot reorder the
+// neutral punctuation that sits between a Hebrew run and an embedded English/number
+// run. This is the core fix for RTL jumbling. Terminal sentence punctuation is left
+// OUTSIDE the run so it stays with the Hebrew text.
+const LTR_RUN = /(\([A-Za-z0-9][A-Za-z0-9 .,/+:'"-]*\)|[A-Za-z][A-Za-z0-9.+/\\:'"@#&_-]*[A-Za-z0-9]|\d[\d.,:/x+-]*\d|[A-Za-z]|\d)/g;
+
+// Operates on the post-markdown HTML string. Splits on tags so it never wraps inside
+// an attribute or an already-isolated <code>; only visible text runs are wrapped.
+function isolateLtr(html: string): string {
+  let inCode = false;
+  return html
+    .split(/(<[^>]+>)/)
+    .map((seg) => {
+      if (seg.startsWith('<')) {
+        if (/^<code\b/i.test(seg)) inCode = true;
+        else if (/^<\/code>/i.test(seg)) inCode = false;
+        return seg;
+      }
+      if (inCode || !seg) return seg;
+      return seg.replace(LTR_RUN, '<bdi>$1</bdi>');
+    })
+    .join('');
+}
+
+const formatInline = (text: string): string => {
+  const html = text
     .replace(/\*\*(.+?)\*\*/g, '<strong class="font-bold text-text-primary">$1</strong>')
-    .replace(/`(.+?)`/g, '<code class="px-1.5 py-0.5 rounded bg-claude-cream text-claude-brown text-sm font-mono">$1</code>')
+    .replace(/`(.+?)`/g, '<code dir="ltr" class="px-1.5 py-0.5 rounded bg-claude-cream text-claude-brown text-sm font-mono" style="unicode-bidi:isolate">$1</code>')
     .replace(/\[(.+?)\]\((.+?)\)/g, (_m, label: string, href: string) => {
       const external = /^https?:\/\//.test(href);
       const attrs = external ? ' target="_blank" rel="noopener noreferrer"' : '';
-      return `<a href="${href}" class="link-accent"${attrs}>${label}</a>`;
+      return `<a href="${href}" dir="auto" class="link-accent"${attrs}>${label}</a>`;
     })
     .replace(/❌/g, '<span class="text-red-600">❌</span>')
     .replace(/✅/g, '<span class="text-green-700">✅</span>');
+  return isolateLtr(html);
+};
 
 const Inline: React.FC<{ html: string }> = ({ html }) => (
   <span dangerouslySetInnerHTML={{ __html: html }} />
@@ -95,7 +122,7 @@ export function renderMarkdown(content: string, opts: RenderOptions): React.Reac
             {rows.slice(1).map((row, ri) => (
               <tr key={ri} className={ri % 2 === 0 ? 'bg-white' : 'bg-claude-cream/30'}>
                 {row.map((cell, ci) => (
-                  <td key={ci} className="p-3 text-sm text-text-secondary border-b border-border-color/30">
+                  <td key={ci} className="p-3 text-sm text-text-secondary border-b border-border-color/30 text-start">
                     <Inline html={formatInline(cell)} />
                   </td>
                 ))}
@@ -231,11 +258,11 @@ export function renderMarkdown(content: string, opts: RenderOptions): React.Reac
     }
     // headings: content # -> h2, ## -> h3, ### -> h4 (page already owns the single h1)
     else if (line.startsWith('### ')) {
-      getTarget().push(<h4 key={i} dir="auto" className="text-lg font-semibold text-text-primary mt-5 mb-2">{line.slice(4)}</h4>);
+      getTarget().push(<h4 key={i} dir="auto" className="text-lg font-semibold text-text-primary mt-5 mb-2"><Inline html={formatInline(line.slice(4))} /></h4>);
     } else if (line.startsWith('## ')) {
-      getTarget().push(<h3 key={i} dir="auto" className="text-xl font-bold text-text-primary mt-6 mb-3">{line.slice(3)}</h3>);
+      getTarget().push(<h3 key={i} dir="auto" className="text-xl font-bold text-text-primary mt-6 mb-3"><Inline html={formatInline(line.slice(3))} /></h3>);
     } else if (line.startsWith('# ')) {
-      getTarget().push(<h2 key={i} dir="auto" className="text-2xl font-bold text-text-primary mt-8 mb-3 pb-2 border-b border-orange-100">{line.slice(2)}</h2>);
+      getTarget().push(<h2 key={i} dir="auto" className="text-2xl font-bold text-text-primary mt-8 mb-3 pb-2 border-b border-orange-100"><Inline html={formatInline(line.slice(2))} /></h2>);
     } else if (trimmed) {
       getTarget().push(<p key={i} dir="auto" className="text-text-secondary my-2 leading-relaxed"><Inline html={formatInline(line)} /></p>);
     } else {

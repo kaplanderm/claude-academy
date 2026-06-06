@@ -5,90 +5,138 @@ const lesson: Lesson = {
   track: 'cowork',
   title: { he: '"Work in a Folder" - להצביע על תיקייה', en: '"Work in a Folder" - Pointing at a Folder' },
   description: {
-    he: 'הפעולה הבסיסית של Cowork: לבחור תיקייה, לתת משימה, ולקבל קובץ פלט. עם דוגמה מלאה.',
-    en: 'The basic Cowork action: pick a folder, give a task, get an output file. With a full example.',
+    he: 'הפעולה הבסיסית: לבחור תיקייה, לתת משימה, לקבל קובץ פלט.',
+    en: 'The basic action: pick a folder, give a task, get an output file.',
   },
   duration: 9,
-  updated: '2026-06-05',
+  updated: '2026-06-06',
   content: {
     he: `# "Work in a Folder"
 
-זו הפעולה שהופכת את Cowork לכלי עבודה אמיתי. בתחתית חלון Cowork יש תיבת סימון **"Work in a Folder"**. מסמנים אותה, בוחרים תיקייה, ומאשרים ל-Claude לקרוא ולכתוב בה.
+בסוף השיעור תוכל להצביע על תיקייה במחשב, לתת ל-Claude משימה אחת בעברית, ולקבל בחזרה קובץ פלט מסודר בלי להעלות שום קובץ ידנית.
 
-## שלושה צעדים
+## מה תלמד כאן
 
-1. **סמן "Work in a Folder"** ובחר את התיקייה (למשל תיקיית הדוחות של החודש).
-2. **תן את ההרשאה** - Claude יבקש אישור לקרוא, לשנות ולמחוק קבצים בתיקייה. אשר רק לתיקייה שאתה מתכוון אליה.
-3. **כתוב את המשימה** בעברית רגילה.
+- תוכל להפעיל את האפשרות **"Work in a Folder"** בטאב Cowork ולבחור תיקייה לעבודה.
+- תוכל לכתוב משימה אחת שמעבדת עשרות קבצים בבת אחת ומחזירה טבלה.
+- תוכל להגן על עצמך משלוש טעויות נפוצות: מזהים, מחיקה בטעות, וקידוד עברית שבור.
 
-## דוגמה מלאה - דוחות פתולוגיה לטבלה
+## למה זה חשוב לך במרפאה
 
-נניח שבתיקייה יש 30 דוחות פתולוגיה (PDF). המשימה:
+נניח שהצטברו אצלך 30 דוחות פתולוגיה בתיקייה אחת, וצריך להוציא מכל אחד תאריך, סוג הדגימה, אבחנה סופית ושוליים - ואז לרכז הכל בגיליון אחד. ידנית זו עבודה של שעה, פתיחה וסגירה של קובץ אחרי קובץ, עם הסיכון שמקרה ממאיר אחד ייפול בין הכיסאות. עם הפעולה הזו אתה מצביע על התיקייה פעם אחת ומקבל את הגיליון מוכן, וכל מקרה שדורש מעקב מסומן בנפרד. אותו עיקרון עובד גם על תיקיית מכתבי הפניה שצריך לסכם, על סיכומי יום שצריך לאחד לשבוע, או על תיקיית תיאורי נגעים שצריך לארגן לטבלה. בכל מקום שבו יש לך הרבה קבצים דומים ופעולה אחת חוזרת על כולם, זו הדרך.
+
+## ההסבר בפשטות
+
+הטאב Cowork באפליקציית Claude Desktop יכול לקבל הרשאה לתיקייה מסוימת במחשב שלך, ואז לקרוא את כל הקבצים שבה ולכתוב קובץ תוצאה חזרה לאותה תיקייה. דמיין שאתה מוסר לעוזר מסור מפתח לארון תיקים אחד בלבד: הוא יכול לעבוד על כל מה שבארון הזה, אבל לא ייגע בשום ארון אחר.
+
+המילה האנגלית **"folder"** היא פשוט תיקייה - אוסף קבצים במחשב. אתה לא צריך לדעת שום דבר טכני ולא להעלות אף קובץ: אתה רק מסמן תיבה, מצביע על תיקייה אחת, וכותב מה לעשות בעברית רגילה. ההבדל מ-Chat הוא בדיוק כאן - ב-Chat היית צריך לגרור קובץ אחרי קובץ לתוך החלון, וכאן אתה מוסר מפתח אחד לתיקייה ונותן ל-Claude לעבוד.
+
+## דוגמה מהמרפאה, צעד אחר צעד
+
+המשימה: תיקייה עם 30 דוחות פתולוגיה בפורמט PDF, **שכבר עברו הסרת פרטים מזהים** (ללא שם, ללא תעודת זהות). המטרה - גיליון מרוכז.
+
+1. פתח את אפליקציית Claude Desktop ולחץ על הטאב **Cowork** למעלה.
+2. בתחתית חלון השיחה, סמן את התיבה **"Work in a Folder"**.
+3. בחלון שנפתח, בחר את התיקייה עם הדוחות ולחץ אישור.
+4. כש-Claude מבקש הרשאה לקרוא ולכתוב בתיקייה, אשר - אך ורק לתיקייה הזו.
+5. הדבק את הבקשה הבאה בתיבת ההודעה ושלח:
 
 \`\`\`
 קרא את כל קובצי ה-PDF בתיקייה הזו.
-לכל דוח הוצא: תאריך, שם החומר (specimen), אבחנה סופית, שוליים.
-סמן ירוק אם השוליים נקיים, אדום אם מעורבים.
-שמור טבלה כקובץ Excel בשם pathology-summary.xlsx באותה תיקייה.
-בסוף, ספור כמה מקרים ממאירים, כמה לא-ודאיים, וכמה שפירים.
+לכל דוח הוצא: תאריך, סוג הדגימה (specimen), אבחנה סופית, ומצב השוליים.
+צור עמודה שמסמנת "לבדיקה" לכל מקרה ממאיר או לא-טיפוסי.
+שמור את התוצאה כקובץ CSV בשם pathology-summary.csv באותה תיקייה.
+אל תמחק ואל תשנה את קובצי המקור - רק קרא אותם.
+שמור את הקובץ בקידוד UTF-8 כדי שהעברית תיקרא נכון.
 \`\`\`
 
-Claude יקרא את הקבצים, יוציא את השדות, וישמור קובץ Excel מוכן. שלוש דקות במקום שעה.
+מה תראה: Claude עובר על הקבצים אחד-אחד, מוציא מכל דוח את השדות שביקשת, ואז יוצר קובץ טבלה אחד בשם \`pathology-summary.csv\` שאפשר לפתוח ב-Excel. הסיומת \`csv\` היא פורמט טבלה פשוט שכל גיליון אלקטרוני יודע לקרוא. בקובץ יש שורה לכל דוח ועמודות לתאריך, סוג דגימה, אבחנה, שוליים, וסימון "לבדיקה" למקרים שדורשים תשומת לב. המספרים כאן בהמחשה בלבד, אבל עבודה שלוקחת אצלך כשעה הופכת לכמה דקות, וקובצי המקור נשארים בדיוק כפי שהיו.
 
 :::beginner
-שים לב: ב-Chat היית צריך להעלות 30 קבצים אחד-אחד. ב-Cowork אתה רק מצביע על התיקייה. זה כל ההבדל.
+אם אתה לא בטוח מה Claude עומד לעשות לפני שאתה מאשר, אפשר פשוט לכתוב לו "תאר לי את התוכנית לפני שאתה מתחיל". הוא יסביר בעברית את הצעדים, ורק אחרי שתאשר הוא יתחיל לעבוד.
 :::
 
-## כללי בטיחות חשובים
+## נסה בעצמך
 
-- **אל תצביע על תיקייה עם פרטים מזהים** של מטופלים (שם מלא, ת"ז) בחשבון רגיל. בקש מ-Claude קודם להסיר מזהים, או עבוד על נתונים מעומעמים.
-- **Claude מבקש אישור** לפני שמירה או מחיקה. קרא מה הוא עומד לעשות לפני שאתה מאשר.
-- **בקש פלט ב-UTF-8** אם אתה עובד בעברית, כדי שלא יישבר הקידוד.
+קח קובץ PDF אחד שאינו רגיש (מאמר, עלון תרופה, נוהל), שים אותו בתיקייה ריקה, סמן **"Work in a Folder"** עליה ובקש: "סכם את הקובץ הזה בשלוש נקודות". פחות משלוש דקות, ואתה כבר מכיר את כל המעגל.
 
-:::advanced
-מאחורי הקלעים זה אותו loop agentic של Claude Code: תכנון, ביצוע, בדיקה, תיקון. אתה לא רואה את הצעדים אלא אם תרצה. הקבצים נקראים מקומית, אבל התוכן נשלח לעיבוד בענן של Anthropic - ולכן הכלל על מזהים. נרחיב בשיעור הפרטיות במסלול Claude Code.
-:::
+## טעויות נפוצות
 
-בשיעור הבא: **Dispatch ו-Routines** - להריץ ברקע ובאופן מתוזמן.`,
+- **הצבעה על תיקייה שעוד מכילה מזהי מטופלים** (שם, תעודת זהות). הפתרון: הסר מזהים מהקבצים לפני, ועבוד רק על נתונים מעומעמים.
+- **שכחת לכתוב "אל תמחק את קובצי המקור".** הפתרון: כתוב את המשפט הזה בכל משימה, כדי שהמקור יישאר שלם.
+- **העברית יוצאת ג'יבריש בקובץ הפלט.** הסיבה: קידוד לא נכון. הפתרון: בקש במפורש לשמור ב-UTF-8 (תקן שמירת אותיות שגורם לעברית להיקרא נכון בכל תוכנה).
+- **אישור הרשאה לתיקייה רחבה מדי** (כל שולחן העבודה). הפתרון: בחר תיקייה אחת וצרה, רק זו שצריך.
+
+## נקודות לזכירה
+
+- במקום להעלות קבצים אחד-אחד, אתה מצביע על תיקייה אחת ו-Claude עובד על כולם.
+- שלושה משפטי הגנה בכל משימה: בלי מזהים, אל תמחק את המקור, שמור ב-UTF-8.
+- הפלט הוא קובץ אמיתי שנשמר בתיקייה שלך, מוכן לפתיחה ב-Excel.
+
+## מה הלאה
+
+בשיעור הבא, [Dispatch ו-Routines](/academy/cowork/dispatch-and-routines), תלמד לשלוח משימה כזו לרקע ולתזמן אותה שתרוץ לבד.`,
     en: `# "Work in a Folder"
 
-This is the action that turns Cowork into a real work tool. At the bottom of the Cowork window there is a **"Work in a Folder"** checkbox. Tick it, pick a folder, and grant Claude permission to read and write in it.
+By the end of this lesson you will be able to point at a folder on your computer, give Claude one task in plain language, and get back a tidy output file without uploading any file by hand.
 
-## Three steps
+## What you will learn here
 
-1. **Tick "Work in a Folder"** and pick the folder (for example this month's reports folder).
-2. **Grant permission** - Claude will ask to read, modify, and delete files in the folder. Grant it only for the folder you intend.
-3. **Write the task** in plain language.
+- You will be able to turn on **"Work in a Folder"** in the Cowork tab and pick a folder to work on.
+- You will be able to write one task that processes dozens of files at once and returns a table.
+- You will be able to protect yourself from three common mistakes: identifiers, accidental deletion, and broken Hebrew encoding.
 
-## A full example - pathology reports into a table
+## Why this matters in your clinic
 
-Suppose the folder has 30 pathology reports (PDF). The task:
+Suppose 30 pathology reports have piled up in one folder, and each needs its date, specimen type, final diagnosis, and margins pulled out and gathered into a single sheet. By hand that is an hour of opening and closing one file after another. With this action you point at the folder once and get the sheet ready. The same works on a folder of referral letters, daily summaries, or lesion descriptions.
+
+## The plain explanation
+
+The Cowork tab in the Claude Desktop app can be granted permission to one folder on your computer, and then read every file in it and write a result file back to that same folder. Picture handing a trusted assistant the key to one filing cabinet only: the assistant can work on everything in that cabinet, but will not touch any other one.
+
+A **folder** is simply a collection of files on your computer. You do not need anything technical: you tick a box, point at one folder, and write what to do in plain language.
+
+## A clinic example, step by step
+
+The task: a folder with 30 pathology reports in PDF format, **already de-identified** (no name, no ID number). The goal is one combined sheet.
+
+1. Open the Claude Desktop app and click the **Cowork** tab at the top.
+2. At the bottom of the conversation window, tick the **"Work in a Folder"** box.
+3. In the window that opens, choose the folder with the reports and click confirm.
+4. When Claude asks for permission to read and write in the folder, grant it - for this folder only.
+5. Paste the following request into the message box and send:
 
 \`\`\`
 Read all the PDF files in this folder.
-For each report extract: date, specimen, final diagnosis, margins.
-Mark green if margins are clear, red if involved.
-Save a table as an Excel file named pathology-summary.xlsx in the same folder.
-At the end, count how many cases are malignant, uncertain, and benign.
+For each report extract: date, specimen type, final diagnosis, and margin status.
+Add a column that marks "review" for any malignant or atypical case.
+Save the result as a CSV file named pathology-summary.csv in the same folder.
+Do not delete or change the source files - only read them.
+Save the file in UTF-8 encoding so the Hebrew reads correctly.
 \`\`\`
 
-Claude will read the files, extract the fields, and save a finished Excel file. Three minutes instead of an hour.
+What you will see: Claude goes through the files one by one and then creates a single table file named \`pathology-summary.csv\` (a \`csv\` is a simple table format that every spreadsheet program can open) with columns for date, specimen type, diagnosis, margins, and a "review" flag, ready to open in Excel. The numbers are illustrative, but work that takes you about an hour becomes a few minutes.
 
-:::beginner
-Note: in Chat you would have to upload 30 files one by one. In Cowork you just point at the folder. That is the whole difference.
-:::
+## Try it yourself
 
-## Important safety rules
+Take one non-sensitive PDF (a paper, a drug leaflet, a protocol), put it in an empty folder, tick **"Work in a Folder"** on it, and ask: "Summarize this file in three points." Under three minutes, and you already know the whole loop.
 
-- **Do not point at a folder with identifying patient details** (full name, ID) on a regular account. Ask Claude to remove identifiers first, or work on de-identified data.
-- **Claude asks for approval** before saving or deleting. Read what it is about to do before you approve.
-- **Ask for UTF-8 output** if you work in Hebrew, so the encoding does not break.
+## Common mistakes
 
-:::advanced
-Behind the scenes this is the same agentic loop as Claude Code: plan, act, check, correct. You do not see the steps unless you want to. Files are read locally, but their content is sent to Anthropic's cloud for processing - hence the rule about identifiers. We expand on this in the privacy lesson in the Claude Code track.
-:::
+- **Pointing at a folder that still holds patient identifiers** (name, ID number). Fix: strip identifiers from the files first, and work on de-identified data only.
+- **Forgetting to write "do not delete the source files".** Fix: include that sentence in every task, so the originals stay intact.
+- **Hebrew comes out as gibberish in the output file.** Cause: wrong encoding. Fix: ask explicitly to save in UTF-8 (a standard for storing letters that makes Hebrew read correctly in any program).
+- **Granting permission to too wide a folder** (the whole desktop). Fix: pick one narrow folder, only the one you need.
 
-Next: **Dispatch and Routines** - running in the background and on a schedule.`,
+## Points to remember
+
+- Instead of uploading files one by one, you point at one folder and Claude works on all of them.
+- Three protective sentences in every task: no identifiers, do not delete the source, save in UTF-8.
+- The output is a real file saved in your folder, ready to open in Excel.
+
+## What is next
+
+In the next lesson, [Dispatch and Routines](/academy/cowork/dispatch-and-routines), you will learn to send a task like this to the background and schedule it to run on its own.`,
   },
 };
 

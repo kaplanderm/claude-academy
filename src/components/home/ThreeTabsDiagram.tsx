@@ -47,7 +47,7 @@ const TABS: TabDef[] = [
     icon: FolderCog,
     color: '#B5560E',
     title: { he: 'Code', en: 'Code' },
-    tagline: { he: 'Claude Code בממשק גרפי מלא - הטרמינל אופציונלי', en: 'Claude Code in a full GUI - the terminal is optional' },
+    tagline: { he: 'Claude Code בממשק גרפי מלא, והטרמינל אופציונלי', en: 'Claude Code in a full GUI, and the terminal is optional' },
     points: [
       { he: 'כל שיחה היא "session" עם תיקיית פרויקט משלה', en: 'Each conversation is a "session" with its own project folder' },
       { he: 'עורך קבצים מובנה ו-diff חזותי לראות מה השתנה', en: 'Built-in file editor and a visual diff to see what changed' },
@@ -91,7 +91,7 @@ export default function ThreeTabsDiagram() {
           </h2>
           <p className="text-text-secondary text-lg max-w-2xl mx-auto">
             {he
-              ? 'כל מה שתעשה עם Claude קורה ב-Claude Desktop (Mac/Windows). שלושת הטאבים מכסים מהשיחה הפשוטה ועד עבודה agentic על תיקיות שלמות.'
+              ? 'כל מה שתעשה עם Claude קורה באפליקציית Claude Desktop (למק ולחלונות). שלושת הטאבים מכסים מהשיחה הפשוטה ועד עבודה agentic על תיקיות שלמות.'
               : 'Everything you do with Claude happens in Claude Desktop (Mac/Windows). The three tabs cover everything from a simple chat to agentic work on whole folders.'}
           </p>
         </div>

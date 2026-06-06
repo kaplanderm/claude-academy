@@ -71,6 +71,29 @@ body {
   text-align: right;
 }
 
+/* ─── Bidi isolation safety net for mixed Hebrew/Latin inline content ─── */
+/* bdi already isolates by default; make it explicit so a11y filters / older
+   engines do not drop it. Isolation belongs on inline LTR islands only,
+   never on block elements (those rely on dir="auto" for base direction). */
+bdi { unicode-bidi: isolate; }
+
+/* Inline code is almost always an LTR token (commands, paths, /fast).
+   Force LTR + isolate so its internal slashes and dots never reorder. */
+code:not(pre code) {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+/* Fenced code blocks read left to right regardless of page direction. */
+.code-block {
+  direction: ltr;
+  unicode-bidi: isolate;
+  text-align: left;
+}
+
+/* Links may carry English labels embedded in Hebrew; isolate the box. */
+.link-accent { unicode-bidi: isolate; }
+
 /* Global visible focus indicator (keyboard users), independent of the a11y toggle */
 :where(a, button, input, select, textarea, summary, [role="button"], [tabindex]:not([tabindex="-1"])):focus-visible {
   outline: 3px solid var(--focus-ring);

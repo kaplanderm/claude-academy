@@ -4,73 +4,174 @@ const lesson: Lesson = {
   id: 'chat-tab',
   track: 'getting-started',
   title: { he: 'הטאב Chat - שיחה, קבצים, Artifacts ו-Projects', en: 'The Chat Tab - Conversation, Files, Artifacts, and Projects' },
-  description: {
-    he: 'איך עובדים בטאב הבסיסי: לשאול, להעלות קובץ או תמונה, ולשמור סדר עם Projects.',
-    en: 'How to work in the basic tab: ask, upload a file or image, and stay organized with Projects.',
-  },
+  description: { he: 'לשאול, להעלות קובץ או תמונה, ולשמור סדר עם Projects.', en: 'Ask, upload a file or image, and stay organized with Projects.' },
   duration: 9,
-  updated: '2026-06-05',
+  updated: '2026-06-06',
   content: {
-    he: `# הטאב Chat
+    he: `אחרי השיעור הזה תדע להעלות קובץ אל הטאב Chat, לבקש סיכום ממוקד, ולהפוך תשובה למסמך שאפשר לערוך ולהוריד.
 
-זה הטאב הבסיסי וההכי מוכר: אתה כותב, Claude עונה. מצוין לשאלה נקודתית, לניסוח ולסיכום.
+## מה תלמד כאן
 
-## שלוש פעולות שכדאי להכיר
+- תוכל להעלות מסמך או תמונה ולבקש סיכום קצר ומדויק.
+- תוכל לבקש מסמך פתוח לעריכה בחלון צד (Artifact) ולהוריד אותו.
+- תוכל לפתוח Project עם הנחיות קבועות שכל שיחה חדשה כבר מכירה.
 
-- **לכתוב בקשה** - פשוט מתאר מה אתה רוצה. ככל שתהיה ספציפי יותר (פורמט, אורך, טון), כך התוצאה טובה יותר.
-- **להעלות קובץ או תמונה** - גרור PDF, מסמך Word או צילום אל תיבת הכתיבה, ואז שאל עליו. לדוגמה: תמונת גרף ובקשה "תסביר לי מה הגרף מראה".
-- **Artifacts** - כשמבקשים מסמך, טבלה או דף הסבר, Claude פותח אותו בחלון צד נפרד שאפשר לערוך ולהוריד.
+## למה זה חשוב לך במרפאה
+
+מגיע אליך דוח פתולוגיה או תשובת מעבדה בן כמה עמודים, ואתה צריך את השורה התחתונה ב-20 שניות לפני הכניסה לחדר. אותו דבר עם מכתב הסבר למטופל: במקום לנסח מאפס כל פעם, אתה מקבל טיוטה נקייה ועורך אותה. גם תמונת גרף ממאמר או טבלת תוצאות שאתה לא בטוח איך לקרוא הופכות לשורה ברורה. הטאב Chat לוקח את המשימות האלה - קריאת מסמך ארוך וכתיבת הסבר - וחותך אותן לדקות.
+
+## ההסבר בפשטות
+
+הטאב Chat הוא שיחה רגילה: אתה כותב, Claude עונה, ואפשר לצרף קובץ או תמונה לשיחה. המילה החשובה כאן היא הקשר (context) - כל מה ש-Claude "רואה" באותה שיחה: מה שכתבת, מה שהעלית, וכל מה שנאמר קודם בשיחה הזו. ככל שההקשר ברור וממוקד יותר, התשובה מדויקת יותר. כשפותחים שיחה חדשה מתחילים מהקשר ריק, וזה דווקא יתרון כשרוצים נושא נקי בלי גרירה של דיון קודם.
+
+חשוב על זה כמו על תדרוך למתמחה. אם תיתן לו דף ותגיד "תקרא ותחזיר לי שלוש נקודות עיקריות", תקבל בדיוק את זה. אם תגיד רק "מה דעתך?", תקבל תשובה כללית. אותו היגיון בדיוק עובד כאן: ההבדל בין תשובה שמשרתת אותך לתשובה כללית הוא כמעט תמיד בניסוח הבקשה, לא ביכולת של הכלי.
+
+## דוגמה מהמרפאה, צעד אחר צעד
+
+המשימה: לקבל סיכום של שלוש נקודות מדוח פתולוגיה מנוקה מזיהוי (בלי שם, בלי תעודת זהות, בלי תאריך לידה).
+
+1. פתח את הטאב Chat ופתח שיחה חדשה.
+2. ודא שהקובץ שאתה מעלה הוא PDF מנוקה מזיהוי - הסר או השחר שם, תעודת זהות ומספר מטופל לפני ההעלאה.
+3. גרור את ה-PDF אל תיבת הכתיבה, או לחץ על סמל המהדק והעלה אותו.
+4. הדבק את הבקשה הבאה ושלח.
+
+\`\`\`
+צירפתי דוח פתולוגיה מנוקה מזיהוי. סכם אותו בשלוש נקודות בלבד:
+1. האבחנה העיקרית במילה אחת או שתיים.
+2. שולי הכריתה - נקיים או לא, ובכמה מ"מ.
+3. צעד המשך מומלץ אחד.
+ענה בעברית, בקצרה, בלי הקדמות.
+\`\`\`
+
+מה שתראה: שלוש שורות ממוקדות בעברית, כל אחת עונה בדיוק על מה שביקשת, בלי פסקת רקע מיותרת.
+
+### להפוך את זה ל-Artifact שאפשר לערוך
+
+עכשיו נבקש הסבר ידידותי למטופל כמסמך פתוח לעריכה.
+
+1. באותה שיחה, הדבק את הבקשה הבאה ושלח.
+
+\`\`\`
+על בסיס אותו דוח, כתוב מסמך הסבר קצר למטופל בשפה פשוטה,
+4 עד 5 שורות, בגוף פונה אישית, בלי מונחים רפואיים מפחידים.
+פתח אותו כמסמך נפרד שאוכל לערוך.
+\`\`\`
+
+2. ייפתח חלון צד נפרד (Artifact) עם המסמך. ערוך טקסט ישירות בתוכו, ולחץ על כפתור ההורדה בראש החלון כדי לשמור עותק.
+
+מה שתראה: ההסבר מופיע בחלון הצד ולא באמצע השיחה, כך שקל לקרוא, לתקן מילה, ולהוריד.
+
+## נסה בעצמך
+
+- [ ] קח קובץ לא רגיש (למשל תקציר של מאמר סקירה, או טקסט שכתבת בעצמך), גרור אותו ל-Chat, ובקש סיכום בשלוש נקודות. אם התשובה כללית מדי, הוסף שורה אחת שמבקשת פורמט מדויק יותר.
+
+## טעויות נפוצות
+
+- **בקשה מעורפלת מחזירה תשובה כללית** - "תסכם את זה" יחזיר משהו רחב. התיקון: ציין מספר נקודות, אורך ושפה ("שלוש נקודות, בעברית, משפט לכל אחת").
+- **העלאת מסמך עם פרטים מזהים** - אל תעלה דוח עם שם, תעודת זהות או תאריך לידה. התיקון: נקה או השחר את הפרטים לפני ההעלאה.
+- **לבקש Artifact בלי לומר זאת** - אם תרצה מסמך שאפשר לערוך, בקש זאת במפורש ("פתח כמסמך נפרד שאוכל לערוך"). אחרת התשובה תופיע בתוך השיחה בלבד.
+
+## נקודות לזכירה
+
+- ההקשר הוא כל מה ש-Claude רואה בשיחה; ככל שהוא ממוקד, התשובה מדויקת יותר.
+- בקשה ספציפית עם פורמט, אורך ושפה עדיפה תמיד על בקשה כללית.
+- ה-Artifact הוא חלון צד שבו המסמך פתוח לעריכה והורדה.
 
 :::beginner
-חשוב על הבקשה כמו על הוראה לעוזר אנושי. במקום "כתוב על מלנומה", נסה: "כתוב לי פסקה של 4 שורות למטופל, בשפה פשוטה, שמסבירה מה זו מלנומה ולמה חשוב לעקוב אחרי שומות".
+ה-Project הוא תיקיית שיחות עם הנחיות קבועות וקצת חומר רקע, כך שלא תצטרך לחזור על ההקשר בכל פעם. הנה גוש הנחיות שתוכל להדביק פעם אחת בהגדרות ה-Project, ואז כל שיחה חדשה כבר תפעל לפיו:
+
+\`\`\`
+אני רופא עור בישראל. ענה תמיד בעברית, בטון מקצועי אך נגיש.
+כשאני מצרף דוח, סכם בשלוש נקודות לפני כל הרחבה.
+אל תשמור או תצטט פרטים מזהים של מטופלים.
+\`\`\`
 :::
 
-## Projects - לשמור סדר
+## מה הלאה
 
-**Project** הוא תיקיית שיחות עם הקשר קבוע. אתה מגדיר פעם אחת הנחיות ("אני רופא עור, ענה תמיד בעברית, טון מקצועי אך נגיש") ומעלה חומרי רקע, וכל שיחה חדשה ב-Project כבר מכירה את ההקשר.
+בשיעור הבא, [תוכניות ומחירים](/academy/getting-started/pricing-plans), תבין איזו תוכנית פותחת את האפליקציה ואת היכולות המתקדמות, וכמה זה עולה.`,
+    en: `After this lesson you will be able to upload a file in the Chat tab, ask for a focused summary, and turn an answer into a document you can edit and download.
 
-דוגמאות ל-Projects שימושיים לרופא:
-- **מכתבי הפניה** - הנחיות לפורמט אחיד וטון רצוי.
-- **חומרי הסבר למטופל** - שפה פשוטה, אורך קבוע, תבנית קבועה.
-- **סקירת ספרות** - הנחיות לאיך לסכם מאמר.
+## What You Will Learn
 
-## מתי לעבור הלאה
+- You will be able to upload a document or an image and ask for a short, precise summary.
+- You will be able to request a document that opens for editing in a side panel (an Artifact) and download it.
+- You will be able to open a Project with standing instructions that every new conversation already knows.
 
-הטאב Chat מצוין, אבל אתה עדיין מעתיק ומדביק ידנית. כשתרצה ש-Claude יעבוד על **תיקייה שלמה של קבצים** ויחזיר תוצאה מוכנה - תעבור לטאב **Cowork** (המסלול הבא) או **Code**.
+## Why This Matters In Your Clinic
 
-:::advanced
-Artifacts תומך גם בתצוגה מקדימה של HTML פשוט, כך שאפשר לבקש "דף הסבר למטופל מעוצב" ולראות אותו מיד. ב-Projects אפשר להעלות עד עשרות מסמכי רקע; Claude מתייחס אליהם כידע זמין לכל שיחה ב-Project.
-:::`,
-    en: `# The Chat Tab
+A pathology report or a lab result lands on your desk, several pages long, and you need the bottom line in 20 seconds before walking into the room. The same goes for a patient handout: instead of writing from scratch every time, you get a clean draft and edit it. A graph image from a paper, or a results table you are not sure how to read, also turns into one clear line. The Chat tab takes these tasks, reading a long document and writing an explanation, and cuts them down to minutes.
 
-This is the basic, most familiar tab: you type, Claude answers. Great for a one-off question, drafting, and summarizing.
+## The Explanation, Simply
 
-## Three actions worth knowing
+The Chat tab is an ordinary conversation: you type, Claude answers, and you can attach a file or an image to the conversation. The key word here is context (הקשר), everything Claude "sees" in that conversation: what you wrote, what you uploaded, and everything said earlier in this conversation. The clearer and more focused the context, the more accurate the answer. Opening a new conversation starts from an empty context, which is an advantage when you want a clean topic with no carryover from an earlier discussion.
 
-- **Write a request** - just describe what you want. The more specific you are (format, length, tone), the better the result.
-- **Upload a file or image** - drag a PDF, Word document, or photo into the input box, then ask about it. For example: a graph image with the request "explain what this graph shows".
-- **Artifacts** - when you ask for a document, table, or handout, Claude opens it in a separate side panel you can edit and download.
+Think of it like a briefing for a resident. Hand over a page and say "read it and give me three main points," and you get exactly that. Say only "what do you think?" and you get a generic answer. The same logic works here: the difference between an answer that serves you and a generic one is almost always in how you phrase the request, not in the tool's ability.
+
+## A Clinic Example, Step By Step
+
+The task: get a three-point summary from a de-identified pathology report (no name, no ID number, no date of birth).
+
+1. Open the Chat tab and start a new conversation.
+2. Make sure the file you upload is a de-identified PDF, removing or redacting name, ID number, and patient number before upload.
+3. Drag the PDF into the message box, or click the paperclip icon and upload it.
+4. Paste the request below and send.
+
+\`\`\`
+צירפתי דוח פתולוגיה מנוקה מזיהוי. סכם אותו בשלוש נקודות בלבד:
+1. האבחנה העיקרית במילה אחת או שתיים.
+2. שולי הכריתה - נקיים או לא, ובכמה מ"מ.
+3. צעד המשך מומלץ אחד.
+ענה בעברית, בקצרה, בלי הקדמות.
+\`\`\`
+
+What you will see: three focused lines in Hebrew, each answering exactly what you asked, with no extra background paragraph.
+
+### Turn It Into an Artifact You Can Edit
+
+Now ask for a patient-friendly explanation as an editable document.
+
+1. In the same conversation, paste the request below and send.
+
+\`\`\`
+על בסיס אותו דוח, כתוב מסמך הסבר קצר למטופל בשפה פשוטה,
+4 עד 5 שורות, בגוף פונה אישית, בלי מונחים רפואיים מפחידים.
+פתח אותו כמסמך נפרד שאוכל לערוך.
+\`\`\`
+
+2. A separate side panel (an Artifact) opens with the document. Edit the text directly inside it, and click the download button at the top of the panel to save a copy.
+
+What you will see: the explanation appears in the side panel rather than in the middle of the conversation, so it is easy to read, fix a word, and download.
+
+## Try It Yourself
+
+- [ ] Take a non-sensitive file (for example an abstract of a review article, or text you wrote yourself), drag it into Chat, and ask for a three-point summary. If the answer is too generic, add one line asking for a more precise format.
+
+## Common Mistakes
+
+- **A vague request returns a generic answer.** "Summarize this" returns something broad. The fix: state the number of points, the length, and the language ("three points, in Hebrew, one sentence each").
+- **Uploading a document with identifying details.** Do not upload a report with a name, an ID number, or a date of birth. The fix: clean or redact the details before upload.
+- **Asking for an Artifact without saying so.** If you want a document you can edit, ask for it explicitly ("open as a separate document I can edit"). Otherwise the answer appears inside the conversation only.
+
+## Points To Remember
+
+- The context is everything Claude sees in the conversation; the more focused it is, the more accurate the answer.
+- A specific request with format, length, and language always beats a general one.
+- An Artifact is a side panel where the document opens for editing and download.
 
 :::beginner
-Think of the request like an instruction to a human assistant. Instead of "write about melanoma", try: "Write me a 4-line paragraph for a patient, in plain language, explaining what melanoma is and why it is important to monitor moles".
+A Project is a folder of conversations with standing instructions and a small knowledge base, so you do not repeat the context every time. Here is an instruction block you can paste once into the Project settings, and then every new conversation already follows it:
+
+\`\`\`
+אני רופא עור בישראל. ענה תמיד בעברית, בטון מקצועי אך נגיש.
+כשאני מצרף דוח, סכם בשלוש נקודות לפני כל הרחבה.
+אל תשמור או תצטט פרטים מזהים של מטופלים.
+\`\`\`
 :::
 
-## Projects - staying organized
+## What Is Next
 
-A **Project** is a folder of conversations with persistent context. You set instructions once ("I am a dermatologist, always answer in Hebrew, professional but accessible tone") and upload background materials, and every new conversation in the Project already knows the context.
-
-Useful Projects for a physician:
-- **Referral letters** - instructions for a consistent format and tone.
-- **Patient handouts** - plain language, fixed length, fixed template.
-- **Literature review** - instructions for how to summarize a paper.
-
-## When to move on
-
-The Chat tab is great, but you still copy and paste manually. When you want Claude to work on a **whole folder of files** and return a finished result, move to the **Cowork** tab (the next track) or **Code**.
-
-:::advanced
-Artifacts also previews simple HTML, so you can ask for "a styled patient handout" and see it immediately. In Projects you can upload dozens of background documents; Claude treats them as knowledge available to every conversation in the Project.
-:::`,
+In the next lesson, [Plans and Pricing](/academy/getting-started/pricing-plans), you will understand which plan unlocks the app and its advanced capabilities, and how much it costs.`,
   },
 };
 

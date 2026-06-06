@@ -5,90 +5,128 @@ const lesson: Lesson = {
   track: 'claude-code',
   title: { he: 'עבודה עם קבצים - עורך, diff חזותי ותצוגה מקדימה', en: 'Working With Files - Editor, Visual Diff, and Preview' },
   description: {
-    he: 'איך לראות מה Claude עומד לשנות, לאשר או לדחות, ולראות תצוגה מקדימה של HTML ו-PDF.',
-    en: 'How to see what Claude is about to change, approve or reject, and preview HTML and PDFs.',
+    he: 'לראות מה Claude עומד לשנות, לאשר, ולראות תצוגה מקדימה.',
+    en: 'See what Claude is about to change, approve, and preview.',
   },
   duration: 8,
-  updated: '2026-06-05',
+  updated: '2026-06-06',
   content: {
     he: `# עבודה עם קבצים
 
-זה היתרון הגדול של הטאב Code על Cowork: אתה **רואה** מה קורה לקבצים, ושולט בכל שינוי.
+בסוף השיעור תדע לראות בדיוק מה Claude עומד לשנות בקובץ, לאשר רק אחרי שווידאת שהתוכן נכון, ולפתוח תצוגה מקדימה של דף הסבר לפני שהוא נשמר.
 
-## עורך הקבצים המובנה
+## מה תלמד כאן
 
-אפשר לפתוח כל קובץ בפרויקט ולראות אותו בתוך האפליקציה. אם אתה רוצה תיקון קטן בעצמך - עורך אותו ישירות, בלי לצאת לתוכנה אחרת.
+- תוכל לקרוא את ה-diff (השוואת לפני-ואחרי) ולאשר שינוי רק אחרי שראית אותו.
+- תוכל לפתוח תצוגה מקדימה של קובץ \`HTML\` או \`PDF\` בתוך הטאב Code עצמו.
+- תוכל לעצור שינוי שגוי לפני שהוא נשמר לקובץ.
 
-## diff חזותי - הביקורת לפני האישור
+## למה זה חשוב לך במרפאה
 
-כש-Claude משנה קובץ, הוא מציג **diff**: ירוק למה שנוסף, אדום למה שהוסר. אתה רואה בדיוק מה עומד להשתנות, ומאשר או דוחה.
+נניח שאתה מבקש דף הסבר למטופל אחרי ניתוח מוז, או מעדכן מכתב הפניה קיים. אתה לא רוצה לגלות טעות רק אחרי שהדף כבר הודפס ונמסר. העורך וה-diff מראים לך את כל הניסוח החדש על המסך, לפני שמשהו נשמר. כך אתה בודק את ההוראות הרפואיות בעיניים שלך, מאשר, ורק אז הקובץ נכתב.
 
-:::beginner
-diff זו פשוט תצוגה של "לפני ואחרי". במקום לסמוך על Claude בעיניים עצומות, אתה רואה כל שינוי ומאשר אותו. זה הופך את העבודה לבטוחה.
-:::
+## ההסבר בפשטות
 
-זה קריטי לרופא: לפני ש-Claude כותב קובץ סיכום או מעדכן טבלה, אתה מוודא שהתוכן נכון.
+כשאתה מבקש מ-Claude ליצור או לערוך קובץ, הוא לא משנה אותו מאחורי הגב שלך. קודם הוא מציג **diff** (השוואת לפני-ואחרי): טקסט שיורד מסומן באדום, טקסט שנוסף מסומן בירוק. אתה קורא, ואז לוחץ "אשר" או "דחה". רק אחרי אישור הקובץ באמת משתנה.
 
-## תצוגה מקדימה (app preview)
+זה כמו מסמך עם "עקוב אחר שינויים" בתוכנת מסמכים: רואים בדיוק מה השתנה ומחליטים אם לקבל. בנוסף, לקבצים כמו \`HTML\` או \`PDF\` יש **תצוגה מקדימה** (preview) - חלון שמציג את הדף המוגמר כמו שהמטופל יראה אותו, לא את הקוד שמאחוריו.
 
-הטאב Code מציג **תצוגה מקדימה** של:
-- **HTML** - דף הסבר למטופל שביקשת, מעוצב, נראה מיד.
-- **PDF** - לראות מסמך בלי לצאת מהאפליקציה.
+## דוגמה מהמרפאה, צעד אחר צעד
 
-דוגמה: "צור דף הסבר למטופל על טיפול לאחר כריתת Mohs, עברית, מעוצב ונקי" - ותראה את התוצאה בתצוגה מקדימה, תבקש תיקונים, ותוריד כשמרוצה.
+נבקש דף הסבר בן עמוד אחד לטיפול בפצע אחרי ניתוח מוז, כקובץ \`HTML\`, נראה תצוגה מקדימה, ורק אז נאשר.
 
-## זרימת עבודה טיפוסית לרופא
+1. בתוך הטאב Code, פתח שיחה (session) חדשה ובחר תיקייה לא רגישה (למשל תיקיית טיוטות).
+2. הדבק את הבקשה למטה ושלח.
+3. כש-Claude מסיים, ייפתח פאנל ה-diff. קרא את כל ההוראות הרפואיות מההתחלה ועד הסוף.
+4. לחץ על כפתור התצוגה המקדימה (preview) כדי לראות את הדף כמו שהוא יודפס.
+5. אם הכול נכון, לחץ "אשר". אם משהו חסר, כתוב ל-Claude מה לתקן - הקובץ עדיין לא נשמר.
 
-1. פותח session על תיקיית הפרויקט.
-2. מבקש משימה (טבלה / מסמך / דף הסבר).
-3. Claude עובד, מציג diff / תצוגה מקדימה.
-4. אתה בודק, מבקש תיקון אם צריך, מאשר.
-5. הקובץ נשמר בתיקייה.
+\`\`\`
+צור דף הסבר בן עמוד אחד למטופל, כקובץ HTML, על טיפול בפצע אחרי ניתוח מוז.
+בלי שם מטופל ובלי פרטים מזהים - דף כללי.
+כלול: ניקוי עדין, החלפת חבישה, סימני אזהרה לזיהום, ומתי להתקשר למרפאה.
+עברית פשוטה, כותרות ברורות, מתאים להדפסה.
+\`\`\`
 
-:::advanced
-ה-diff viewer בנוי לטפל גם בשינויים גדולים (changesets). אפשר לבקש מ-Claude לעבוד עם git worktrees לבידוד שינויים, ולהשתמש ב-side chat (Cmd+;) כדי לשאול שאלה בלי לזהם את ההקשר של המשימה. כל אלה אופציונליים - העבודה הבסיסית לא דורשת אותם.
-:::
+מה תראה: בצד אחד ה-diff עם כל הטקסט החדש בירוק, ובתצוגה המקדימה דף מעוצב עם כותרות וסעיפים, מוכן להדפסה.
 
-בשיעור הבא: **Connectors** - לחבר את Claude ל-Drive ו-Gmail.`,
+## נסה בעצמך
+
+בקש מ-Claude: "צור קובץ \`HTML\` קצר עם הכותרת 'בדיקה' ופסקה אחת שמסבירה מה זה דף הסבר." פתח את התצוגה המקדימה, ראה את הדף, ואז אשר. זה ייקח פחות משלוש דקות וכל החומר לא רגיש.
+
+## טעויות נפוצות
+
+- **לאשר בלי לקרוא** - לחיצה מהירה על "אשר" מפספסת בדיוק את הביטחון ש-diff נותן. התיקון: קרא את כל הטקסט הירוק לפני שאתה מאשר.
+- **לצפות שהקובץ ישתנה בלי אישור** - כל עוד לא לחצת "אשר", הקובץ לא נכתב. התיקון: זכור שהשינוי ממתין לאישור שלך, וחפש את כפתור האישור.
+- **להסתכל על הקוד במקום על התצוגה המקדימה** - ה-diff מראה קוד גולמי, לא את הדף המעוצב. התיקון: לבדיקת המראה לחץ על preview, לבדיקת התוכן קרא את ה-diff.
+
+## נקודות לזכירה
+
+- Claude מציג diff לפני כל שינוי, ושום דבר לא נשמר עד שאתה מאשר.
+- תצוגה מקדימה מראה את הדף המוגמר \`HTML\` או \`PDF\`, כמו שהמטופל יראה אותו.
+- האחריות שלך פשוטה: לקרוא, ואז לאשר.
+
+## מה הלאה
+
+בשיעור הבא, [חיבורים (Connectors)](/academy/claude-code/connectors), תלמד לחבר את הכלי Claude ל-Drive ול-Gmail בלחיצה, כך שיוכל לעבוד ישירות על הקבצים שכבר יש לך.`,
     en: `# Working With Files
 
-This is the big advantage of the Code tab over Cowork: you **see** what happens to the files, and control every change.
+By the end of this lesson you will know how to see exactly what Claude is about to change in a file, approve only after you have confirmed the content is correct, and open a preview of a handout before it is saved.
 
-## The built-in file editor
+## What you will learn
 
-You can open any file in the project and view it inside the app. If you want a small fix yourself, edit it directly, without switching to another program.
+- You will be able to read the diff (a before-and-after comparison) and approve a change only after you have seen it.
+- You will be able to open a preview of an \`HTML\` or \`PDF\` file right inside the Code tab.
+- You will be able to stop a wrong change before it is saved to the file.
 
-## Visual diff - the review before approval
+## Why this matters in your clinic
 
-When Claude changes a file, it shows a **diff**: green for what was added, red for what was removed. You see exactly what is about to change, and approve or reject.
+Say you ask for a patient handout after Mohs surgery, or you update an existing referral letter. You do not want to discover a mistake only after the page has already been printed and handed over. The editor and the diff show you all the new wording on screen, before anything is saved. That way you check the medical instructions with your own eyes, approve, and only then is the file written.
 
-:::beginner
-A diff is simply a "before and after" view. Instead of trusting Claude blindly, you see every change and approve it. This makes the work safe.
-:::
+## The plain explanation
 
-This is critical for a physician: before Claude writes a summary file or updates a table, you confirm the content is correct.
+When you ask Claude to create or edit a file, it does not change it behind your back. First it shows a **diff** (a before-and-after comparison): removed text is marked in red, added text is marked in green. You read it, then click "approve" or "reject". Only after approval does the file actually change.
 
-## Preview (app preview)
+It is like a document with "track changes" in a word processor: you see exactly what changed and decide whether to accept it. In addition, files like \`HTML\` or \`PDF\` get a **preview** - a window that shows the finished page the way the patient will see it, not the code behind it.
 
-The Code tab shows a **preview** of:
-- **HTML** - a patient handout you asked for, styled, shown immediately.
-- **PDF** - view a document without leaving the app.
+## A clinic example, step by step
 
-Example: "Create a patient handout on post-Mohs care, Hebrew, styled and clean" - and you see the result in preview, ask for fixes, and download when satisfied.
+We will ask for a one-page wound-care handout for after Mohs surgery, as an \`HTML\` file, watch the preview, and only then approve.
 
-## A typical physician workflow
+1. In the Code tab, open a new conversation (session) and pick a non-sensitive folder (for example a drafts folder).
+2. Paste the request below and send it.
+3. When Claude finishes, the diff panel opens. Read all the medical instructions from start to finish.
+4. Click the preview button to see the page as it would be printed.
+5. If everything is correct, click "approve". If something is missing, tell Claude what to fix - the file is not saved yet.
 
-1. Open a session on the project folder.
-2. Ask for a task (table / document / handout).
-3. Claude works, shows a diff / preview.
-4. You review, ask for a fix if needed, approve.
-5. The file is saved to the folder.
+\`\`\`
+צור דף הסבר בן עמוד אחד למטופל, כקובץ HTML, על טיפול בפצע אחרי ניתוח מוז.
+בלי שם מטופל ובלי פרטים מזהים - דף כללי.
+כלול: ניקוי עדין, החלפת חבישה, סימני אזהרה לזיהום, ומתי להתקשר למרפאה.
+עברית פשוטה, כותרות ברורות, מתאים להדפסה.
+\`\`\`
 
-:::advanced
-The diff viewer is built to handle large changesets too. You can ask Claude to work with git worktrees to isolate changes, and use side chat (Cmd+;) to ask a question without polluting the task context. All of these are optional - basic work does not require them.
-:::
+What you will see: on one side the diff with all the new text in green, and in the preview a formatted page with headings and sections, ready to print.
 
-Next: **Connectors** - linking Claude to Drive and Gmail.`,
+## Try it yourself
+
+Ask Claude: "create a short \`HTML\` file with the heading 'Test' and one paragraph explaining what a handout is." Open the preview, look at the page, then approve. It takes under three minutes and the material is not sensitive.
+
+## Common mistakes
+
+- **Approving without reading** - a quick click on "approve" misses exactly the confidence a diff gives. The fix: read all the green text before you approve.
+- **Expecting the file to change without confirming** - as long as you have not clicked "approve", the file is not written. The fix: remember the change is waiting for your confirmation, and look for the approve button.
+- **Looking at the code instead of the preview** - the diff shows raw code, not the formatted page. The fix: to check the look click preview, to check the content read the diff.
+
+## Key takeaways
+
+- Claude shows a diff before any change, and nothing is saved until you approve.
+- The preview shows the finished \`HTML\` or \`PDF\` page, the way the patient will see it.
+- Your job is simple: read, then approve.
+
+## What is next
+
+In the next lesson, [Connectors](/academy/claude-code/connectors), you will learn to link Claude to Drive and Gmail in one click, so it can work directly on the files you already have.`,
   },
 };
 
